@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Squad de Comus</title>
-<meta name="description" content="Learning experience design and AI enablement case study by Matheus Policarpo: audience, learning objectives, assessment and four-level evaluation for professionals learning to produce seller communications at Mercado Libre, plus a RAG knowledge base for engineers and a sample microlearning unit.">
+<meta name="description" content="Learning experience design and AI enablement case study by Matheus Policarpo: audience, learning objectives, assessment and four-level evaluation for professionals learning to produce seller communications at Mercado Libre, plus a RAG knowledge base for engineers and microlearning with assessment for sales engineers.">
 <meta name="author" content="Matheus Policarpo">
 <meta name="keywords" content="Instructional Design, Learning Experience Design, Technical Instructional Design, Microlearning, Assessment Design, Kirkpatrick, Learning Objectives, Effectiveness Metrics, AI Enablement, Custom GPT, Retrieval-Augmented Generation, RAG, Knowledge Base, Metadata Schema, Taxonomy, Structured Content, Content Operations, Change Management, AI Content Strategist">
 <meta property="og:title" content="Squad de Comus · Learning design and AI enablement">
@@ -80,7 +80,7 @@
       <a href="#solution">Program</a>
       <a href="#evaluation">Evaluation</a>
       <a href="#rag">RAG for engineers</a>
-      <a href="#unit">Microlearning unit</a>
+      <a href="#unit">Microlearning</a>
       <a href="#fit">Role fit</a>
     </nav>
   </div>
@@ -91,7 +91,7 @@
     <div class="wrap">
       <p class="eyebrow">Learning experience design and AI enablement · Mercado Libre · 2026</p>
       <h1>Squad de <span>Comus</span></h1>
-      <p class="lede" style="max-width: 62ch;">An enablement program for working professionals. UX designers had to learn to produce seller communications end to end, and the know-how lived with a few experts. I defined the audience and the learning objectives, built the instruction around hands-on workshops, job aids and three AI assistants, assessed performance against explicit criteria, and evaluated the results at four levels. Then I turned the same material into a retrieval-ready knowledge base for engineers, product managers and commercial teams.</p>
+      <p class="lede" style="max-width: 62ch;">An enablement program for working professionals. UX designers had to learn to produce seller communications end to end, and the know-how lived with a few experts. I defined the audience and the learning objectives, built the instruction around hands-on workshops, job aids and three AI assistants, assessed performance against explicit criteria, and evaluated the results at four levels. Then I turned the same material into a retrieval-ready knowledge base for engineers, product managers and commercial teams, and built microlearning with scenario-based assessment for sales engineers on top of it.</p>
       <p style="margin-top: 20px;"><span class="disclaimer">Anonymized version. Colleague names, internal tool names and links are removed, and figures are approximate.</span></p>
 
       <div class="numbers">
@@ -101,8 +101,8 @@
         <div><b>10 → 7</b><span>days of average delivery per communication</span></div>
         <div><b>5 → 1</b><span>errors per month found after publishing</span></div>
         <div><b>40% → 70%+</b><span>approved on first review</span></div>
-        <div><b>39</b><span>retrieval-ready chunks for engineers, PMs and commercial teams</span></div>
-        <div><b>22 / 22</b><span>questions in their voice retrieved the right chunk in the top 3</span></div>
+        <div><b>41</b><span>retrieval-ready chunks for engineers, PMs, sales and commercial teams</span></div>
+        <div><b>24 / 24</b><span>questions in their voice retrieved the right chunk in the top 3</span></div>
       </div>
     </div>
   </div>
@@ -364,17 +364,17 @@
       <div class="tbl-wrap" style="margin-bottom: 28px;">
         <table class="glance">
           <tbody>
-            <tr><th scope="row">Audience</th><td>Engineers, product managers, commercial and operations teams</td></tr>
+            <tr><th scope="row">Audience</th><td>Engineers, sales engineers, product managers, commercial and operations teams</td></tr>
             <tr><th scope="row">Job to support</th><td>Request the right seller communication, with the right inputs, at the right time, without a content expert in the loop</td></tr>
             <tr><th scope="row">Source material</th><td>A 19-slide deck with screen recordings and three whiteboards: templates, a full worked case and the retrospective, in Portuguese and Spanish</td></tr>
-            <tr><th scope="row">Output</th><td>39 single-topic chunks, 140 to 460 words each, with a 19-field metadata schema and a controlled vocabulary</td></tr>
-            <tr><th scope="row">Evaluation</th><td>Schema validation, word-for-word checks against published texts, and a 22-question retrieval test in the voice of the target roles</td></tr>
+            <tr><th scope="row">Output</th><td>41 single-topic chunks, 140 to 460 words each, with a 19-field metadata schema and a controlled vocabulary, including the microlearning unit and its assessment</td></tr>
+            <tr><th scope="row">Evaluation</th><td>Schema validation, word-for-word checks against published texts, and a 24-question retrieval test in the voice of the target roles</td></tr>
           </tbody>
         </table>
       </div>
       <div class="prose" style="margin-bottom: 28px;">
         <p><b>Extraction.</b> I pulled everything out of the source, including tables, links embedded in text, screenshots of briefs, and the screen recordings of the intake form fields and the assistants’ demos.</p>
-        <p><b>Chunking.</b> One topic per chunk, so each one answers a question on its own. Every chunk opens with a breadcrumb and closes with its source. They cover how to request a communication, reference timings, formats and channels, pre-notice and rollout, the four stages, tools, templates, worked cases, the retrospective, a glossary, contacts and limits.</p>
+        <p><b>Chunking.</b> One topic per chunk, so each one answers a question on its own. Every chunk opens with a breadcrumb and closes with its source. They cover how to request a communication, reference timings, formats and channels, pre-notice and rollout, the four stages, tools, templates, worked cases, the retrospective, microlearning and assessment for sales engineers, a glossary, contacts and limits.</p>
         <p><b>Tagging for retrieval.</b> Besides document type, topic, format, stage, phase, market, audience and status, two fields exist only for retrieval: the questions the chunk answers, written the way a non-expert would ask them, and synonyms in Portuguese and Spanish. Both go into the embedded text, and the synonyms let keyword search match acronyms and local terms.</p>
       </div>
 
@@ -480,9 +480,9 @@
         <table class="checks">
           <thead><tr><th scope="col">Check</th><th scope="col">Result</th></tr></thead>
           <tbody>
-            <tr><td>Schema validation: required fields, vocabulary, cross-references, chunk size</td><td>39 of 39 chunks pass</td></tr>
+            <tr><td>Schema validation: required fields, vocabulary, cross-references, chunk size</td><td>41 of 41 chunks pass</td></tr>
             <tr><td>Published seller texts in the worked case, checked word for word against the source</td><td>3 of 3 match</td></tr>
-            <tr><td>Retrieval test: 22 questions in the voice of engineers, product managers and commercial teams</td><td>Right chunk in the top 3 for 22 of 22, with a simple keyword baseline (TF-IDF) before embeddings</td></tr>
+            <tr><td>Retrieval test: 24 questions in the voice of engineers, product managers and commercial teams</td><td>Right chunk in the top 3 for 24 of 24, with a simple keyword baseline (TF-IDF) before embeddings</td></tr>
           </tbody>
         </table>
       </div>
@@ -503,13 +503,14 @@
             <tr><td>“¿Cómo pido una comunicación para vendedores?”</td><td class="mono"><b>002</b> · 015 · 051</td><td>✓</td></tr>
             <tr><td>“How many days ahead do I request an FAQ?”</td><td class="mono"><b>006</b> · <b>099</b> · 020</td><td>✓</td></tr>
             <tr><td>“Who do I talk to if I get lost?”</td><td class="mono"><b>095</b> · 002 · 001</td><td>✓</td></tr>
+            <tr><td>“Is there a quick training for sales engineers on how to request a communication?”</td><td class="mono"><b>080</b> · <b>081</b> · 005</td><td>✓</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="output" style="margin-top: 12px;"><b>Total:</b> hit@3 of 22 out of 22. The SLA and price questions are traps: the right answers are the chunk that says “not defined” and a chunk tagged as a dated example, not a current rule.</p>
+      <p class="output" style="margin-top: 12px;"><b>Total:</b> hit@3 of 24 out of 24. The SLA and price questions are traps: the right answers are the chunk that says “not defined” and a chunk tagged as a dated example, not a current rule.</p>
 
       <div class="prose" style="margin-top: 24px;">
-        <p>A build script validates the schema and regenerates the ingestion file after every edit, and the 22 test questions ship with the knowledge base so the retrieval check can be re-run on any setup. A maintenance log lists 6 inconsistencies found in the source, such as conflicting dates and different market coverage between the intake form and the templates, to resolve before launch.</p>
+        <p>A build script validates the schema and regenerates the ingestion file after every edit, and the 24 test questions ship with the knowledge base so the retrieval check can be re-run on any setup. A maintenance log lists 6 inconsistencies found in the source, such as conflicting dates and different market coverage between the intake form and the templates, to resolve before launch.</p>
         <p><b>Status:</b> built and tested offline, not deployed yet.</p>
       </div>
     </div>
@@ -519,53 +520,79 @@
   <section id="unit" aria-labelledby="unit-h">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Microlearning and assessment</p>
-        <h2 id="unit-h">A five-minute unit for engineers, built from the knowledge base</h2>
-        <p>This shows how I turn the same source into microlearning with an assessment for a technical audience. Every fact in it comes from the knowledge base above, mainly the chunks on how to request (002), timings (006), formats (011), pre-notice and rollout (020) and the intake form (041).</p>
-        <p><span class="concept-note">Sample unit · designed for this portfolio, not yet run with learners</span></p>
+        <p class="eyebrow">Microlearning and assessment for sales engineers</p>
+        <h2 id="unit-h">Six-minute units, built from the knowledge base</h2>
+        <p>Sales engineers bring seller-facing changes to the squad, so they need to request a communication correctly the first time. I built microlearning units and an assessment for them from the same knowledge base. Volume, dates and results are confidential, so the sample below shows the design.</p>
+      </div>
+
+      <div class="tbl-wrap" style="margin-bottom: 28px;">
+        <table class="glance">
+          <tbody>
+            <tr><th scope="row">Audience and job</th><td>Sales engineers who take changes affecting sellers in their portfolio to the squad. The job: request a communication that needs no back and forth.</td></tr>
+            <tr><th scope="row">Objective</th><td>One observable objective per unit. Sample: fill in a complete communication request for a real scenario, with markets, pre-notice and rollout dates, the rule before and after, exceptions and official sources.</td></tr>
+            <tr><th scope="row">Source material</th><td>Each unit is built from knowledge base chunks, so when a rule changes in the base, the unit changes with it. The sample uses the chunks on pre-notice and rollout (020), inputs checklist (036), timings (006) and formats (011).</td></tr>
+            <tr><th scope="row">Format</th><td>About six minutes: an opening scenario, three short blocks, a practice step and an answer key.</td></tr>
+            <tr><th scope="row">Assessment</th><td>Three scenario questions and a short task scored against a rubric, with the pass criterion set before launch.</td></tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="unit">
         <dl class="unit-meta">
-          <div><dt>Audience</dt><dd>Engineers and PMs shipping a change that affects sellers</dd></div>
-          <div><dt>Duration</dt><dd>5 minutes, on mobile or desktop</dd></div>
-          <div><dt>Trigger</dt><dd>Linked from the release checklist and answered by the RAG assistant</dd></div>
-          <div><dt>Pass criterion</dt><dd>3 of 3 scenario questions, plus a complete intake in the practice step</dd></div>
+          <div><dt>Unit</dt><dd>How to request a communication without back and forth</dd></div>
+          <div><dt>Audience</dt><dd>Sales engineers</dd></div>
+          <div><dt>Duration</dt><dd>About 6 minutes</dd></div>
+          <div><dt>Pass criterion</dt><dd>3 of 3 questions and at least 3 of 4 rubric points</dd></div>
         </dl>
 
         <div>
           <p class="eyebrow" style="margin-bottom: 8px;">Objective</p>
-          <p class="objective">Given a change that affects sellers, request the right communication, with every required input, at least one week before the pre-notice date.</p>
+          <p class="objective">Fill in a complete communication request for a real scenario: markets, pre-notice and rollout dates, the rule before and after, exceptions and official sources.</p>
         </div>
 
-        <div class="steps3">
-          <div><span class="n">1</span><p><b>Scenario, 30 seconds.</b> Your team is adding a new product category to the supermarket store. Rollout is in three weeks. Sellers in that category will see new costs and requirements.</p></div>
-          <div><span class="n">2</span><p><b>Core idea, 2 minutes.</b> Every seller-facing change has two moments: pre-notice, before it happens, and rollout, when it goes live. The format follows one rule per situation. A communication takes about 7 days on average, so the request has to come early.</p></div>
-          <div><span class="n">3</span><p><b>Practice, 1.5 minutes.</b> Fill a mock intake for the scenario: markets, pre-notice date, rollout date, type of communication and the categories involved. Missing fields are highlighted with the reason they matter.</p></div>
-          <div><span class="n">4</span><p><b>Check, 1 minute.</b> Three scenario questions with feedback on every option, below.</p></div>
+        <div class="tbl-wrap">
+          <table class="quiz" style="min-width: 560px;">
+            <thead><tr><th scope="col">Time</th><th scope="col">Block</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">0:00</td><td><b>Scenario.</b> A shipping cost change for one category goes live in three weeks, and a large seller in your portfolio is already asking about it.</td></tr>
+              <tr><td class="mono">1:00</td><td><b>Pre-notice versus rollout.</b> Why every request needs both dates.</td></tr>
+              <tr><td class="mono">2:00</td><td><b>The six items of a complete request.</b> Scope, dates, the rule before and after, what the seller must do and by when, exceptions and official sources.</td></tr>
+              <tr><td class="mono">4:00</td><td><b>The common mistake.</b> “Shipping is changing, can you do a communication?” with no dates, rule or source.</td></tr>
+              <tr><td class="mono">4:30</td><td><b>Practice.</b> Fill in the request for the scenario, then compare it with the answer key. Every missing item is a question the squad would have had to ask.</td></tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="tbl-wrap">
           <table class="quiz">
-            <thead><tr><th scope="col">Scenario question</th><th scope="col">Correct answer</th><th scope="col">Why, shown as feedback</th></tr></thead>
+            <thead><tr><th scope="col">Scenario question</th><th scope="col">Correct answer</th><th scope="col">Why</th></tr></thead>
             <tbody>
-              <tr><td>Rollout is in three weeks. When should you send the request?</td><td>At least one week before the pre-notice date</td><td>A communication takes about 7 days, and sellers need to hear about the change before it happens.</td></tr>
-              <tr><td>Which type of communication do you select in the intake form?</td><td>Categories: include or exclude a category</td><td>The type routes the request and sets which template and rules apply.</td></tr>
-              <tr><td>The change has a date and affects many sellers. Which formats do you expect?</td><td>A news post or email, plus an FAQ</td><td>A big change needs fast notice now and an explanation sellers can come back to.</td></tr>
+              <tr><td>The new fee applies from a set date, and sellers must adjust prices before it. Which communication goes out first?</td><td>Pre-notice, as a news post or email</td><td>A dated change that needs action beforehand starts with a pre-notice.</td></tr>
+              <tr><td>After launch, sellers ask every week how the fee is calculated. Which format solves it?</td><td>FAQ</td><td>A question that keeps coming back becomes an FAQ.</td></tr>
+              <tr><td>Part of your portfolio has a special commercial condition and is not affected. What goes into the request?</td><td>The exception, and whether that group should be left out of the communication</td><td>Exceptions and exclusions are part of a complete request.</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="split">
           <div>
-            <h4>How I would evaluate it</h4>
-            <p>Reaction from a one-question rating at the end. Learning from the pass rate on first attempt. Behavior from the share of requests that arrive complete on first submission. Results from rounds of back and forth per request and days between request and pre-notice.</p>
+            <h4>Task rubric, one point each</h4>
+            <p><b>Dates:</b> gives both the pre-notice and the rollout date.</p>
+            <p><b>Rule:</b> describes today versus after, with numbers or a clear condition.</p>
+            <p><b>Exceptions:</b> says who is not affected, or states there are none.</p>
+            <p><b>Sources:</b> names the official source, like a policy, table, PRD or ticket.</p>
           </div>
           <div>
-            <h4>How it scales to sales engineers</h4>
-            <p>The same backbone works for a sales engineer preparing a customer demo: one observable objective per unit, source material from subject matter experts turned into steps, examples and common mistakes, a scenario-based check with the pass criterion set before launch, and a tagged knowledge base behind it.</p>
+            <h4>Pass criterion, set before launch</h4>
+            <p>3 of 3 questions right and at least 3 of 4 rubric points. Anyone who does not pass redoes only the practice step.</p>
+            <h4 style="margin-top: 8px;">Linked to the knowledge base</h4>
+            <p>The unit and its assessment are chunks 080 and 081. The entry chunk for requesters points to them, so someone asking the assistant how to request a communication is offered the six-minute unit.</p>
           </div>
         </div>
+      </div>
+
+      <div class="prose" style="margin-top: 28px;">
+        <p><b>Next step for a technical product.</b> The same design fits a product audience, for example a sales engineer running a customer demo, with objectives such as “configure X” or “explain Y to a customer in two minutes”. There I would evaluate on four levels, reaction, learning, behavior on the job and business results, and track completion, assessment score, time to competence, support questions and output quality.</p>
       </div>
     </div>
   </section>
@@ -576,20 +603,20 @@
       <div class="sec-head">
         <p class="eyebrow">Role fit</p>
         <h2 id="fit-h">How this case maps to the role</h2>
-        <p>Delivered work and the concept unit are kept separate below.</p>
+        
       </div>
       <div class="tbl-wrap">
         <table class="fit">
           <thead><tr><th scope="col">The role asks for</th><th scope="col">Evidence in this case</th></tr></thead>
           <tbody>
-            <tr><td>A learning experience designed for professionals</td><td>Delivered: audience, five objectives, workshops, job aids, AI performance support, a performance task and four-level evaluation</td></tr>
-            <tr><td>Outcome evaluation and effectiveness metrics</td><td>Delivered: 5 of 6 passed, 70%+ adoption on the job, 10 → 7 days, 5 → 1 errors a month, 40% → 70%+ first-review approval</td></tr>
-            <tr><td>RAG and structured content</td><td>Delivered: 39 chunks, 19-field schema, controlled vocabulary, bilingual synonyms, grounded system prompt, 22 of 22 retrieval test</td></tr>
-            <tr><td>Complex material turned into precise content for engineers</td><td>Delivered: knowledge base and test questions written for engineers, PMs and commercial teams, with safeguards against wrong answers</td></tr>
-            <tr><td>Microlearning and assessment development</td><td>Concept: a five-minute unit with objective, scenario, practice, scored questions and a pass criterion, built from the knowledge base</td></tr>
-            <tr><td>Content models, taxonomy and modular frameworks</td><td>Delivered: metadata schema, intake categories as controlled vocabulary, format rules with required structures</td></tr>
-            <tr><td>Hands-on work with LLMs and prompt design</td><td>Delivered: three custom GPT assistants that flag gaps instead of inventing, and a system prompt for the RAG assistant</td></tr>
-            <tr><td>Change management and stakeholder partnership</td><td>Delivered: workshops, a structured retrospective and actions with owners, deadlines and success criteria</td></tr>
+            <tr><td>A learning experience designed for professionals</td><td>audience, five objectives, workshops, job aids, AI performance support, a performance task and four-level evaluation</td></tr>
+            <tr><td>Outcome evaluation and effectiveness metrics</td><td>5 of 6 passed, 70%+ adoption on the job, 10 → 7 days, 5 → 1 errors a month, 40% → 70%+ first-review approval</td></tr>
+            <tr><td>RAG and structured content</td><td>41 chunks, 19-field schema, controlled vocabulary, bilingual synonyms, grounded system prompt, 24 of 24 retrieval test</td></tr>
+            <tr><td>Complex material turned into precise content for engineers and sales engineers</td><td>Knowledge base and test questions written for engineers, PMs and commercial teams, and microlearning for sales engineers built from it, with safeguards against wrong answers</td></tr>
+            <tr><td>Microlearning and assessment development</td><td>Six-minute units for sales engineers with a scenario, practice step and answer key, three scenario questions, a four-point rubric and a pass criterion set before launch</td></tr>
+            <tr><td>Content models, taxonomy and modular frameworks</td><td>metadata schema, intake categories as controlled vocabulary, format rules with required structures</td></tr>
+            <tr><td>Hands-on work with LLMs and prompt design</td><td>three custom GPT assistants that flag gaps instead of inventing, and a system prompt for the RAG assistant</td></tr>
+            <tr><td>Change management and stakeholder partnership</td><td>workshops, a structured retrospective and actions with owners, deadlines and success criteria</td></tr>
           </tbody>
         </table>
       </div>
