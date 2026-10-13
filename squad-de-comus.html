@@ -414,6 +414,52 @@
         </div>
       </div>
 
+
+      <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">The entry point, written for engineers</h2>
+        <p>The source deck was written for designers. This chunk rewrites the same process from the requester’s side, for engineering, product and commercial teams. It starts with a rule of thumb, gives the steps in the order they happen, and ends with what speeds a request up and how long it takes.</p>
+      </div>
+      <div class="chunk">
+        <div>
+<pre><span class="c"># comus-002 (excerpt, translated, anonymized)</span>
+<span class="k">title:</span> How to request a communication
+  (guide for non-content roles)
+<span class="k">doc_type:</span> guide
+<span class="k">topics:</span> [how-to-request, process, form, roles]
+<span class="k">process_step:</span> [1, 2, 3, 4]
+<span class="k">audience:</span> [engineering, product, commercial]
+<span class="k">status:</span> current
+<span class="k">derived:</span> true   <span class="c"># synthesized from 4 slides</span>
+<span class="k">questions:</span>
+  - I need to tell sellers about a change, what do I do?
+  - I'm launching a feature that changes a seller rule,
+    who do I tell?
+  - I'm changing a shipping, price or category rule,
+    how do I warn sellers?
+  - ¿Cómo aviso a los vendedores de un cambio?
+<span class="k">synonyms:</span> [warn sellers, request, intake, form,
+  solicitud, abrir demanda]
+<span class="k">sources:</span> slides 9, 10, 12, 14 + form recording
+<span class="k">related:</span> [comus-036, comus-041, comus-030, comus-006]</pre>
+        </div>
+        <div class="doc">
+          <span class="crumb">How to request › For engineering, product and commercial</span>
+          <h4>How to request a communication</h4>
+          <p><b>Rule of thumb:</b> if a change affects what the seller pays, sells, sees or has to do, it probably needs a communication. Requests always start with the form.</p>
+          <ol>
+            <li>Fill in the intake form: markets, pre-notice date, rollout date and type of change.</li>
+            <li>Have your sources ready: official policy or table, PRD or ticket, spreadsheets and IDs of existing FAQs or articles.</li>
+            <li>The squad builds the brief, books the dates and shares the roadmap.</li>
+            <li>The squad produces the content and reviews it in the team channel.</li>
+            <li>Feedback is consolidated in one place, and the final version records what changed.</li>
+            <li>The communication is scheduled and checked after publishing.</li>
+          </ol>
+          <p><b>What speeds it up:</b> dates already defined, the rule explained as “today it works like this, it will work like that”, and clear exceptions.</p>
+          <p><b>How long it takes:</b> no formal SLA, but about 7 days and 2 rounds on average. Ask well ahead of the pre-notice date.</p>
+          <p class="src">Source: deck, slides 9 to 14, and the form recording</p>
+        </div>
+      </div>
+
       <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
         <h2 style="font-size: clamp(24px, 3vw, 32px);">Precision safeguards</h2>
         <p>The risk with a knowledge base is an assistant that sounds sure about the wrong thing. These rules prevent it.</p>
@@ -440,6 +486,28 @@
           </tbody>
         </table>
       </div>
+
+      <div class="sec-head" style="margin-top: 40px; margin-bottom: 16px;">
+        <h2 style="font-size: clamp(20px, 2.4vw, 26px);">Retrieval test, sample of the run</h2>
+        <p>Questions as people typed them, in Portuguese or Spanish, translated here. Each one lists the chunks that came back in the top 3. The expected chunk is in bold.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="checks">
+          <thead><tr><th scope="col">Question</th><th scope="col">Top 3 retrieved</th><th scope="col">Hit</th></tr></thead>
+          <tbody>
+            <tr><td>“I’m changing a shipping rule in the app, how do I tell sellers?”</td><td class="mono"><b>002</b> · 012 · 015</td><td>✓</td></tr>
+            <tr><td>“What do I need to send the squad before requesting a communication?”</td><td class="mono">001 · <b>002</b> · <b>006</b></td><td>✓</td></tr>
+            <tr><td>“Difference between pre-notice and rollout”</td><td class="mono"><b>020</b> · 014 · 061</td><td>✓</td></tr>
+            <tr><td>“What’s the squad’s SLA?”</td><td class="mono"><b>095</b> · <b>099</b> · 002</td><td>✓</td></tr>
+            <tr><td>“What’s the minimum supermarket price in Chile?”</td><td class="mono">093 · <b>062</b> · 060</td><td>✓</td></tr>
+            <tr><td>“¿Cómo pido una comunicación para vendedores?”</td><td class="mono"><b>002</b> · 015 · 051</td><td>✓</td></tr>
+            <tr><td>“How many days ahead do I request an FAQ?”</td><td class="mono"><b>006</b> · <b>099</b> · 020</td><td>✓</td></tr>
+            <tr><td>“Who do I talk to if I get lost?”</td><td class="mono"><b>095</b> · 002 · 001</td><td>✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="output" style="margin-top: 12px;"><b>Total:</b> hit@3 of 22 out of 22. The SLA and price questions are traps: the right answers are the chunk that says “not defined” and a chunk tagged as a dated example, not a current rule.</p>
+
       <div class="prose" style="margin-top: 24px;">
         <p>A build script validates the schema and regenerates the ingestion file after every edit, and the 22 test questions ship with the knowledge base so the retrieval check can be re-run on any setup. A maintenance log lists 6 inconsistencies found in the source, such as conflicting dates and different market coverage between the intake form and the templates, to resolve before launch.</p>
         <p><b>Status:</b> built and tested offline, not deployed yet.</p>
@@ -453,7 +521,7 @@
       <div class="sec-head">
         <p class="eyebrow">Microlearning and assessment</p>
         <h2 id="unit-h">A five-minute unit for engineers, built from the knowledge base</h2>
-        <p>This shows how I turn the same source into microlearning with an assessment for a technical audience. Every fact in it comes from the knowledge base above.</p>
+        <p>This shows how I turn the same source into microlearning with an assessment for a technical audience. Every fact in it comes from the knowledge base above, mainly the chunks on how to request (002), timings (006), formats (011), pre-notice and rollout (020) and the intake form (041).</p>
         <p><span class="concept-note">Sample unit · designed for this portfolio, not yet run with learners</span></p>
       </div>
 
