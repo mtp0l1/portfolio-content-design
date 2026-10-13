@@ -315,3 +315,8 @@ footer p { max-width: var(--measure); }
 
 .contact { align-self: start; }
 .about h2 { line-height: 1.05; }
+.case-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.case-card h3 { font-size: 24px; }
+.mini-chunk { margin: 0; width: 100%; max-width: 320px; background: var(--device); color: #E9ECE6; border-radius: 8px; padding: 14px 16px; font-family: var(--f-mono); font-size: 12px; line-height: 1.6; overflow: hidden; white-space: pre; }
+.mini-chunk span { color: #FFDF2E; }
+@media (max-width: 720px) { .case-grid { grid-template-columns: minmax(0, 1fr); } }

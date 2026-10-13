@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Squad de Comus</title>
+<meta name="description" content="Content operations and AI enablement case study by Matheus Policarpo: a four-stage process, three custom GPT assistants and a retrieval-ready knowledge base that let designers produce seller communications at Mercado Libre.">
+<meta name="author" content="Matheus Policarpo">
+<meta name="keywords" content="AI Content Strategist, Content Operations, Content Strategy, AI Enablement, Custom GPT, Retrieval-Augmented Generation, RAG, Knowledge Base, Content Model, Metadata Schema, Taxonomy, Controlled Vocabulary, Structured Content, Prompt Design, Evaluation, Retrieval Testing, Onboarding, Training, Change Management, Stakeholder Management">
+<meta property="og:title" content="Squad de Comus · Content operations and AI enablement">
+<meta property="og:description" content="A process, three AI assistants and a retrieval-ready knowledge base for seller communications.">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Squad de Comus: content operations and AI enablement",
+  "about": "Content operations, AI assistants, retrieval-augmented knowledge base and team enablement for seller communications",
+  "inLanguage": "en",
+  "dateCreated": "2026",
+  "keywords": "content operations, AI enablement, custom GPT, RAG, knowledge base, metadata schema, controlled vocabulary, retrieval testing, onboarding, training, retrospective",
+  "author": {"@type": "Person", "name": "Matheus Policarpo"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.numbers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--fg); margin-top: clamp(36px, 5vw, 56px); }
+.numbers div { padding: 16px 18px 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
+.numbers b { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 40px); line-height: 1; font-variant-numeric: tabular-nums; }
+.numbers span { font-size: 14.5px; color: var(--muted); line-height: 1.4; }
+.process { min-width: 820px; }
+.process td:first-child { font-weight: 700; white-space: nowrap; }
+.results { min-width: 560px; }
+.results td:nth-child(3) { font-weight: 700; }
+.checks { min-width: 620px; }
+.chunk { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.chunk > div { min-width: 0; }
+.chunk pre { margin: 0; padding: 18px 16px; overflow-x: auto; font-family: var(--f-mono); font-size: 12.5px; line-height: 1.6; background: var(--device); color: #E9ECE6; height: 100%; }
+.chunk .k { color: #FFDF2E; }
+.chunk .c { color: #8C949B; }
+.chunk .doc { padding: 18px 20px; background: var(--surface); display: grid; gap: 10px; align-content: start; font-size: 15px; }
+.chunk .doc .crumb { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.chunk .doc h4 { margin: 0; font-family: var(--f-display); font-size: 18px; font-weight: 750; }
+.chunk .doc ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.chunk .doc .src { font-size: 13px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; }
+.plan-note { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--warn); }
+@media (max-width: 900px) { .numbers { grid-template-columns: repeat(2, minmax(0, 1fr)); } .chunk { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="name" href="/">Matheus Policarpo</a>
+    <nav aria-label="Sections">
+      <a href="/">All work</a>
+      <a href="#context">Context</a>
+      <a href="#solution">Solution</a>
+      <a href="#enablement">Enablement</a>
+      <a href="#results">Results</a>
+      <a href="#rag">Knowledge base</a>
+      <a href="#fit">Role fit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Content operations and AI enablement · Mercado Libre · 2026</p>
+      <h1>Squad de <span>Comus</span></h1>
+      <p class="lede" style="max-width: 60ch;">I designed a repeatable process and three AI assistants that let UX designers produce seller communications, like emails, news posts, FAQs and help articles, without depending on a few experts. I trained the team, measured adoption in a retrospective, and then restructured the same material into a retrieval-ready knowledge base so engineers, product and commercial teams can get answers from it too.</p>
+      <p style="margin-top: 20px;"><span class="disclaimer">Anonymized version. Internal names and tools are removed, and figures are approximate.</span></p>
+
+      <div class="numbers">
+        <div><b>10 → 7</b><span>days of average delivery per communication</span></div>
+        <div><b>80%</b><span>fewer errors reaching publishing</span></div>
+        <div><b>3</b><span>custom GPT assistants grounded in a curated knowledge base</span></div>
+        <div><b>6</b><span>teammates trained in two workshops, 5 now produce on their own</span></div>
+        <div><b>4</b><span>process stages, each with a definition of done</span></div>
+        <div><b>39</b><span>retrieval-ready chunks with a 19-field metadata schema</span></div>
+        <div><b>22 / 22</b><span>test questions retrieved the right chunk in the top 3</span></div>
+        <div><b>70%+</b><span>of communications now go through the process</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEXT -->
+  <section id="context" aria-labelledby="context-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Context and audience</p>
+        <h2 id="context-h">Knowledge lived in “who knows”, not in the process</h2>
+        <p>UX designers wrote communications for sellers, working with Product and Commercial stakeholders. The end audience was the sellers themselves.</p>
+      </div>
+      <div class="two">
+        <article class="moment">
+          <span class="tag">The learning curve</span>
+          <h3>Every designer started from zero</h3>
+          <p>Any UX designer needed time to learn how to produce a communication end to end. The know-how sat with a few people, so every new request depended on them.</p>
+        </article>
+        <article class="moment">
+          <span class="tag">The cost</span>
+          <h3>Back and forth, and errors in production</h3>
+          <p>Each request took several rounds to collect missing information. With no checking step, dates, links and rules could go wrong and reach sellers that way.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section aria-labelledby="obj-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Enablement objectives</p>
+        <h2 id="obj-h">What a designer can do after onboarding</h2>
+        <p>Each objective maps to one stage of the process, and each stage has a definition of done that works as its assessment criterion.</p>
+      </div>
+      <div class="steps3" style="max-width: 860px;">
+        <div><span class="n">1</span><p>Turn a stakeholder request into a complete brief, using the intake form and the brief assistant.</p></div>
+        <div><span class="n">2</span><p>Choose the right format, email or news post, FAQ or article, with the decision rules.</p></div>
+        <div><span class="n">3</span><p>Tell a pre-notice communication from a rollout communication, and write each one correctly.</p></div>
+        <div><span class="n">4</span><p>Produce the content with the content assistant and document it for review.</p></div>
+        <div><span class="n">5</span><p>Validate, publish and check the live communication: links, dates, numbers and language adaptation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution" aria-labelledby="sol-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Solution</p>
+        <h2 id="sol-h">A process, decision rules, a knowledge base and three assistants</h2>
+        <p>Four stages take a request from intake to a checked, live communication. Every stage ends with a definition of done, so “finished” means the same thing for everyone.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="process">
+          <thead><tr><th scope="col">Stage</th><th scope="col">Goal</th><th scope="col">Tools</th><th scope="col">Definition of done</th></tr></thead>
+          <tbody>
+            <tr><td>1. Brief and plan</td><td>Turn a request into a brief ready for execution</td><td>Intake form, brief assistant, shared calendar, onboarding assistant</td><td>Dates agreed and in the calendar, brief complete, roadmap shared with stakeholders</td></tr>
+            <tr><td>2. Create</td><td>Write quality content in the right format</td><td>Content assistant, docs or design tool</td><td>Reviewed in the team channel and approved</td></tr>
+            <tr><td>3. Validate and iterate</td><td>Consolidate feedback and close the final version with a change history</td><td>Centralized review in the team channel, documentation, content assistant</td><td>The approved version is fully reflected in the final document, with no context gaps</td></tr>
+            <tr><td>4. Publish and check</td><td>Go live in the right channel and confirm it is correct after publishing</td><td>Publishing platforms, onboarding assistant with checklist</td><td>Links, dates, numbers and language adaptation consistent, content scheduled correctly</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">Format decision rules</h2>
+        <p>Choosing a format stopped being a matter of opinion. One rule per situation, and a required structure per format.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="rules">
+          <thead><tr><th scope="col">When the change is</th><th scope="col">Use</th><th scope="col">It must answer</th></tr></thead>
+          <tbody>
+            <tr><td>Dated and needs fast notice</td><td><b>Email or news post</b></td><td>What changed and when, who is affected, what to do</td></tr>
+            <tr><td>A question that will keep coming back</td><td><b>FAQ</b></td><td>A direct question, an objective answer, rules and exceptions, references</td></tr>
+            <tr><td>Something that needs step by step teaching</td><td><b>Article</b></td><td>A structured how-to with examples and references</td></tr>
+            <tr><td>A big change</td><td><b>Email or news post, plus FAQ or article</b></td><td>Fast notice now, and an explanation people can come back to</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">Three assistants, one source of truth</h2>
+        <p>I built them as custom GPTs grounded in a curated knowledge base of rules, formats, examples and the process. They answer from those documents, so their output follows the documented rule. It is a retrieval-augmented setup using custom GPT knowledge files, not a custom pipeline.</p>
+      </div>
+      <div class="tri">
+        <div><h3>Onboarding assistant</h3><p>Guides new designers through the process and runs the checklist before and after publishing.</p></div>
+        <div><h3>Brief assistant</h3><p>Turns a stakeholder request into a complete brief and flags the information still missing.</p></div>
+        <div><h3>Content assistant</h3><p>Produces the content in the chosen format, following its required structure and the market’s language.</p></div>
+      </div>
+      <p class="output" style="margin-top: 16px;"><b>Adoption:</b> most of the team used them, in over 70% of communications.</p>
+    </div>
+  </section>
+
+  <!-- PRECISION -->
+  <section aria-labelledby="prec-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">From complex to precise</p>
+        <h2 id="prec-h">Five moves that made complex material precise</h2>
+        <p>Several formats, several publishing platforms, rules with exceptions, dates, and language adaptation across markets. This is how it became something a new designer, and an assistant, could follow.</p>
+      </div>
+      <dl class="open-list">
+        <div><dt>Stages with a definition of done</dt><dd>The work split into four stages, each with an explicit exit criterion.</dd></div>
+        <div><dt>One decision rule per format</dt><dd>Format choice became a rule anyone can apply, instead of a judgment call.</dd></div>
+        <div><dt>A required structure per format</dt><dd>Every communication of the same type answers the same questions in the same order.</dd></div>
+        <div><dt>Rules in a knowledge base</dt><dd>Rules, exceptions and examples live where the assistants consult them, so answers follow the documented rule.</dd></div>
+        <div><dt>Sources and checks</dt><dd>Every data point and link needs a source, and every piece is checked before and after publishing.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- WORKED EXAMPLE -->
+  <section aria-labelledby="ex-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Worked example, anonymized</p>
+        <h2 id="ex-h">One brief, four pieces, two review rounds</h2>
+        <p>A change moved a group of product categories into a new store area of the marketplace, written in Spanish for a Spanish-speaking market.</p>
+      </div>
+      <div class="split">
+        <div>
+          <h4>What the brief covered</h4>
+          <p>What we will do and what it means for the seller. Today versus after the change: location, shipping cost, visibility and the action the seller must take. The target sellers and two dates, pre-notice and rollout. The experience objective: the seller reviews and adjusts their listings before the rollout. And what to say in each phase.</p>
+          <h4 style="margin-top: 8px;">The content set</h4>
+          <p>A pre-notice news post, a pre-notice FAQ, an evergreen rollout FAQ and an update to the category list.</p>
+        </div>
+        <div>
+          <h4>Precision decisions</h4>
+          <p>Scoped the shipping saving to the price range where it applies, and said so in every piece.</p>
+          <p>Stated clearly what did not change: the sales commission.</p>
+          <p>Framed the message around being more competitive, not around raising prices.</p>
+          <p>Listed the requirements to sell in the new area, so sellers could check their own listings.</p>
+        </div>
+      </div>
+      <p class="output" style="margin-top: 16px;"><b>Outcome:</b> the full set was approved in 2 review rounds.</p>
+    </div>
+  </section>
+
+  <!-- ENABLEMENT -->
+  <section id="enablement" aria-labelledby="en-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Training and evaluation</p>
+        <h2 id="en-h">Teach it, then measure whether it stuck</h2>
+      </div>
+      <div class="split">
+        <div>
+          <h4>Training</h4>
+          <p>I ran a hands-on workshop with four teammates, then a second one with two more. Six people in total. Afterwards, 5 of the 6 produced a communication on their own.</p>
+        </div>
+        <div>
+          <h4>Evaluation</h4>
+          <p>I ran a structured retrospective, adapted to the squad’s tools and process, to measure adoption, perceived usefulness, autonomy and blockers. Every finding became an action with a success criterion, an owner and a deadline.</p>
+          <p>The first round had 4 participants and defined 1 action, which was completed.</p>
+        </div>
+      </div>
+
+      <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">The retrospective questions</h2>
+        <p>The flow went from check-in, to what is working, to where we are stuck, to what we will change. People grouped similar points, named each group and voted with two votes each.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="rubric">
+          <thead><tr><th scope="col">Question</th><th scope="col">What it measures</th></tr></thead>
+          <tbody>
+            <tr><td>Which tool or stage did you actually use, and when did it help?</td><td>Adoption</td></tr>
+            <tr><td>What got faster, clearer or safer?</td><td>Perceived usefulness</td></tr>
+            <tr><td>Which tools are not being used, and why?</td><td>Blockers</td></tr>
+            <tr><td>Which stages raise the most questions, and are they problems of guidance or of process?</td><td>Blockers, by root cause</td></tr>
+            <tr><td>What can people already do on their own?</td><td>Autonomy</td></tr>
+            <tr><td>Which part should stay as it is?</td><td>What to protect</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" aria-labelledby="res-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Results</p>
+        <h2 id="res-h">Faster, with fewer errors reaching sellers</h2>
+        <p>Figures are approximate, since exact data is confidential. Quality is held in place by the definition of done at each stage and the checks before and after publishing.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="results">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Delivery time per communication</td><td>10 days</td><td>7 days</td></tr>
+            <tr><td>Rounds of back and forth per request</td><td>Several</td><td>2</td></tr>
+            <tr><td>Errors found after publishing (links, dates, numbers)</td><td>5 per month</td><td>1 per month</td></tr>
+            <tr><td>Approved on first review</td><td>40%</td><td>Over 70%</td></tr>
+            <tr><td>Communications through the process</td><td>n/a</td><td>Over 70%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAG -->
+  <section id="rag" aria-labelledby="rag-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Knowledge base for non-content roles</p>
+        <h2 id="rag-h">The same material, restructured for retrieval</h2>
+        <p>Engineers, product managers and commercial teams need different answers from the same material: how to request a communication, what to send, which format fits and when it goes live. I restructured the source into a knowledge base for a retrieval-augmented assistant that answers them.</p>
+      </div>
+      <div class="prose" style="margin-bottom: 28px;">
+        <p><b>Source material.</b> A 19-slide deck with screen recordings, plus three whiteboards: the templates, a full worked case and the retrospective. I extracted everything, including tables, links embedded in text, screenshots of briefs, and the screen recordings of the intake form fields and the assistants’ demos.</p>
+        <p><b>Structure.</b> 39 chunks, one topic each, of about 140 to 460 words, so each one answers a question on its own. Every chunk opens with a breadcrumb and closes with its source. Together they cover how to request a communication, reference timings, formats and channels, pre-notice and rollout, the four stages, tools, templates, worked cases, the retrospective, a glossary, contacts and limits.</p>
+        <p><b>Tagging.</b> Each chunk carries a 19-field metadata schema with a controlled vocabulary: document type, topic, format, process stage, phase, market, audience and status, among others. Two fields exist only for retrieval: the questions the chunk answers, written the way a non-expert would ask them, and synonyms in Portuguese and Spanish, because the source mixes both languages. Both go into the embedded text, and the synonyms let keyword search match acronyms and local terms.</p>
+      </div>
+
+      <div class="chunk">
+        <div>
+<pre><span class="c"># chunk front matter (excerpt, translated)</span>
+<span class="k">id:</span> comus-011
+<span class="k">title:</span> Which communication format to use
+<span class="k">doc_type:</span> guide
+<span class="k">topics:</span> [formats, email, news, faq, article]
+<span class="k">process_step:</span> [1]
+<span class="k">markets:</span> [all]
+<span class="k">audience:</span> [all]
+<span class="k">status:</span> current
+<span class="k">derived:</span> false
+<span class="k">questions:</span>
+  - Which format should I use to announce a change?
+  - When do I use email, news, FAQ or article?
+  - The change is big, do I need more than one format?
+<span class="k">synonyms:</span> [choose format, decision tree,
+  árbol de decisión, novedad, nota, e-mail]
+<span class="k">sources:</span> slides 5 and 6
+<span class="k">related:</span> [comus-012, comus-013, comus-014, comus-020]
+<span class="k">data_as_of:</span> Q1/26</pre>
+        </div>
+        <div class="doc">
+          <span class="crumb">Channels and formats › When to use each format</span>
+          <h4>Which communication format to use</h4>
+          <ol>
+            <li>Dated change that needs fast notice: email or news post.</li>
+            <li>A question that will keep coming back: FAQ.</li>
+            <li>Needs step by step teaching: article.</li>
+            <li>Big change: email or news post, plus FAQ or article.</li>
+          </ol>
+          <p>Timing also matters: before the change (pre-notice) or when it goes live (rollout). See comus-020.</p>
+          <p class="src">Source: deck, slides 5 and 6</p>
+        </div>
+      </div>
+
+      <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">Precision safeguards</h2>
+        <p>The risk with a knowledge base is an assistant that sounds sure about the wrong thing. These rules prevent it.</p>
+      </div>
+      <dl class="open-list">
+        <div><dt>Examples stay examples</dt><dd>Worked cases are tagged as examples, so the assistant never presents one market’s prices or dates as current rules.</dd></div>
+        <div><dt>Known gaps are documented</dt><dd>One chunk lists what the documentation does not define, like formal service levels or a formal approver, so the assistant says “not defined” instead of inventing an answer.</dd></div>
+        <div><dt>Synthesis is flagged</dt><dd>A field separates chunks that synthesize guidance from several sources from chunks that transcribe one.</dd></div>
+        <div><dt>Every chunk is traceable</dt><dd>Each one points to the slide or section it came from.</dd></div>
+        <div><dt>The system prompt enforces it</dt><dd>The assistant answers only from retrieved chunks, flags example values, starts with the practical action and cites the chunk it used.</dd></div>
+      </dl>
+
+      <div class="sec-head" style="margin-top: 48px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">Quality checks</h2>
+        <p>The test questions are written in the voice of the people who will ask them, like “I’m changing a shipping rule in the app, how do I tell sellers?”</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="checks">
+          <thead><tr><th scope="col">Check</th><th scope="col">Result</th></tr></thead>
+          <tbody>
+            <tr><td>Schema validation: required fields, vocabulary, cross-references, chunk size</td><td>39 of 39 chunks pass</td></tr>
+            <tr><td>Published seller texts in the worked case, checked word for word against the source</td><td>3 of 3 match</td></tr>
+            <tr><td>Retrieval test: 22 questions in the voice of engineers, product managers and commercial teams</td><td>Right chunk in the top 3 for 22 of 22, with a simple keyword baseline (TF-IDF) before embeddings</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prose" style="margin-top: 24px;">
+        <p>A build script validates the schema and regenerates the ingestion file after every edit, and the 22 test questions ship with the knowledge base so the retrieval check can be re-run on any setup. A maintenance log lists 6 inconsistencies found in the source, such as conflicting dates and different market coverage between the intake form and the templates, to resolve before launch.</p>
+        <p><b>Status:</b> built and tested offline, not deployed yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADAPTATION -->
+  <section aria-labelledby="ad-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How I would adapt it</p>
+        <h2 id="ad-h">Same backbone, for a technical audience</h2>
+        <p>This case enabled designers, and the knowledge base already applies step 3 to this material. The rest is a plan, not a delivered result.</p>
+      </div>
+      <p class="plan-note" style="margin-bottom: 12px;">Plan</p>
+      <div class="steps3" style="max-width: 920px;">
+        <div><span class="n">1</span><p><b>Audience and job.</b> Define the role and the task, for example a sales engineer running a customer demo.</p></div>
+        <div><span class="n">2</span><p><b>Objectives.</b> One observable objective per unit, like “configure X” or “explain Y to a customer in two minutes”.</p></div>
+        <div><span class="n">3</span><p><b>Source material.</b> Work with subject matter experts to turn specs into precise steps, examples and common mistakes, and structure it as a tagged knowledge base for a retrieval-augmented assistant.</p></div>
+        <div><span class="n">4</span><p><b>Format.</b> Microlearning units of five to seven minutes, each with a scenario and a practice step.</p></div>
+        <div><span class="n">5</span><p><b>Assessment.</b> Scenario questions plus a short task checked against a rubric, with the pass criterion set before launch.</p></div>
+        <div><span class="n">6</span><p><b>Evaluation.</b> Four levels: reaction, learning, behavior on the job and business results.</p></div>
+        <div><span class="n">7</span><p><b>Metrics.</b> Completion, assessment score, time to competence, support questions and quality of the output.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLE FIT -->
+  <section id="fit" aria-labelledby="fit-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Role fit</p>
+        <h2 id="fit-h">How this case maps to the Sr. AI Content Strategist role</h2>
+      </div>
+      <div class="tbl-wrap">
+        <table class="fit">
+          <thead><tr><th scope="col">The role asks for</th><th scope="col">Evidence in this case</th></tr></thead>
+          <tbody>
+            <tr><td>Content models, taxonomy and modular frameworks for tagging, reuse and scale</td><td>39 single-topic chunks with a 19-field schema and a controlled vocabulary</td></tr>
+            <tr><td>Structure content for immediate usability and AI-readiness</td><td>The same material serves designers through a process and non-content roles through retrieval</td></tr>
+            <tr><td>Large-scale content restructuring or migration</td><td>A deck, three whiteboards and screen recordings consolidated into one validated knowledge base</td></tr>
+            <tr><td>Hands-on work with LLMs and prompt design</td><td>Three custom GPT assistants and a system prompt that enforces grounded, cited answers</td></tr>
+            <tr><td>Evaluation criteria and quality benchmarks for generated content</td><td>Schema validation, word-for-word checks and a 22-question retrieval test that can be re-run</td></tr>
+            <tr><td>Repeatable frameworks, patterns and documentation</td><td>Four-stage process with definitions of done, format rules and required structures</td></tr>
+            <tr><td>Enable product, design and PM teams to work independently</td><td>Six designers trained, five producing on their own, plus a knowledge base for engineers and PMs</td></tr>
+            <tr><td>Change management and stakeholder partnership</td><td>Workshops, a structured retrospective and actions with owners, deadlines and success criteria</td></tr>
+            <tr><td>Onboarding journeys</td><td>Enablement objectives and an onboarding assistant for new designers joining the process</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Anonymized portfolio version by Matheus Policarpo. Colleague names are confidential, internal links and tool names are removed, and figures are approximate. <a href="/">See all work</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
