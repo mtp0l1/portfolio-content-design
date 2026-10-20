@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Food Cart Migration</title>
+<meta name="description" content="Product design case study by Matheus Policarpo: moving the Mercado Libre Food cart onto the marketplace cart, with 17 use cases sorted into reuse, keep and create, and one rule for combining free shipping with a minimum purchase.">
+<meta name="author" content="Matheus Policarpo">
+<meta name="keywords" content="Product Design, UX Design, Product Designer, E-commerce, Cart, Checkout, Design Handoff, Use Cases, User Flows, Mobile App, Food Delivery, Design Systems, Interaction Design">
+<meta property="og:title" content="Food Cart Migration · Product design case study">
+<meta property="og:description" content="17 use cases, a reuse-first classification and one rule for combining free shipping with a minimum purchase.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portfolio-content-design.vercel.app/food-cart-migration.html">
+<meta property="og:site_name" content="Matheus Policarpo">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://portfolio-content-design.vercel.app/og-food-cart-migration.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Food cart migration: product design case study by Matheus Policarpo">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-content-design.vercel.app/food-cart-migration.html">
+<link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/food-cart-migration.html">
+<link rel="alternate" hreflang="pt-BR" href="https://portfolio-content-design.vercel.app/pt/food-cart-migration.html">
+<link rel="alternate" hreflang="x-default" href="https://portfolio-content-design.vercel.app/food-cart-migration.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Food cart migration: product design case study",
+  "about": "Product design for moving a food delivery cart onto a marketplace cart: use cases, reuse decisions and a combined rule for free shipping and minimum purchase",
+  "inLanguage": "en",
+  "dateCreated": "2026",
+  "keywords": "product design, UX design, cart, checkout, handoff, use cases, user flows, mobile app, design systems",
+  "author": {"@type": "Person", "name": "Matheus Policarpo"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.numbers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--fg); margin-top: clamp(36px, 5vw, 56px); }
+.numbers div { padding: 16px 18px 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
+.numbers b { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 40px); line-height: 1; font-variant-numeric: tabular-nums; }
+.numbers span { font-size: 14.5px; color: var(--muted); line-height: 1.4; }
+.terms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; margin: 28px 0 0; max-width: 960px; border-top: 1px solid var(--line); }
+.terms div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.terms dt { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .04em; color: var(--muted); padding-top: 2px; }
+.terms dd { margin: 0; font-size: 15.5px; line-height: 1.45; }
+.decision { display: grid; gap: 14px; margin-top: clamp(44px, 6vw, 72px); }
+.decision h3 { font-size: clamp(22px, 2.6vw, 29px); font-weight: 780; font-stretch: 104%; line-height: 1.15; max-width: 34ch; }
+.decision p { max-width: var(--measure); }
+.decision .crit { margin-bottom: -6px; }
+.shots { display: grid; gap: 24px; margin-top: 12px; }
+.shot { display: grid; gap: 10px; margin: 0; justify-items: stretch; }
+.shot .frame { background: #F3F3F5; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; justify-content: center; }
+.shot img { display: block; width: auto; max-width: 100%; height: auto; }
+.shot figcaption { max-width: none; font-size: 14px; }
+.labels { min-width: 600px; }
+.labels th[scope="row"] { white-space: nowrap; }
+.thr { min-width: 720px; }
+.thr th[scope="row"] { white-space: nowrap; }
+.cases { min-width: 860px; }
+.cases td:first-child { font-family: var(--f-mono); font-size: 13px; color: var(--muted); width: 44px; }
+.cases td:nth-child(2) { min-width: 190px; font-weight: 700; }
+.cases .label { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); white-space: nowrap; }
+.cases .label.new { color: var(--warn); }
+@media (max-width: 900px) { .numbers { grid-template-columns: repeat(2, minmax(0, 1fr)); } .terms { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 720px) {
+  .shot .frame { overflow-x: auto; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
+  .shot img { max-width: none; }
+  .terms div { grid-template-columns: 110px minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="name" href="/">Matheus Policarpo</a>
+    <nav aria-label="Sections">
+      <a href="/">All work</a>
+      <a href="#context">Context</a>
+      <a href="#approach">Approach</a>
+      <a href="#decisions">Decisions</a>
+      <a href="#shipping">Shipping rule</a>
+      <a href="#cases">17 cases</a>
+      <a href="#learned">Takeaways</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <span aria-current="true">EN</span>
+      <a href="/pt/food-cart-migration.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português (Brasil)">PT</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Product design case study · Mercado Libre · 2026</p>
+      <h1>Food cart <span>migration</span></h1>
+      <p class="lede" style="max-width: 60ch;">Mercado Libre’s Food cart was moving onto the marketplace cart. I mapped every behavior a cart has to support, decided case by case what to reuse, keep or create, and wrote it up as 17 use cases and one rule for combining free shipping with a minimum purchase.</p>
+      <p style="margin-top: 20px;"><span class="disclaimer">Reduced version of a handoff file. Prices in the screens are placeholders.</span></p>
+
+      <div class="numbers">
+        <div><b>17</b><span>use cases mapped, plus one combined rule</span></div>
+        <div><b>5</b><span>start from how the Food cart works today</span></div>
+        <div><b>10</b><span>reuse the marketplace cart with no change</span></div>
+        <div><b>1</b><span>new behavior: identical kits share one row</span></div>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Goal</dt><dd>Move Food onto the marketplace cart without losing what Food needs</dd></div>
+        <div><dt>Scope</dt><dd>17 use cases and one combined rule</dd></div>
+        <div><dt>Platform</dt><dd>Mobile app</dd></div>
+        <div><dt>Market</dt><dd>Argentina, in Spanish</dd></div>
+        <div><dt>My role</dt><dd>Product design: use cases, flows and rules for handoff</dd></div>
+        <div><dt>Tools</dt><dd>Figma</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section id="context" aria-labelledby="context-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Context</p>
+        <h2 id="context-h">Reuse the marketplace cart, keep what is specific to Food</h2>
+        <p>Food had its own cart. Moving it onto the marketplace cart meant deciding, for each behavior, whether the marketplace version already did the job.</p>
+      </div>
+      <div class="prose">
+        <p>Most of a cart is shared behavior: select items, change quantity, remove, show discounts and free shipping. Food has a few behaviors of its own: kits with choices set on the product page, a minimum purchase per store and a service fee in the price box.</p>
+        <p>The handoff had to be clear about both sides, so engineering knew what to build, what to reuse as it is and what to leave alone.</p>
+      </div>
+      <dl class="terms">
+        <div><dt>Kit</dt><dd>An item with choices to configure, such as a combo with a side and a drink.</dd></div>
+        <div><dt>A2C</dt><dd>Add to cart.</dd></div>
+        <div><dt>Awareness A2C</dt><dd>The footer that appears after adding an item, with the cart count and the progress toward free shipping.</dd></div>
+        <div><dt>VPP</dt><dd>The product page, where a kit is configured.</dd></div>
+        <div><dt>VSP</dt><dd>The store page.</dd></div>
+        <div><dt>MPV</dt><dd>The minimum purchase a store requires.</dd></div>
+        <div><dt>FS</dt><dd>Free shipping, which starts at a threshold.</dd></div>
+        <div><dt>Pricebox</dt><dd>The block of amounts in the cart: products, shipping, service fee and total.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="approach" aria-labelledby="approach-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Approach</p>
+        <h2 id="approach-h">Every use case gets one of four labels</h2>
+        <p>I split the cart into 17 use cases and labeled how each one gets solved. The label tells engineering what to build and what to leave alone.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="labels">
+          <thead><tr><th scope="col">Label</th><th scope="col">What it means</th><th scope="col">Cases</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Current</th><td>Food keeps the behavior it has today.</td><td>4</td></tr>
+            <tr><th scope="row">Current + capability</th><td>Starts from how Food works today and swaps in a component from the marketplace cart.</td><td>1, 2 and 5</td></tr>
+            <tr><th scope="row">Capability</th><td>Uses the marketplace cart behavior, in most cases exactly as it is.</td><td>3, 6 and 8 to 17</td></tr>
+            <tr><th scope="row">Current + new</th><td>Keeps today’s behavior and adds one new rule.</td><td>7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 16px; font-size: 14.5px; color: var(--muted); max-width: var(--measure);">The full list, with the scenario and the solution for each case, is in the last section.</p>
+    </div>
+  </section>
+
+  <section id="decisions" aria-labelledby="decisions-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Decisions</p>
+        <h2 id="decisions-h">Where Food needed more than a reuse</h2>
+        <p>Every add flow starts from the same three entry points: the Food home, the store page and organic search. From there, four cases needed a real decision.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="frame"><img src="food-entry-points.png" alt="Three mobile screens: the Food home with restaurants and offers, a store page with an add-to-cart footer, and organic search results" loading="lazy" width="1220" height="936"></div>
+          <figcaption><b>Entry points</b>Food home, store page (VSP) and organic search.</figcaption>
+        </figure>
+      </div>
+
+      <div class="decision">
+        <span class="crit">Cases 1 and 2</span>
+        <h3>A kit takes one more step than a simple item</h3>
+        <p>A simple item has nothing to configure, so the A2C button adds it straight to the cart. A kit has choices to make, so it still goes through the product page first. Both paths end on the same footer, the Awareness A2C component already used in Supermarket, with the cart count and the progress toward free shipping.</p>
+        <p>On the product page the button already carries the total. In the cart, the choices appear in blue under the kit name, so the combo can be checked at a glance.</p>
+        <div class="shots">
+          <figure class="shot">
+            <div class="frame"><img src="food-kit-flow.png" alt="Three mobile screens: the product page of a burger combo with the Add button showing the total, the store page with the footer showing the cart count and the progress to free shipping, and the cart with the kit choices in blue under the item name" loading="lazy" width="1220" height="936"></div>
+            <figcaption><b>Case 2 · Add a kit</b>Product page, store page with the Awareness A2C footer, and the cart.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="decision">
+        <span class="crit">Case 3</span>
+        <h3>The minimum purchase borrows the Supermarket pattern</h3>
+        <p>When the items don’t reach the store’s minimum, the cart replaces today’s experience with the Supermarket one. An orange banner at the top says how much is missing: <span class="es" lang="es">“Agrega $ 6.910 para alcanzar la compra mínima.”</span> With two or more products, the banner moves below the list header.</p>
+        <p>A modal reinforces it with a single action: add the missing amount at the store.</p>
+        <div class="shots">
+          <figure class="shot">
+            <div class="frame"><img src="food-minimum-purchase.png" alt="Three mobile screens: the cart with one product and an orange banner about the minimum purchase, the cart with two products and the banner moved below the list header, and a modal saying the minimum purchase at the store has not been reached" loading="lazy" width="1284" height="936"></div>
+            <figcaption><b>Case 3 · Minimum purchase</b>Cart with one product, cart with two or more, and the MPV modal.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="decision">
+        <span class="crit">Case 5</span>
+        <h3>Editing a kit: back discards, confirm applies</h3>
+        <p>From a kit’s row, the buyer reopens the product page with the choices already loaded. The variants link from the marketplace cart is reused as the entry point. The rule is explicit: going back leaves the cart untouched, and confirming on the product page applies the changes to the cart.</p>
+        <p>In the example, swapping the side and the drink updates the blue line under the kit name.</p>
+        <div class="shots">
+          <figure class="shot">
+            <div class="frame"><img src="food-modify-kit.png" alt="Three mobile screens: the cart with a kit, the product page with the kit choices selected and an Update button showing the total, and the cart again with the new choices under the kit name" loading="lazy" width="1240" height="1128"></div>
+            <figcaption><b>Case 5 · Modify a kit</b>Cart, product page with the choices preloaded, and the updated cart.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="decision">
+        <span class="crit">Case 7</span>
+        <h3>The same kit twice: one row or two</h3>
+        <p>Adding the same item again raises one question: is it the same customization? If it is different, the cart keeps two separate rows, as Food does today. If it is the same, the two collapse into one row with the quantity, <span class="es" lang="es">“2 u.”</span> This is the only new behavior in the whole handoff.</p>
+        <div class="shots">
+          <figure class="shot">
+            <div class="frame"><img src="food-same-item.png" alt="Three mobile screens: the cart with a kit, the result with a different customization showing two separate rows, and the result with the same customization showing a single row with two units" loading="lazy" width="1284" height="725"></div>
+            <figcaption><b>Case 7 · Same item, twice</b>A different customization keeps two rows. The same customization collapses into one.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="sec-head" style="margin-top: 64px; margin-bottom: 20px;">
+        <h2 style="font-size: clamp(24px, 3vw, 32px);">Smaller calls in the same handoff</h2>
+        <p>These cases follow the marketplace cart or today’s Food cart, with a note on how they look in Food.</p>
+      </div>
+      <dl class="open-list">
+        <div><dt>Service fee (4)</dt><dd>Stays as it is: a row in the price box, with a tooltip that explains what the fee covers.</dd></div>
+        <div><dt>Quantity (8)</dt><dd>The marketplace quantity selector opens a modal with options from 1 to 6 units and a “more than 6” option.</dd></div>
+        <div><dt>Deselect (9)</dt><dd>Each row has a checkbox. With nothing selected, the button loses its counter, the total reads $ 0 and a message asks for at least one product to continue.</dd></div>
+        <div><dt>Paused items (17)</dt><dd>If a seller pauses an item or a kit before the purchase, its row turns gray with a sold-out tag and a link to similar items, and it can’t be selected.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="shipping" aria-labelledby="shipping-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The cross case</p>
+        <h2 id="shipping-h">Two thresholds, one rule</h2>
+        <p>Meli+ free shipping and a store’s minimum purchase are separate thresholds, and either one can be the higher. The handoff shows the three possible setups.</p>
+      </div>
+      <div class="callout" style="margin-bottom: 28px;">
+        <p><b>The rule:</b> only the minimum purchase decides whether the buyer can continue. Free shipping only changes what shipping costs.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="thr">
+          <thead><tr><th scope="col">Setup</th><th scope="col">Reaching the minimum</th><th scope="col">Reaching free shipping</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Free shipping $ 15.000<br>Minimum $ 15.000</th><td>At $ 15.000, the buyer can continue.</td><td>At $ 15.000, shipping is free.</td></tr>
+            <tr><th scope="row">Free shipping $ 15.000<br>Minimum $ 10.000</th><td>At $ 10.000, the buyer can continue and pays for shipping.</td><td>At $ 15.000, shipping becomes free.</td></tr>
+            <tr><th scope="row">Free shipping $ 10.000<br>Minimum $ 15.000</th><td>At $ 15.000, the buyer can continue with free shipping.</td><td>At $ 10.000, shipping is free, but the buyer still can’t continue.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="shots" style="margin-top: 28px;">
+        <figure class="shot">
+          <div class="frame"><img src="food-fs-mpv-1.png" alt="Two mobile screens: the cart before reaching the thresholds, and the cart after reaching free shipping and the minimum purchase at the same time" loading="lazy" width="866" height="724"></div>
+          <figcaption><b>Setup 1 · Same threshold</b>Before the threshold, and after reaching both at once.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="food-fs-mpv-2.png" alt="A mobile screen of the cart after reaching the minimum purchase, with shipping still paid" loading="lazy" width="448" height="581"></div>
+          <figcaption><b>Setup 2 · Minimum first</b>The minimum is reached and the buyer can continue, paying for shipping.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="food-fs-mpv-3.png" alt="Three mobile screens: the cart before the thresholds, the cart after reaching free shipping but not the minimum, and the cart after reaching the minimum with free shipping" loading="lazy" width="1284" height="724"></div>
+          <figcaption><b>Setup 3 · Free shipping first</b>Free shipping alone doesn’t unlock the checkout. The minimum does.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" aria-labelledby="cases-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Reference</p>
+        <h2 id="cases-h">The 17 use cases at a glance</h2>
+        <p>Names are the ones used in the handoff, in Spanish, with a short gloss.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="cases">
+          <thead><tr><th scope="col">#</th><th scope="col">Use case</th><th scope="col">Scenario</th><th scope="col">Label</th><th scope="col">Solution</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><span class="es" lang="es">Agregar ítem simple</span><span class="gloss">Add a simple item</span></td><td>Add an item with no customization straight from the A2C button.</td><td class="label">Current + capability</td><td>Awareness A2C component, the same one used in Supermarket.</td></tr>
+            <tr><td>2</td><td><span class="es" lang="es">Agregar ítem kit</span><span class="gloss">Add a kit</span></td><td>Add an item with customization. It goes through the product page first.</td><td class="label">Current + capability</td><td>Awareness A2C component.</td></tr>
+            <tr><td>3</td><td><span class="es" lang="es">Compra mínima</span><span class="gloss">Minimum purchase</span></td><td>The items in the cart don’t reach the store’s minimum.</td><td class="label">Capability</td><td>Replace today’s experience with the Supermarket one.</td></tr>
+            <tr><td>4</td><td>Service fee</td><td>See the service fee in the cart.</td><td class="label">Current</td><td>A row in the price box, with a tooltip.</td></tr>
+            <tr><td>5</td><td><span class="es" lang="es">Modificar kits</span><span class="gloss">Modify kits</span></td><td>Open the product page to change an item’s customization.</td><td class="label">Current + capability</td><td>Variants link from the marketplace cart. The product page opens with the kits preloaded.</td></tr>
+            <tr><td>6</td><td><span class="es" lang="es">Abrir VPP</span><span class="gloss">Open the product page</span></td><td>Open a fresh product page, with no kits selected, for the same item.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>7</td><td><span class="es" lang="es">Agregar 2 veces el mismo ítem</span><span class="gloss">Add the same item twice</span></td><td>Add a kit with the same or a different customization.</td><td class="label new">Current + new</td><td>Different: separate rows, as today. The same: one row (new).</td></tr>
+            <tr><td>8</td><td><span class="es" lang="es">Cambio de cantidad</span><span class="gloss">Change quantity</span></td><td>Increase or decrease an item’s quantity.</td><td class="label">Capability</td><td>Quantity selector from the marketplace cart.</td></tr>
+            <tr><td>9</td><td><span class="es" lang="es">Deseleccionar productos</span><span class="gloss">Deselect products</span></td><td>Uncheck one item or all of them.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>10</td><td><span class="es" lang="es">Eliminar productos</span><span class="gloss">Remove products</span></td><td>Remove items from the cart.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>11</td><td>Empty</td><td>A cart with no products.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>12</td><td><span class="es" lang="es">Envío gratis Seller</span><span class="gloss">Seller-paid free shipping</span></td><td>Show free shipping paid by the seller.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>13</td><td><span class="es" lang="es">Envío gratis Meli+</span><span class="gloss">Meli+ free shipping</span></td><td>Show free shipping that comes with the subscription.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>14</td><td><span class="es" lang="es">Descuento en productos</span><span class="gloss">Discounted items</span></td><td>Items with a discount in the cart.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>15</td><td><span class="es" lang="es">Edición masiva</span><span class="gloss">Bulk edit</span></td><td>The experience behind the “Modify cart” button.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>16</td><td><span class="es" lang="es">Edición en row</span><span class="gloss">Row edit</span></td><td>Edit actions that appear when swiping a row.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+            <tr><td>17</td><td><span class="es" lang="es">Ítems o kits pausados</span><span class="gloss">Paused items or kits</span></td><td>Products paused by the seller.</td><td class="label">Capability</td><td>Same as the marketplace cart.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="learned" aria-labelledby="learned-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Takeaways</p>
+        <h2 id="learned-h">What this case shows about how I work</h2>
+      </div>
+      <div class="lessons">
+        <div>
+          <h3>Label first, then design</h3>
+          <p>Sorting the 17 cases into current, capability and new made the scope visible. Ten of them needed no design of their own, so the effort could go where Food really differs.</p>
+        </div>
+        <div>
+          <h3>Name the one new thing</h3>
+          <p>Of the 17 cases, only one adds a behavior: identical kits share a row. Calling it out keeps it from getting lost among the reused ones.</p>
+        </div>
+        <div>
+          <h3>State the rule, then show the cases</h3>
+          <p>Free shipping and minimum purchase looked like three different flows. One sentence covers all three: the minimum decides whether the buyer can continue, and free shipping only changes the price of shipping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Screens come from a Mercado Libre handoff file and are shown in a reduced version for this portfolio. Prices shown as $ 00.000 are placeholders. <a href="/">See all work</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
