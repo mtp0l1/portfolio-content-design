@@ -141,7 +141,10 @@
         <h2 id="problem-h">Food had three behaviors the marketplace cart didn’t</h2>
       </div>
       <div class="prose">
-        <p>Most of a cart is shared behavior: pick items, change quantity, remove, show discounts and free shipping. Food adds three of its own: kits with choices set on the product page (a combo with a side and a drink, for example), a minimum purchase per store, and a service fee in the price box.</p>
+        <p>Keeping two carts was costly, and Food missed the new features of the marketplace cart. Most of a cart is shared behavior: pick items, change quantity, remove, show discounts and free shipping. Food adds three of its own: kits with choices set on the product page (a combo with a side and a drink, for example), a minimum purchase per store, and a service fee in the price box.</p>
+        <div class="callout">
+          <p><b>The constraint:</b> the marketplace cart couldn’t change, so every Food need had to fit components that already existed.</p>
+        </div>
         <p>The handoff had to tell engineering, behavior by behavior, what to build, what to reuse as it is and what to leave alone.</p>
       </div>
     </div>
@@ -152,7 +155,7 @@
       <div class="sec-head">
         <p class="eyebrow">Approach</p>
         <h2 id="approach-h">I gave every use case one of four labels</h2>
-        <p>I split the cart into 17 use cases. The label on each one answers the question engineering asks first: build it, reuse it or leave it?</p>
+        <p>I split the cart into 17 use cases and aligned them with product and engineering. The label on each one answers the question engineering asks first: build it, reuse it or leave it?</p>
       </div>
       <div class="tally" role="list">
         <div class="row" role="listitem">
@@ -216,7 +219,7 @@
       <div class="decision">
         <span class="crit">Decision 2</span>
         <h3>The same kit twice: one row or two</h3>
-        <p>Adding the same item again raises one question: is it the same customization? If it is different, the cart keeps two separate rows, as Food does today. If it is the same, the two collapse into one row with the quantity, <span class="es" lang="es">“2 u.”</span></p>
+        <p>Adding the same item again raises one question: is it the same customization? If it is different, the cart keeps two separate rows, as Food does today. If it is the same, the two collapse into one row with the quantity, <span class="es" lang="es">“2 u.”</span> The marketplace cart already groups equal items, and two identical rows made the quantity hard to read.</p>
         <p class="out"><b>What I left out.</b> Only identical kits merge. It is the one new behavior in the whole handoff, so I called it out instead of leaving it among the reused cases.</p>
         <div class="shots">
           <figure class="shot">
@@ -245,20 +248,20 @@
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Result</p>
-        <h2 id="result-h">What the handoff made clear</h2>
+        <h2 id="result-h">What came out of it</h2>
       </div>
       <div class="lessons">
         <div>
-          <h3>Scope you can see</h3>
-          <p>Labeling the 17 cases made the scope visible. Twelve reuse a capability that already exists, so the design effort went to the few places where Food differs.</p>
+          <h3>Used without questions</h3>
+          <p>Engineering used the handoff without open questions.</p>
         </div>
         <div>
-          <h3>One new thing, named</h3>
-          <p>Only one case adds a behavior: identical kits share a row. Calling it out keeps it from getting lost among the reused ones.</p>
+          <h3>A reference for other teams</h3>
+          <p>The handoff became a reference for another vertical.</p>
         </div>
         <div>
-          <h3>One rule, not three flows</h3>
-          <p>Free shipping and minimum purchase looked like three different flows. One sentence covers all three: the minimum decides whether the buyer can continue, and free shipping only changes the price of shipping.</p>
+          <h3>What I’d change</h3>
+          <p>I would test the shipping rule with buyers before the handoff.</p>
         </div>
       </div>
       <p style="margin-top: 28px; max-width: var(--measure);">The full file covers all 17 use cases, and I’m happy to walk through it.</p>

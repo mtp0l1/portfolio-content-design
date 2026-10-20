@@ -138,7 +138,10 @@
 <h2 id="problem-h">O Food tinha três comportamentos que o carrinho do marketplace não tinha</h2>
 </div>
 <div class="prose">
-<p>A maior parte de um carrinho é comportamento compartilhado: escolher itens, mudar a quantidade, remover, mostrar descontos e envio grátis. O Food acrescenta três comportamentos próprios: kits com escolhas feitas na página do produto (um combo com acompanhamento e bebida, por exemplo), uma compra mínima por loja e uma tarifa de serviço no pricebox.</p>
+<p>Manter dois carrinhos saía caro, e o Food ficava de fora das novidades do carrinho do marketplace. A maior parte de um carrinho é comportamento compartilhado: escolher itens, mudar a quantidade, remover, mostrar descontos e envio grátis. O Food acrescenta três comportamentos próprios: kits com escolhas feitas na página do produto (um combo com acompanhamento e bebida, por exemplo), uma compra mínima por loja e uma tarifa de serviço no pricebox.</p>
+<div class="callout">
+<p><b>A restrição:</b> o carrinho do marketplace não podia mudar, então toda necessidade do Food tinha que caber em componentes que já existiam.</p>
+</div>
 <p>O handoff precisava dizer à engenharia, comportamento por comportamento, o que construir, o que reaproveitar como está e o que deixar quieto.</p>
 </div>
 </div>
@@ -148,7 +151,7 @@
 <div class="sec-head">
 <p class="eyebrow">Abordagem</p>
 <h2 id="approach-h">Dei a cada caso de uso um de quatro rótulos</h2>
-<p>Dividi o carrinho em 17 casos de uso. O rótulo de cada um responde à primeira pergunta da engenharia: construir, reaproveitar ou deixar como está?</p>
+<p>Dividi o carrinho em 17 casos de uso e alinhei com produto e engenharia. O rótulo de cada um responde à primeira pergunta da engenharia: construir, reaproveitar ou deixar como está?</p>
 </div>
 <div class="tally" role="list">
 <div class="row" role="listitem">
@@ -209,7 +212,7 @@
 <div class="decision">
 <span class="crit">Decisão 2</span>
 <h3>O mesmo kit duas vezes: uma linha ou duas</h3>
-<p>Adicionar o mesmo item de novo levanta uma pergunta: é a mesma personalização? Se for diferente, o carrinho mantém duas linhas separadas, como o Food faz hoje. Se for igual, as duas viram uma só linha com a quantidade, <span class="es" lang="es">“2 u.”</span></p>
+<p>Adicionar o mesmo item de novo levanta uma pergunta: é a mesma personalização? Se for diferente, o carrinho mantém duas linhas separadas, como o Food faz hoje. Se for igual, as duas viram uma só linha com a quantidade, <span class="es" lang="es">“2 u.”</span> O carrinho do marketplace já agrupa itens iguais, e duas linhas idênticas deixavam a quantidade difícil de ler.</p>
 <p class="out"><b>O que ficou de fora.</b> Só kits idênticos se juntam. É o único comportamento novo em todo o handoff, então destaquei isso em vez de deixá-lo no meio dos casos reaproveitados.</p>
 <div class="shots">
 <figure class="shot">
@@ -236,20 +239,20 @@
 <div class="wrap">
 <div class="sec-head">
 <p class="eyebrow">Resultado</p>
-<h2 id="result-h">O que o handoff deixou claro</h2>
+<h2 id="result-h">O que saiu disso</h2>
 </div>
 <div class="lessons">
 <div>
-<h3>Escopo que dá para ver</h3>
-<p>Rotular os 17 casos deixou o escopo visível. Doze reaproveitam uma capability que já existe, então o esforço de design foi para os poucos pontos em que o Food é diferente.</p>
+<h3>Usado sem dúvidas</h3>
+<p>A engenharia usou o handoff sem dúvidas em aberto.</p>
 </div>
 <div>
-<h3>Uma coisa nova, com nome</h3>
-<p>Só um caso acrescenta um comportamento: kits idênticos dividem uma linha. Destacar isso evita que ele se perca no meio dos reaproveitados.</p>
+<h3>Referência para outros times</h3>
+<p>O handoff virou referência para outra vertical.</p>
 </div>
 <div>
-<h3>Uma regra, não três fluxos</h3>
-<p>Envio grátis e compra mínima pareciam três fluxos diferentes. Uma frase cobre os três: a compra mínima decide se o comprador pode continuar, e o envio grátis só muda o preço do frete.</p>
+<h3>O que eu mudaria</h3>
+<p>Eu testaria a regra de frete com compradores antes do handoff.</p>
 </div>
 </div>
 <p style="margin-top: 28px; max-width: var(--measure);">O arquivo completo cobre os 17 casos de uso, e posso apresentá-lo com calma numa conversa.</p>
