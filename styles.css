@@ -330,3 +330,8 @@ footer p { max-width: var(--measure); }
 @media (max-width: 720px) { .topbar .wrap { gap: 12px; } .topbar .lang { margin-left: auto; } }
 .script .note { font-style: normal; color: var(--muted); }
 .script.cols-2 { min-width: 0; }
+
+/* ---------- four-card grid + screenshot cover ---------- */
+.case-grid { grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
+@media (max-width: 720px) { .case-grid { grid-template-columns: minmax(0, 1fr); } }
+.case-card .cover.shot-cover img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; box-shadow: 0 18px 30px -22px rgba(0, 0, 0, .55); }
