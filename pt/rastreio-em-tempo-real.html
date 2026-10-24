@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rastreio em tempo real · Entregas em minutos</title>
+<meta name="description" content="Case de Content Systems &amp; Service Design de Matheus Policarpo: 9 estados sincronizados entre App, Push e Live Activities, sem ruído.">
+<meta name="author" content="Matheus Policarpo">
+<meta property="og:title" content="Rastreio em tempo real · Entregas em minutos · Case de portfólio">
+<meta property="og:description" content="9 estados sincronizados entre App, Push e Live Activities, sem ruído.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portfolio-content-design.vercel.app/pt/rastreio-em-tempo-real.html">
+<meta property="og:site_name" content="Matheus Policarpo">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://portfolio-content-design.vercel.app/og-home-pt.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-content-design.vercel.app/pt/rastreio-em-tempo-real.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Rastreio em tempo real: Entregas em minutos",
+  "about": "Content Systems &amp; Service Design",
+  "inLanguage": "pt-BR",
+  "author": {
+    "@type": "Person",
+    "name": "Matheus Policarpo"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+<div class="wrap">
+<a class="name" href="/pt/">Matheus Policarpo</a>
+<nav aria-label="Seções">
+<a href="/pt/">Todos os trabalhos</a>
+<a href="#problem">Problema</a>
+<a href="#decisions">Decisões</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="hero">
+<div class="wrap">
+<p class="eyebrow">Content Systems &amp; Service Design · Mercado Libre</p>
+<h1>Rastreio em tempo real<br><span>Entregas em minutos</span></h1>
+<div class="cx-stats">
+<div><b>1 máquina única</b><span><i class="cx-tag">medido</i> 9 estados sincronizados entre App, Push e Live Activities, sem ruído.</span></div>
+<div><b>4 falhas críticas</b><span><i class="cx-tag">medido</i> Erros graves de confiança barrados no Design QA antes do rollout de 100%.</span></div>
+<div><b>3 degraus</b><span><i class="cx-tag">framework</i> Escada honesta de comunicação de atraso, com devolução de controle.</span></div>
+</div>
+<dl class="facts cx-facts">
+<div><dt>Meu papel</dt><dd>Designer responsável: máquina de estados, régua de atrasos e push/Live Activity</dd></div>
+<div><dt>Canais</dt><dd>App, notificações push, Live Activities e widgets (AR e BR)</dd></div>
+<div><dt>Tempo de leitura</dt><dd>60 segundos</dd></div>
+</dl>
+</div>
+</div>
+<section class="cx-lead" aria-label="Visão geral do case">
+<div class="wrap">
+<!-- IMAGEM: Arquitetura de estados: escada de atraso e sincronização de superfícies omnicanal -->
+<figure class="cx-fig">
+<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Diagrama da escada de atraso em três degraus">
+<span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
+<b>Arquitetura de estados: escada de atraso e sincronização de superfícies omnicanal</b>
+<p>Diagrama da máquina de estados. “A caminho (minutos)”: contagem regressiva viva. Degrau 1, pequeno atraso: “Vai chegar uns min depois...”. Degrau 2, atraso severo: assume o atraso + alerta push. Degrau 3, cancelamento: opção de estorno autônomo.</p>
+</div>
+<figcaption><b>A régua de atrasos</b>Em entregas de 15 minutos, a incerteza destrói a retenção: a régua substitui estimativas falsas por ação honesta.</figcaption>
+</figure>
+</div>
+</section>
+<section id="problem" aria-labelledby="problem-h">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow">Problema</p>
+<h2 id="problem-h">Um rastreio mudo funciona para entregas de dias, mas gera caos em 15 minutos</h2>
+</div>
+<div class="prose">
+<p>O marketplace expandiu entregas ultrarrápidas para farmácia e restaurante, mas o comprador acompanhava tudo no fluxo legado de correio tradicional. Sem atualizações em tempo real, a ansiedade explodia em contatos de suporte (“cadê meu pedido?”).</p>
+<p>Mas desenhar telas isoladas faria a Live Activity na tela de bloqueio mostrar um status enquanto o Push mandava outro. Portanto, modelei primeiro <b>uma máquina única de estados</b> consumida por todas as superfícies.</p>
+</div>
+</div>
+</section>
+<section id="decisions" aria-labelledby="decisions-h">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow">Decisão</p>
+<h2 id="decisions-h">Transparência nos atrasos e o Design QA que salvou o lançamento</h2>
+</div>
+<div class="prose">
+<p>Em vez de congelar a tela num horário vencido, desenhei uma comunicação em 3 níveis: avisa o atraso sem pânico no início, assume a demora no meio e devolve a autonomia no final (permitindo cancelamento com estorno em 1 clique).</p>
+<p>No Design QA em produção, peguei 4 falhas críticas antes de abrir para o público:</p>
+<ul class="cx-list">
+<li>Pedido em preparo aparecia erroneamente como “a caminho”.</li>
+<li>Gorjeta aparecia listada como se fosse um produto físico na sacola.</li>
+<li>Opção de devolução ativa para comida de restaurante (proibida por lei sanitária).</li>
+<li>Chat com o entregador aparecendo antes do momento correto.</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p>Trabalho realizado no Mercado Libre. <a href="/pt/">Ver todos os trabalhos</a>.</p>
+</div>
+</footer>
+</body>
+</html>
