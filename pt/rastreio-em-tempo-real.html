@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rastreio em tempo real · Entregas em minutos</title>
-<meta name="description" content="Case de Content Systems &amp; Service Design de Matheus Policarpo: 9 estados sincronizados entre App, Push e Live Activities, sem ruído.">
+<title>Rastreio em tempo real · Matheus Policarpo</title>
+<meta name="description" content="Rastreio para entregas de minutos, igual no app, no push e na tela de bloqueio.">
 <meta name="author" content="Matheus Policarpo">
-<meta property="og:title" content="Rastreio em tempo real · Entregas em minutos · Case de portfólio">
-<meta property="og:description" content="9 estados sincronizados entre App, Push e Live Activities, sem ruído.">
+<meta property="og:title" content="Rastreio em tempo real · Matheus Policarpo">
+<meta property="og:description" content="Rastreio para entregas de minutos, igual no app, no push e na tela de bloqueio.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://portfolio-content-design.vercel.app/pt/rastreio-em-tempo-real.html">
 <meta property="og:site_name" content="Matheus Policarpo">
@@ -24,8 +24,8 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Rastreio em tempo real: Entregas em minutos",
-  "about": "Content Systems &amp; Service Design",
+  "name": "Rastreio em tempo real",
+  "about": "Content systems e service design",
   "inLanguage": "pt-BR",
   "author": {
     "@type": "Person",
@@ -44,68 +44,77 @@
 <a class="name" href="/pt/">Matheus Policarpo</a>
 <nav aria-label="Seções">
 <a href="/pt/">Todos os trabalhos</a>
-<a href="#problem">Problema</a>
-<a href="#decisions">Decisões</a>
+<a href="#contexto">Contexto</a>
+<a href="#resultados">Resultados</a>
+<a href="#processo">O que eu fiz</a>
 </nav>
 </div>
 </header>
 <main>
 <div class="hero">
 <div class="wrap">
-<p class="eyebrow">Content Systems &amp; Service Design · Mercado Libre</p>
-<h1>Rastreio em tempo real<br><span>Entregas em minutos</span></h1>
-<div class="cx-stats">
-<div><b>1 máquina única</b><span><i class="cx-tag">medido</i> 9 estados sincronizados entre App, Push e Live Activities, sem ruído.</span></div>
-<div><b>4 falhas críticas</b><span><i class="cx-tag">medido</i> Erros graves de confiança barrados no Design QA antes do rollout de 100%.</span></div>
-<div><b>3 degraus</b><span><i class="cx-tag">framework</i> Escada honesta de comunicação de atraso, com devolução de controle.</span></div>
-</div>
+<p class="eyebrow">Mercado Libre · Content systems e service design</p>
+<h1>Rastreio<br><span>em tempo real</span></h1>
+<p class="lede" style="max-width: 58ch;">Rastreio para entregas de minutos, igual no app, no push e na tela de bloqueio.</p>
 <dl class="facts cx-facts">
-<div><dt>Meu papel</dt><dd>Designer responsável: máquina de estados, régua de atrasos e push/Live Activity</dd></div>
-<div><dt>Canais</dt><dd>App, notificações push, Live Activities e widgets (AR e BR)</dd></div>
-<div><dt>Tempo de leitura</dt><dd>60 segundos</dd></div>
+<div><dt>Meu papel</dt><dd>Designer responsável: estados, régua de atraso, push e Live Activity</dd></div>
+<div><dt>Canais</dt><dd>App, push, Live Activity e widgets (Argentina e Brasil)</dd></div>
 </dl>
 </div>
 </div>
-<section class="cx-lead" aria-label="Visão geral do case">
+<section class="cx-lead" aria-label="Visão geral">
 <div class="wrap">
-<!-- IMAGEM: Arquitetura de estados: escada de atraso e sincronização de superfícies omnicanal -->
-<figure class="cx-fig">
-<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Diagrama da escada de atraso em três degraus">
+<!-- IMAGEM: Máquina de estados e régua de atraso -->
+<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Máquina de estados e régua de atraso">
 <span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
-<b>Arquitetura de estados: escada de atraso e sincronização de superfícies omnicanal</b>
-<p>Diagrama da máquina de estados. “A caminho (minutos)”: contagem regressiva viva. Degrau 1, pequeno atraso: “Vai chegar uns min depois...”. Degrau 2, atraso severo: assume o atraso + alerta push. Degrau 3, cancelamento: opção de estorno autônomo.</p>
-</div>
-<figcaption><b>A régua de atrasos</b>Em entregas de 15 minutos, a incerteza destrói a retenção: a régua substitui estimativas falsas por ação honesta.</figcaption>
-</figure>
-</div>
-</section>
-<section id="problem" aria-labelledby="problem-h">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Problema</p>
-<h2 id="problem-h">Um rastreio mudo funciona para entregas de dias, mas gera caos em 15 minutos</h2>
-</div>
-<div class="prose">
-<p>O marketplace expandiu entregas ultrarrápidas para farmácia e restaurante, mas o comprador acompanhava tudo no fluxo legado de correio tradicional. Sem atualizações em tempo real, a ansiedade explodia em contatos de suporte (“cadê meu pedido?”).</p>
-<p>Mas desenhar telas isoladas faria a Live Activity na tela de bloqueio mostrar um status enquanto o Push mandava outro. Portanto, modelei primeiro <b>uma máquina única de estados</b> consumida por todas as superfícies.</p>
+<b>Máquina de estados e régua de atraso</b>
+<p>Estados do pedido e os três degraus de atraso, com app, push e Live Activity.</p>
 </div>
 </div>
 </section>
-<section id="decisions" aria-labelledby="decisions-h">
+<section id="contexto" class="cx-block" aria-labelledby="contexto-h">
 <div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Decisão</p>
-<h2 id="decisions-h">Transparência nos atrasos e o Design QA que salvou o lançamento</h2>
+<h2 id="contexto-h" class="cx-label">Contexto</h2>
+<div class="cx-text">
+<p>O marketplace passou a entregar farmácia e restaurante em minutos, mas o rastreio ainda seguia o fluxo do correio. Sem atualização em tempo real, o comprador ia ao suporte perguntar onde estava o pedido.</p>
 </div>
-<div class="prose">
-<p>Em vez de congelar a tela num horário vencido, desenhei uma comunicação em 3 níveis: avisa o atraso sem pânico no início, assume a demora no meio e devolve a autonomia no final (permitindo cancelamento com estorno em 1 clique).</p>
-<p>No Design QA em produção, peguei 4 falhas críticas antes de abrir para o público:</p>
-<ul class="cx-list">
-<li>Pedido em preparo aparecia erroneamente como “a caminho”.</li>
-<li>Gorjeta aparecia listada como se fosse um produto físico na sacola.</li>
-<li>Opção de devolução ativa para comida de restaurante (proibida por lei sanitária).</li>
-<li>Chat com o entregador aparecendo antes do momento correto.</li>
-</ul>
+</div>
+</section>
+<section id="resultados" class="cx-block" aria-labelledby="resultados-h">
+<div class="wrap">
+<h2 id="resultados-h" class="cx-label">Resultados</h2>
+<div class="cx-cols cx-results">
+<p>Uma única máquina de estados para app, push e Live Activity</p>
+<p><b>4 falhas graves</b> de confiança barradas no Design QA antes do rollout total</p>
+</div>
+</div>
+</section>
+<section id="processo" class="cx-block" aria-labelledby="processo-h">
+<div class="wrap">
+<h2 id="processo-h" class="cx-label sr-only">O que eu fiz e o que mudou</h2>
+<div class="cx-cols">
+<div>
+<h3 class="cx-label">O que eu fiz</h3>
+<p>Modelei os estados do pedido antes de desenhar qualquer tela, para todas as superfícies lerem a mesma fonte.</p>
+<p>Desenhei a régua de atraso em três degraus: avisa, assume o atraso e devolve o controle, com cancelamento e estorno.</p>
+<p>Fiz o Design QA no build real antes de abrir para todos.</p>
+</div>
+<div>
+<h3 class="cx-label">O que mudou</h3>
+<p>App, push e tela de bloqueio mostram sempre o mesmo status.</p>
+<p>O comprador recebe informação honesta no lugar de uma estimativa vencida.</p>
+<p>O QA pegou erros como pedido em preparo aparecendo como “a caminho” e gorjeta listada como produto.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cx-lead" aria-label="Telas">
+<div class="wrap">
+<!-- IMAGEM: Telas por superfície -->
+<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Telas por superfície">
+<span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
+<b>Telas por superfície</b>
+<p>O mesmo estado no app, no push e na Live Activity.</p>
 </div>
 </div>
 </section>

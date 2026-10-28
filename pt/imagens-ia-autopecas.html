@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Imagens genéricas com IA · Catálogo de autopeças</title>
-<meta name="description" content="Case de AI Content Design &amp; Prompt Engineering de Matheus Policarpo: Salto na aprovação visual na 1ª tentativa (Pass@1) com prompts em JSON.">
+<title>Imagens de IA para autopeças · Matheus Policarpo</title>
+<meta name="description" content="Imagens de referência geradas por IA para o seller de autopeças publicar sem ter foto da peça.">
 <meta name="author" content="Matheus Policarpo">
-<meta property="og:title" content="Imagens genéricas com IA · Catálogo de autopeças · Case de portfólio">
-<meta property="og:description" content="Salto na aprovação visual na 1ª tentativa (Pass@1) com prompts em JSON.">
+<meta property="og:title" content="Imagens de IA para autopeças · Matheus Policarpo">
+<meta property="og:description" content="Imagens de referência geradas por IA para o seller de autopeças publicar sem ter foto da peça.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://portfolio-content-design.vercel.app/pt/imagens-ia-autopecas.html">
 <meta property="og:site_name" content="Matheus Policarpo">
@@ -24,8 +24,8 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Imagens genéricas com IA: Catálogo de autopeças",
-  "about": "AI Content Design &amp; Prompt Engineering",
+  "name": "Imagens de IA para autopeças",
+  "about": "AI content design",
   "inLanguage": "pt-BR",
   "author": {
     "@type": "Person",
@@ -44,66 +44,77 @@
 <a class="name" href="/pt/">Matheus Policarpo</a>
 <nav aria-label="Seções">
 <a href="/pt/">Todos os trabalhos</a>
-<a href="#problem">Problema</a>
-<a href="#decisions">Decisões</a>
+<a href="#contexto">Contexto</a>
+<a href="#resultados">Resultados</a>
+<a href="#processo">O que eu fiz</a>
 </nav>
 </div>
 </header>
 <main>
 <div class="hero">
 <div class="wrap">
-<p class="eyebrow">AI Content Design &amp; Prompt Engineering · Mercado Libre</p>
-<h1>Imagens genéricas com IA<br><span>Catálogo de autopeças</span></h1>
-<div class="cx-stats">
-<div><b>31% → 88%</b><span><i class="cx-tag">medido</i> Salto na aprovação visual na 1ª tentativa (Pass@1) com prompts em JSON.</span></div>
-<div><b>Zero-touch</b><span><i class="cx-tag">qualitativo</i> O método virou um bot automático da Engenharia, sem intervenção de designer.</span></div>
-<div><b>100% de clareza</b><span><i class="cx-tag">medido</i> Compreensão no teste de escaneabilidade com o selo “Imagem de referência”.</span></div>
-</div>
+<p class="eyebrow">Mercado Libre · AI content design</p>
+<h1>Imagens de IA<br><span>para autopeças</span></h1>
+<p class="lede" style="max-width: 58ch;">Imagens de referência geradas por IA para o seller de autopeças publicar sem ter foto da peça.</p>
 <dl class="facts cx-facts">
-<div><dt>Meu papel</dt><dd>Lead designer: testes de 4 LLMs, prompts em JSON e selo de confiança</dd></div>
-<div><dt>Superfícies</dt><dd>Fluxo do seller, busca e página de produto (B2B/B2C)</dd></div>
-<div><dt>Tempo de leitura</dt><dd>60 segundos</dd></div>
+<div><dt>Meu papel</dt><dd>Designer líder: testes com 4 LLMs, prompts em JSON e selo de confiança</dd></div>
+<div><dt>Onde aparece</dt><dd>Fluxo do seller, busca e página de produto</dd></div>
 </dl>
 </div>
 </div>
-<section class="cx-lead" aria-label="Visão geral do case">
+<section class="cx-lead" aria-label="Visão geral">
 <div class="wrap">
-<!-- IMAGEM: Engenharia de prompt: V1 descritiva vs. prompt estruturado em JSON (88% de Pass@1) -->
-<figure class="cx-fig">
-<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Comparativo entre o prompt V1 e o prompt final em JSON">
+<!-- IMAGEM: Prompt V1 vs. prompt em JSON -->
+<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Prompt V1 vs. prompt em JSON">
 <span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
-<b>Engenharia de prompt: V1 descritiva vs. prompt estruturado em JSON (88% de Pass@1)</b>
-<p>Comparativo em dois blocos. V1, descrição aberta em linguagem natural: prompt “Foto de disco de freio, fundo branco puro, visão frontal...”, com falha (fundo bege, peça inclinada e 3D hiper-realista perigoso). Versão final, bloco JSON com parâmetros negativos: { view: &quot;orthographic_front&quot;, style: &quot;3d_render_catalog&quot;, bg: &quot;#ffffff&quot; }, aprovada (fundo estritamente puro e ilustração 3D sem engano mecânico).</p>
-</div>
-<figcaption><b>Blindagem por parâmetros negativos</b>Eliminou variações indesejadas e destravou a escala sem revisão humana item a item.</figcaption>
-</figure>
-</div>
-</section>
-<section id="problem" aria-labelledby="problem-h">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Problema</p>
-<h2 id="problem-h">Sem foto não há anúncio, mas uma imagem falsa de IA em autopeças gera devolução</h2>
-</div>
-<div class="prose">
-<p>Sellers com discos de freio físicos na prateleira não conseguiam publicar porque o catálogo não tinha foto. Mas gerar fotos por IA em autopeças tem um risco severo: se a imagem for fotorrealista, o comprador conta os furos do disco achando que é a peça exata do seu carro. Se houver divergência de 1 milímetro, ele devolve e prejudica o seller.</p>
-<p>Portanto, descartei o fotorrealismo e adotei uma <b>ilustração 3D técnica</b>: visual atraente no grid, mas claramente representativa.</p>
+<b>Prompt V1 vs. prompt em JSON</b>
+<p>Lado a lado: resultado da V1 (fundo bege, peça torta) e do prompt final aprovado.</p>
 </div>
 </div>
 </section>
-<section id="decisions" aria-labelledby="decisions-h">
+<section id="contexto" class="cx-block" aria-labelledby="contexto-h">
 <div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Decisão</p>
-<h2 id="decisions-h">O clímax técnico: controlando a IA com restrições negativas em JSON</h2>
+<h2 id="contexto-h" class="cx-label">Contexto</h2>
+<div class="cx-text">
+<p>Sellers com peças na prateleira não publicavam porque o catálogo não tinha foto. Em autopeças, uma imagem realista demais faz o comprador achar que é a peça exata do carro dele, e o erro vira devolução.</p>
 </div>
-<div class="prose">
-<p>A V1 do prompt falhava sistematicamente: fundos saíam cinzentos e as peças saíam rotacionadas. Para entregar um método que a engenharia rodasse via script, estruturei o prompt em dois blocos:</p>
-<!-- TODO (Matheus): o PDF descreve só o "Bloco Fixo". Falta o texto do segundo bloco (o variável?) para completar a frase "dois blocos". -->
-<ul class="cx-list">
-<li><b>Bloco fixo (regras imutáveis):</b> trava de iluminação, enquadramento ortográfico e a instrução negativa expressa: “branco absolutamente puro, sem degradê e sem sombra fora do objeto”.</li>
-<li><b>Transparência honesta com quem compra:</b> criamos o selo <b>Imagem de referência</b> nos cards. Em testes, evitamos o termo “Gerada por IA” porque o comprador de peças só quer saber se a foto retrata a peça exata ou se é ilustrativa.</li>
-</ul>
+</div>
+</section>
+<section id="resultados" class="cx-block" aria-labelledby="resultados-h">
+<div class="wrap">
+<h2 id="resultados-h" class="cx-label">Resultados</h2>
+<div class="cx-cols cx-results">
+<p>Aprovação na primeira geração subiu de <b>31% para 88%</b> com prompts em JSON</p>
+<p>O método virou um bot da Engenharia, sem designer no meio</p>
+</div>
+</div>
+</section>
+<section id="processo" class="cx-block" aria-labelledby="processo-h">
+<div class="wrap">
+<h2 id="processo-h" class="cx-label sr-only">O que eu fiz e o que mudou</h2>
+<div class="cx-cols">
+<div>
+<h3 class="cx-label">O que eu fiz</h3>
+<p>Testei 4 LLMs e escolhi ilustração 3D técnica no lugar de foto realista.</p>
+<p>Estruturei o prompt em JSON, com regras fixas e restrições negativas: fundo branco, sem sombra, vista frontal.</p>
+<p>Criei o selo “Imagem de referência” para os cards.</p>
+</div>
+<div>
+<h3 class="cx-label">O que mudou</h3>
+<p>Fundo e ângulo pararam de variar de uma geração para outra.</p>
+<p>O seller publica sem esperar foto, e o comprador sabe que a imagem é ilustrativa.</p>
+<p>Testei “Gerada por IA” e descartei. Quem compra peça quer saber se a foto é da peça exata, não como foi feita.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cx-lead" aria-label="Telas">
+<div class="wrap">
+<!-- IMAGEM: Cards no catálogo -->
+<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Cards no catálogo">
+<span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
+<b>Cards no catálogo</b>
+<p>Imagens geradas com o selo “Imagem de referência”.</p>
 </div>
 </div>
 </section>
