@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pausar una tienda en el backoffice · Matheus Policarpo</title>
+<meta name="description" content="Una forma controlada de frenar los pedidos entrantes cuando una tienda no da abasto.">
+<meta name="author" content="Matheus Policarpo">
+<meta property="og:title" content="Pausar una tienda en el backoffice · Matheus Policarpo">
+<meta property="og:description" content="Una forma controlada de frenar los pedidos entrantes cuando una tienda no da abasto.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html">
+<meta property="og:site_name" content="Matheus Policarpo">
+<meta property="og:locale" content="es_LA">
+<meta property="og:image" content="https://mtpoli-portfolio.vercel.app/og-home-pt.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html">
+<link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html">
+<link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html">
+<link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html">
+<link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Pausar una tienda en el backoffice",
+  "about": "Diseño de producto",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Person",
+    "name": "Matheus Policarpo"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="cx-page">
+<header class="topbar">
+<div class="wrap">
+<a class="name" href="/es/">Matheus Policarpo</a>
+<nav aria-label="Navegación">
+<a href="/es/">← Todos los trabajos</a>
+</nav>
+<div class="lang" role="group" aria-label="Idioma">
+<a href="/pausar-loja.html" hreflang="en" lang="en" aria-label="Read in English" title="English">EN</a>
+<span aria-current="true">ES</span>
+<a href="/pt/pausar-loja.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português">PT</a>
+</div>
+</div>
+</header>
+<main>
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h1 class="cx-title">Pausar una tienda en el backoffice</h1>
+<p class="cx-sub">Una forma controlada de frenar los pedidos entrantes cuando una tienda no da abasto.</p>
+<p class="cx-role"><b>Product y Content Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026 · Argentina</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/pausar-modal.png" alt="Modal Pausar tienda con la duración y el motivo elegidos y el campo para contar más" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">Una tienda funciona con normalidad, pero a veces recibe más pedidos de los que puede procesar. No había una regla confiable para contener la demanda y la cola seguía creciendo hasta que la operación se rompía. El MVP combina dos respuestas: pausa automática por capacidad y pausa manual para contingencias. Este caso es el flujo manual, en el backoffice, para el líder de equipo de Mercado Libre.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>1 flujo</b> para pausar y reanudar una tienda, con un motivo y el registro de quién lo hizo</p>
+<p>Handoff con 15 casos de uso, incluidos errores de fecha y hora, fallas y sesiones vencidas</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">Qué hice</h2>
+<p>Diseñé el flujo de pausar y reanudar en el backoffice, restringido a quienes tienen un permiso específico.</p>
+<p>Escribí los textos para dejar claro que es una herramienta de excepción, no de uso diario.</p>
+<p>Documenté los casos de uso, los errores y la reanudación automática.</p>
+</div>
+<div>
+<h2 class="cx-label">Qué cambió</h2>
+<p>El líder de equipo elige hasta cuándo pausar y por qué, en un modal corto.</p>
+<p>El modal aclara que los pedidos en curso no se afectan. Solo se pausan los nuevos.</p>
+<p>La pantalla de la tienda muestra quién la pausó, hasta cuándo y por qué, con un botón para reanudar.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/pausar-config.png" alt="Configuración de la tienda con el estado Pausada, quién la pausó, hasta cuándo y el botón Reanudar tienda" loading="lazy">
+</div>
+</div>
+</main>
+</body>
+</html>

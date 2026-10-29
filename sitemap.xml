@@ -2,64 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/pt/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/"/>
-  </url>
-
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/pt/pronto-app-instant-delivery.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/pt/beneficio-de-alimentacao.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/"/>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html</loc>
-    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/pronto-app-instant-delivery.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/pt/pronto-app-instant-delivery.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pronto-app-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/beneficio-de-alimentacao.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/pt/beneficio-de-alimentacao.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/beneficio-de-alimentacao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/pausar-loja.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/pausar-loja.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/cotacao-seguro-auto.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
   </url>
   <url>
     <loc>https://mtpoli-portfolio.vercel.app/pt/cotacao-seguro-auto.html</loc>
     <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/cotacao-seguro-auto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
   </url>
 </urlset>
