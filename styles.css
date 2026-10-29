@@ -398,6 +398,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp { scroll-behavior: smooth; }
 .sp-bar { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 18px clamp(16px, 3vw, 28px); pointer-events: none; background: linear-gradient(#000 40%, transparent); height: 72px; }
 .sp-bar > * { pointer-events: auto; }
+.sp-actions { margin-left: auto; }
 .sp-menu { width: 28px; height: 28px; background: none; border: 0; padding: 0; display: grid; align-content: center; gap: 6px; cursor: pointer; }
 .sp-menu span { display: block; height: 1.5px; background: #fff; }
 .sp-actions { display: flex; align-items: center; gap: 14px; }
