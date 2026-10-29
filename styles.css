@@ -388,6 +388,8 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
   .cx-strip.imgs[style*="--n:2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+.cx-strip.imgs img[src="/pausar-modal.png"] { width: min(100%, 440px); justify-self: center; margin: 0 auto; }
+.cx-strip.imgs + .cx-strip.imgs { margin-top: 16px; }
 /* ===== Página única ===== */
 .sp { scroll-behavior: smooth; }
 .sp-bar { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 18px clamp(16px, 3vw, 28px); pointer-events: none; background: linear-gradient(#000 40%, transparent); height: 72px; }
