@@ -412,6 +412,9 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
 .sp-links a { padding: 9px 18px; font-size: 15px; color: #fff; background: #141416; border: 1px solid #232326; border-radius: 999px; text-decoration: none; }
 .sp-links a:hover { background: #1c1c1f; }
+.sp-links a.sp-primary { background: #fff; color: #111; border-color: #fff; font-weight: 500; }
+.sp-links a.sp-primary:hover { background: #e8e8ea; }
+.sp-links a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 .sp-drawer { position: fixed; inset: 0; z-index: 40; background: rgba(0, 0, 0, .96); display: grid; align-content: center; justify-content: center; gap: 18px; padding: 80px 24px; text-align: center; }
 .sp-drawer[hidden] { display: none; }
 .sp-drawer a { color: #fff; font-size: clamp(22px, 3vw, 30px); text-decoration: none; }
