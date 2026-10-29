@@ -388,6 +388,10 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
   .cx-strip.imgs[style*="--n:2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+.sp-case .cx-strip.imgs img { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='17' cy='17' r='11' fill='rgba(0,0,0,.35)' stroke='white' stroke-width='2'/%3E%3Cpath d='M25 25l10 10M17 12v10M12 17h10' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") 17 17, zoom-in; }
+.sp-lb { position: fixed; inset: 0; z-index: 60; background: rgba(0, 0, 0, .94); display: grid; place-items: center; padding: 24px; cursor: zoom-out; }
+.sp-lb[hidden] { display: none; }
+.sp-lb img { max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 12px; object-fit: contain; }
 .cx-strip.imgs img[src="/pausar-modal.png"] { width: min(100%, 440px); justify-self: center; margin: 0 auto; }
 .cx-strip.imgs + .cx-strip.imgs { margin-top: 16px; }
 /* ===== Página única ===== */

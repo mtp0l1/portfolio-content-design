@@ -368,11 +368,24 @@
 </main>
 <script>
 (function () {
+  var lb = document.createElement("div");
+  lb.className = "sp-lb"; lb.hidden = true; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-label", "Imagem ampliada");
+  lb.innerHTML = '<img alt="">';
+  document.body.appendChild(lb);
+  var lbi = lb.firstChild;
+  function lbSet(src, alt) {
+    if (src) { lbi.src = src; lbi.alt = alt || ""; }
+    lb.hidden = !src; document.body.classList.toggle("sp-open", !!src);
+  }
+  document.querySelectorAll(".sp-case .cx-strip.imgs img").forEach(function (im) {
+    im.addEventListener("click", function () { lbSet(im.currentSrc || im.src, im.alt); });
+  });
+  lb.addEventListener("click", function () { lbSet(null); });
   var b = document.querySelector(".sp-menu"), d = document.getElementById("sp-drawer");
   function set(o) { d.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); document.body.classList.toggle("sp-open", o); }
   b.addEventListener("click", function () { set(d.hidden); });
   d.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { set(false); lbSet(null); } });
 })();
 </script>
 </body>
