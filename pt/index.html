@@ -59,154 +59,283 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-<header class="topbar">
-<div class="wrap">
-<a class="name" href="/pt/">Matheus Policarpo</a>
-<nav aria-label="Seções">
-<a href="#work">Trabalhos</a>
-<a href="#about">Sobre</a>
-<a href="#contact">Contato</a>
-</nav>
- <div class="lang" role="group" aria-label="Idioma">
-<a href="/" hreflang="en" lang="en" aria-label="Read in English" title="English">EN</a>
-<span aria-current="true">PT</span>
-</div>
-</div>
+<body class="cx-page sp">
+<header class="sp-bar">
+<button class="sp-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sp-drawer"><span></span><span></span></button>
+<a class="sp-works" href="#trabalhos">TRABALHOS</a>
 </header>
+<nav class="sp-drawer" id="sp-drawer" aria-label="Seções" hidden>
+<a href="#inicio">Início</a>
+<a href="#pronto-app-instant-delivery">Pronto App para instant delivery</a>
+<a href="#beneficio-de-alimentacao">Benefício de alimentação no Súper</a>
+<a href="#landing-pharma">Landing de Pharma para 5 países</a>
+<a href="#food-cart-migration">Levando o Food para o carrinho do marketplace</a>
+<a href="#squad-de-comus">Squad de Comus</a>
+<a href="#contato">Contato</a>
+</nav>
 <main>
-<div class="hero">
-<div class="wrap">
-<p class="eyebrow">Content design · Sistemas de conteúdo · IA</p>
-<h1>Conteúdo que <span>se sustenta</span> em escala</h1>
-<p class="lede" style="max-width: 58ch;">Sou Matheus Policarpo, Product Designer e Design Engineer com 11 anos de experiência. Desenho conteúdo e produtos com IA, do texto na tela ao prompt.</p>
+<section class="sp-hero" id="inicio">
+<div class="sp-id">
+<span class="sp-flag" role="img" aria-label="Brasil">🇧🇷</span>
+<h1 class="sp-name">Matheus<br>Policarpo</h1>
+<span class="sp-clock" id="sp-clock" aria-hidden="true">UTC-3</span>
+</div>
+<p class="sp-tag">Product Designer e Design Engineer, desenhando conteúdo e produtos com IA, do texto na tela ao prompt</p>
+<p class="sp-bio">11 anos em e-commerce, fintech, telecom, saúde e logística, de startups a empresas como Mercado Libre, Loggi, Banco do Brasil, Porto e Vivo.</p>
+<a class="sp-cta" href="mailto:matheusloures@live.com">Enviar e-mail</a>
+</section>
+<div id="trabalhos"></div>
+<section class="sp-case" id="pronto-app-instant-delivery" aria-label="Pronto App para instant delivery">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Pronto App para instant delivery</h2>
+<p class="cx-sub">Quatro ajustes no app do picker para o supermercado entregar em minutos.</p>
+<p class="cx-role"><b>Product e Content Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026 · Argentina e Brasil</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/pronto-vol-depois.png" alt="Tela de confirmação do pedido com alerta laranja pedindo para avaliar se um só entregador consegue levar tudo" loading="lazy">
+<img src="/pronto-stock-depois.png" alt="Lista de produtos do pedido com a etiqueta Stock nos itens com pouco estoque" loading="lazy">
 </div>
 </div>
-<section id="work" aria-labelledby="work-h" style="padding-top: 8px; border-top: 0;">
-<div class="wrap">
-<h2 id="work-h" class="eyebrow" style="font-family: var(--f-mono); font-size: 12.5px; font-weight: 400; margin-bottom: 16px;">Trabalhos selecionados</h2>
-<div class="case-grid">
-<a class="case-card" href="/pt/food-cart-migration.html">
-<div class="cover shot-cover"><img src="/food-cover.png" alt="Tela do carrinho com um combo de hambúrguer, as escolhas em azul abaixo do nome e a linha de frete mostrando envio grátis" loading="lazy" width="392" height="245"></div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Product design</p>
-<h3>Levando o Food para o carrinho do marketplace</h3>
-<p>Um carrinho de delivery de comida migrando para o carrinho do marketplace, com um handoff do que reaproveitar e do que criar.</p>
-<span class="more">Ler o case →</span>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx has-note">O Pronto App é o app de quem separa pedidos de supermercado. Com o instant delivery, o fluxo do picker mostrou quatro falhas: volume que não cabe num entregador, estoque que gera substituição à toa, sacola sem número e nenhuma prova do que foi coletado. Cada uma virou um projeto de handoff.</p>
+<p class="cx-note">O Controle de Aduana ainda está em andamento.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>4 frentes</b> desenhadas e documentadas para a engenharia, cada uma sobre uma falha do fluxo</p>
+<p>Alerta de volume a partir de <b>15 unidades</b>, sem acrescentar tempo ao picking</p>
 </div>
-</a>
-<a class="case-card" href="/pt/squad-de-comus.html">
-<div class="cover" aria-hidden="true">
-<pre class="mini-chunk"><span>id:</span> comus-011
-<span>doc_type:</span> guide
-<span>process_step:</span> [1]
-<span>status:</span> current
-<span>questions:</span>
-  - Qual formato devo usar?
-<span>synonyms:</span> [novedad, nota]</pre>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Li o fluxo do picker de ponta a ponta e separei o que quebrava com entrega em minutos.</p>
+<p>Desenhei e escrevi uma tela ou um aviso para cada ponto, com handoff próprio.</p>
+<p>Defini o que o app informa e o que o picker decide, sem criar etapa nova.</p>
 </div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Aprendizagem e IA</p>
-<h3>Squad de Comus</h3>
-<p>Um programa de capacitação com IA para designers que produzem comunicações para vendedores.</p>
-<span class="more">Ler o case →</span>
+<div>
+<h2 class="cx-label">O que mudou</h2>
+<p>Pedido grande avisa antes da coleta, e o picker decide se chama um segundo entregador.</p>
+<p>Item com pouco estoque ganha uma etiqueta “Stock”. O picker oferece substituição em vez de procurar mais.</p>
+<p>O picker confirma a numeração das sacolas e entrega ao motorista no fim da separação.</p>
+<p>Na saída da loja, a tela de Aduana mostra o que foi coletado, mesmo com o sistema do supermercado fora do ar.</p>
 </div>
-</a>
-<a class="case-card" href="/pt/pronto-app-instant-delivery.html">
-<div class="cover cx-cover" aria-hidden="true">
-<div><b>4 frentes</b><span>do picker até o motorista</span></div>
 </div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Product e content design</p>
-<h3>Pronto App para instant delivery</h3>
-<p>Quatro ajustes no app do picker para o supermercado entregar em minutos.</p>
-<span class="more">Ler o case →</span>
 </div>
-</a>
-<a class="case-card" href="/pt/beneficio-de-alimentacao.html">
-<div class="cover cx-cover" aria-hidden="true">
-<div><b>3 pontos</b><span>do fluxo com o benefício</span></div>
-</div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Product design</p>
-<h3>Benefício de alimentação no Súper</h3>
-<p>Pagar o supermercado com o benefício de alimentação, direto no Mercado Libre.</p>
-<span class="more">Ler o case →</span>
-</div>
-</a>
-<a class="case-card" href="/pt/landing-pharma.html">
-<div class="cover cx-cover" aria-hidden="true">
-<div><b>5 países</b><span>uma landing de medicamentos</span></div>
-</div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Product design</p>
-<h3>Landing de Pharma para 5 países</h3>
-<p>Uma única landing de medicamentos para os sites do Mercado Libre.</p>
-<span class="more">Ler o case →</span>
-</div>
-</a>
-<a class="case-card" href="/pt/rastreio-em-tempo-real.html">
-<div class="cover cx-cover" aria-hidden="true">
-<div><b>4 falhas</b><span>barradas no Design QA</span></div>
-</div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Content systems e service design</p>
-<h3>Rastreio em tempo real</h3>
-<p>Rastreio para entregas de minutos, igual no app, no push e na tela de bloqueio.</p>
-<span class="more">Ler o case →</span>
-</div>
-</a>
-<a class="case-card" href="/pt/posicoes-autopecas.html">
-<div class="cover cx-cover" aria-hidden="true">
-<div><b>~3 cliques</b><span>para preencher a posição</span></div>
-</div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Content design e arquitetura de informação</p>
-<h3>Posições de autopeças</h3>
-<p>Editor de posição de peça que o seller preenche em poucos cliques.</p>
-<span class="more">Ler o case →</span>
-</div>
-</a>
-<a class="case-card" href="/pt/pausar-loja.html">
-<div class="cover cx-cover" aria-hidden="true">
-<div><b>1 gap crítico</b><span>achado antes do código</span></div>
-</div>
-<div class="body">
-<p class="eyebrow">Mercado Libre · Product design e service blueprint</p>
-<h3>Pausar loja sob pressão</h3>
-<p>Botão de pausa para o supervisor segurar novos pedidos quando faltam pickers.</p>
-<span class="more">Ler o case →</span>
-</div>
-</a>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/pronto-finalizar-depois.png" alt="Tela verde de pedido terminado, com o código de envio e o total de sacolas para anotar" loading="lazy">
+<img src="/pronto-aduana.png" alt="Tela Detalhe da ordem, com os produtos coletados para mostrar na saída da loja" loading="lazy">
 </div>
 </div>
 </section>
-<section id="about" aria-labelledby="about-h">
-<div class="wrap about">
-<div class="prose">
-<p class="eyebrow">Sobre</p>
-<h2 id="about-h" style="font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; font-stretch: 108%;">Estratégia e mão na massa, na mesma pessoa</h2>
-<p>Já trabalhei com e-commerce, fintech, telecom, saúde e logística, em empresas como Mercado Libre, Loggi, Banco do Brasil, Porto e Vivo. Minha formação é em Comunicação, e meu trabalho reúne product design, content design e design engineering.</p>
-<p>Desenhei experiências de IA conversacional antes do boom dos LLMs. Hoje uso modelos de linguagem todos os dias para pesquisar, estruturar, escrever e avaliar conteúdo, e para construir ferramentas de design com Figma, Google Apps Script e Vercel.</p>
-<p class="skills"><b style="color: var(--fg);">Habilidades:</b> estratégia de conteúdo, content design, UX writing, modelagem de conteúdo, taxonomia, conteúdo estruturado, prompt design, conteúdo gerado por IA, critérios de avaliação e benchmarks de qualidade, lógica de personalização, voz e tom, localização para espanhol e português, design systems, handoff para desenvolvimento, gestão de stakeholders.</p>
+<section class="sp-case" id="beneficio-de-alimentacao" aria-label="Benefício de alimentação no Súper">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Benefício de alimentação no Súper</h2>
+<p class="cx-sub">Pagar o supermercado com o benefício de alimentação, direto no Mercado Libre.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2025 · Brasil</p>
 </div>
-<div class="contact" id="contact">
-<p class="eyebrow">Contato</p>
-<p class="addr" id="email">matheusloures@live.com</p>
-<a class="copy" href="mailto:matheusloures@live.com" style="text-decoration: none;">Enviar e-mail</a>
-<a href="https://www.linkedin.com/in/mtpoli" rel="me noopener" style="justify-self: start; font-size: 14.5px;">LinkedIn ↗</a>
-<p style="font-size: 14px; color: var(--muted);">Baseado em São Paulo, Brasil. Aberto a contratos (PJ) e a vagas CLT em product design, content design e content design com IA.</p>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/beneficio-home.png" alt="Home da loja no mobile, com o saldo do benefício de alimentação ao lado do envio grátis" loading="lazy">
+<img src="/beneficio-pagamento.png" alt="Tela Escolha como pagar, com Benefício de alimentação entre os meios recomendados e o selo Novo" loading="lazy">
+<img src="/beneficio-compra.png" alt="Detalhe da compra mostrando o pagamento aprovado com o benefício de alimentação" loading="lazy">
 </div>
 </div>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">Quem recebe o benefício de alimentação pelo Mercado Pago pode usá-lo nas compras do Súper. A oportunidade era aumentar as vendas da vertical, mostrando o benefício na home da loja e no pagamento. A primeira versão é para os colaboradores do Mercado Libre Brasil.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>3 pontos</b> do fluxo desenhados: home da loja, checkout e detalhe da compra</p>
+<p>Primeira versão em handoff para a engenharia, com casos de uso, specs e traduções</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Mapeei onde o benefício precisa aparecer, da home da loja até o detalhe da compra.</p>
+<p>Tratei o benefício como um meio de pagamento novo, com saldo e selo “Novo”.</p>
+<p>Documentei os casos de uso, as specs e as traduções.</p>
+</div>
+<div>
+<h2 class="cx-label">O que mudou</h2>
+<p>A home da loja mostra o saldo do benefício junto do envio grátis e da entrega.</p>
+<p>No checkout, o benefício aparece entre os meios de pagamento recomendados, com o saldo.</p>
+<p>Depois da compra, o detalhe mostra quanto foi pago com o benefício.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/beneficio-desktop.png" alt="Home da loja no desktop, com o benefício de alimentação e o saldo disponível" loading="lazy">
+</div>
+</div>
+</section>
+<section class="sp-case" id="landing-pharma" aria-label="Landing de Pharma para 5 países">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Landing de Pharma para 5 países</h2>
+<p class="cx-sub">Uma única landing de medicamentos para os sites do Mercado Libre.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2025 · Argentina, México, Chile, Uruguai e Colômbia</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/pharma-mobile-1.png" alt="Landing mobile: banner de medicamentos de venda livre, categorias, carrossel de ofertas, farmácias destacadas e sintomas" loading="lazy">
+<img src="/pharma-mobile-2.png" alt="Landing mobile, continuação: medicamentos receitados, banner de informação regulatória, ofertas e cuidados" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">O Mercado Libre vende medicamentos em vários países, mas nem todos tinham uma landing para eles. Onde existia, cada uma era diferente. A oportunidade era unificar a experiência e a interface em todos os sites, respeitando as regras legais de cada país.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>1 landing</b> para 5 sites: Argentina, México, Chile, Uruguai e Colômbia</p>
+<p><b>11 blocos</b> documentados, cada um com objetivo e regra de conteúdo, em handoff concluído</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Montei a mesma estrutura de landing para todos os sites, em mobile e desktop.</p>
+<p>Dividi a página em blocos e documentei o objetivo e a lógica de cada um para a engenharia.</p>
+<p>Marquei o que muda por país: ordem das categorias, ofertas e conteúdo regulatório.</p>
+</div>
+<div>
+<h2 class="cx-label">O que mudou</h2>
+<p>Quem busca remédio encontra a mesma página, com a mesma lógica, em qualquer site.</p>
+<p>As categorias e os sintomas seguem o que mais se busca em cada país.</p>
+<p>As regras legais entram no desenho. Um banner leva à informação regulatória sobre a venda de medicamentos.</p>
+<p>Farmácias destacadas levam direto à loja de cada uma, e a oferta de outras categorias aparece só onde é permitido.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/pharma-desktop.png" alt="Landing desktop com banner, categorias, carrossel de ofertas, farmácias destacadas e sintomas" loading="lazy">
+</div>
+</div>
+</section>
+<section class="sp-case" id="food-cart-migration" aria-label="Levando o Food para o carrinho do marketplace">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Levando o Food para o carrinho do marketplace</h2>
+<p class="cx-sub">Um carrinho de delivery de comida migrando para o carrinho do marketplace, com um handoff do que reaproveitar e do que criar.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/food-vpp-kit.png" alt="Página do produto de um combo, com acompanhamento, bebida e personalização" loading="lazy">
+<img src="/food-cart-kit.png" alt="Carrinho do marketplace com o kit e suas escolhas na linha do item" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">O Food tinha um carrinho próprio e estava migrando para o carrinho do marketplace, que não podia mudar. Manter dois carrinhos saía caro, e o Food ficava de fora das novidades do marketplace.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>12 dos 17</b> casos de uso do carrinho reaproveitam uma capability que já existe, e só 1 é novo</p>
+<p>A engenharia usou o handoff sem dúvidas em aberto, e ele virou referência para outra vertical</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Dividi o carrinho em 17 casos de uso e alinhei com produto e engenharia.</p>
+<p>Dei a cada caso um de quatro rótulos, como “capability” ou “atual”, para dizer o que construir, reaproveitar ou deixar como está.</p>
+<p>Escrevi uma regra única para envio grátis e compra mínima.</p>
+</div>
+<div>
+<h2 class="cx-label">O que mudou</h2>
+<p>A engenharia sabe, caso a caso, o que construir, o que reaproveitar e o que deixar quieto.</p>
+<p>Só a compra mínima decide se o comprador continua. O envio grátis só muda o custo do frete.</p>
+<p>Kits idênticos passam a dividir uma linha com a quantidade. É o único comportamento novo.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/food-same-1.png" alt="Carrinho com um kit" loading="lazy">
+<img src="/food-same-2.png" alt="Mesmo item com outra personalização, em duas linhas" loading="lazy">
+<img src="/food-same-3.png" alt="Mesmo item com a mesma personalização, em uma linha com quantidade 2" loading="lazy">
+</div>
+</div>
+<p class="sp-foot">Preços como $ 00.000 são placeholders.</p>
+</section>
+<section class="sp-case" id="squad-de-comus" aria-label="Squad de Comus">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Squad de Comus</h2>
+<p class="cx-sub">Um programa de capacitação com IA para designers que produzem comunicações para vendedores.</p>
+<p class="cx-role"><b>Criador do programa</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/comus-form.png" alt="Formulário de solicitação de comunicação, em espanhol, com datas de pré-aviso e lançamento e tipo de comunicação" loading="lazy">
+<img src="/comus-brief.jpg" alt="Brief em espanhol com datas, objetivo de experiência e o que dizer aos vendedores, com decisões de conteúdo destacadas" loading="lazy">
+<img src="/comus-assistant.png" alt="Saída do assistente listando lacunas marcadas como A DEFINIR e um checklist final" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx has-note">Produzir uma comunicação para vendedores de ponta a ponta era um conhecimento de poucas pessoas. Cada pedido levava várias rodadas de idas e vindas, e erros de datas, links e regras chegavam aos vendedores.</p>
+<p class="cx-note">Versão anonimizada: nomes de colegas e de ferramentas internas foram removidos e os números são aproximados.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p>Entrega média de <b>10 para 7 dias</b>, e erros após a publicação de 5 para 1 por mês</p>
+<p>Mais de 70% das comunicações já passam pelo processo</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Defini o público, cinco objetivos observáveis e a tarefa de avaliação, de trás para frente a partir do trabalho.</p>
+<p>Construí o treinamento com workshops práticos, job aids e três assistentes de IA ligados a uma base curada de regras e formatos.</p>
+<p>Transformei o mesmo material em uma base de conhecimento para engenheiros, PMs e times comerciais, com microlearning por cenários.</p>
+</div>
+<div>
+<h2 class="cx-label">O que mudou</h2>
+<p>Escolher o formato deixou de ser opinião: uma regra por situação e uma estrutura obrigatória por formato.</p>
+<p>A aprovação na primeira revisão passou de 40% para mais de 70%.</p>
+<p>A base de conhecimento passou no teste de recuperação com perguntas na voz de engenheiros e PMs. Está construída e testada offline, ainda não publicada.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/comus-news.jpg" alt="Post de novidades publicado, em espanhol" loading="lazy">
+<img src="/comus-faq.jpg" alt="FAQ publicado, em espanhol, com requisitos e benefícios" loading="lazy">
+</div>
+</div>
+<p class="sp-foot">Versão anonimizada.</p>
+</section>
+<section class="sp-end" id="contato">
+<p class="sp-tag">Aberto a novas oportunidades</p>
+<a class="sp-mail" href="mailto:matheusloures@live.com">matheusloures@live.com</a>
+<a class="sp-in" href="https://www.linkedin.com/in/mtpoli" rel="me noopener">LinkedIn ↗</a>
 </section>
 </main>
-<footer>
-<div class="wrap">
-<p>© 2026 Matheus Policarpo.</p>
-</div>
-</footer>
+<script>
+(function () {
+  var c = document.getElementById("sp-clock");
+  function tick() {
+    try {
+      c.textContent = "UTC-3 " + new Date().toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo", hour12: false });
+    } catch (e) {}
+  }
+  tick(); setInterval(tick, 1000);
+  var b = document.querySelector(".sp-menu"), d = document.getElementById("sp-drawer");
+  function set(o) { d.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); document.body.classList.toggle("sp-open", o); }
+  b.addEventListener("click", function () { set(d.hidden); });
+  d.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+})();
+</script>
 </body>
 </html>
