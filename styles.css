@@ -355,6 +355,9 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .cx-meta { margin-top: clamp(40px, 7vw, 72px); font-size: 17px; color: #C7C7CC; }
 .cx-bleed { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
 .cx-strip { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 8px; }
+.cx-strip.imgs { align-items: start; }
+.cx-strip img { display: block; width: 100%; height: auto; border-radius: 14px; background: #111; }
+.cx-video { display: block; width: 100%; max-width: 760px; max-height: 82vh; margin-inline: auto; border-radius: 14px; background: #000; }
 .cx-frame { display: grid; place-items: center; border: 1.5px dashed #55555a; background: var(--sunken); color: var(--muted); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; border-radius: 14px; }
 .cx-frame.phones { aspect-ratio: 9 / 19; }
 .cx-frame.wide { aspect-ratio: 16 / 10; }
@@ -363,6 +366,8 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .cx-body { max-width: 660px; margin-inline: auto; padding: clamp(56px, 9vw, 104px) var(--gutter) clamp(56px, 9vw, 104px); display: grid; gap: 0; }
 .cx-label { font-size: 17px; font-weight: 400; color: var(--muted); margin-bottom: 20px; }
 .cx-ctx { font-size: clamp(19px, 2.2vw, 22px); line-height: 1.4; color: #fff; margin-bottom: clamp(48px, 7vw, 72px); }
+.cx-ctx.has-note { margin-bottom: 14px; }
+.cx-note { font-size: 15px; color: var(--muted); margin-bottom: clamp(48px, 7vw, 72px); }
 .cx-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; align-items: start; }
 .cx-two > div { display: grid; gap: 22px; }
 .cx-two p { font-size: clamp(18px, 2vw, 20px); line-height: 1.4; color: #fff; }
@@ -370,8 +375,6 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .cx-out { margin-top: -4px; margin-bottom: clamp(48px, 7vw, 72px); }
 .cx-did > div > .cx-label { margin-bottom: 0; }
 .cx-did p { color: #E4E4E7; }
-.cx-page .cx-bleed + .cx-body { padding-top: clamp(56px, 9vw, 104px); }
-.cx-page .cx-body + .cx-bleed { padding-bottom: 0; }
 .cx-cover > div { display: grid; gap: 8px; max-width: 320px; }
 .cx-cover b { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: clamp(30px, 4vw, 44px); line-height: 1.05; }
 .cx-cover span { font-size: 14px; color: var(--muted); line-height: 1.4; }
@@ -379,5 +382,5 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
   .cx-two { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .cx-did { gap: 40px; }
   .cx-strip.phones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .cx-strip.wide { grid-template-columns: minmax(0, 1fr); }
+  .cx-strip.wide, .cx-strip.imgs { grid-template-columns: minmax(0, 1fr); }
 }

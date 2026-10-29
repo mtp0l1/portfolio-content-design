@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Levando o Food para o carrinho do marketplace</title>
-<meta name="description" content="Case de product design de Matheus Policarpo: 17 casos de uso do carrinho separados entre o que o Food podia reaproveitar e o que realmente precisava, com uma regra para combinar envio grátis e compra mínima.">
+<title>Levando o Food para o carrinho do marketplace · Matheus Policarpo</title>
+<meta name="description" content="Um carrinho de delivery de comida migrando para o carrinho do marketplace, com um handoff do que reaproveitar e do que criar.">
 <meta name="author" content="Matheus Policarpo">
-<meta name="keywords" content="Product Design, UX Design, Product Designer, E-commerce, Carrinho, Checkout, Handoff de design, Casos de uso, Fluxos de usuário, App mobile, Food delivery, Design systems, Design de interação">
-<meta property="og:title" content="Levando o Food para o carrinho do marketplace · Case de product design">
-<meta property="og:description" content="17 casos de uso do carrinho: 12 reaproveitam uma capability que já existe, 1 é novo, e uma regra cobre envio grátis e compra mínima.">
+<meta property="og:title" content="Levando o Food para o carrinho do marketplace · Matheus Policarpo">
+<meta property="og:description" content="Um carrinho de delivery de comida migrando para o carrinho do marketplace, com um handoff do que reaproveitar e do que criar.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://portfolio-content-design.vercel.app/pt/food-cart-migration.html">
 <meta property="og:site_name" content="Matheus Policarpo">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://portfolio-content-design.vercel.app/og-food-cart-migration-pt.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Levando o Food para o carrinho do marketplace: case de product design de Matheus Policarpo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://portfolio-content-design.vercel.app/pt/food-cart-migration.html">
 <link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/food-cart-migration.html">
 <link rel="alternate" hreflang="pt-BR" href="https://portfolio-content-design.vercel.app/pt/food-cart-migration.html">
@@ -30,11 +28,9 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Levando o Food para o carrinho do marketplace: case de product design",
-  "about": "Product design para levar um carrinho de delivery de comida para um carrinho de marketplace: quais comportamentos reaproveitar, manter ou criar, e uma regra para envio grátis e compra mínima",
+  "name": "Levando o Food para o carrinho do marketplace",
+  "about": "Product design",
   "inLanguage": "pt-BR",
-  "dateCreated": "2026",
-  "keywords": "product design, UX design, carrinho, checkout, handoff, casos de uso, fluxos de usuário, app mobile, design systems",
   "author": {
     "@type": "Person",
     "name": "Matheus Policarpo"
@@ -43,225 +39,70 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/styles.css">
-<style>
-.numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--fg); margin-top: clamp(36px, 5vw, 56px); }
-.numbers div { padding: 16px 18px 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
-.numbers b { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 40px); line-height: 1; font-variant-numeric: tabular-nums; }
-.numbers span { font-size: 14.5px; color: var(--muted); line-height: 1.4; }
-.lead-shot { padding-top: 0; }
-.tally { margin-top: 28px; border-top: 2px solid var(--fg); max-width: 960px; }
-.tally .row { display: grid; grid-template-columns: minmax(0, 1fr) 232px 44px; gap: 8px 20px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.tally .name { grid-column: 1; grid-row: 1; display: grid; gap: 2px; }
-.tally .name b { font-family: var(--f-mono); font-weight: 500; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
-.tally .name span { font-size: 15.5px; line-height: 1.4; }
-.tally .dots { grid-column: 2; grid-row: 1; display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
-.tally .dots i { display: block; width: 14px; height: 14px; border-radius: 3px; background: var(--fg); }
-.tally .row.new .dots i { background: var(--signal); box-shadow: inset 0 0 0 2px var(--fg); }
-.tally .n { grid-column: 3; grid-row: 1; text-align: right; font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
-.decision { display: grid; gap: 14px; margin-top: clamp(44px, 6vw, 72px); }
-.decision h3 { font-size: clamp(22px, 2.6vw, 29px); font-weight: 780; font-stretch: 104%; line-height: 1.15; max-width: 34ch; }
-.decision p { max-width: var(--measure); }
-.decision .crit { margin-bottom: -6px; }
-.decision .out { border-left: 3px solid var(--fg); padding-left: 14px; }
-.shots { display: grid; gap: 24px; margin-top: 12px; }
-.shot { display: grid; gap: 10px; margin: 0; justify-items: stretch; }
-.shot .frame { background: #F3F3F5; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; justify-content: center; }
-.shot img { display: block; width: auto; max-width: 100%; height: auto; }
-.shot figcaption { max-width: none; font-size: 14px; }
-.thr { min-width: 720px; }
-.thr th[scope="row"] { white-space: nowrap; }
-@media (max-width: 720px) {
-  .numbers { grid-template-columns: minmax(0, 1fr); }
-  .shot .frame { overflow-x: auto; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
-  .shot img { max-width: none; }
-  .lead-shot .shot .frame { overflow: hidden; justify-content: center; }
-  .lead-shot .shot img { max-width: 100%; }
-}
-@media (max-width: 560px) {
-  .tally .row { grid-template-columns: minmax(0, 1fr) 44px; }
-  .tally .n { grid-column: 2; }
-  .tally .dots { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; }
-}
-</style>
 </head>
-<body>
+<body class="cx-page">
 <header class="topbar">
 <div class="wrap">
 <a class="name" href="/pt/">Matheus Policarpo</a>
-<nav aria-label="Seções">
-<a href="/pt/">Todos os trabalhos</a>
-<a href="#problem">Problema</a>
-<a href="#approach">Abordagem</a>
-<a href="#decisions">Decisões</a>
-<a href="#result">Resultado</a>
+<nav aria-label="Navegação">
+<a href="/pt/">← Todos os trabalhos</a>
 </nav>
- <div class="lang" role="group" aria-label="Idioma">
+<div class="lang" role="group" aria-label="Idioma">
 <a href="/food-cart-migration.html" hreflang="en" lang="en" aria-label="Read in English" title="English">EN</a>
 <span aria-current="true">PT</span>
 </div>
 </div>
 </header>
 <main>
-<div class="hero">
-<div class="wrap">
-<p class="eyebrow">Case de product design · Mercado Libre · 2026</p>
-<h1>Levando o Food para o <span>carrinho do marketplace</span></h1>
-<p class="lede" style="max-width: 60ch;">O Food tinha um carrinho próprio, e ele estava migrando para o carrinho do marketplace. Passei por todos os comportamentos do carrinho e decidi o que o Food podia reaproveitar e o que ele realmente precisava. Dos 17 casos de uso, 12 reaproveitam uma capability que já existe e só um é novo.</p>
-<p style="margin-top: 20px;"><span class="disclaimer">Versão reduzida de um arquivo de handoff. Os preços nas telas são placeholders.</span></p>
-<div class="numbers">
-<div><b>17</b><span>casos de uso mapeados, mais uma regra combinada</span></div>
-<div><b>12</b><span>reaproveitam uma capability que já existe</span></div>
-<div><b>1</b><span>comportamento novo: kits idênticos dividem a mesma linha</span></div>
+<div class="cx-hero">
+<!-- IMAGEM: ícone ou logo do projeto -->
+<div class="cx-logo" role="img" aria-label="Espaço reservado para o ícone do projeto"><span>Ícone</span></div>
+<h1 class="cx-title">Levando o Food para o carrinho do marketplace</h1>
+<p class="cx-sub">Um carrinho de delivery de comida migrando para o carrinho do marketplace, com um handoff do que reaproveitar e do que criar.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026</p>
 </div>
-<dl class="facts">
-<div><dt>Meu papel</dt><dd>Product design: casos de uso, fluxos e regras para o handoff</dd></div>
-<div><dt>Escopo</dt><dd>17 casos de uso e uma regra combinada</dd></div>
-<div><dt>Plataforma</dt><dd>App mobile, Argentina, em espanhol</dd></div>
-<div><dt>Ferramentas</dt><dd>Figma</dd></div>
-</dl>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/food-kit-flow.png" alt="Três telas mobile: página do produto de um combo, página da loja com o progresso do envio grátis e o carrinho com as escolhas do kit" loading="lazy">
 </div>
 </div>
-<section class="lead-shot" aria-label="O carrinho Food no carrinho do marketplace">
-<div class="wrap">
-<figure class="shot">
-<div class="frame"><img src="/food-kit-flow.png" alt="Três telas mobile: a página do produto de um combo de hambúrguer com o botão Adicionar mostrando o total, a página da loja com o rodapé mostrando a contagem do carrinho e o progresso até o envio grátis, e o carrinho com as escolhas do kit em azul abaixo do nome do item" width="1220" height="936"></div>
-<figcaption><b>O resultado em três telas</b>Página do produto, página da loja com o progresso do envio grátis e o carrinho com as escolhas do kit em azul.</figcaption>
-</figure>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">O Food tinha um carrinho próprio e estava migrando para o carrinho do marketplace, que não podia mudar. Manter dois carrinhos saía caro, e o Food ficava de fora das novidades do marketplace.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>12 dos 17</b> casos de uso do carrinho reaproveitam uma capability que já existe, e só 1 é novo</p>
+<p>A engenharia usou o handoff sem dúvidas em aberto, e ele virou referência para outra vertical</p>
 </div>
-</section>
-<section id="problem" aria-labelledby="problem-h">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Problema</p>
-<h2 id="problem-h">O Food tinha três comportamentos que o carrinho do marketplace não tinha</h2>
-</div>
-<div class="prose">
-<p>Manter dois carrinhos saía caro, e o Food ficava de fora das novidades do carrinho do marketplace. A maior parte de um carrinho é comportamento compartilhado: escolher itens, mudar a quantidade, remover, mostrar descontos e envio grátis. O Food acrescenta três comportamentos próprios: kits com escolhas feitas na página do produto (um combo com acompanhamento e bebida, por exemplo), uma compra mínima por loja e uma tarifa de serviço no pricebox.</p>
-<div class="callout">
-<p><b>A restrição:</b> o carrinho do marketplace não podia mudar, então toda necessidade do Food tinha que caber em componentes que já existiam.</p>
-</div>
-<p>O handoff precisava dizer à engenharia, comportamento por comportamento, o que construir, o que reaproveitar como está e o que deixar quieto.</p>
-</div>
-</div>
-</section>
-<section id="approach" aria-labelledby="approach-h">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Abordagem</p>
-<h2 id="approach-h">Dei a cada caso de uso um de quatro rótulos</h2>
-<p>Dividi o carrinho em 17 casos de uso e alinhei com produto e engenharia. O rótulo de cada um responde à primeira pergunta da engenharia: construir, reaproveitar ou deixar como está?</p>
-</div>
-<div class="tally" role="list">
-<div class="row" role="listitem">
-<div class="name"><b>Capability</b><span>Reaproveitar uma capability que já existe.</span></div>
-<span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-<b class="n">12</b>
-</div>
-<div class="row" role="listitem">
-<div class="name"><b>Atual + capability</b><span>Partir de como o Food funciona hoje e trocar por um componente que já existe.</span></div>
-<span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-<b class="n">3</b>
-</div>
-<div class="row" role="listitem">
-<div class="name"><b>Atual</b><span>Manter o que o Food faz hoje.</span></div>
-<span class="dots" aria-hidden="true"><i></i></span>
-<b class="n">1</b>
-</div>
-<div class="row new" role="listitem">
-<div class="name"><b>Atual + novo</b><span>Manter o comportamento de hoje e acrescentar uma regra nova.</span></div>
-<span class="dots" aria-hidden="true"><i></i></span>
-<b class="n">1</b>
-</div>
-</div>
-</div>
-</section>
-<section id="decisions" aria-labelledby="decisions-h">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Decisões</p>
-<h2 id="decisions-h">Onde o Food precisou de mais do que um reaproveitamento</h2>
-<p>Três decisões mostram o raciocínio. Os outros casos seguem o carrinho do marketplace ou o que o Food faz hoje.</p>
-</div>
-<div class="decision">
-<span class="crit">Decisão 1</span>
-<h3>Uma regra cobre três cenários de frete</h3>
-<p>O envio grátis do Meli+ e a compra mínima da loja são limites separados, e qualquer um dos dois pode ser o maior. Isso parecia três fluxos diferentes. Uma frase cobre todos.</p>
-<div class="callout">
-<p><b>A regra:</b> só a compra mínima decide se o comprador pode continuar. O envio grátis só muda quanto custa o frete.</p>
-</div>
-<p class="out"><b>O que ficou de fora.</b> O envio grátis nunca libera o checkout sozinho.</p>
-<div class="tbl-wrap">
-<table class="thr">
-<thead><tr><th scope="col">Configuração</th><th scope="col">Ao alcançar a compra mínima</th><th scope="col">Ao alcançar o envio grátis</th></tr></thead>
-<tbody>
-<tr><th scope="row">Envio grátis $ 15.000<br>Compra mínima $ 15.000</th><td>Em $ 15.000, o comprador pode continuar.</td><td>Em $ 15.000, o envio é grátis.</td></tr>
-<tr><th scope="row">Envio grátis $ 15.000<br>Compra mínima $ 10.000</th><td>Em $ 10.000, o comprador pode continuar e paga o envio.</td><td>Em $ 15.000, o envio passa a ser grátis.</td></tr>
-<tr><th scope="row">Envio grátis $ 10.000<br>Compra mínima $ 15.000</th><td>Em $ 15.000, o comprador pode continuar com envio grátis.</td><td>Em $ 10.000, o envio é grátis, mas o comprador ainda não consegue continuar.</td></tr>
-</tbody>
-</table>
-</div>
-<div class="shots">
-<figure class="shot">
-<div class="frame"><img src="/food-fs-mpv-3.png" alt="Três telas mobile: o carrinho antes dos limites, o carrinho depois de alcançar o envio grátis mas não a compra mínima, e o carrinho depois de alcançar a compra mínima com envio grátis" loading="lazy" width="1284" height="724"></div>
-<figcaption><b>O cenário mais difícil</b>O envio grátis vem primeiro e, sozinho, não libera o checkout. A compra mínima libera.</figcaption>
-</figure>
-</div>
-</div>
-<div class="decision">
-<span class="crit">Decisão 2</span>
-<h3>O mesmo kit duas vezes: uma linha ou duas</h3>
-<p>Adicionar o mesmo item de novo levanta uma pergunta: é a mesma personalização? Se for diferente, o carrinho mantém duas linhas separadas, como o Food faz hoje. Se for igual, as duas viram uma só linha com a quantidade, <span class="es" lang="es">“2 u.”</span> O carrinho do marketplace já agrupa itens iguais, e duas linhas idênticas deixavam a quantidade difícil de ler.</p>
-<p class="out"><b>O que ficou de fora.</b> Só kits idênticos se juntam. É o único comportamento novo em todo o handoff, então destaquei isso em vez de deixá-lo no meio dos casos reaproveitados.</p>
-<div class="shots">
-<figure class="shot">
-<div class="frame"><img src="/food-same-item.png" alt="Três telas mobile: o carrinho com um kit, o resultado com personalização diferente mostrando duas linhas separadas e o resultado com a mesma personalização mostrando uma única linha com duas unidades" loading="lazy" width="1284" height="725"></div>
-<figcaption><b>O mesmo item, duas vezes</b>Uma personalização diferente mantém duas linhas. A mesma personalização vira uma só.</figcaption>
-</figure>
-</div>
-</div>
-<div class="decision">
-<span class="crit">Decisão 3</span>
-<h3>Editar um kit: voltar descarta, confirmar aplica</h3>
-<p>Da linha de um kit, o comprador reabre a página do produto com as escolhas já carregadas. O link de variantes que o carrinho do marketplace já tem é o ponto de entrada, então a linha não ganha nada novo.</p>
-<p class="out"><b>O que ficou de fora.</b> Voltar nunca altera o carrinho. Só confirmar na página do produto aplica as novas escolhas.</p>
-<div class="shots">
-<figure class="shot">
-<div class="frame"><img src="/food-modify-kit.png" alt="Três telas mobile: o carrinho com um kit, a página do produto com as escolhas do kit selecionadas e um botão Actualizar mostrando o total, e o carrinho de novo com as novas escolhas abaixo do nome do kit" loading="lazy" width="1240" height="1128"></div>
-<figcaption><b>Modificar um kit</b>Carrinho, página do produto com as escolhas pré-carregadas e o carrinho atualizado.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="result" aria-labelledby="result-h">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">Resultado</p>
-<h2 id="result-h">O que saiu disso</h2>
-</div>
-<div class="lessons">
+<div class="cx-two cx-did">
 <div>
-<h3>Usado sem dúvidas</h3>
-<p>A engenharia usou o handoff sem dúvidas em aberto.</p>
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Dividi o carrinho em 17 casos de uso e alinhei com produto e engenharia.</p>
+<p>Dei a cada caso um de quatro rótulos, como “capability” ou “atual”, para dizer o que construir, reaproveitar ou deixar como está.</p>
+<p>Escrevi uma regra única para envio grátis e compra mínima.</p>
 </div>
 <div>
-<h3>Referência para outros times</h3>
-<p>O handoff virou referência para outra vertical.</p>
-</div>
-<div>
-<h3>O que eu mudaria</h3>
-<p>Eu testaria a regra de frete com compradores antes do handoff.</p>
+<h2 class="cx-label">O que mudou</h2>
+<p>A engenharia sabe, caso a caso, o que construir, o que reaproveitar e o que deixar quieto.</p>
+<p>Só a compra mínima decide se o comprador continua. O envio grátis só muda o custo do frete.</p>
+<p>Kits idênticos passam a dividir uma linha com a quantidade. É o único comportamento novo.</p>
 </div>
 </div>
-<p style="margin-top: 28px; max-width: var(--measure);">O arquivo completo cobre os 17 casos de uso, e posso apresentá-lo com calma numa conversa.</p>
 </div>
-</section>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/food-fs-mpv-3.png" alt="Três telas do carrinho: antes dos limites, com envio grátis sem compra mínima, e com os dois limites atingidos" loading="lazy">
+<img src="/food-same-item.png" alt="Três telas: um kit no carrinho, o mesmo item com outra personalização em duas linhas e com a mesma personalização em uma linha" loading="lazy">
+<img src="/food-modify-kit.png" alt="Três telas: carrinho com um kit, página do produto com as escolhas carregadas e carrinho atualizado" loading="lazy">
+</div>
+</div>
 </main>
 <footer>
 <div class="wrap">
-<p>Telas de um arquivo de handoff do Mercado Libre, mostradas em versão reduzida para este portfólio. Preços mostrados como $ 00.000 são placeholders. <a href="/pt/">Ver todos os trabalhos</a>.</p>
+<p>Telas de um arquivo de handoff do Mercado Libre, em versão reduzida. Preços como $ 00.000 são placeholders. <a href="/pt/">Ver todos os trabalhos</a>.</p>
 </div>
 </footer>
 </body>
