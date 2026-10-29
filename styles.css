@@ -467,6 +467,15 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-ft-l::after, .sp-ft-r::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(135deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, .06)); -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%); }
 @keyframes sp-orbs { to { transform: translate3d(3%, -4%, 0) scale(1.08) rotate(3deg); } }
 @media (prefers-reduced-motion: reduce) { .sp-ft-l::before, .sp-ft-r::before { animation: none; } }
+.sp-do { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 24px 40px; max-width: 1240px; width: 100%; margin: 0 auto; padding: clamp(32px, 5vw, 56px) clamp(16px, 3vw, 28px); border-top: 1px solid var(--line); }
+.sp-do-l { font-size: 14px; font-weight: 400; color: var(--muted); padding-top: 2px; }
+.sp-do-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; list-style: none; margin: 0; padding: 0; }
+.sp-do-g li { min-width: 0; }
+.sp-do-i { background: #f4f4f5; border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 10; display: grid; place-items: center; }
+.sp-do-i img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.sp-do-g h3 { font-size: 17px; font-weight: 500; color: #fff; margin: 16px 0 6px; }
+.sp-do-g p { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 24em; }
+@media (max-width: 860px) { .sp-do { grid-template-columns: 1fr; } .sp-do-g { grid-template-columns: 1fr; gap: 28px; } .sp-do-g p { max-width: none; } }
 .sp-ft { --ftsz: clamp(32px, 4.1vw, 58px); }
 .sp-ft-big { text-shadow: 0 1px 12px rgba(0, 0, 0, .18); font-size: var(--ftsz); white-space: nowrap; line-height: 1.02; font-weight: 500; letter-spacing: -.035em; }
 .sp-ft-l, .sp-ft-r { position: relative; isolation: isolate; overflow: hidden; border-radius: 24px; background: #0b0b10; border: 1px solid rgba(255, 255, 255, .22); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -1px 0 rgba(255, 255, 255, .08), inset 0 0 36px rgba(255, 255, 255, .05), 0 18px 40px rgba(0, 0, 0, .35); color: #fff; }
