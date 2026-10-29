@@ -59,13 +59,13 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="cx-page sp">
 <header class="sp-bar">
 <button class="sp-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sp-drawer"><span></span><span></span></button>
-<a class="sp-works" href="#trabalhos">TRABALHOS</a>
+<nav class="sp-actions"><a class="sp-mailbtn" href="mailto:matheusloures@live.com">Enviar e-mail</a><a class="sp-li" href="https://www.linkedin.com/in/mtpoli/" rel="me noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></nav>
 </header>
 <nav class="sp-drawer" id="sp-drawer" aria-label="Seções" hidden>
 <a href="#inicio">Início</a>
@@ -78,16 +78,10 @@
 </nav>
 <main>
 <section class="sp-hero" id="inicio">
-<div class="sp-id">
-<span class="sp-flag" role="img" aria-label="Brasil">🇧🇷</span>
-<h1 class="sp-name">Matheus<br>Policarpo</h1>
-<span class="sp-clock" id="sp-clock" aria-hidden="true">UTC-3</span>
-</div>
-<p class="sp-tag">Product Designer e Design Engineer, desenhando conteúdo e produtos com IA, do texto na tela ao prompt</p>
-<p class="sp-bio">11 anos em e-commerce, fintech, telecom, saúde e logística, de startups a empresas como Mercado Libre, Loggi, Banco do Brasil, Porto e Vivo.</p>
-<a class="sp-cta" href="mailto:matheusloures@live.com">Enviar e-mail</a>
+<h1 class="sp-name">Matheus Policarpo</h1>
+<p class="sp-tag">Product Design e AI Content Designer. Desenho produtos e experiências com IA, do texto na tela ao prompt.</p>
+<p class="sp-bio">11 anos em e-commerce, fintech, telecom, saúde e logística. Mercado Libre, Loggi, Banco do Brasil, Porto e Vivo.</p>
 </section>
-<div id="trabalhos"></div>
 <section class="sp-case" id="pronto-app-instant-delivery" aria-label="Pronto App para instant delivery">
 <div class="cx-hero">
 <img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
@@ -316,20 +310,17 @@
 <p class="sp-foot">Versão anonimizada.</p>
 </section>
 <section class="sp-end" id="contato">
-<p class="sp-tag">Aberto a novas oportunidades</p>
-<a class="sp-mail" href="mailto:matheusloures@live.com">matheusloures@live.com</a>
-<a class="sp-in" href="https://www.linkedin.com/in/mtpoli" rel="me noopener">LinkedIn ↗</a>
+<h2 class="sp-endt">Vamos conversar?</h2>
+<p class="sp-bio">Se algum desses projetos fez sentido pra você, me chama. Adoro trocar ideia sobre produto, conteúdo e IA.</p>
+<div class="sp-links">
+<a href="https://www.linkedin.com/in/mtpoli/" rel="me noopener">LinkedIn</a>
+<a href="mailto:matheusloures@live.com">E-mail</a>
+<a href="https://calendly.com/mtpoli/30min" rel="noopener">Agendar 30 min</a>
+</div>
 </section>
 </main>
 <script>
 (function () {
-  var c = document.getElementById("sp-clock");
-  function tick() {
-    try {
-      c.textContent = "UTC-3 " + new Date().toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo", hour12: false });
-    } catch (e) {}
-  }
-  tick(); setInterval(tick, 1000);
   var b = document.querySelector(".sp-menu"), d = document.getElementById("sp-drawer");
   function set(o) { d.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); document.body.classList.toggle("sp-open", o); }
   b.addEventListener("click", function () { set(d.hidden); });
