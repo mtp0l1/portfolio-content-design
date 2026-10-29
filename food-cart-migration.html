@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Moving Food onto the Marketplace Cart</title>
-<meta name="description" content="Product design case study by Matheus Policarpo: 17 cart use cases sorted into what Food could reuse and what it really needed, with one rule for combining free shipping and a minimum purchase.">
+<title>Bringing Food to the marketplace cart · Matheus Policarpo</title>
+<meta name="description" content="A food delivery cart moving into the marketplace cart, with a handoff of what to reuse and what to build.">
 <meta name="author" content="Matheus Policarpo">
-<meta name="keywords" content="Product Design, UX Design, Product Designer, E-commerce, Cart, Checkout, Design Handoff, Use Cases, User Flows, Mobile App, Food Delivery, Design Systems, Interaction Design">
-<meta property="og:title" content="Moving Food onto the marketplace cart · Product design case study">
-<meta property="og:description" content="17 cart use cases: 12 reuse an existing capability, 1 is new, and one rule covers free shipping and minimum purchase.">
+<meta property="og:title" content="Bringing Food to the marketplace cart · Matheus Policarpo">
+<meta property="og:description" content="A food delivery cart moving into the marketplace cart, with a handoff of what to reuse and what to build.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://portfolio-content-design.vercel.app/food-cart-migration.html">
 <meta property="og:site_name" content="Matheus Policarpo">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="pt_BR">
-<meta property="og:image" content="https://portfolio-content-design.vercel.app/og-food-cart-migration.png">
+<meta property="og:image" content="https://portfolio-content-design.vercel.app/og-food-cart-migration-pt.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Moving Food onto the marketplace cart: product design case study by Matheus Policarpo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://portfolio-content-design.vercel.app/food-cart-migration.html">
 <link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/food-cart-migration.html">
 <link rel="alternate" hreflang="pt-BR" href="https://portfolio-content-design.vercel.app/pt/food-cart-migration.html">
@@ -30,250 +28,82 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Moving Food onto the marketplace cart: product design case study",
-  "about": "Product design for moving a food delivery cart onto a marketplace cart: which behaviors to reuse, keep or create, and one rule for free shipping and minimum purchase",
+  "name": "Bringing Food to the marketplace cart",
+  "about": "Product design",
   "inLanguage": "en",
-  "dateCreated": "2026",
-  "keywords": "product design, UX design, cart, checkout, handoff, use cases, user flows, mobile app, design systems",
-  "author": {"@type": "Person", "name": "Matheus Policarpo"}
+  "author": {
+    "@type": "Person",
+    "name": "Matheus Policarpo"
+  }
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles.css">
-<style>
-.numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--fg); margin-top: clamp(36px, 5vw, 56px); }
-.numbers div { padding: 16px 18px 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
-.numbers b { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: clamp(28px, 3.4vw, 40px); line-height: 1; font-variant-numeric: tabular-nums; }
-.numbers span { font-size: 14.5px; color: var(--muted); line-height: 1.4; }
-.lead-shot { padding-top: 0; }
-.tally { margin-top: 28px; border-top: 2px solid var(--fg); max-width: 960px; }
-.tally .row { display: grid; grid-template-columns: minmax(0, 1fr) 232px 44px; gap: 8px 20px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.tally .name { grid-column: 1; grid-row: 1; display: grid; gap: 2px; }
-.tally .name b { font-family: var(--f-mono); font-weight: 500; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
-.tally .name span { font-size: 15.5px; line-height: 1.4; }
-.tally .dots { grid-column: 2; grid-row: 1; display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
-.tally .dots i { display: block; width: 14px; height: 14px; border-radius: 3px; background: var(--fg); }
-.tally .row.new .dots i { background: var(--signal); box-shadow: inset 0 0 0 2px var(--fg); }
-.tally .n { grid-column: 3; grid-row: 1; text-align: right; font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
-.decision { display: grid; gap: 14px; margin-top: clamp(44px, 6vw, 72px); }
-.decision h3 { font-size: clamp(22px, 2.6vw, 29px); font-weight: 780; font-stretch: 104%; line-height: 1.15; max-width: 34ch; }
-.decision p { max-width: var(--measure); }
-.decision .crit { margin-bottom: -6px; }
-.decision .out { border-left: 3px solid var(--fg); padding-left: 14px; }
-.shots { display: grid; gap: 24px; margin-top: 12px; }
-.shot { display: grid; gap: 10px; margin: 0; justify-items: stretch; }
-.shot .frame { background: #F3F3F5; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; justify-content: center; }
-.shot img { display: block; width: auto; max-width: 100%; height: auto; }
-.shot figcaption { max-width: none; font-size: 14px; }
-.thr { min-width: 720px; }
-.thr th[scope="row"] { white-space: nowrap; }
-@media (max-width: 720px) {
-  .numbers { grid-template-columns: minmax(0, 1fr); }
-  .shot .frame { overflow-x: auto; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
-  .shot img { max-width: none; }
-  .lead-shot .shot .frame { overflow: hidden; justify-content: center; }
-  .lead-shot .shot img { max-width: 100%; }
-}
-@media (max-width: 560px) {
-  .tally .row { grid-template-columns: minmax(0, 1fr) 44px; }
-  .tally .n { grid-column: 2; }
-  .tally .dots { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; }
-}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-
+<body class="cx-page">
 <header class="topbar">
-  <div class="wrap">
-    <a class="name" href="/">Matheus Policarpo</a>
-    <nav aria-label="Sections">
-      <a href="/">All work</a>
-      <a href="#problem">Problem</a>
-      <a href="#approach">Approach</a>
-      <a href="#decisions">Decisions</a>
-      <a href="#result">Result</a>
-    </nav>
-    <div class="lang" role="group" aria-label="Language">
-      <span aria-current="true">EN</span>
-      <a href="/pt/food-cart-migration.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português (Brasil)">PT</a>
-    </div>
-  </div>
+<div class="wrap">
+<a class="name" href="/">Matheus Policarpo</a>
+<nav aria-label="Navigation">
+<a href="/">← All work</a>
+</nav>
+<div class="lang" role="group" aria-label="Language">
+<span aria-current="true">EN</span>
+<a href="/pt/food-cart-migration.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português">PT</a>
+</div>
+</div>
 </header>
-
 <main>
-  <div class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Product design case study · Mercado Libre · 2026</p>
-      <h1>Moving Food onto the <span>marketplace cart</span></h1>
-      <p class="lede" style="max-width: 60ch;">Food had its own cart, and it was migrating to the marketplace cart. I went through every cart behavior and decided what Food could reuse and what it actually needed. Of 17 use cases, 12 reuse a capability that already exists and only one is new.</p>
-      <p style="margin-top: 20px;"><span class="disclaimer">Reduced version of a handoff file. Prices in the screens are placeholders.</span></p>
-
-      <div class="numbers">
-        <div><b>17</b><span>use cases mapped, plus one combined rule</span></div>
-        <div><b>12</b><span>reuse a capability that already exists</span></div>
-        <div><b>1</b><span>new behavior: identical kits share one row</span></div>
-      </div>
-
-      <dl class="facts">
-        <div><dt>My role</dt><dd>Product design: use cases, flows and rules for the handoff</dd></div>
-        <div><dt>Scope</dt><dd>17 use cases and one combined rule</dd></div>
-        <div><dt>Platform</dt><dd>Mobile app, Argentina, in Spanish</dd></div>
-        <div><dt>Tools</dt><dd>Figma</dd></div>
-      </dl>
-    </div>
-  </div>
-
-  <section class="lead-shot" aria-label="The Food cart on the marketplace cart">
-    <div class="wrap">
-      <figure class="shot">
-        <div class="frame"><img src="food-kit-flow.png" alt="Three mobile screens: the product page of a burger combo with the Add button showing the total, the store page with the footer showing the cart count and the progress to free shipping, and the cart with the kit choices in blue under the item name" width="1220" height="936"></div>
-        <figcaption><b>The result in three screens</b>Product page, store page with the free-shipping progress, and the cart with the kit choices in blue.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section id="problem" aria-labelledby="problem-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Problem</p>
-        <h2 id="problem-h">Food had three behaviors the marketplace cart didn’t</h2>
-      </div>
-      <div class="prose">
-        <p>Keeping two carts was costly, and Food missed the new features of the marketplace cart. Most of a cart is shared behavior: pick items, change quantity, remove, show discounts and free shipping. Food adds three of its own: kits with choices set on the product page (a combo with a side and a drink, for example), a minimum purchase per store, and a service fee in the price box.</p>
-        <div class="callout">
-          <p><b>The constraint:</b> the marketplace cart couldn’t change, so every Food need had to fit components that already existed.</p>
-        </div>
-        <p>The handoff had to tell engineering, behavior by behavior, what to build, what to reuse as it is and what to leave alone.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="approach" aria-labelledby="approach-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Approach</p>
-        <h2 id="approach-h">I gave every use case one of four labels</h2>
-        <p>I split the cart into 17 use cases and aligned them with product and engineering. The label on each one answers the question engineering asks first: build it, reuse it or leave it?</p>
-      </div>
-      <div class="tally" role="list">
-        <div class="row" role="listitem">
-          <div class="name"><b>Capability</b><span>Reuse a capability that already exists.</span></div>
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          <b class="n">12</b>
-        </div>
-        <div class="row" role="listitem">
-          <div class="name"><b>Current + capability</b><span>Start from how Food works today and swap in one existing component.</span></div>
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <b class="n">3</b>
-        </div>
-        <div class="row" role="listitem">
-          <div class="name"><b>Current</b><span>Keep what Food does today.</span></div>
-          <span class="dots" aria-hidden="true"><i></i></span>
-          <b class="n">1</b>
-        </div>
-        <div class="row new" role="listitem">
-          <div class="name"><b>Current + new</b><span>Keep today’s behavior and add one new rule.</span></div>
-          <span class="dots" aria-hidden="true"><i></i></span>
-          <b class="n">1</b>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="decisions" aria-labelledby="decisions-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Decisions</p>
-        <h2 id="decisions-h">Where Food needed more than a reuse</h2>
-        <p>Three decisions show the reasoning. The other cases follow the marketplace cart or what Food does today.</p>
-      </div>
-
-      <div class="decision">
-        <span class="crit">Decision 1</span>
-        <h3>One rule covers three shipping setups</h3>
-        <p>Meli+ free shipping and a store’s minimum purchase are separate thresholds, and either one can be the higher. That looked like three different flows. One sentence covers all of them.</p>
-        <div class="callout">
-          <p><b>The rule:</b> only the minimum purchase decides whether the buyer can continue. Free shipping only changes what shipping costs.</p>
-        </div>
-        <p class="out"><b>What I left out.</b> Free shipping never unlocks the checkout on its own.</p>
-        <div class="tbl-wrap">
-          <table class="thr">
-            <thead><tr><th scope="col">Setup</th><th scope="col">Reaching the minimum</th><th scope="col">Reaching free shipping</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Free shipping $ 15.000<br>Minimum $ 15.000</th><td>At $ 15.000, the buyer can continue.</td><td>At $ 15.000, shipping is free.</td></tr>
-              <tr><th scope="row">Free shipping $ 15.000<br>Minimum $ 10.000</th><td>At $ 10.000, the buyer can continue and pays for shipping.</td><td>At $ 15.000, shipping becomes free.</td></tr>
-              <tr><th scope="row">Free shipping $ 10.000<br>Minimum $ 15.000</th><td>At $ 15.000, the buyer can continue with free shipping.</td><td>At $ 10.000, shipping is free, but the buyer still can’t continue.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="shots">
-          <figure class="shot">
-            <div class="frame"><img src="food-fs-mpv-3.png" alt="Three mobile screens: the cart before the thresholds, the cart after reaching free shipping but not the minimum, and the cart after reaching the minimum with free shipping" loading="lazy" width="1284" height="724"></div>
-            <figcaption><b>The hardest setup</b>Free shipping comes first, and it alone doesn’t unlock the checkout. The minimum does.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="decision">
-        <span class="crit">Decision 2</span>
-        <h3>The same kit twice: one row or two</h3>
-        <p>Adding the same item again raises one question: is it the same customization? If it is different, the cart keeps two separate rows, as Food does today. If it is the same, the two collapse into one row with the quantity, <span class="es" lang="es">“2 u.”</span> The marketplace cart already groups equal items, and two identical rows made the quantity hard to read.</p>
-        <p class="out"><b>What I left out.</b> Only identical kits merge. It is the one new behavior in the whole handoff, so I called it out instead of leaving it among the reused cases.</p>
-        <div class="shots">
-          <figure class="shot">
-            <div class="frame"><img src="food-same-item.png" alt="Three mobile screens: the cart with a kit, the result with a different customization showing two separate rows, and the result with the same customization showing a single row with two units" loading="lazy" width="1284" height="725"></div>
-            <figcaption><b>Same item, twice</b>A different customization keeps two rows. The same customization collapses into one.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="decision">
-        <span class="crit">Decision 3</span>
-        <h3>Editing a kit: back discards, confirm applies</h3>
-        <p>From a kit’s row, the buyer reopens the product page with the choices already loaded. The variants link that the marketplace cart already has is the entry point, so the row gets nothing new.</p>
-        <p class="out"><b>What I left out.</b> Going back never changes the cart. Only confirming on the product page applies the new choices.</p>
-        <div class="shots">
-          <figure class="shot">
-            <div class="frame"><img src="food-modify-kit.png" alt="Three mobile screens: the cart with a kit, the product page with the kit choices selected and an Update button showing the total, and the cart again with the new choices under the kit name" loading="lazy" width="1240" height="1128"></div>
-            <figcaption><b>Modify a kit</b>Cart, product page with the choices preloaded, and the updated cart.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="result" aria-labelledby="result-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Result</p>
-        <h2 id="result-h">What came out of it</h2>
-      </div>
-      <div class="lessons">
-        <div>
-          <h3>Used without questions</h3>
-          <p>Engineering used the handoff without open questions.</p>
-        </div>
-        <div>
-          <h3>A reference for other teams</h3>
-          <p>The handoff became a reference for another vertical.</p>
-        </div>
-        <div>
-          <h3>What I’d change</h3>
-          <p>I would test the shipping rule with buyers before the handoff.</p>
-        </div>
-      </div>
-      <p style="margin-top: 28px; max-width: var(--measure);">The full file covers all 17 use cases, and I’m happy to walk through it.</p>
-    </div>
-  </section>
-
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h1 class="cx-title">Bringing Food to the marketplace cart</h1>
+<p class="cx-sub">A food delivery cart moving into the marketplace cart, with a handoff of what to reuse and what to build.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/food-vpp-kit.png" alt="Product page of a combo, with a side, a drink and customization" loading="lazy">
+<img src="/food-cart-kit.png" alt="Marketplace cart with the kit and its choices on the item line" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Context</h2>
+<p class="cx-ctx">Food had its own cart and was migrating to the marketplace cart, which couldn&#x27;t change. Keeping two carts was expensive, and Food missed out on marketplace improvements.</p>
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>12 of 17</b> cart use cases reuse an existing capability, and only 1 is new</p>
+<p>Engineering used the handoff with no open questions, and it became a reference for another vertical</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">What I did</h2>
+<p>Split the cart into 17 use cases and aligned with product and engineering.</p>
+<p>Gave each case one of four labels, like “capability” or “current”, to say what to build, reuse or leave as is.</p>
+<p>Wrote a single rule for free shipping and minimum purchase.</p>
+</div>
+<div>
+<h2 class="cx-label">What changed</h2>
+<p>Engineering knows, case by case, what to build, what to reuse and what to leave alone.</p>
+<p>Only the minimum purchase decides whether the buyer continues. Free shipping only changes the shipping cost.</p>
+<p>Identical kits now share one line with a quantity. It&#x27;s the only new behavior.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/food-same-1.png" alt="Cart with one kit" loading="lazy">
+<img src="/food-same-2.png" alt="Same item with a different customization, on two lines" loading="lazy">
+<img src="/food-same-3.png" alt="Same item with the same customization, on one line with quantity 2" loading="lazy">
+</div>
+</div>
 </main>
-
 <footer>
-  <div class="wrap">
-    <p>Screens come from a Mercado Libre handoff file and are shown in a reduced version for this portfolio. Prices shown as $ 00.000 are placeholders. <a href="/">See all work</a>.</p>
-  </div>
+<div class="wrap">
+<p>Prices like $ 00.000 are placeholders.</p>
+</div>
 </footer>
 </body>
 </html>

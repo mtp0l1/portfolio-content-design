@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Matheus Policarpo · Content Design</title>
-<meta name="description" content="Portfolio of Matheus Policarpo, Product Designer, Content Designer and Design Engineer. Content systems, structured content, prompt design and evaluation for AI-generated content.">
+<title>Matheus Policarpo · Product Design and AI Content Design</title>
+<meta name="description" content="Portfolio of Matheus Policarpo, Product Designer and AI Content Designer. Product and content cases at Mercado Libre.">
 <meta name="author" content="Matheus Policarpo">
 <meta name="keywords" content="AI Content Strategist, Content Strategy, Content Design, UX Writing, Content Systems, Content Model, Taxonomy, Structured Content, AI-generated content, LLM, Prompt Design, Evaluation Criteria, Personalization, Onboarding, Product Design">
-<meta property="og:title" content="Matheus Policarpo · Content Design">
-<meta property="og:description" content="Content systems, prompt design and evaluation for AI-generated content.">
+<meta property="og:title" content="Matheus Policarpo · Product Design and AI Content Design">
+<meta property="og:description" content="Portfolio of Matheus Policarpo, Product Designer and AI Content Designer. Product and content cases at Mercado Libre.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portfolio-content-design.vercel.app/">
 <meta property="og:site_name" content="Matheus Policarpo">
@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://portfolio-content-design.vercel.app/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Matheus Policarpo: Content that holds up at scale">
+<meta property="og:image:alt" content="Matheus Policarpo · Product Design and AI Content Design">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://portfolio-content-design.vercel.app/">
 <link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/">
@@ -41,76 +41,242 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<header class="topbar">
-  <div class="wrap">
-    <a class="name" href="/">Matheus Policarpo</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="lang" role="group" aria-label="Language">
-      <span aria-current="true">EN</span>
-      <a href="/pt/" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português (Brasil)">PT</a>
-    </div>
-  </div>
+<body class="cx-page sp">
+<header class="sp-bar">
+<button class="sp-menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sp-drawer"><span></span><span></span></button>
+<nav class="sp-actions"><a class="sp-lang" href="/pt/" hreflang="pt-BR" aria-label="Ler em português">PT</a><a class="sp-mailbtn" href="mailto:matheusloures@live.com">Send email</a><a class="sp-li" href="https://www.linkedin.com/in/mtpoli/" rel="me noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></nav>
 </header>
-
+<nav class="sp-drawer" id="sp-drawer" aria-label="Sections" hidden>
+<a href="#inicio">Home</a>
+<a href="#pronto-app-instant-delivery">Pronto App for instant delivery</a>
+<a href="#beneficio-de-alimentacao">Food benefit at Súper</a>
+<a href="#pausar-loja">Pausing a store in the backoffice</a>
+<a href="#food-cart-migration">Bringing Food to the marketplace cart</a>
+<a href="#contato">Contact</a>
+</nav>
 <main>
-  <div class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Content design · Content systems · AI</p>
-      <h1>Content that <span>holds up</span> at scale</h1>
-      <p class="lede" style="max-width: 58ch;">I’m Matheus Policarpo, a Product Designer and Design Engineer with 11 years of experience and a focus on content. I design content systems that people and AI can both work from: clear models, prompts built on them, and quality criteria anyone can apply.</p>
-    </div>
-  </div>
-
-  <section id="work" aria-labelledby="work-h" style="padding-top: 8px; border-top: 0;">
-    <div class="wrap">
-      <h2 id="work-h" class="eyebrow" style="font-family: var(--f-mono); font-size: 12.5px; font-weight: 400; margin-bottom: 16px;">Selected work</h2>
-      <div class="case-grid">
-        <a class="case-card" href="food-cart-migration.html">
-          <div class="cover shot-cover"><img src="food-cover.png" alt="Cart screen with a burger combo, its choices in blue under the name, and the shipping line showing free shipping" loading="lazy" width="392" height="245"></div>
-          <div class="body">
-            <p class="eyebrow">Mercado Libre · Product design · 2026</p>
-            <h3>Moving Food onto the marketplace cart</h3>
-            <p>17 cart use cases sorted into reuse, keep and create. Twelve reuse a capability that already exists, one is new, and a single rule covers free shipping and minimum purchase.</p>
-            <span class="more">Read the case →</span>
-          </div>
-        </a>
+<section class="sp-hero" id="inicio">
+<h1 class="sp-name">Matheus Policarpo</h1>
+<p class="sp-tag">Product Design and AI Content Designer. I design products and experiences with AI, from the words on screen to the prompt.</p>
+<p class="sp-bio">11 years across e-commerce, fintech, telecom, health and logistics. Mercado Libre, Loggi, Banco do Brasil, Porto and Vivo.</p>
+</section>
+<section class="sp-case" id="pronto-app-instant-delivery" aria-label="Pronto App for instant delivery">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Pronto App for instant delivery</h2>
+<p class="cx-sub">Four changes to the picker app so the supermarket can deliver in minutes.</p>
+<p class="cx-role"><b>Product and Content Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026 · Argentina and Brazil</p>
 </div>
-    </div>
-  </section>
-
-  <section id="about" aria-labelledby="about-h">
-    <div class="wrap about">
-      <div class="prose">
-        <p class="eyebrow">About</p>
-        <h2 id="about-h" style="font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; font-stretch: 108%;">Strategy and hands-on work, in the same person</h2>
-        <p>I’ve worked across e-commerce, fintech, telecom, health and logistics, at companies like Mercado Libre, Loggi, Banco do Brasil, Porto and Vivo. My background is in communications, and my work spans product design, content design and design engineering.</p>
-        <p>I designed conversational AI experiences before the LLM boom. Today I use large language models every day to research, structure, write and evaluate content, and to build design tooling with Figma, Google Apps Script and Vercel.</p>
-        <p class="skills"><b style="color: var(--fg);">Skills:</b> content strategy, content design, UX writing, content modeling, taxonomy, structured content, prompt design, AI-generated content, evaluation criteria and quality benchmarks, personalization logic, voice and tone, localization for Spanish and Portuguese, design systems, developer handoff, stakeholder management.</p>
-      </div>
-      <div class="contact" id="contact">
-        <p class="eyebrow">Contact</p>
-        <p class="addr" id="email">matheusloures@live.com</p>
-        <a class="copy" href="mailto:matheusloures@live.com" style="text-decoration: none;">Send an email</a>
-        <a href="https://www.linkedin.com/in/mtpoli" rel="me noopener" style="justify-self: start; font-size: 14.5px;">LinkedIn ↗</a>
-        <p style="font-size: 14px; color: var(--muted);">Based in São Paulo, Brazil. Open to contract and full-time roles in product design, content design and AI content design.</p>
-      </div>
-    </div>
-  </section>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/pronto-vol-depois.png" alt="Order confirmation screen with an orange alert asking whether a single courier can carry everything" loading="lazy">
+<img src="/pronto-stock-depois.png" alt="Order product list with a Stock tag on low-stock items" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Context</h2>
+<p class="cx-ctx has-note">Pronto App is the app used by the people who pick supermarket orders. With instant delivery, the picker flow showed four gaps: volume that doesn&#x27;t fit one courier, stock that triggers needless substitutions, bags with no count, and no proof of what was collected. Each one became its own handoff project.</p>
+<p class="cx-note">Customs Control is still in progress.</p>
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>4 fronts</b> designed and documented for engineering, each tackling one gap in the flow</p>
+<p>Volume alert from <b>15 units</b>, with no extra time added to picking</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">What I did</h2>
+<p>Read the picker flow end to end and separated what broke with delivery in minutes.</p>
+<p>Designed and wrote a screen or a notice for each point, with its own handoff.</p>
+<p>Defined what the app tells the picker and what the picker decides, without adding a step.</p>
+</div>
+<div>
+<h2 class="cx-label">What changed</h2>
+<p>A large order warns before collection, and the picker decides whether to call a second courier.</p>
+<p>Low-stock items get a “Stock” tag. The picker offers a substitute instead of searching for more.</p>
+<p>The picker confirms the bag count and hands the order to the driver at the end of picking.</p>
+<p>At the store exit, the Customs screen shows what was collected, even if the supermarket&#x27;s system is down.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/pronto-finalizar-depois.png" alt="Green order-finished screen with the shipping code and the total number of bags to note down" loading="lazy">
+<img src="/pronto-aduana.png" alt="Order detail screen with the collected products to show at the store exit" loading="lazy">
+</div>
+</div>
+</section>
+<section class="sp-case" id="beneficio-de-alimentacao" aria-label="Food benefit at Súper">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Food benefit at Súper</h2>
+<p class="cx-sub">Paying for groceries with the food benefit, right inside Mercado Libre.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2025 · Brazil</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/beneficio-home.png" alt="Mobile store home showing the food benefit balance next to free shipping" loading="lazy">
+<img src="/beneficio-pagamento.png" alt="Choose how to pay screen with Food benefit among the recommended methods and a New tag" loading="lazy">
+<img src="/beneficio-compra.png" alt="Purchase detail showing the payment approved with the food benefit" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Context</h2>
+<p class="cx-ctx">People who receive their food benefit through Mercado Pago can use it on Súper purchases. The opportunity was to grow the vertical&#x27;s sales by showing the benefit on the store home and at payment. The first version is for Mercado Libre Brazil employees.</p>
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>3 points</b> of the flow designed: store home, checkout and purchase detail</p>
+<p>First version handed off to engineering, with use cases, specs and translations</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">What I did</h2>
+<p>Mapped where the benefit needs to show up, from the store home to the purchase detail.</p>
+<p>Treated the benefit as a new payment method, with a balance and a “New” tag.</p>
+<p>Documented the use cases, specs and translations.</p>
+</div>
+<div>
+<h2 class="cx-label">What changed</h2>
+<p>The store home shows the benefit balance next to free shipping and delivery.</p>
+<p>At checkout, the benefit appears among the recommended payment methods, with the balance.</p>
+<p>After the purchase, the detail shows how much was paid with the benefit.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/beneficio-desktop.png" alt="Desktop store home with the food benefit and the available balance" loading="lazy">
+</div>
+</div>
+</section>
+<section class="sp-case" id="pausar-loja" aria-label="Pausing a store in the backoffice">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Pausing a store in the backoffice</h2>
+<p class="cx-sub">A controlled way to stop incoming orders when a store can&#x27;t keep up.</p>
+<p class="cx-role"><b>Product and Content Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026 · Argentina</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/pausar-modal.png" alt="Pause store modal with the duration and reason selected and the field to add more detail" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Context</h2>
+<p class="cx-ctx has-note">A store runs normally, but at times it gets more orders than it can process. There was no reliable rule to hold back demand, and the queue kept growing until operations broke down. The MVP combines two answers: automatic pausing by capacity and manual pausing for contingencies. This case is the manual flow, in the backoffice, for the Mercado Libre team leader.</p>
+<p class="cx-note">Project in progress.</p>
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>1 flow</b> to pause and resume a store, with a reason and a record of who did it</p>
+<p>Handoff with 15 use cases, including date and time errors, failures and expired sessions</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">What I did</h2>
+<p>Designed the pause and resume flow in the backoffice, restricted to people with a specific permission.</p>
+<p>Wrote the copy to make clear this is an exception tool, not an everyday one.</p>
+<p>Documented the use cases, the errors and the automatic resume.</p>
+</div>
+<div>
+<h2 class="cx-label">What changed</h2>
+<p>The team leader picks until when to pause and why, in a short modal.</p>
+<p>The modal says orders in progress aren&#x27;t affected. Only new ones are paused.</p>
+<p>The store screen shows who paused it, until when and why, with a button to resume.</p>
+<p>The store list shows the Paused status and the time it comes back.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/pausar-config.png" alt="Store settings with the Paused status, who paused it, until when and the Resume store button" loading="lazy">
+</div><div class="cx-strip imgs" style="--n:1">
+<img src="/pausar-lista.png" alt="Store list with one paused store and the time it comes back" loading="lazy">
+</div>
+</div>
+</section>
+<section class="sp-case" id="food-cart-migration" aria-label="Bringing Food to the marketplace cart">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="64" height="49">
+<h2 class="cx-title">Bringing Food to the marketplace cart</h2>
+<p class="cx-sub">A food delivery cart moving into the marketplace cart, with a handoff of what to reuse and what to build.</p>
+<p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
+<p class="cx-meta">2026</p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:2">
+<img src="/food-vpp-kit.png" alt="Product page of a combo, with a side, a drink and customization" loading="lazy">
+<img src="/food-cart-kit.png" alt="Marketplace cart with the kit and its choices on the item line" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Context</h2>
+<p class="cx-ctx">Food had its own cart and was migrating to the marketplace cart, which couldn&#x27;t change. Keeping two carts was expensive, and Food missed out on marketplace improvements.</p>
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>12 of 17</b> cart use cases reuse an existing capability, and only 1 is new</p>
+<p>Engineering used the handoff with no open questions, and it became a reference for another vertical</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">What I did</h2>
+<p>Split the cart into 17 use cases and aligned with product and engineering.</p>
+<p>Gave each case one of four labels, like “capability” or “current”, to say what to build, reuse or leave as is.</p>
+<p>Wrote a single rule for free shipping and minimum purchase.</p>
+</div>
+<div>
+<h2 class="cx-label">What changed</h2>
+<p>Engineering knows, case by case, what to build, what to reuse and what to leave alone.</p>
+<p>Only the minimum purchase decides whether the buyer continues. Free shipping only changes the shipping cost.</p>
+<p>Identical kits now share one line with a quantity. It&#x27;s the only new behavior.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/food-same-1.png" alt="Cart with one kit" loading="lazy">
+<img src="/food-same-2.png" alt="Same item with a different customization, on two lines" loading="lazy">
+<img src="/food-same-3.png" alt="Same item with the same customization, on one line with quantity 2" loading="lazy">
+</div>
+</div>
+<p class="sp-foot">Prices like $ 00.000 are placeholders.</p>
+</section>
+<section class="sp-end" id="contato">
+<h2 class="sp-endt">Let's design something together?</h2>
+<p class="sp-bio">I'm open to new opportunities in Product Design and AI Content Design. If any of these projects sounds like a challenge on your team, get in touch.</p>
+<div class="sp-links">
+<a href="https://www.linkedin.com/in/mtpoli/" rel="me noopener">LinkedIn</a>
+<a href="mailto:matheusloures@live.com">Email</a>
+<a href="https://wa.me/5511999562221" rel="noopener">WhatsApp</a>
+<a href="https://calendly.com/mtpoli/30min" rel="noopener">Book a 30-min chat</a>
+</div>
+</section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <p>© 2026 Matheus Policarpo.</p>
-  </div>
-</footer>
+<script>
+(function () {
+  var lb = document.createElement("div");
+  lb.className = "sp-lb"; lb.hidden = true; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-label", "Enlarged image");
+  lb.innerHTML = '<img alt="">';
+  document.body.appendChild(lb);
+  var lbi = lb.firstChild;
+  function lbSet(src, alt) {
+    if (src) { lbi.src = src; lbi.alt = alt || ""; }
+    lb.hidden = !src; document.body.classList.toggle("sp-open", !!src);
+  }
+  document.querySelectorAll(".sp-case .cx-strip.imgs img").forEach(function (im) {
+    im.addEventListener("click", function () { lbSet(im.currentSrc || im.src, im.alt); });
+  });
+  lb.addEventListener("click", function () { lbSet(null); });
+  var b = document.querySelector(".sp-menu"), d = document.getElementById("sp-drawer");
+  function set(o) { d.hidden = !o; b.setAttribute("aria-expanded", o ? "true" : "false"); document.body.classList.toggle("sp-open", o); }
+  b.addEventListener("click", function () { set(d.hidden); });
+  d.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { set(false); lbSet(null); } });
+})();
+</script>
 </body>
 </html>
