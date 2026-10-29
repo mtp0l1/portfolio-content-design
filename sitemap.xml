@@ -29,20 +29,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-content-design.vercel.app/squad-de-comus.html"/>
   </url>
   <url>
-    <loc>https://portfolio-content-design.vercel.app/signals-at-the-shelf.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/signals-at-the-shelf.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-content-design.vercel.app/pt/signals-at-the-shelf.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-content-design.vercel.app/signals-at-the-shelf.html"/>
-  </url>
-  <url>
-    <loc>https://portfolio-content-design.vercel.app/pt/signals-at-the-shelf.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/signals-at-the-shelf.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-content-design.vercel.app/pt/signals-at-the-shelf.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-content-design.vercel.app/signals-at-the-shelf.html"/>
-  </url>
-  <url>
     <loc>https://portfolio-content-design.vercel.app/dona-cida.html</loc>
     <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-content-design.vercel.app/dona-cida.html"/>
@@ -71,10 +57,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-content-design.vercel.app/food-cart-migration.html"/>
   </url>
   <url>
-    <loc>https://portfolio-content-design.vercel.app/pt/sinais-pro-picker.html</loc>
-    <lastmod>2026-10-24</lastmod>
-  </url>
-  <url>
     <loc>https://portfolio-content-design.vercel.app/pt/imagens-ia-autopecas.html</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
@@ -93,5 +75,10 @@
   <url>
     <loc>https://portfolio-content-design.vercel.app/pt/pausar-loja.html</loc>
     <lastmod>2026-10-24</lastmod>
+  </url>
+
+  <url>
+    <loc>https://portfolio-content-design.vercel.app/pt/pronto-app-instant-delivery.html</loc>
+    <lastmod>2026-10-28</lastmod>
   </url>
 </urlset>
