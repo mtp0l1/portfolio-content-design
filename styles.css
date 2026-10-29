@@ -438,12 +438,12 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 
 .sp-about-btn { font: inherit; cursor: pointer; padding: 9px 18px; font-size: 15px; color: #fff; background: #141416; border: 1px solid #232326; border-radius: 999px; }
 .sp-about-btn:hover { background: #1c1c1f; }
-.sp-about-btn:focus-visible, .sp-close:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.sp-about-btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.sp-close:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 .sp-modal { position: fixed; inset: 0; z-index: 70; display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; align-content: center; padding: clamp(12px, 3vw, 32px); background: rgba(0, 0, 0, .72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .sp-modal[hidden] { display: none; }
 .sp-sheet { position: relative; min-width: 0; }
-.sp-sheet::after { content: ""; position: absolute; inset: auto 0 0 0; height: 110px; border-radius: 0 0 28px 28px; background: linear-gradient(transparent, #fff 70%); pointer-events: none; }
-.sp-card { position: relative; width: 100%; max-height: calc(100svh - 2 * clamp(12px, 3vw, 32px)); overflow-y: auto; overscroll-behavior: contain; background: #fff; color: #111; border-radius: 28px; padding: clamp(24px, 5vw, 40px) clamp(22px, 5vw, 40px) 96px; outline: none; }
+.sp-card { position: relative; width: 100%; max-height: calc(100svh - 2 * clamp(12px, 3vw, 32px)); overflow-y: auto; overscroll-behavior: contain; background: #fff; color: #111; border-radius: 28px; padding: clamp(24px, 5vw, 40px) clamp(22px, 5vw, 40px) clamp(28px, 5vw, 40px); outline: none; }
 .sp-hello { font-size: clamp(26px, 4vw, 32px); line-height: 1.1; font-weight: 600; color: #111; letter-spacing: -.02em; }
 .sp-photo { display: block; width: 148px; height: 148px; object-fit: cover; border-radius: 22px; margin: 24px 0 32px 6px; transform: rotate(-4deg); box-shadow: 0 10px 28px rgba(0, 0, 0, .22); }
 .sp-kicker { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6b6b72; margin: 0 0 14px; font-weight: 500; }
@@ -456,8 +456,8 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-marquee:hover .sp-track { animation-play-state: paused; }
 @keyframes sp-scroll { to { transform: translateX(-100%); } }
 @media (prefers-reduced-motion: reduce) { .sp-marquee { overflow-x: auto; } .sp-track { animation: none; } .sp-track[aria-hidden] { display: none; } }
-.sp-close { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 2; font: inherit; font-size: 15px; display: inline-flex; gap: 8px; align-items: center; padding: 11px 20px; background: #111; color: #fff; border: 0; border-radius: 999px; cursor: pointer; box-shadow: 0 8px 24px rgba(0, 0, 0, .3); }
-.sp-close:hover { background: #26262a; }
+.sp-close { position: absolute; top: 14px; right: 14px; z-index: 2; width: 34px; height: 34px; display: grid; place-items: center; padding: 0; color: #55555c; background: rgba(0, 0, 0, .06); border: 0; border-radius: 50%; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.sp-close:hover { background: rgba(0, 0, 0, .12); color: #111; }
 @media (max-width: 480px) { .sp-actions { gap: 14px; } }
 .sp-end { display: block; min-height: 0; border-top: 0; text-align: left; padding: 16px; }
 .sp-ft { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; min-height: clamp(380px, 46vw, 460px); width: 100%; max-width: 1400px; margin: 0 auto; }
