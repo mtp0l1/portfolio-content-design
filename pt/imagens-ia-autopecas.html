@@ -16,6 +16,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://portfolio-content-design.vercel.app/pt/imagens-ia-autopecas.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -35,89 +36,64 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="cx-page">
 <header class="topbar">
 <div class="wrap">
 <a class="name" href="/pt/">Matheus Policarpo</a>
-<nav aria-label="Seções">
-<a href="/pt/">Todos os trabalhos</a>
-<a href="#contexto">Contexto</a>
-<a href="#resultados">Resultados</a>
-<a href="#processo">O que eu fiz</a>
+<nav aria-label="Navegação">
+<a href="/pt/">← Todos os trabalhos</a>
 </nav>
 </div>
 </header>
 <main>
-<div class="hero">
-<div class="wrap">
-<p class="eyebrow">Mercado Libre · AI content design</p>
-<h1>Imagens de IA<br><span>para autopeças</span></h1>
-<p class="lede" style="max-width: 58ch;">Imagens de referência geradas por IA para o seller de autopeças publicar sem ter foto da peça.</p>
-<dl class="facts cx-facts">
-<div><dt>Meu papel</dt><dd>Designer líder: testes com 4 LLMs, prompts em JSON e selo de confiança</dd></div>
-<div><dt>Onde aparece</dt><dd>Fluxo do seller, busca e página de produto</dd></div>
-</dl>
+<div class="cx-hero">
+<!-- IMAGEM: ícone ou logo do projeto -->
+<div class="cx-logo" role="img" aria-label="Espaço reservado para o ícone do projeto"><span>Ícone</span></div>
+<h1 class="cx-title">Imagens de IA para autopeças</h1>
+<p class="cx-sub">Imagens de referência geradas por IA para o seller de autopeças publicar sem ter foto da peça.</p>
+<p class="cx-role"><b>Designer líder</b><span>Mercado Libre</span></p>
+<p class="cx-meta">São Paulo</p>
 </div>
-</div>
-<section class="cx-lead" aria-label="Visão geral">
-<div class="wrap">
+<div class="cx-bleed">
 <!-- IMAGEM: Prompt V1 vs. prompt em JSON -->
-<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Prompt V1 vs. prompt em JSON">
-<span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
-<b>Prompt V1 vs. prompt em JSON</b>
-<p>Lado a lado: resultado da V1 (fundo bege, peça torta) e do prompt final aprovado.</p>
+<div class="cx-strip wide" style="--n:2" role="img" aria-label="Espaço reservado para imagens: Prompt V1 vs. prompt em JSON">
+<div class="cx-frame wide"><span>Imagem</span></div><div class="cx-frame wide"><span>Imagem</span></div>
 </div>
+<p class="cx-cap"><b>Prompt V1 vs. prompt em JSON.</b> Lado a lado: resultado da V1 (fundo bege, peça torta) e do prompt final aprovado.</p>
 </div>
-</section>
-<section id="contexto" class="cx-block" aria-labelledby="contexto-h">
-<div class="wrap">
-<h2 id="contexto-h" class="cx-label">Contexto</h2>
-<div class="cx-text">
-<p>Sellers com peças na prateleira não publicavam porque o catálogo não tinha foto. Em autopeças, uma imagem realista demais faz o comprador achar que é a peça exata do carro dele, e o erro vira devolução.</p>
-</div>
-</div>
-</section>
-<section id="resultados" class="cx-block" aria-labelledby="resultados-h">
-<div class="wrap">
-<h2 id="resultados-h" class="cx-label">Resultados</h2>
-<div class="cx-cols cx-results">
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">Sellers com peças na prateleira não publicavam porque o catálogo não tinha foto. Em autopeças, uma imagem realista demais faz o comprador achar que é a peça exata do carro dele, e o erro vira devolução.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
 <p>Aprovação na primeira geração subiu de <b>31% para 88%</b> com prompts em JSON</p>
 <p>O método virou um bot da Engenharia, sem designer no meio</p>
 </div>
-</div>
-</section>
-<section id="processo" class="cx-block" aria-labelledby="processo-h">
-<div class="wrap">
-<h2 id="processo-h" class="cx-label sr-only">O que eu fiz e o que mudou</h2>
-<div class="cx-cols">
+<div class="cx-two cx-did">
 <div>
-<h3 class="cx-label">O que eu fiz</h3>
+<h2 class="cx-label">O que eu fiz</h2>
 <p>Testei 4 LLMs e escolhi ilustração 3D técnica no lugar de foto realista.</p>
 <p>Estruturei o prompt em JSON, com regras fixas e restrições negativas: fundo branco, sem sombra, vista frontal.</p>
 <p>Criei o selo “Imagem de referência” para os cards.</p>
 </div>
 <div>
-<h3 class="cx-label">O que mudou</h3>
+<h2 class="cx-label">O que mudou</h2>
 <p>Fundo e ângulo pararam de variar de uma geração para outra.</p>
 <p>O seller publica sem esperar foto, e o comprador sabe que a imagem é ilustrativa.</p>
 <p>Testei “Gerada por IA” e descartei. Quem compra peça quer saber se a foto é da peça exata, não como foi feita.</p>
 </div>
 </div>
 </div>
-</section>
-<section class="cx-lead" aria-label="Telas">
-<div class="wrap">
+<div class="cx-bleed">
 <!-- IMAGEM: Cards no catálogo -->
-<div class="cx-ph" role="img" aria-label="Espaço reservado para imagem: Cards no catálogo">
-<span class="cx-ph-tag">Placeholder · aqui entra uma imagem</span>
-<b>Cards no catálogo</b>
-<p>Imagens geradas com o selo “Imagem de referência”.</p>
+<div class="cx-strip phones" style="--n:4" role="img" aria-label="Espaço reservado para imagens: Cards no catálogo">
+<div class="cx-frame phones"><span>Imagem</span></div><div class="cx-frame phones"><span>Imagem</span></div><div class="cx-frame phones"><span>Imagem</span></div><div class="cx-frame phones"><span>Imagem</span></div>
 </div>
+<p class="cx-cap"><b>Cards no catálogo.</b> Imagens geradas com o selo “Imagem de referência”.</p>
 </div>
-</section>
 </main>
 <footer>
 <div class="wrap">
