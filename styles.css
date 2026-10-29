@@ -356,6 +356,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .cx-bleed { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
 .cx-strip { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 8px; }
 .cx-strip.imgs { align-items: start; }
+.cx-strip.imgs[style*="--n:2"] { max-width: 640px; margin-inline: auto; }
 .cx-strip img { display: block; width: 100%; height: auto; border-radius: 14px; background: #111; }
 .cx-video { display: block; width: 100%; max-width: 760px; max-height: 82vh; margin-inline: auto; border-radius: 14px; background: #000; }
 .cx-frame { display: grid; place-items: center; border: 1.5px dashed #55555a; background: var(--sunken); color: var(--muted); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; border-radius: 14px; }
@@ -383,4 +384,5 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
   .cx-did { gap: 40px; }
   .cx-strip.phones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cx-strip.wide, .cx-strip.imgs { grid-template-columns: minmax(0, 1fr); }
+  .cx-strip.imgs[style*="--n:2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
