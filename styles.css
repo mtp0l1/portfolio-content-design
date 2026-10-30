@@ -425,6 +425,12 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-id { width: min(560px, 100%); display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; margin-bottom: clamp(56px, 10vw, 112px); }
 .sp-flag { justify-self: start; font-size: 22px; line-height: 1; }
 .sp-name { font-weight: 600; font-size: clamp(34px, 6vw, 52px); line-height: 1; color: #fff; margin-bottom: clamp(14px, 2vw, 22px); }
+.sp-loc { display: flex; align-items: center; justify-content: center; gap: 12px; margin: clamp(36px, 5vw, 56px) 0 0; font-size: 17px; font-weight: 500; letter-spacing: -.01em; color: #fff; }
+.sp-globe { flex: none; overflow: visible; }
+.sp-globe .m1, .sp-globe .m2 { transform-origin: 12px 12px; transform-box: view-box; animation: sp-spin 4.8s linear infinite; }
+.sp-globe .m2 { animation-delay: -2.4s; }
+@keyframes sp-spin { 0% { transform: scaleX(1); } 50% { transform: scaleX(0.02); } 100% { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .sp-globe .m1, .sp-globe .m2 { animation: none; } .sp-globe .m1 { transform: scaleX(.4); } .sp-globe .m2 { display: none; } }
 .sp-hero .sp-links { margin-top: clamp(44px, 6vw, 64px); }
 .sp-clock { justify-self: end; font-size: 12px; color: #fff; font-variant-numeric: tabular-nums; }
 .sp-tag { font-size: clamp(17px, 2vw, 20px); line-height: 1.35; color: #fff; max-width: 44em; text-wrap: balance; }
