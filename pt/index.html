@@ -61,7 +61,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@600&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="cx-page sp">
@@ -74,7 +74,12 @@
 </header>
 <main class="sp-curtain">
 <section class="sp-hero" id="inicio">
+<div class="sp-av" data-avatar-player>
+<button type="button" class="sp-av-btn" aria-pressed="false" aria-label="Tocar minha playlist">
 <img class="sp-avatar" src="/avatar.png" width="64" height="64" alt="" decoding="async">
+</button>
+<div class="sp-bubble" role="status" aria-live="polite"><svg class="sp-note" viewBox="0 0 8 7" width="16" height="14" aria-hidden="true" shape-rendering="crispEdges"><path d="M2 0h6v2H2zM2 2h1v3H2zM7 2h1v3H7zM0 5h3v2H0zM5 5h3v2H5z"/></svg><span class="sp-bubble-text"></span></div>
+</div>
 <h1 class="sp-name">Matheus Policarpo</h1>
 <p class="sp-tag">Desenho e construo seu produto com agilidade e qualidade como Product Designer, Content Designer e Design Engineer</p>
 <div class="sp-links">
@@ -417,6 +422,7 @@
   addEventListener("scroll", req, { passive: true }); addEventListener("resize", req); upd();
 })();
 </script>
+<script src="/avatar-player.js" defer></script>
 <script src="/selection.js" defer></script>
 <script src="/globe.js" defer></script>
 </body>
