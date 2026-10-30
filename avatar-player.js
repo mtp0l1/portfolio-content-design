@@ -14,16 +14,21 @@
   "use strict";
 
   var CONFIG = {
-    engine: "preview", // "preview" | "spotify"
+    engine: "spotify", // "spotify" = música inteira | "preview" = prévia de 30 s (usada se o Spotify falhar)
     playlistId: "6ZJb7zsFDa3L7acRCyCYdl",
     volume: 0.7,
     // Passou desse tempo sem tocar nada, a próxima visita volta para a primeira faixa.
     resetAfterMs: 6 * 60 * 60 * 1000,
-    // Faixas da playlist (lidas do embed público). previewUrl = prévia de 30 s do Spotify.
+    // Faixas da playlist, na ordem dela (lidas do embed público). previewUrl = prévia de 30 s, só para reserva.
     tracks: [
-      { artist: "Khruangbin", song: "Right", uri: "spotify:track:3ezJklJWZRm6pWI3DQjW9e", previewUrl: "https://p.scdn.co/mp3-preview/ce61667a09a919c3d879445ad9c848a182f126f1" },
-      { artist: "Parcels", song: "Exotica", uri: "spotify:track:2eC43PWHMbUnwqCRZcbGfo", previewUrl: "https://p.scdn.co/mp3-preview/d208427331f890231ff5ff6cf81b8117b08dc1a1" },
-      { artist: "Fruit Bats", song: "The Saddest Part of the Song", uri: "spotify:track:0G3la950nVoDeqKhfMooOw", previewUrl: "https://p.scdn.co/mp3-preview/4fcba82d811b384d8617a16693f64defef70ace3" }
+      { artist: "Malphino", song: "The Sleep Tree", uri: "spotify:track:47Rs9xMHgO16kH3RGW0rrY", previewUrl: "https://p.scdn.co/mp3-preview/c7bf660278ec1d47cbef3c54ac4c2be14af6e756" },
+      { artist: "Childish Gambino, Khruangbin", song: "Happy Survival (feat. Khruangbin)", uri: "spotify:track:0Ck3kW2KiRLjMOGiKzW3la", previewUrl: "https://p.scdn.co/mp3-preview/b03acb09df90d9c84a92e1661f9d6383aca8c4e0" },
+      { artist: "Luiz Bonfá", song: "Bonfá Nova", uri: "spotify:track:2AxgMk9MTODVUao5uQcTSk", previewUrl: "https://p.scdn.co/mp3-preview/2a49ed0c91463873d7471331456773a4737d9bf2" },
+      { artist: "Paul McCartney", song: "Coming Up - Remastered 2011", uri: "spotify:track:4Ku6X72Q815qNd7ChuiDdD", previewUrl: "https://p.scdn.co/mp3-preview/63bce871a04b7921a33e0425fe8e6bbc5783dcbb" },
+      { artist: "Cortex", song: "Troupeau bleu", uri: "spotify:track:2DTHWr5NK1igQZxctpYTA9", previewUrl: "https://p.scdn.co/mp3-preview/d5d006856ed413a201f1350fe0096987ad6cfa2b" },
+      { artist: "Moacir Santos", song: "Nana", uri: "spotify:track:2O86cNvAra9d9t05RVLW2B", previewUrl: "https://p.scdn.co/mp3-preview/82c10ee9fdde41622a06f7857dc8f33fbcdb4482" },
+      { artist: "Surprise Chef", song: "Leg Day", uri: "spotify:track:73tcaREtlOxh7RnOsy8Lfh", previewUrl: "https://p.scdn.co/mp3-preview/a6d1626aa798e54ffd818e3bbe32b36ad6bc347c" },
+      { artist: "João Donato", song: "A Rã", uri: "spotify:track:0vZwdJBXOGppAMLjwDUNWg", previewUrl: "https://p.scdn.co/mp3-preview/67e5512a8d0a1fc0416e9114bbb29ddc0edd8c9c" }
     ]
   };
 
@@ -71,7 +76,7 @@
 
   /* ---------- Motor 2: Spotify IFrame API ---------- */
   function SpotifyEngine(cfg) {
-    var ctrl = null, ready = false, wantPlay = false, idx = startIndex(cfg), cur = cfg.tracks[idx];
+    var ctrl = null, ready = false, wantPlay = false, idx = startIndex(cfg), cur = cfg.tracks[idx], advancing = false;
     var trackCb = function () {}, failCb = function () {};
     var host = document.createElement("div");
     host.setAttribute("aria-hidden", "true");
@@ -93,7 +98,9 @@
           var t = d.playingURI && byUri(d.playingURI);
           if (t && t !== cur) { cur = t; idx = cfg.tracks.indexOf(t); remember(idx); trackCb(t); }
           // Chegou ao fim da faixa: segue a ordem da playlist, e depois da última volta para a primeira
-          if (d.duration && d.position >= d.duration - 500 && !d.__adv) {
+          if (d.position < 2000) advancing = false;
+          if (d.duration && d.position >= d.duration - 500 && !advancing && wantPlay) {
+            advancing = true;
             idx = (idx + 1) % cfg.tracks.length; cur = cfg.tracks[idx]; remember(idx); trackCb(cur);
             ctrl.loadUri(cur.uri); ctrl.play();
           }
@@ -129,11 +136,18 @@
     var isPinned = false, engine = null;
 
     function render(t) { if (t) label.textContent = t.artist + " - " + t.song; }
+    var tried = {};
     function setEngine(name) {
+      tried[name] = true;
       if (engine) engine.destroy();
       engine = name === "spotify" ? SpotifyEngine(cfg) : PreviewEngine(cfg);
       engine.onTrack(render);
-      engine.onFail(function () { if (engine.name === "preview") { var live = bubble.classList.contains("on"); setEngine("spotify"); if (live) engine.play(); } });
+      engine.onFail(function () {
+        var from = engine.name, live = bubble.classList.contains("on");
+        if (tried[from === "spotify" ? "preview" : "spotify"]) return;
+        setEngine(from === "spotify" ? "preview" : "spotify");
+        if (live) engine.play();
+      });
     }
     function show() { bubble.classList.add("on"); }
     function hide() { bubble.classList.remove("on"); }
