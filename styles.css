@@ -492,6 +492,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-case .fx-col .cx-out b, .sp-case .fx-blk b { font-weight: 500; color: #fff; }
 .sp-case .fx-col > .cx-label { margin-bottom: calc(16px - var(--g)); }
 @media (max-width: 760px) { .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "logo role" "title title" "sub sub"; } .sp-case .cx-role { margin-top: 0; align-self: start; } }
+.sp-hero .sp-tag { font-size: clamp(16px, 1.5vw, 20px); line-height: 1.4; font-weight: 400; max-width: 31em; text-wrap: balance; margin-top: 14px; }
 .sp-foot { text-align: center; color: var(--muted); font-size: 13.5px; padding: 0 var(--gutter) 24px; }
 .sp-end { min-height: 70svh; display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center; padding: 96px var(--gutter); }
 .sp-mail { font-size: clamp(22px, 3.2vw, 32px); color: #fff; text-decoration: none; }
