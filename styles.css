@@ -436,6 +436,34 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-cta, .sp-in { display: inline-block; margin-top: clamp(48px, 8vw, 88px); padding: 9px 16px; font-size: 15px; color: #fff; background: #141416; border: 1px solid #232326; border-radius: 999px; text-decoration: none; }
 .sp-cta:hover, .sp-in:hover { background: #1c1c1f; }
 .sp-case { scroll-margin-top: 0; }
+
+/* ===== Layout em F dos cases ===== */
+.sp-case { padding-top: clamp(56px, 8vw, 104px); }
+.sp-case .cx-hero { max-width: 1120px; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); grid-template-areas: "logo logo" "title role" "sub meta"; column-gap: clamp(24px, 4vw, 56px); justify-items: start; text-align: left; padding: 0 var(--gutter) clamp(36px, 5vw, 56px); }
+.sp-case .cx-logo-img { grid-area: logo; margin: 0 0 clamp(28px, 4vw, 44px); width: 52px; }
+.sp-case .cx-title { grid-area: title; font-size: clamp(30px, 4.6vw, 60px); font-weight: 500; line-height: 1.06; letter-spacing: -.03em; color: #fff; text-wrap: balance; max-width: 15em; }
+.sp-case .cx-sub { grid-area: sub; margin-top: clamp(14px, 1.8vw, 20px); font-size: clamp(19px, 2.2vw, 24px); max-width: 26em; }
+.sp-case .cx-role { grid-area: role; align-self: end; margin: 0; font-size: 16px; gap: 1px; text-align: left; }
+.sp-case .cx-meta { grid-area: meta; align-self: start; margin: clamp(14px, 1.8vw, 20px) 0 0; font-size: 15px; color: var(--muted); }
+.sp-case .cx-bleed { max-width: 1120px; }
+.sp-case .cx-strip.imgs.fx { grid-template-columns: var(--cols); gap: 10px; align-items: start; max-width: none; margin: 0; }
+.sp-case .cx-strip.imgs.fx img, .sp-case .cx-strip.imgs.fx img[src="/pausar-modal.png"] { width: 100%; max-width: none; margin: 0; justify-self: stretch; border-radius: 12px; }
+.sp-case .cx-body.fx { max-width: 1120px; margin-inline: auto; padding: clamp(48px, 7vw, 88px) var(--gutter) clamp(64px, 9vw, 112px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 6vw, 96px); align-items: start; }
+.sp-case .fx-col { --g: clamp(40px, 6vw, 64px); display: grid; gap: var(--g); align-content: start; }
+.sp-case .fx-col .cx-ctx { margin-bottom: 0; }
+.sp-case .fx-blk { display: grid; gap: 22px; }
+.sp-case .fx-blk p { font-size: clamp(18px, 2vw, 20px); line-height: 1.4; color: #E4E4E7; }
+.sp-case .fx-blk > .cx-label { margin-bottom: 0; }
+.sp-case .fx-col > .cx-label { margin-bottom: calc(22px - var(--g)); }
+.sp-case .fx-col .cx-out { grid-template-columns: minmax(0, 1fr); gap: 22px; margin: 0; }
+.sp-case .fx-col .cx-label + .cx-ctx { margin-top: 0; }
+@media (max-width: 760px) {
+  .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "logo" "title" "sub" "role" "meta"; }
+  .sp-case .cx-role { margin-top: 28px; align-self: start; }
+  .sp-case .cx-strip.imgs.fx { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sp-case .cx-strip.imgs.fx img[src*="beneficio-desktop"], .sp-case .cx-strip.imgs.fx img[src*="pausar-config"], .sp-case .cx-strip.imgs.fx img[src*="porto-"] { grid-column: 1 / -1; }
+  .sp-case .cx-body.fx { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
+}
 .sp-foot { text-align: center; color: var(--muted); font-size: 13.5px; padding: 0 var(--gutter) 24px; }
 .sp-end { min-height: 70svh; display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center; padding: 96px var(--gutter); }
 .sp-mail { font-size: clamp(22px, 3.2vw, 32px); color: #fff; text-decoration: none; }

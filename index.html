@@ -73,27 +73,18 @@
 <p class="cx-meta">2026 · Argentina and Brazil</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/pronto-vol-depois.png" alt="Order confirmation screen with an orange alert asking whether a single courier can carry everything" loading="lazy">
-<img src="/pronto-stock-depois.png" alt="Order product list with a Stock tag on low-stock items" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.562fr 0.302fr 0.561fr 0.493fr">
+<img style="aspect-ratio:360/640" src="/pronto-vol-depois.png" alt="Order confirmation screen with an orange alert asking whether a single courier can carry everything" loading="lazy">
+<img style="aspect-ratio:360/1192" src="/pronto-stock-depois.png" alt="Order product list with a Stock tag on low-stock items" loading="lazy">
+<img style="aspect-ratio:358/638" src="/pronto-finalizar-depois.png" alt="Green order-finished screen with the shipping code and the total number of bags to note down" loading="lazy">
+<img style="aspect-ratio:360/730" src="/pronto-aduana.png" alt="Order detail screen with the collected products to show at the store exit" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Context</h2>
 <p class="cx-ctx">Pronto App is the app used by the people who pick supermarket orders. With instant delivery, the picker flow showed four gaps: volume that doesn&#x27;t fit one courier, stock that triggers needless substitutions, bags with no count, and no proof of what was collected. Each one became its own handoff project.</p>
-<h2 class="cx-label">Results</h2>
-<div class="cx-two cx-out">
-<p><b>4 fronts</b> designed and documented for engineering, each tackling one gap in the flow</p>
-<p>Volume alert from <b>15 units</b>, with no extra time added to picking</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">What I did</h2>
-<p>Read the picker flow end to end and separated what broke with delivery in minutes.</p>
-<p>Designed and wrote a screen or a notice for each point, with its own handoff.</p>
-<p>Defined what the app tells the picker and what the picker decides, without adding a step.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">What changed</h2>
 <p>A large order warns before collection, and the picker decides whether to call a second courier.</p>
 <p>Low-stock items get a “Stock” tag. The picker offers a substitute instead of searching for more.</p>
@@ -101,11 +92,18 @@
 <p>At the store exit, the Customs screen shows what was collected, even if the supermarket&#x27;s system is down.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">What I did</h2>
+<p>Read the picker flow end to end and separated what broke with delivery in minutes.</p>
+<p>Designed and wrote a screen or a notice for each point, with its own handoff.</p>
+<p>Defined what the app tells the picker and what the picker decides, without adding a step.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/pronto-finalizar-depois.png" alt="Green order-finished screen with the shipping code and the total number of bags to note down" loading="lazy">
-<img src="/pronto-aduana.png" alt="Order detail screen with the collected products to show at the store exit" loading="lazy">
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>4 fronts</b> designed and documented for engineering, each tackling one gap in the flow</p>
+<p>Volume alert from <b>15 units</b>, with no extra time added to picking</p>
+</div>
 </div>
 </div>
 </section>
@@ -118,38 +116,36 @@
 <p class="cx-meta">2025 · Brazil</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:3">
-<img src="/beneficio-home.png" alt="Mobile store home showing the food benefit balance next to free shipping" loading="lazy">
-<img src="/beneficio-pagamento.png" alt="Choose how to pay screen with Food benefit among the recommended methods and a New tag" loading="lazy">
-<img src="/beneficio-compra.png" alt="Purchase detail showing the payment approved with the food benefit" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.34fr 0.329fr 0.468fr 1.8fr">
+<img style="aspect-ratio:360/1060" src="/beneficio-home.png" alt="Mobile store home showing the food benefit balance next to free shipping" loading="lazy">
+<img style="aspect-ratio:368/1117" src="/beneficio-pagamento.png" alt="Choose how to pay screen with Food benefit among the recommended methods and a New tag" loading="lazy">
+<img style="aspect-ratio:364/777" src="/beneficio-compra.png" alt="Purchase detail showing the payment approved with the food benefit" loading="lazy">
+<img style="aspect-ratio:1440/800" src="/beneficio-desktop.png" alt="Desktop store home with the food benefit and the available balance" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Context</h2>
 <p class="cx-ctx">People who receive their food benefit through Mercado Pago can use it on Súper purchases. The opportunity was to grow the vertical&#x27;s sales by showing the benefit on the store home and at payment. The first version is for Mercado Libre Brazil employees.</p>
-<h2 class="cx-label">Results</h2>
-<div class="cx-two cx-out">
-<p><b>3 points</b> of the flow designed: store home, checkout and purchase detail</p>
-<p>First version handed off to engineering, with use cases, specs and translations</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">What I did</h2>
-<p>Mapped where the benefit needs to show up, from the store home to the purchase detail.</p>
-<p>Treated the benefit as a new payment method, with a balance and a “New” tag.</p>
-<p>Documented the use cases, specs and translations.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">What changed</h2>
 <p>The store home shows the benefit balance next to free shipping and delivery.</p>
 <p>At checkout, the benefit appears among the recommended payment methods, with the balance.</p>
 <p>After the purchase, the detail shows how much was paid with the benefit.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">What I did</h2>
+<p>Mapped where the benefit needs to show up, from the store home to the purchase detail.</p>
+<p>Treated the benefit as a new payment method, with a balance and a “New” tag.</p>
+<p>Documented the use cases, specs and translations.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:1">
-<img src="/beneficio-desktop.png" alt="Desktop store home with the food benefit and the available balance" loading="lazy">
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>3 points</b> of the flow designed: store home, checkout and purchase detail</p>
+<p>First version handed off to engineering, with use cases, specs and translations</p>
+</div>
 </div>
 </div>
 </section>
@@ -162,26 +158,16 @@
 <p class="cx-meta">2026 · Argentina</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:1">
-<img src="/pausar-modal.png" alt="Pause store modal with the duration and reason selected and the field to add more detail" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:2;--cols:0.661fr 2.595fr">
+<img style="aspect-ratio:480/726" src="/pausar-modal.png" alt="Pause store modal with the duration and reason selected and the field to add more detail" loading="lazy">
+<img style="aspect-ratio:1440/555" src="/pausar-config.png" alt="Store settings with the Paused status, who paused it, until when and the Resume store button" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Context</h2>
 <p class="cx-ctx">A store runs normally, but at times it gets more orders than it can process. There was no reliable rule to hold back demand, and the queue kept growing until operations broke down. The MVP combines two answers: automatic pausing by capacity and manual pausing for contingencies. This case is the manual flow, in the backoffice, for the Mercado Libre team leader.</p>
-<h2 class="cx-label">Results</h2>
-<div class="cx-two cx-out">
-<p><b>1 flow</b> to pause and resume a store, with a reason and a record of who did it</p>
-<p>Handoff with 15 use cases, including date and time errors, failures and expired sessions</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">What I did</h2>
-<p>Designed the pause and resume flow in the backoffice, restricted to people with a specific permission.</p>
-<p>Wrote the copy to make clear this is an exception tool, not an everyday one.</p>
-<p>Documented the use cases, the errors and the automatic resume.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">What changed</h2>
 <p>The team leader picks until when to pause and why, in a short modal.</p>
 <p>The modal says orders in progress aren&#x27;t affected. Only new ones are paused.</p>
@@ -189,10 +175,18 @@
 <p>The store list shows the Paused status and the time it comes back.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">What I did</h2>
+<p>Designed the pause and resume flow in the backoffice, restricted to people with a specific permission.</p>
+<p>Wrote the copy to make clear this is an exception tool, not an everyday one.</p>
+<p>Documented the use cases, the errors and the automatic resume.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:1">
-<img src="/pausar-config.png" alt="Store settings with the Paused status, who paused it, until when and the Resume store button" loading="lazy">
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>1 flow</b> to pause and resume a store, with a reason and a record of who did it</p>
+<p>Handoff with 15 use cases, including date and time errors, failures and expired sessions</p>
+</div>
 </div>
 </div>
 </section>
@@ -205,27 +199,18 @@
 <p class="cx-meta">2026 · Argentina</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/reclamos-pedido.png" alt="Delivered order detail with the Need help? button" loading="lazy">
-<img src="/reclamos-ayuda.png" alt="Help with the purchase menu, with the reasons to ask for help about the order" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.45fr 0.45fr 0.427fr 0.45fr">
+<img style="aspect-ratio:360/800" src="/reclamos-pedido.png" alt="Delivered order detail with the Need help? button" loading="lazy">
+<img style="aspect-ratio:360/800" src="/reclamos-ayuda.png" alt="Help with the purchase menu, with the reasons to ask for help about the order" loading="lazy">
+<img style="aspect-ratio:360/843" src="/reclamos-motivo.png" alt="What was the problem screen with four reasons for an order&#x27;s product" loading="lazy">
+<img style="aspect-ratio:360/800" src="/reclamos-estado.png" alt="Why did it arrive in bad condition screen, with the thawed or expired options" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Context</h2>
 <p class="cx-ctx">When something goes wrong with a supermarket order, the buyer opens a complaint and picks the problem from a tree of options. The trees were outdated: fields that no longer exist, no message when a complaint ends without compensation, and a different tone in each vertical. They will also become the rule base for the AI assistant that handles complaints.</p>
-<h2 class="cx-label">Results</h2>
-<div class="cx-two cx-out">
-<p><b>Instore and Darkstore</b> trees updated, with the obsolete fields removed</p>
-<p>Copy aligned with Food and ready to be the rule base for the AI assistant</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">What I did</h2>
-<p>Reviewed the Instore and Darkstore complaint trees and removed what no longer exists.</p>
-<p>Aligned the copy with Food, in a tone that acknowledges the buyer without admitting fault.</p>
-<p>Documented each path, like a product with a problem or a package that didn&#x27;t arrive, and where each exit goes.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">What changed</h2>
 <p>The buyer picks the problem in a few questions, with direct options like “Arrived damaged or open”.</p>
 <p>A complaint that ends without compensation now gets a closing message, instead of a dead end.</p>
@@ -233,11 +218,18 @@
 <p>After sending, the screen offers to continue the conversation on WhatsApp.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">What I did</h2>
+<p>Reviewed the Instore and Darkstore complaint trees and removed what no longer exists.</p>
+<p>Aligned the copy with Food, in a tone that acknowledges the buyer without admitting fault.</p>
+<p>Documented each path, like a product with a problem or a package that didn&#x27;t arrive, and where each exit goes.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/reclamos-motivo.png" alt="What was the problem screen with four reasons for an order&#x27;s product" loading="lazy">
-<img src="/reclamos-estado.png" alt="Why did it arrive in bad condition screen, with the thawed or expired options" loading="lazy">
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>Instore and Darkstore</b> trees updated, with the obsolete fields removed</p>
+<p>Copy aligned with Food and ready to be the rule base for the AI assistant</p>
+</div>
 </div>
 </div>
 </section>
@@ -250,32 +242,34 @@
 <p class="cx-meta">2021</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/porto-home.png" alt="Auto insurance home: An insurance that is easy to understand, benefits and the three buying steps" loading="lazy">
-<img src="/porto-placa.png" alt="Quote screen asking What is the car license plate, with a I do not know the plate option" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:2;--cols:1.573fr 1.573fr">
+<img style="aspect-ratio:1200/763" src="/porto-home.png" alt="Auto insurance home: An insurance that is easy to understand, benefits and the three buying steps" loading="lazy">
+<img style="aspect-ratio:1200/763" src="/porto-placa.png" alt="Quote screen asking What is the car license plate, with a I do not know the plate option" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Context</h2>
 <p class="cx-ctx">People who wanted car insurance at Porto couldn&#x27;t get a full quote on their own and needed a broker. The company wanted to give customers autonomy, and the call center kept getting calls from people who didn&#x27;t understand the insurance information. A content audit, a heuristic review and customer interviews confirmed it: the problem was the language.</p>
-<h2 class="cx-label">Results</h2>
-<div class="cx-two cx-out">
-<p><b>75%</b> of the texts were easy to read for 6th to 9th grade level</p>
-<p>In the test, <b>4 of 6</b> people said they understood the insurance better, and 5 found the steps comfortable</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">What I did</h2>
-<p>Did the content audit and the heuristic review with the team, and listened to customers about each step of the quote.</p>
-<p>With the product designer, built the storytelling, the hierarchy and the information architecture.</p>
-<p>Wrote the new quote journey, with clear microcopy in Porto&#x27;s tone of voice.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">What changed</h2>
 <p>The home promises “insurance that&#x27;s easy to understand” and shows the benefits in three cards.</p>
 <p>Buying is laid out in three steps, with the inspection done from home.</p>
 <p>Coverages and assistance get icons and a short explanation, instead of insurance jargon.</p>
 <p>Each quote question explains why it exists, like why we ask for the license plate.</p>
+</div>
+</div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">What I did</h2>
+<p>Did the content audit and the heuristic review with the team, and listened to customers about each step of the quote.</p>
+<p>With the product designer, built the storytelling, the hierarchy and the information architecture.</p>
+<p>Wrote the new quote journey, with clear microcopy in Porto&#x27;s tone of voice.</p>
+</div>
+<h2 class="cx-label">Results</h2>
+<div class="cx-two cx-out">
+<p><b>75%</b> of the texts were easy to read for 6th to 9th grade level</p>
+<p>In the test, <b>4 of 6</b> people said they understood the insurance better, and 5 found the steps comfortable</p>
 </div>
 </div>
 </div>
