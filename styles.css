@@ -439,7 +439,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 
 /* ===== Layout em F dos cases ===== */
 .sp-case { padding-top: clamp(56px, 8vw, 104px); }
-.sp-case .cx-hero { max-width: 1120px; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); grid-template-areas: "logo logo" "title role" "sub meta"; column-gap: clamp(24px, 4vw, 56px); justify-items: start; text-align: left; padding: 0 var(--gutter) clamp(36px, 5vw, 56px); }
+.sp-case .cx-hero { max-width: 1120px; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); grid-template-areas: "logo logo" "title role" "sub ."; column-gap: clamp(24px, 4vw, 56px); justify-items: start; text-align: left; padding: 0 var(--gutter) clamp(36px, 5vw, 56px); }
 .sp-case .cx-logo-img { grid-area: logo; margin: 0 0 clamp(28px, 4vw, 44px); width: 52px; }
 .sp-case .cx-title { grid-area: title; font-size: clamp(30px, 4.6vw, 60px); font-weight: 500; line-height: 1.06; letter-spacing: -.03em; color: #fff; text-wrap: balance; max-width: 15em; }
 .sp-case .cx-sub { grid-area: sub; margin-top: clamp(14px, 1.8vw, 20px); font-size: clamp(19px, 2.2vw, 24px); max-width: 26em; }
@@ -458,7 +458,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-case .fx-col .cx-out { grid-template-columns: minmax(0, 1fr); gap: 22px; margin: 0; }
 .sp-case .fx-col .cx-label + .cx-ctx { margin-top: 0; }
 @media (max-width: 760px) {
-  .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "logo" "title" "sub" "role" "meta"; }
+  .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "logo" "title" "sub" "role"; }
   .sp-case .cx-role { margin-top: 28px; align-self: start; }
   .sp-case .cx-strip.imgs.fx { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sp-case .cx-strip.imgs.fx img[src*="beneficio-desktop"], .sp-case .cx-strip.imgs.fx img[src*="pausar-config"], .sp-case .cx-strip.imgs.fx img[src*="porto-"] { grid-column: 1 / -1; }
