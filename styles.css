@@ -625,9 +625,14 @@ body.sp { color: #000; font-family: var(--f-sp); letter-spacing: -.02em; }
 .wk-panel { background: #f9f4ec; border-color: rgba(0, 0, 0, .1); }
 .sp-card { background: #f9f4ec; }
 .sp .sp-curtain { background: #f9f4ec; }
-.sp .sp-sky { background: radial-gradient(70% 55% at 50% 110%, rgba(255, 71, 231, .3), transparent 70%), #000; }
-.sp-pill { background: color-mix(in oklab, #f9f4ec 16%, transparent); color: #f9f4ec; }
-.sp-pill:hover, .sp-pill:focus-visible { background: #f9f4ec; color: #000; }
-.sp-pill:focus-visible { outline-color: #f9f4ec; }
-.sp-pill-lg { background: var(--pink); color: #000; font-weight: 600; }
-.sp-pill-lg:hover, .sp-pill-lg:focus-visible { background: #f9f4ec; color: #000; }
+.sp .sp-sky { background: #1c1c1c; }
+.sp-end { color: #f9f4ec; }
+.sp-fx { max-width: 640px; gap: 18px; }
+.sp-fx-big { margin: 0; font-size: clamp(40px, 7vw, 80px); line-height: 1; font-weight: 600; letter-spacing: -.055em; color: #f9f4ec; }
+.sp-fx-line { margin: 0; font-size: clamp(17px, 1.8vw, 20px); line-height: 1.7; color: rgba(249, 244, 236, .72); text-wrap: balance; }
+.sp-fx-line .nw { white-space: nowrap; }
+.sp-fx-line .sp-pill { font-size: inherit; line-height: 1.2; padding: .08em .38em .14em; margin: 0 .04em; background: color-mix(in oklab, #f9f4ec 14%, transparent); color: #f9f4ec; border-radius: .3em; }
+.sp-fx-line .sp-pill:hover, .sp-fx-line .sp-pill:focus-visible { background: #f9f4ec; color: #1c1c1c; }
+.sp-fx-line .sp-pill:focus-visible { outline-color: #f9f4ec; }
+.sp-hero, .wk-list { border-top: 0; }
+.wk-title { margin: 0 0 calc(-1 * clamp(44px, 6vw, 72px) + clamp(14px, 2vw, 22px)); font-size: 14px; line-height: 1.3; font-weight: 500; letter-spacing: -.01em; color: var(--muted); }
