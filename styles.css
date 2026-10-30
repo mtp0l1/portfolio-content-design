@@ -649,3 +649,6 @@ body.sp { color: #000; font-family: var(--f-sp); letter-spacing: -.02em; }
 .sp-note { flex: none; fill: #111; }
 .sp-bubble-text { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 @media (prefers-reduced-motion: reduce) { .sp-bubble, .sp-bubble.on { transition: none; } }
+/* ----- Texto de apoio do hero: linha com a largura do nome ----- */
+@media (min-width: 761px) { .sp-hero { grid-template-columns: max-content minmax(0, 1fr); grid-template-areas: "avatar avatar" "name ." "tag ." "links ." "loc ."; } }
+.sp-hero .sp-tag { width: 0; min-width: 100%; max-width: none; text-wrap: pretty; color: #000; }
