@@ -438,10 +438,10 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-case { scroll-margin-top: 0; }
 
 /* ===== Hero em F ===== */
-.sp-hero { width: min(1120px, 100%); margin-inline: auto; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); grid-template-areas: "avatar avatar" "name name" "tag loc" "links ."; column-gap: clamp(24px, 4vw, 56px); justify-items: start; align-content: center; text-align: left; padding: 96px var(--gutter) 72px; }
+.sp-hero { width: min(1120px, 100%); margin-inline: auto; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); grid-template-areas: "avatar avatar" "name name" "tag ." "links ." "loc ."; column-gap: clamp(24px, 4vw, 56px); justify-items: start; align-content: center; text-align: left; padding: 96px var(--gutter) 72px; }
 .sp-hero .sp-avatar { grid-area: avatar; margin: 0 0 clamp(28px, 4vw, 44px); width: 56px; }
 .sp-hero .sp-name { grid-area: name; font-size: clamp(38px, 7vw, 92px); white-space: nowrap; font-weight: 500; line-height: 1.02; letter-spacing: -.035em; margin: 0; }
-.sp-hero .sp-loc { grid-area: loc; align-self: start; justify-self: start; margin: clamp(16px, 2vw, 24px) 0 0; padding-top: .35em; flex-wrap: wrap; justify-content: flex-start; gap: 8px 10px; }
+.sp-hero .sp-loc { grid-area: loc; align-self: start; justify-self: start; margin: clamp(28px, 3.6vw, 40px) 0 0; padding: 0; flex-wrap: wrap; justify-content: flex-start; gap: 8px 10px; }
 .sp-hero .sp-tag { grid-area: tag; margin-top: clamp(16px, 2vw, 24px); font-size: clamp(19px, 2.4vw, 26px); line-height: 1.3; color: var(--muted); max-width: 26em; text-wrap: pretty; }
 .sp-hero .sp-links { grid-area: links; justify-content: flex-start; margin-top: clamp(36px, 5vw, 52px); }
 @media (max-width: 760px) { .sp-hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "avatar" "name" "tag" "links" "loc"; } .sp-hero .sp-loc { margin-top: 36px; padding: 0; } }
