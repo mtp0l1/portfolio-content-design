@@ -500,6 +500,17 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-case .cx-role b { font-weight: 500; color: #fff; }
 .sp-case .cx-role span { color: var(--muted); font-weight: 400; }
 @media (max-width: 760px) { .sp-case .cx-hero { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "logo role" "title title" "sub sub"; } .sp-case .cx-role { margin: 0 0 clamp(28px, 3.6vw, 40px); align-self: start; } }
+/* blocos de texto: grade 2x2 alinhada, mesmo rótulo, mesmo corpo, bullets e ponto final */
+.sp-case .cx-body.fx { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 5vw, 72px); row-gap: clamp(40px, 5vw, 56px); align-items: start; }
+.sp-case .fx-blk { display: block; }
+.sp-case .fx-blk .cx-label { font-size: 14px; line-height: 1.3; margin: 0 0 14px; font-weight: 400; color: var(--muted); }
+.sp-case .fx-ctx, .sp-case .fx-list li { font-size: clamp(15px, 1.2vw, 16.5px); line-height: 1.5; font-weight: 400; color: #C9C9CE; margin: 0; }
+.sp-case .fx-ctx + .fx-ctx { margin-top: 12px; }
+.sp-case .fx-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.sp-case .fx-list li { position: relative; padding-left: 18px; }
+.sp-case .fx-list li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: #6b6b73; }
+.sp-case .fx-list b { font-weight: 500; color: #fff; }
+@media (max-width: 760px) { .sp-case .cx-body.fx { grid-template-columns: minmax(0, 1fr); row-gap: 40px; } }
 .sp-foot { text-align: center; color: var(--muted); font-size: 13.5px; padding: 0 var(--gutter) 24px; }
 .sp-end { min-height: 70svh; display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center; padding: 96px var(--gutter); }
 .sp-mail { font-size: clamp(22px, 3.2vw, 32px); color: #fff; text-decoration: none; }
