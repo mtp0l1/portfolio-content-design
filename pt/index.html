@@ -91,27 +91,18 @@
 <p class="cx-meta">2026 · Argentina e Brasil</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/pronto-vol-depois.png" alt="Tela de confirmação do pedido com alerta laranja pedindo para avaliar se um só entregador consegue levar tudo" loading="lazy">
-<img src="/pronto-stock-depois.png" alt="Lista de produtos do pedido com a etiqueta Stock nos itens com pouco estoque" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.562fr 0.302fr 0.561fr 0.493fr">
+<img style="aspect-ratio:360/640" src="/pronto-vol-depois.png" alt="Tela de confirmação do pedido com alerta laranja pedindo para avaliar se um só entregador consegue levar tudo" loading="lazy">
+<img style="aspect-ratio:360/1192" src="/pronto-stock-depois.png" alt="Lista de produtos do pedido com a etiqueta Stock nos itens com pouco estoque" loading="lazy">
+<img style="aspect-ratio:358/638" src="/pronto-finalizar-depois.png" alt="Tela verde de pedido terminado, com o código de envio e o total de sacolas para anotar" loading="lazy">
+<img style="aspect-ratio:360/730" src="/pronto-aduana.png" alt="Tela Detalhe da ordem, com os produtos coletados para mostrar na saída da loja" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Contexto</h2>
 <p class="cx-ctx">O Pronto App é o app de quem separa pedidos de supermercado. Com o instant delivery, o fluxo do picker mostrou quatro falhas: volume que não cabe num entregador, estoque que gera substituição à toa, sacola sem número e nenhuma prova do que foi coletado. Cada uma virou um projeto de handoff.</p>
-<h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out">
-<p><b>4 frentes</b> desenhadas e documentadas para a engenharia, cada uma sobre uma falha do fluxo</p>
-<p>Alerta de volume a partir de <b>15 unidades</b>, sem acrescentar tempo ao picking</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">O que eu fiz</h2>
-<p>Li o fluxo do picker de ponta a ponta e separei o que quebrava com entrega em minutos.</p>
-<p>Desenhei e escrevi uma tela ou um aviso para cada ponto, com handoff próprio.</p>
-<p>Defini o que o app informa e o que o picker decide, sem criar etapa nova.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">O que mudou</h2>
 <p>Pedido grande avisa antes da coleta, e o picker decide se chama um segundo entregador.</p>
 <p>Item com pouco estoque ganha uma etiqueta “Stock”. O picker oferece substituição em vez de procurar mais.</p>
@@ -119,11 +110,18 @@
 <p>Na saída da loja, a tela de Aduana mostra o que foi coletado, mesmo com o sistema do supermercado fora do ar.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Li o fluxo do picker de ponta a ponta e separei o que quebrava com entrega em minutos.</p>
+<p>Desenhei e escrevi uma tela ou um aviso para cada ponto, com handoff próprio.</p>
+<p>Defini o que o app informa e o que o picker decide, sem criar etapa nova.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/pronto-finalizar-depois.png" alt="Tela verde de pedido terminado, com o código de envio e o total de sacolas para anotar" loading="lazy">
-<img src="/pronto-aduana.png" alt="Tela Detalhe da ordem, com os produtos coletados para mostrar na saída da loja" loading="lazy">
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>4 frentes</b> desenhadas e documentadas para a engenharia, cada uma sobre uma falha do fluxo</p>
+<p>Alerta de volume a partir de <b>15 unidades</b>, sem acrescentar tempo ao picking</p>
+</div>
 </div>
 </div>
 </section>
@@ -136,38 +134,36 @@
 <p class="cx-meta">2025 · Brasil</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:3">
-<img src="/beneficio-home.png" alt="Home da loja no mobile, com o saldo do benefício de alimentação ao lado do envio grátis" loading="lazy">
-<img src="/beneficio-pagamento.png" alt="Tela Escolha como pagar, com Benefício de alimentação entre os meios recomendados e o selo Novo" loading="lazy">
-<img src="/beneficio-compra.png" alt="Detalhe da compra mostrando o pagamento aprovado com o benefício de alimentação" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.34fr 0.329fr 0.468fr 1.8fr">
+<img style="aspect-ratio:360/1060" src="/beneficio-home.png" alt="Home da loja no mobile, com o saldo do benefício de alimentação ao lado do envio grátis" loading="lazy">
+<img style="aspect-ratio:368/1117" src="/beneficio-pagamento.png" alt="Tela Escolha como pagar, com Benefício de alimentação entre os meios recomendados e o selo Novo" loading="lazy">
+<img style="aspect-ratio:364/777" src="/beneficio-compra.png" alt="Detalhe da compra mostrando o pagamento aprovado com o benefício de alimentação" loading="lazy">
+<img style="aspect-ratio:1440/800" src="/beneficio-desktop.png" alt="Home da loja no desktop, com o benefício de alimentação e o saldo disponível" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Contexto</h2>
 <p class="cx-ctx">Quem recebe o benefício de alimentação pelo Mercado Pago pode usá-lo nas compras do Súper. A oportunidade era aumentar as vendas da vertical, mostrando o benefício na home da loja e no pagamento. A primeira versão é para os colaboradores do Mercado Livre Brasil.</p>
-<h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out">
-<p><b>3 pontos</b> do fluxo desenhados: home da loja, checkout e detalhe da compra</p>
-<p>Primeira versão em handoff para a engenharia, com casos de uso, specs e traduções</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">O que eu fiz</h2>
-<p>Mapeei onde o benefício precisa aparecer, da home da loja até o detalhe da compra.</p>
-<p>Tratei o benefício como um meio de pagamento novo, com saldo e selo “Novo”.</p>
-<p>Documentei os casos de uso, as specs e as traduções.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">O que mudou</h2>
 <p>A home da loja mostra o saldo do benefício junto do envio grátis e da entrega.</p>
 <p>No checkout, o benefício aparece entre os meios de pagamento recomendados, com o saldo.</p>
 <p>Depois da compra, o detalhe mostra quanto foi pago com o benefício.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Mapeei onde o benefício precisa aparecer, da home da loja até o detalhe da compra.</p>
+<p>Tratei o benefício como um meio de pagamento novo, com saldo e selo “Novo”.</p>
+<p>Documentei os casos de uso, as specs e as traduções.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:1">
-<img src="/beneficio-desktop.png" alt="Home da loja no desktop, com o benefício de alimentação e o saldo disponível" loading="lazy">
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>3 pontos</b> do fluxo desenhados: home da loja, checkout e detalhe da compra</p>
+<p>Primeira versão em handoff para a engenharia, com casos de uso, specs e traduções</p>
+</div>
 </div>
 </div>
 </section>
@@ -180,26 +176,16 @@
 <p class="cx-meta">2026 · Argentina</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:1">
-<img src="/pausar-modal.png" alt="Modal Pausar tienda com a duração e o motivo escolhidos e o campo para contar mais" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:2;--cols:0.661fr 2.595fr">
+<img style="aspect-ratio:480/726" src="/pausar-modal.png" alt="Modal Pausar tienda com a duração e o motivo escolhidos e o campo para contar mais" loading="lazy">
+<img style="aspect-ratio:1440/555" src="/pausar-config.png" alt="Configuração da loja com o estado Pausada, quem pausou, até quando e o botão Reanudar tienda" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Contexto</h2>
 <p class="cx-ctx">A loja opera normal, mas em alguns momentos recebe mais pedidos do que consegue processar. Não existia uma regra confiável para segurar a demanda, e a fila crescia até a operação travar. O MVP combina duas respostas: pausa automática por capacidade e pausa manual para contingências. Este case é o fluxo manual, no backoffice, para o team leader do Mercado Livre.</p>
-<h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out">
-<p><b>1 fluxo</b> de pausar e retomar a loja, com motivo e registro de quem acionou</p>
-<p>Handoff com 15 casos de uso, incluindo erros de data e hora, falhas e sessão expirada</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">O que eu fiz</h2>
-<p>Desenhei o fluxo de pausar e retomar no backoffice, restrito a quem tem permissão específica.</p>
-<p>Escrevi os textos para deixar claro que é uma ferramenta de exceção, não de uso diário.</p>
-<p>Documentei os casos de uso, os erros e a retomada automática.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">O que mudou</h2>
 <p>O team leader escolhe até quando pausa e o motivo, num modal curto.</p>
 <p>O modal avisa que os pedidos em andamento não são afetados. Só os novos são pausados.</p>
@@ -207,10 +193,18 @@
 <p>A lista de lojas mostra o estado Pausada e o horário de retorno.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Desenhei o fluxo de pausar e retomar no backoffice, restrito a quem tem permissão específica.</p>
+<p>Escrevi os textos para deixar claro que é uma ferramenta de exceção, não de uso diário.</p>
+<p>Documentei os casos de uso, os erros e a retomada automática.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:1">
-<img src="/pausar-config.png" alt="Configuração da loja com o estado Pausada, quem pausou, até quando e o botão Reanudar tienda" loading="lazy">
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>1 fluxo</b> de pausar e retomar a loja, com motivo e registro de quem acionou</p>
+<p>Handoff com 15 casos de uso, incluindo erros de data e hora, falhas e sessão expirada</p>
+</div>
 </div>
 </div>
 </section>
@@ -223,27 +217,18 @@
 <p class="cx-meta">2026 · Argentina</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/reclamos-pedido.png" alt="Detalhe de um pedido entregue, com o botão ¿Necesitas ayuda?" loading="lazy">
-<img src="/reclamos-ayuda.png" alt="Menu Ayuda con la compra, com os motivos para pedir ajuda sobre o pedido" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.45fr 0.45fr 0.427fr 0.45fr">
+<img style="aspect-ratio:360/800" src="/reclamos-pedido.png" alt="Detalhe de um pedido entregue, com o botão ¿Necesitas ayuda?" loading="lazy">
+<img style="aspect-ratio:360/800" src="/reclamos-ayuda.png" alt="Menu Ayuda con la compra, com os motivos para pedir ajuda sobre o pedido" loading="lazy">
+<img style="aspect-ratio:360/843" src="/reclamos-motivo.png" alt="Tela Cuál fue el problema com quatro motivos para o produto de um pedido" loading="lazy">
+<img style="aspect-ratio:360/800" src="/reclamos-estado.png" alt="Tela Por qué llegó en mal estado, com as opções descongelado ou vencido" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Contexto</h2>
 <p class="cx-ctx">Quando algo dá errado numa compra do supermercado, o comprador abre uma reclamação e escolhe o problema numa árvore de opções. As árvores estavam desatualizadas: campos que não existem mais, nenhuma mensagem quando a reclamação termina sem compensação e um tom diferente em cada vertical. Elas também vão virar a base de regras do assistente de IA que atende as reclamações.</p>
-<h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out">
-<p>Árvores de <b>Instore e Darkstore</b> atualizadas, sem os campos obsoletos</p>
-<p>Texto alinhado com o Food e pronto para servir de base de regras ao assistente de IA</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">O que eu fiz</h2>
-<p>Revisei as árvores de reclamação de Instore e Darkstore e tirei o que não existe mais.</p>
-<p>Alinhei o texto com o Food, numa linguagem que acolhe o comprador sem admitir falha.</p>
-<p>Documentei cada caminho, como produto com problema ou pacote que não chegou, e para onde cada saída vai.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">O que mudou</h2>
 <p>O comprador escolhe o problema em poucas perguntas, com opções diretas como “Chegou danificado ou aberto”.</p>
 <p>Reclamação que termina sem compensação ganha uma mensagem de encerramento, em vez de um beco sem saída.</p>
@@ -251,11 +236,18 @@
 <p>Ao enviar, a tela oferece continuar a conversa por WhatsApp.</p>
 </div>
 </div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Revisei as árvores de reclamação de Instore e Darkstore e tirei o que não existe mais.</p>
+<p>Alinhei o texto com o Food, numa linguagem que acolhe o comprador sem admitir falha.</p>
+<p>Documentei cada caminho, como produto com problema ou pacote que não chegou, e para onde cada saída vai.</p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/reclamos-motivo.png" alt="Tela Cuál fue el problema com quatro motivos para o produto de um pedido" loading="lazy">
-<img src="/reclamos-estado.png" alt="Tela Por qué llegó en mal estado, com as opções descongelado ou vencido" loading="lazy">
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p>Árvores de <b>Instore e Darkstore</b> atualizadas, sem os campos obsoletos</p>
+<p>Texto alinhado com o Food e pronto para servir de base de regras ao assistente de IA</p>
+</div>
 </div>
 </div>
 </section>
@@ -268,32 +260,34 @@
 <p class="cx-meta">2021</p>
 </div>
 <div class="cx-bleed">
-<div class="cx-strip imgs" style="--n:2">
-<img src="/porto-home.png" alt="Página inicial do seguro auto: Um seguro fácil de entender, vantagens e os três passos da contratação" loading="lazy">
-<img src="/porto-placa.png" alt="Tela da cotação com a pergunta Qual é a placa do carro e a opção Não sei a placa" loading="lazy">
+<div class="cx-strip imgs fx" style="--n:2;--cols:1.573fr 1.573fr">
+<img style="aspect-ratio:1200/763" src="/porto-home.png" alt="Página inicial do seguro auto: Um seguro fácil de entender, vantagens e os três passos da contratação" loading="lazy">
+<img style="aspect-ratio:1200/763" src="/porto-placa.png" alt="Tela da cotação com a pergunta Qual é a placa do carro e a opção Não sei a placa" loading="lazy">
 </div>
 </div>
-<div class="cx-body">
+<div class="cx-body fx">
+<div class="fx-col">
 <h2 class="cx-label">Contexto</h2>
 <p class="cx-ctx">Quem queria um seguro auto na Porto não conseguia fazer uma cotação completa sozinho e precisava de um corretor. A empresa queria dar autonomia aos clientes, e o SAC recebia ligações de quem não entendia as informações do seguro. Uma auditoria de conteúdo, uma análise heurística e entrevistas com clientes confirmaram: o problema era a linguagem.</p>
-<h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out">
-<p><b>75%</b> dos textos ficaram fáceis de ler para quem tem entre o 6º e o 9º ano</p>
-<p>No teste, <b>4 de 6</b> pessoas disseram entender melhor o seguro, e 5 acharam as etapas confortáveis</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">O que eu fiz</h2>
-<p>Fiz com o time a auditoria de conteúdo e a análise heurística do site, e ouvi clientes sobre cada etapa da cotação.</p>
-<p>Com a pessoa de design, construí o storytelling, a hierarquia e a arquitetura de informação.</p>
-<p>Escrevi a nova jornada de cotação, com microcopys claros e no tom e voz da Porto.</p>
-</div>
-<div>
+<div class="fx-blk">
 <h2 class="cx-label">O que mudou</h2>
 <p>A home promete “um seguro fácil de entender” e mostra os benefícios em três cards.</p>
 <p>A contratação aparece em três passos, com vistoria sem sair de casa.</p>
 <p>Coberturas e assistências ganham ícones e uma explicação curta, no lugar do “segurês”.</p>
 <p>Cada pergunta da cotação explica por que ela existe, como o motivo de pedir a placa.</p>
+</div>
+</div>
+<div class="fx-col">
+<div class="fx-blk">
+<h2 class="cx-label">O que eu fiz</h2>
+<p>Fiz com o time a auditoria de conteúdo e a análise heurística do site, e ouvi clientes sobre cada etapa da cotação.</p>
+<p>Com a pessoa de design, construí o storytelling, a hierarquia e a arquitetura de informação.</p>
+<p>Escrevi a nova jornada de cotação, com microcopys claros e no tom e voz da Porto.</p>
+</div>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>75%</b> dos textos ficaram fáceis de ler para quem tem entre o 6º e o 9º ano</p>
+<p>No teste, <b>4 de 6</b> pessoas disseram entender melhor o seguro, e 5 acharam as etapas confortáveis</p>
 </div>
 </div>
 </div>
