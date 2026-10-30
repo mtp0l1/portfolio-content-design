@@ -17,6 +17,8 @@
     engine: "preview", // "preview" | "spotify"
     playlistId: "6ZJb7zsFDa3L7acRCyCYdl",
     volume: 0.7,
+    // Passou desse tempo sem tocar nada, a próxima visita volta para a primeira faixa.
+    resetAfterMs: 6 * 60 * 60 * 1000,
     // Faixas da playlist (lidas do embed público). previewUrl = prévia de 30 s do Spotify.
     tracks: [
       { artist: "Khruangbin", song: "Right", uri: "spotify:track:3ezJklJWZRm6pWI3DQjW9e", previewUrl: "https://p.scdn.co/mp3-preview/ce61667a09a919c3d879445ad9c848a182f126f1" },
@@ -25,9 +27,25 @@
     ]
   };
 
+  /* ---------- Posição na playlist (lembrada entre visitas) ---------- */
+  var KEY = "avatarPlayer.v1";
+  function startIndex(cfg) {
+    // Nova visita: segue para a faixa seguinte à última que tocou. Se faz muito tempo, volta para a primeira.
+    try {
+      var saved = JSON.parse(localStorage.getItem(KEY) || "null");
+      if (saved && typeof saved.i === "number" && Date.now() - saved.t < cfg.resetAfterMs) {
+        return (saved.i + 1) % cfg.tracks.length;
+      }
+    } catch (e) {}
+    return 0;
+  }
+  function remember(i) {
+    try { localStorage.setItem(KEY, JSON.stringify({ i: i, t: Date.now() })); } catch (e) {}
+  }
+
   /* ---------- Motor 1: HTMLAudioElement ---------- */
   function PreviewEngine(cfg) {
-    var tracks = cfg.tracks, i = 0, trackCb = function () {}, failCb = function () {};
+    var tracks = cfg.tracks, i = startIndex(cfg), trackCb = function () {}, failCb = function () {};
     var audio = new Audio();
     audio.preload = "auto";
     audio.volume = cfg.volume;
@@ -36,13 +54,14 @@
       audio.src = tracks[i].previewUrl;
       trackCb(tracks[i]);
     }
-    audio.addEventListener("ended", function () { load(i + 1); audio.play().catch(function () {}); });
+    audio.addEventListener("ended", function () { load(i + 1); remember(i); audio.play().catch(function () {}); });
     audio.addEventListener("error", function () { failCb(); });
-    load(0);
+    load(i);
     return {
       name: "preview",
       current: function () { return tracks[i]; },
-      play: function () { return audio.play(); },
+      // Sempre começa a faixa do início
+      play: function () { try { audio.currentTime = 0; } catch (e) {} remember(i); return audio.play(); },
       pause: function () { audio.pause(); },
       onTrack: function (cb) { trackCb = cb; cb(tracks[i]); },
       onFail: function (cb) { failCb = cb; },
@@ -52,7 +71,7 @@
 
   /* ---------- Motor 2: Spotify IFrame API ---------- */
   function SpotifyEngine(cfg) {
-    var ctrl = null, ready = false, wantPlay = false, cur = cfg.tracks[0];
+    var ctrl = null, ready = false, wantPlay = false, idx = startIndex(cfg), cur = cfg.tracks[idx];
     var trackCb = function () {}, failCb = function () {};
     var host = document.createElement("div");
     host.setAttribute("aria-hidden", "true");
@@ -66,13 +85,18 @@
       return null;
     }
     function init(IFrameAPI) {
-      IFrameAPI.createController(mount, { uri: "spotify:playlist:" + cfg.playlistId, width: 1, height: 1 }, function (c) {
+      IFrameAPI.createController(mount, { uri: cur.uri, width: 1, height: 1 }, function (c) {
         ctrl = c;
-        ctrl.addListener("ready", function () { ready = true; if (wantPlay) ctrl.resume(); });
+        ctrl.addListener("ready", function () { ready = true; if (wantPlay) { ctrl.loadUri(cur.uri); ctrl.play(); } });
         ctrl.addListener("playback_update", function (e) {
           var d = (e && e.data) || {};
           var t = d.playingURI && byUri(d.playingURI);
-          if (t && t !== cur) { cur = t; trackCb(t); }
+          if (t && t !== cur) { cur = t; idx = cfg.tracks.indexOf(t); remember(idx); trackCb(t); }
+          // Chegou ao fim da faixa: segue a ordem da playlist, e depois da última volta para a primeira
+          if (d.duration && d.position >= d.duration - 500 && !d.__adv) {
+            idx = (idx + 1) % cfg.tracks.length; cur = cfg.tracks[idx]; remember(idx); trackCb(cur);
+            ctrl.loadUri(cur.uri); ctrl.play();
+          }
         });
         ctrl.addListener("account_error", function () { failCb(); });
       });
@@ -89,7 +113,7 @@
     return {
       name: "spotify",
       current: function () { return cur; },
-      play: function () { wantPlay = true; if (ctrl && ready) ctrl.resume(); return Promise.resolve(); },
+      play: function () { wantPlay = true; remember(idx); if (ctrl && ready) { ctrl.loadUri(cur.uri); ctrl.play(); } return Promise.resolve(); },
       pause: function () { wantPlay = false; if (ctrl && ready) ctrl.pause(); },
       onTrack: function (cb) { trackCb = cb; cb(cur); },
       onFail: function (cb) { failCb = cb; },
