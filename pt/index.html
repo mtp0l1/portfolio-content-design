@@ -65,6 +65,7 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="cx-page sp">
+<div class="sp-sky" aria-hidden="true"></div>
 <header class="sp-bar">
 <nav class="sp-langs" aria-label="Idioma"><a href="/" hreflang="en" lang="en" aria-label="Read in English" title="English">EN</a>
 <a href="/es/" hreflang="es" lang="es" aria-label="Leer en español" title="Español">ES</a>
@@ -284,17 +285,13 @@
 </div>
 </div>
 <section class="sp-end" id="contato">
-<div class="sp-ft">
-<a class="sp-ft-l" href="https://calendly.com/mtpoli/30min" rel="noopener">
-<span class="sp-ft-big"><span>Let's build?</span><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24h34M26 10l14 14-14 14"/></svg></span>
-</a>
-<div class="sp-ft-r">
-<nav class="sp-ft-icons">
-<a href="https://wa.me/5511999562221" rel="noopener">WhatsApp</a>
-<a href="https://www.linkedin.com/in/mtpoli/" rel="me noopener">LinkedIn</a>
-<a href="mailto:matheusloures@live.com">E-mail</a>
+<div class="sp-fx">
+<p class="sp-fx-cta"><a class="sp-pill sp-pill-lg" href="https://calendly.com/mtpoli/30min" rel="noopener">Let's build? <span aria-hidden="true">→</span></a></p>
+<nav class="sp-fx-links">
+<a class="sp-pill" href="https://wa.me/5511999562221" rel="noopener">WhatsApp</a>
+<a class="sp-pill" href="https://www.linkedin.com/in/mtpoli/" rel="me noopener">LinkedIn</a>
+<a class="sp-pill" href="mailto:matheusloures@live.com">E-mail</a>
 </nav>
-</div>
 </div>
 </section>
 
@@ -399,6 +396,28 @@
       else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
     }
   });
+})();
+</script>
+<script>
+(function () {
+  var m = document.querySelector(".sp-curtain"), ft = document.querySelector(".sp-end");
+  if (!m || !ft || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var tick = false;
+  function upd() {
+    tick = false;
+    var vw = document.documentElement.clientWidth, vh = window.innerHeight;
+    var doc = document.documentElement.scrollHeight;
+    var d = doc - (window.scrollY + vh);
+    var R = ft.offsetHeight + 40;
+    var t = Math.max(0, Math.min(1, (R - d) / R));
+    if (t <= 0) { m.style.transform = ""; m.style.clipPath = ""; return; }
+    var inset = Math.max(10, Math.min(35, vw * 0.018));
+    var sc = 1 - (2 * inset / vw) * t;
+    m.style.transform = "scale(" + sc.toFixed(5) + ")";
+    m.style.clipPath = "inset(0px round 0px 0px " + (24 * t).toFixed(2) + "px " + (24 * t).toFixed(2) + "px)";
+  }
+  function req() { if (!tick) { tick = true; requestAnimationFrame(upd); } }
+  addEventListener("scroll", req, { passive: true }); addEventListener("resize", req); upd();
 })();
 </script>
 <script src="/selection.js" defer></script>

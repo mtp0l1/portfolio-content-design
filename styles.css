@@ -538,6 +538,18 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .wk-body .sp-case { padding-top: clamp(40px, 6vw, 72px); }
 @media (prefers-reduced-motion: reduce) { .wk-panel, .wk-sheet, .wk-cover { transition: none; } }
 @media (max-width: 760px) { .wk-panel { width: 100%; border-radius: 22px 22px 0 0; } .wk-cover { border-radius: 18px; } }
+/* ===== Rodapé: efeito e estilo da referência (conteúdo encolhe e revela o degradê) ===== */
+.sp .sp-sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, #1f173e 0%, #7a3b63 52%, #ab7d5b 100%); }
+.sp .sp-curtain { margin-bottom: 0; border-radius: 0; box-shadow: none; overflow: hidden; transform-origin: 50% 0; will-change: transform; background: #000; }
+.sp .sp-end { position: static; height: auto; min-height: 0; display: block; background: none; padding: clamp(56px, 9vw, 112px) var(--gutter) clamp(56px, 9vw, 112px); text-align: center; border: 0; }
+.sp-fx { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; justify-items: center; }
+.sp-fx-cta { margin: 0; }
+.sp-fx-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+.sp-pill { display: inline-block; padding: 5px 9px 6px; border-radius: 6px; background: color-mix(in oklab, #fff 18%, transparent); color: #fff; font-size: 14px; line-height: 1.3; text-decoration: none; white-space: nowrap; transition: background .2s ease, color .2s ease; }
+.sp-pill:hover, .sp-pill:focus-visible { background: #fff; color: #111110; transition-duration: 0s; }
+.sp-pill:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.sp-pill-lg { font-size: clamp(17px, 2vw, 20px); padding: 8px 16px 9px; border-radius: 8px; }
+@media (max-height: 560px) { .sp .sp-curtain { transform: none !important; clip-path: none !important; } }
 .sp-foot { text-align: center; color: var(--muted); font-size: 13.5px; padding: 0 var(--gutter) 24px; }
 .sp-end { min-height: 70svh; display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center; padding: 96px var(--gutter); }
 .sp-mail { font-size: clamp(22px, 3.2vw, 32px); color: #fff; text-decoration: none; }
