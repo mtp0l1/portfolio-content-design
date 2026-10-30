@@ -407,9 +407,9 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-langs [aria-current] { color: #fff; }
 .sp-mailbtn { padding: 8px 16px; font-size: 14px; color: #fff; background: #141416; border: 1px solid #232326; border-radius: 999px; text-decoration: none; }
 .sp-mailbtn:hover { background: #1c1c1f; }
-.sp-li { color: rgba(255, 255, 255, .7); display: grid; place-items: center; width: 22px; height: 22px; transition: color .2s ease; }
+.sp-li { color: rgba(255, 255, 255, .7); display: grid; place-items: center; width: 24px; height: 24px; transition: color .2s ease; }
 .sp-li:hover { color: #fff; }
-.sp-li svg { display: block; width: 22px; height: 22px; }
+.sp-li svg { display: block; width: 24px; height: 24px; }
 .sp-endt { font-size: clamp(28px, 4vw, 44px); font-weight: 600; color: #fff; }
 .sp-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
 .sp-links a { padding: 9px 18px; font-size: 15px; color: #fff; background: #141416; border: 1px solid #232326; border-radius: 999px; text-decoration: none; }
