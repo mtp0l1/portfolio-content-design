@@ -493,5 +493,5 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-ft-icons a { color: rgba(255, 255, 255, .88); display: block; line-height: 0; transition: transform .2s ease, opacity .2s ease; }
 .sp-ft-icons a:hover { transform: scale(1.08); }
 .sp-ft-icons a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 6px; }
-.sp-ft-icons svg { width: 34px; height: 34px; }
+.sp-ft-icons svg { width: 36px; height: 36px; }
 @media (max-width: 760px) { .sp-ft { grid-template-columns: 1fr; } .sp-ft-l { min-height: 220px; } .sp-ft-r { padding-top: 8px; } .sp-ft-l svg { transform: rotate(90deg); } .sp-ft-l:hover svg, .sp-ft-l:focus-visible svg { transform: rotate(90deg) translateX(8px); } .sp-ft-icons svg { width: 40px; height: 40px; } .sp-ft-icons { height: 64px; } }
