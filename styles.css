@@ -472,6 +472,26 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
   .sp-case .cx-strip.imgs.fx img[src*="beneficio-desktop"], .sp-case .cx-strip.imgs.fx img[src*="pausar-config"], .sp-case .cx-strip.imgs.fx img[src*="porto-"] { grid-column: 1 / -1; }
   .sp-case .cx-body.fx { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
 }
+/* ===== Cases: tipografia menor, linhas preenchidas, cargo na linha do logo ===== */
+.sp-hero { width: min(1200px, 100%); }
+.sp-case .cx-hero, .sp-case .cx-bleed, .sp-case .cx-body.fx { max-width: 1200px; }
+.sp-case .cx-hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "logo role" "title title" "sub sub"; align-items: center; }
+.sp-case .cx-logo-img { grid-area: logo; align-self: center; height: 44px; width: auto; margin: 0 0 clamp(28px, 3.6vw, 40px); }
+.sp-case .cx-logo-img[src*="porto"] { height: 44px; width: auto; }
+.sp-case .cx-role { grid-area: role; align-self: start; justify-self: end; text-align: right; margin: 0 0 clamp(28px, 3.6vw, 40px); font-size: 13px; line-height: 1.3; gap: 0; height: 44px; align-content: center; }
+.sp-case .cx-role b { font-weight: 500; }
+.sp-case .cx-title { max-width: none; font-size: clamp(24px, 3.1vw, 44px); font-weight: 500; letter-spacing: -.028em; line-height: 1.1; text-wrap: pretty; }
+.sp-case .cx-sub { max-width: none; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.4; margin-top: 12px; }
+.sp-case .cx-body.fx { column-gap: clamp(32px, 5vw, 72px); }
+.sp-case .fx-col { --g: clamp(32px, 4.4vw, 48px); }
+.sp-case .cx-label { font-size: 14px; line-height: 1.3; margin-bottom: 14px; }
+.sp-case .fx-col .cx-ctx { font-size: clamp(16px, 1.3vw, 18px); line-height: 1.5; font-weight: 400; color: #EDEDEF; }
+.sp-case .fx-blk { gap: 16px; }
+.sp-case .fx-blk p, .sp-case .fx-col .cx-out p { font-size: clamp(15px, 1.2vw, 16.5px); line-height: 1.5; font-weight: 400; color: #C9C9CE; }
+.sp-case .fx-col .cx-out { gap: 16px; }
+.sp-case .fx-col .cx-out b, .sp-case .fx-blk b { font-weight: 500; color: #fff; }
+.sp-case .fx-col > .cx-label { margin-bottom: calc(16px - var(--g)); }
+@media (max-width: 760px) { .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "logo role" "title title" "sub sub"; } .sp-case .cx-role { margin-top: 0; align-self: start; } }
 .sp-foot { text-align: center; color: var(--muted); font-size: 13.5px; padding: 0 var(--gutter) 24px; }
 .sp-end { min-height: 70svh; display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center; padding: 96px var(--gutter); }
 .sp-mail { font-size: clamp(22px, 3.2vw, 32px); color: #fff; text-decoration: none; }
