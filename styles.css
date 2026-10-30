@@ -493,6 +493,13 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-case .fx-col > .cx-label { margin-bottom: calc(16px - var(--g)); }
 @media (max-width: 760px) { .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "logo role" "title title" "sub sub"; } .sp-case .cx-role { margin-top: 0; align-self: start; } }
 .sp-hero .sp-tag { font-size: clamp(16px, 1.5vw, 20px); line-height: 1.4; font-weight: 400; max-width: 31em; text-wrap: balance; margin-top: 14px; }
+/* logo + cargo/empresa lado a lado, mesma altura */
+.sp-case .cx-hero { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "logo role" "title title" "sub sub"; column-gap: 14px; align-items: center; }
+.sp-case .cx-logo-img { height: 44px; width: auto; flex: none; }
+.sp-case .cx-role { justify-self: start; text-align: left; height: 44px; display: flex; flex-direction: column; justify-content: center; gap: 2px; font-size: 14px; line-height: 1.2; }
+.sp-case .cx-role b { font-weight: 500; color: #fff; }
+.sp-case .cx-role span { color: var(--muted); font-weight: 400; }
+@media (max-width: 760px) { .sp-case .cx-hero { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "logo role" "title title" "sub sub"; } .sp-case .cx-role { margin: 0 0 clamp(28px, 3.6vw, 40px); align-self: start; } }
 .sp-foot { text-align: center; color: var(--muted); font-size: 13.5px; padding: 0 var(--gutter) 24px; }
 .sp-end { min-height: 70svh; display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center; padding: 96px var(--gutter); }
 .sp-mail { font-size: clamp(22px, 3.2vw, 32px); color: #fff; text-decoration: none; }
