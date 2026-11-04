@@ -97,30 +97,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
   </url>
   <url>
-    <loc>https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/tipificacao-de-reclamos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/tipificacao-de-reclamos.html"/>
-  </url>
-  <url>
     <loc>https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html</loc>
     <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
@@ -143,5 +119,29 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/cotacao-seguro-auto.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/cotacao-seguro-auto.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/vivo-troca-de-plano.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/pt/vivo-troca-de-plano.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/vivo-troca-de-plano.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
   </url>
 </urlset>
