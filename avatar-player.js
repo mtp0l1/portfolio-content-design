@@ -144,7 +144,7 @@
     var btn = root.querySelector(".sp-av-btn");
     var bubble = root.querySelector(".sp-bubble");
     var label = root.querySelector(".sp-bubble-text");
-    var isPinned = false, engine = null;
+    var isPinned = false, engine = null, playing = false;
 
     function render(t) { if (t) label.textContent = t.artist + " - " + t.song; }
     var tried = {};
@@ -164,10 +164,12 @@
     function hide() { bubble.classList.remove("on"); }
     function start() {
       show();
+      if (playing) return; // já tocando (ex.: começou no hover e agora foi fixado com o clique): não recomeça a faixa
+      playing = true;
       var p = engine.play();
       if (p && p.catch) p.catch(function () { /* o navegador só libera som depois de um clique na página */ });
     }
-    function stop() { engine.pause(); hide(); }
+    function stop() { playing = false; engine.pause(); hide(); }
     function sync() { btn.setAttribute("aria-pressed", String(isPinned)); }
 
     btn.addEventListener("mouseenter", function () { if (!isPinned) start(); });
