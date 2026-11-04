@@ -627,6 +627,7 @@ body.sp { color: #000; font-family: var(--f-sp); letter-spacing: -.02em; }
 .sp-card { background: #f9f4ec; }
 .sp .sp-curtain { background: #f9f4ec; }
 .sp .sp-sky { background: #1c1c1c; }
+.wk-panel { border: 0; }
 .sp-end { color: #f9f4ec; }
 .sp-fx { max-width: 640px; gap: 18px; }
 .sp-fx-big { margin: 0; font-size: clamp(40px, 7vw, 80px); line-height: 1; font-weight: 600; letter-spacing: -.055em; color: #f9f4ec; }
