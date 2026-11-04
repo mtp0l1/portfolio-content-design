@@ -77,6 +77,7 @@
   /* ---------- Motor 2: Spotify IFrame API ---------- */
   function SpotifyEngine(cfg) {
     var ctrl = null, ready = false, wantPlay = false, idx = startIndex(cfg), cur = cfg.tracks[idx], advancing = false;
+    var loaded = cur.uri, started = false; // faixa que o iframe tem carregada; já tocou alguma vez?
     var trackCb = function () {}, failCb = function () {};
     var host = document.createElement("div");
     host.setAttribute("aria-hidden", "true");
@@ -92,16 +93,16 @@
     function init(IFrameAPI) {
       IFrameAPI.createController(mount, { uri: cur.uri, width: 1, height: 1 }, function (c) {
         ctrl = c;
-        ctrl.addListener("ready", function () { ready = true; if (wantPlay) { ctrl.loadUri(cur.uri); ctrl.play(); } });
+        ctrl.addListener("ready", function () { ready = true; if (wantPlay) { started = true; ctrl.play(); } });
         ctrl.addListener("playback_update", function (e) {
           var d = (e && e.data) || {};
           var t = d.playingURI && byUri(d.playingURI);
-          if (t && t !== cur) { cur = t; idx = cfg.tracks.indexOf(t); remember(idx); trackCb(t); }
+          if (t && t !== cur) { cur = t; loaded = t.uri; idx = cfg.tracks.indexOf(t); remember(idx); trackCb(t); }
           // Chegou ao fim da faixa: segue a ordem da playlist, e depois da última volta para a primeira
           if (d.position < 2000) advancing = false;
           if (d.duration && d.position >= d.duration - 500 && !advancing && wantPlay) {
             advancing = true;
-            idx = (idx + 1) % cfg.tracks.length; cur = cfg.tracks[idx]; remember(idx); trackCb(cur);
+            idx = (idx + 1) % cfg.tracks.length; cur = cfg.tracks[idx]; loaded = cur.uri; remember(idx); trackCb(cur);
             ctrl.loadUri(cur.uri); ctrl.play();
           }
         });
@@ -120,7 +121,17 @@
     return {
       name: "spotify",
       current: function () { return cur; },
-      play: function () { wantPlay = true; remember(idx); if (ctrl && ready) { ctrl.loadUri(cur.uri); ctrl.play(); } return Promise.resolve(); },
+      play: function () {
+        wantPlay = true; remember(idx);
+        if (ctrl && ready) {
+          if (loaded !== cur.uri) { loaded = cur.uri; ctrl.loadUri(cur.uri); ctrl.play(); }
+          else if (started) { // já tocou: recomeça a faixa do início, sem recarregar o iframe
+            try { if (ctrl.restart) ctrl.restart(); else { ctrl.seek(0); ctrl.resume(); } } catch (e) { ctrl.play(); }
+          } else ctrl.play();
+          started = true;
+        }
+        return Promise.resolve();
+      },
       pause: function () { wantPlay = false; if (ctrl && ready) ctrl.pause(); },
       onTrack: function (cb) { trackCb = cb; cb(cur); },
       onFail: function (cb) { failCb = cb; },
