@@ -73,30 +73,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/beneficio-de-alimentacao.html"/>
   </url>
   <url>
-    <loc>https://mtpoli-portfolio.vercel.app/pausar-loja.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/es/pausar-loja.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
-  </url>
-  <url>
-    <loc>https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/pausar-loja.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/pausar-loja.html"/>
-  </url>
-  <url>
     <loc>https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html</loc>
     <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/cotacao-seguro-auto.html"/>
@@ -143,5 +119,29 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/vivo-troca-de-plano.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/vivo-troca-de-plano.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/vivo-troca-de-plano.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/es/rastreio-instant-delivery.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html"/>
+  </url>
+  <url>
+    <loc>https://mtpoli-portfolio.vercel.app/pt/rastreio-instant-delivery.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/rastreio-instant-delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/rastreio-instant-delivery.html"/>
   </url>
 </urlset>
