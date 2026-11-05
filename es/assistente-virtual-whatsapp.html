@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asistente virtual en WhatsApp · Matheus Policarpo</title>
+<meta name="description" content="Desambiguación de intenciones, fallback en dos pasos y traspaso de contexto para que la conversación no se trabe.">
+<meta name="author" content="Matheus Policarpo">
+<meta property="og:title" content="Asistente virtual en WhatsApp · Matheus Policarpo">
+<meta property="og:description" content="Desambiguación de intenciones, fallback en dos pasos y traspaso de contexto para que la conversación no se trabe.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mtpoli-portfolio.vercel.app/es/assistente-virtual-whatsapp.html">
+<meta property="og:site_name" content="Matheus Policarpo">
+<meta property="og:locale" content="es_LA">
+<meta property="og:image" content="https://mtpoli-portfolio.vercel.app/og-home-pt.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://mtpoli-portfolio.vercel.app/es/assistente-virtual-whatsapp.html">
+<link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/assistente-virtual-whatsapp.html">
+<link rel="alternate" hreflang="es" href="https://mtpoli-portfolio.vercel.app/es/assistente-virtual-whatsapp.html">
+<link rel="alternate" hreflang="pt-BR" href="https://mtpoli-portfolio.vercel.app/pt/assistente-virtual-whatsapp.html">
+<link rel="alternate" hreflang="x-default" href="https://mtpoli-portfolio.vercel.app/assistente-virtual-whatsapp.html">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Asistente virtual en WhatsApp",
+  "about": "Diseño conversacional",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Person",
+    "name": "Matheus Policarpo"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="cx-page">
+<header class="topbar">
+<div class="wrap">
+<a class="name" href="/es/">Matheus Policarpo</a>
+<nav aria-label="Navegación">
+<a href="/es/">← Todos los trabajos</a>
+</nav>
+<div class="lang" role="group" aria-label="Idioma">
+<a href="/assistente-virtual-whatsapp.html" hreflang="en" lang="en" aria-label="Read in English" title="English">EN</a>
+<span aria-current="true">ES</span>
+<a href="/pt/assistente-virtual-whatsapp.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português">PT</a>
+</div>
+</div>
+</header>
+<main>
+<div class="cx-hero">
+<img class="cx-logo-img" src="/logos/bb.svg" alt="Banco do Brasil" height="44">
+<h1 class="cx-title">Asistente virtual en WhatsApp</h1>
+<p class="cx-sub">Desambiguación de intenciones, fallback en dos pasos y traspaso de contexto para que la conversación no se trabe.</p>
+<p class="cx-role"><b>UX Writer Senior</b><span>Banco do Brasil</span></p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:3">
+<img src="/bb-fallback.png" alt="Chat de WhatsApp con el asistente de BB, en portugués: después de dos mensajes sin contexto, el asistente explica lo que puede hacer con un ejemplo y ofrece opciones numeradas" loading="lazy">
+<img src="/bb-desambiguacao.png" alt="Chat de WhatsApp, en portugués: el cliente escribe “mi tarjeta no pasa” y el asistente confirma la intención con tres opciones numeradas antes de pedir cualquier dato" loading="lazy">
+<img src="/bb-risco.png" alt="Chat de WhatsApp, en portugués: el cliente no reconoce una compra rechazada en la tarjeta terminada en 4821 y el asistente deriva a un agente, avisando que recibe el resumen de la conversación" loading="lazy">
+</div>
+</div>
+<div class="cx-body">
+<h2 class="cx-label">Contexto</h2>
+<p class="cx-ctx">Planifiqué los flujos y el contenido del asistente de Banco do Brasil en WhatsApp Business API, junto con Producto, Negocio y TI, para consultas urgentes como saldo, transferencias, pago de boletas, límites y bloqueo de tarjeta. Cuando la persona escribía fuera del guion o mandaba frases cortas como “mi tarjeta no pasa”, el flujo anterior caía en errores repetidos o adivinaba mal la intención en IBM Watson. El desafío era destrabar la conversación en el autoservicio y derivar a un agente, con contexto, en los casos de duda o riesgo.</p>
+<h2 class="cx-label">Resultados</h2>
+<div class="cx-two cx-out">
+<p><b>De 3+ intentos a 1 elección directa</b> para recuperar solicitudes ambiguas, con un enrutamiento más preciso en IBM Watson</p>
+<p><b>3 a 4 preguntas repetidas menos</b> al inicio de la atención humana, gracias al resumen de contexto en la pantalla del agente</p>
+<p><b>Implementación más rápida por parte de TI</b> y consistencia entre flujos, con la biblioteca de mensajes estandarizada y la guía de tono de voz</p>
+</div>
+<div class="cx-two cx-did">
+<div>
+<h2 class="cx-label">Qué hice</h2>
+<p>Planifiqué los flujos de diálogo, las reglas de error, ambigüedad y falta de contexto y la derivación a atención humana con Producto, Negocio y TI.</p>
+<p>Entrené la IA (IBM Watson) y analicé las conversaciones reales en los logs para separar intenciones que chocaban (como “tarjeta bloqueada” por contraseña y “quiero bloquear la tarjeta” por pérdida).</p>
+<p>Escribí y documenté el microcopy y las bibliotecas de mensajes del Sistema de Diseño Conversacional en Miro y Figma, para mantener el tono de voz y acelerar la entrega de TI.</p>
+</div>
+<div>
+<h2 class="cx-label">Qué cambió</h2>
+<p>Cuando la confianza de IBM Watson queda en la franja intermedia, el asistente confirma la intención con opciones cortas antes de pedir cualquier dato.</p>
+<p>Ante la primera falla de comprensión, el asistente explica lo que puede hacer con un ejemplo claro; ante una segunda falla seguida, ofrece opciones directas o un agente.</p>
+<p>En la derivación a una persona (por fallas o por riesgo de fraude o robo), el agente recibe la intención identificada, el paso donde se cortó la conversación y los datos ya validados.</p>
+</div>
+</div>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs" style="--n:1">
+<img src="/bb-console.png" alt="Consola del agente, en portugués, con la conversación que viene de WhatsApp y el resumen de la preatención: intención detectada, paso donde se cortó, datos ya validados y regla activada" loading="lazy">
+</div>
+</div>
+</main>
+<script src="/selection.js" defer></script>
+</body>
+</html>
