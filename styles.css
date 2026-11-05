@@ -520,7 +520,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 .sp-end .sp-ft-icons a:hover { transform: none; opacity: .75; }
 @media (max-width: 760px) { .sp-end .sp-ft-icons { height: auto; gap: 2px; } .sp-end .sp-ft-icons a { font-size: 20px; } .sp-ft-r { padding-top: 20px; } }
 /* ===== Lista de projetos + bottom sheet ===== */
-.wk-list { width: min(760px, 100%); margin: 0 auto; padding: clamp(8px, 2vw, 24px) var(--gutter) clamp(72px, 10vw, 128px); display: grid; gap: clamp(44px, 6vw, 72px); }
+.wk-list { width: min(760px, 100%); margin: 0 auto; padding: clamp(8px, 2vw, 24px) var(--gutter) clamp(44px, 6vw, 72px); display: grid; gap: clamp(44px, 6vw, 72px); }
 .wk { display: block; color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
 .wk-cover { border-radius: 22px; background: #ede8de; border: 1px solid rgba(0, 0, 0, .08); padding: clamp(20px, 4vw, 40px); display: grid; place-items: center; min-height: clamp(240px, 38vw, 380px); overflow: hidden; transition: transform .45s cubic-bezier(.32, .72, 0, 1), border-color .3s ease, background .3s ease; }
 .wk-imgs { width: 100%; display: grid; grid-template-columns: var(--cols); gap: 8px; align-items: center; max-height: 100%; }
@@ -544,8 +544,8 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
 @media (max-width: 760px) { .wk-panel { width: 100%; border-radius: 22px 22px 0 0; } .wk-cover { border-radius: 18px; } }
 /* ===== Rodapé: efeito e estilo da referência (conteúdo encolhe e revela o degradê) ===== */
 .sp .sp-sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, #1f173e 0%, #7a3b63 52%, #ab7d5b 100%); }
-.sp .sp-curtain { margin-bottom: 0; border-radius: 0; box-shadow: none; overflow: hidden; transform-origin: 50% 0; will-change: transform; background: #f9f4ec; }
-.sp .sp-end { position: static; height: auto; min-height: 0; display: block; background: none; padding: clamp(56px, 9vw, 112px) var(--gutter) clamp(56px, 9vw, 112px); text-align: center; border: 0; }
+.sp .sp-curtain { margin-bottom: 0; border-radius: 0; box-shadow: none; overflow: hidden; transform-origin: 50% 100%; will-change: transform; background: #f9f4ec; }
+.sp .sp-end { position: static; height: auto; min-height: 0; display: block; background: none; padding: clamp(48px, 7vw, 88px) var(--gutter) clamp(48px, 7vw, 88px); text-align: center; border: 0; }
 .sp-fx { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; justify-items: center; }
 .sp-fx-cta { margin: 0; }
 .sp-fx-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
