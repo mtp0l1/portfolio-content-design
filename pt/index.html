@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Matheus Policarpo · Product Design e Content Design</title>
-<meta name="description" content="Portfólio de Matheus Policarpo, Product e Content Designer. Cases de produto e conteúdo no Mercado Livre.">
+<title>Matheus Policarpo · Product Designer</title>
+<meta name="description" content="Portfólio de Matheus Policarpo, Product Designer. Cases de produto no Mercado Livre.">
 <meta name="author" content="Matheus Policarpo">
 <meta name="keywords" content="AI Content Strategist, Estratégia de conteúdo, Content Design, UX Writing, Sistemas de conteúdo, Modelo de conteúdo, Taxonomia, Conteúdo estruturado, Conteúdo gerado por IA, LLM, Prompt design, Critérios de avaliação, Personalização, Onboarding, Product Design">
-<meta property="og:title" content="Matheus Policarpo · Product Design e Content Design">
-<meta property="og:description" content="Portfólio de Matheus Policarpo, Product e Content Designer. Cases de produto e conteúdo no Mercado Livre.">
+<meta property="og:title" content="Matheus Policarpo · Product Designer">
+<meta property="og:description" content="Portfólio de Matheus Policarpo, Product Designer. Cases de produto no Mercado Livre.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mtpoli-portfolio.vercel.app/pt/">
 <meta property="og:site_name" content="Matheus Policarpo">
@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://mtpoli-portfolio.vercel.app/og-home-pt.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Matheus Policarpo · Product Design e Content Design">
+<meta property="og:image:alt" content="Matheus Policarpo · Product Designer">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://mtpoli-portfolio.vercel.app/pt/">
 <link rel="alternate" hreflang="en" href="https://mtpoli-portfolio.vercel.app/">
@@ -33,7 +33,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Matheus Policarpo",
-  "jobTitle": "Product Designer, Content Designer e Design Engineer",
+  "jobTitle": "Product Designer",
   "email": "matheusloures@live.com",
   "url": "https://mtpoli-portfolio.vercel.app/pt/",
   "sameAs": [
@@ -81,7 +81,7 @@
 <div class="sp-bubble" role="status" aria-live="polite"><svg class="sp-note" viewBox="0 0 8 7" width="16" height="14" aria-hidden="true" shape-rendering="crispEdges"><path d="M2 0h6v2H2zM2 2h1v3H2zM7 2h1v3H7zM0 5h3v2H0zM5 5h3v2H5z"/></svg><span class="sp-bubble-text"></span></div>
 </div>
 <h1 class="sp-name">Matheus Policarpo</h1>
-<p class="sp-tag">Desenho e construo seu produto com agilidade e qualidade como Product Designer, Content Designer e Design Engineer</p>
+<p class="sp-tag">Desenho e construo seu produto com velocidade e qualidade como Product Designer</p>
 <div class="sp-links">
 <a class="sp-primary" href="https://calendly.com/mtpoli/30min" rel="noopener">Agendar conversa</a>
 <button type="button" class="sp-about-btn" aria-haspopup="dialog" aria-controls="sobre">Sobre mim</button>
@@ -318,11 +318,11 @@
 (function () {
   var lb = document.createElement("div");
   lb.className = "sp-lb"; lb.hidden = true; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-label", "Imagem ampliada");
-  lb.innerHTML = '<img alt="">';
+  lb.innerHTML = '<figure><img alt=""><figcaption></figcaption></figure>';
   document.body.appendChild(lb);
-  var lbi = lb.firstChild;
+  var lbi = lb.querySelector("img"), lbc = lb.querySelector("figcaption");
   function lbSet(src, alt) {
-    if (src) { lbi.src = src; lbi.alt = alt || ""; }
+    if (src) { lbi.src = src; lbi.alt = alt || ""; lbc.textContent = alt || ""; lbc.hidden = !alt; }
     lb.hidden = !src; document.body.classList.toggle("sp-open", !!src);
   }
   function bindLb(root) {
