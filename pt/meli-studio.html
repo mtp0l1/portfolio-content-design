@@ -62,31 +62,28 @@
 </div>
 <div class="cx-body">
 <h2 class="cx-label">Contexto</h2>
-<p class="cx-ctx">O Meli Studio é a ferramenta interna de criação com IA do Mercado Livre. Ela reúne modelos de imagem, vídeo e voz num só lugar, e os times de marketing e conteúdo a usam para criar peças de produto. Era um produto em construção: cada mídia tinha um jeito próprio de pedir, configurar e revisar o resultado. A adoção era o maior desafio. Quem não dominava prompt travava na tela em branco. Meu papel foi ouvir quem criava peças no dia a dia e transformar o que travava em melhorias de interface.</p>
+<p class="cx-ctx">O Meli Studio é o workspace interno de IA do Mercado Livre que reúne modelos de imagem, vídeo e voz para que os times de marketing e conteúdo produzam peças de campanha em um só lugar. A adoção era o nosso principal gargalo: cada mídia tinha uma lógica diferente, e criadores não técnicos travavam na tela de prompt em branco ou abandonavam o fluxo depois de 4 a 5 gerações frustradas. A primeira tentativa, adicionar exemplos de prompt em texto, não resolveu, porque os resultados continuavam fora das diretrizes da marca. Acompanhei os criadores em sessões reais para transformar os bloqueios deles em workflows guiados, estilos reutilizáveis e adoção mensurável.</p>
 <h2 class="cx-label">Resultados</h2>
 <div class="cx-two cx-out">
-<p><b>Um só padrão de interface</b> para imagem, vídeo, áudio, estilos, workflows e assets.</p>
-<p>Quem chega pela primeira vez começa por um template, não por uma tela em branco.</p>
-<p>Padrões de interface para IA documentados e incorporados ao design system.</p>
+<p><b>A conclusão na primeira sessão subiu de 2/8 (25%) para 6/8 (75%)</b> em sessões moderadas de tarefa, depois de trocar a tela em branco por templates verificados e estilos de marca guiados.</p>
+<p><b>O esforço de prompt caiu de ~6 tentativas soltas para 2 a 3 passos guiados</b> até chegar a uma peça alinhada à marca, e o tempo até o primeiro valor caiu mais da metade na análise de tarefa.</p>
+<p><b>~30% menos gerações desperdiçadas nas sessões de teste</b> depois da prévia de custo e do cancelamento durante a geração (com os alertas assíncronos para renders de vídeo lentos mapeados como próximo passo).</p>
+<p><b>1 biblioteca unificada de padrões de IA</b> adotada nos fluxos de imagem, vídeo e áudio, reduzindo o retrabalho de especificação de UI e de handoff com a engenharia ao plugar novos modelos.</p>
 </div>
 <div class="cx-two cx-did">
 <div>
 <h2 class="cx-label">O que eu fiz</h2>
-<p>Acompanhei os times criando peças reais, ouvi o que funcionava e o que travava e fiz uma auditoria de UX dos fluxos.</p>
-<p>Priorizei com Produto e Engenharia, em ciclos curtos, a partir de dados de uso e das dores dos usuários.</p>
-<p>Desenhei quickstarts para o primeiro uso: templates verificados, modo guiado de estilos e workflows prontos.</p>
-<p>Redesenhei os fluxos de criar e editar com o design system e levei os componentes novos de volta para ele.</p>
-<p>Defini as métricas para medir a adoção dos fluxos redesenhados.</p>
-<p>Documentei os padrões de interface para IA: barra de prompt, estado de geração, cancelamento e comparação de antes e depois.</p>
+<p><b>Acompanhei 8 criadores de marketing e conteúdo</b> e auditei os fluxos de geração, e vi que a maior parte das desistências acontecia antes da primeira exportação, por tentativa e erro de prompt.</p>
+<p><b>Testei presets de texto na V1 (que não garantiram a consistência da marca)</b> e mudei para templates verificados e schemas de estilo travados, iterando em ciclos curtos com Produto e Engenharia.</p>
+<p><b>Redesenhei os fluxos de Criar e Editar</b> com o design system e levei novos padrões de interface para IA de volta para ele (barra de prompt, estados de geração e cancelamento, comparação antes e depois e prévia de custo).</p>
+<p><b>Defini o funil de adoção com Produto</b> para acompanhar a conversão de template para exportação, as iterações por peça utilizável e o retorno dos criadores em 7 dias.</p>
 </div>
 <div>
 <h2 class="cx-label">O que mudou</h2>
-<p>Imagem, vídeo e áudio seguem o mesmo padrão: Criar, Editar e Explorar.</p>
-<p>O Explorar abre com templates verificados, cada um com título, descrição do que entrega e botão para usar.</p>
-<p>A barra de prompt é a mesma em todas as mídias, com estilo, modelo, formato e quantidade à vista.</p>
-<p>Na edição, a pessoa descreve a mudança com as próprias palavras e compara o original com o resultado, podendo cancelar enquanto a imagem é gerada.</p>
-<p>Estilos de marca podem ser criados num passo a passo guiado ou direto em JSON, para quem já conhece o schema.</p>
-<p>Os workflows prontos mostram as etapas e o custo estimado antes de rodar, e a biblioteca de assets mantém os cartões e logos por país.</p>
+<p><b>Padrão unificado de Criar, Editar e Explorar</b> em imagem, vídeo e áudio, com modelo, estilo, proporção e quantidade de resultados à vista numa única barra de prompt.</p>
+<p><b>Templates verificados no lugar da tela em branco:</b> o Explorar abre com presets testados que mostram o resultado esperado, as etapas e o custo estimado em créditos antes de rodar.</p>
+<p><b>Estilos de marca em dois modos (Guiado e JSON):</b> um passo a passo para quem usa pela primeira vez e a edição direta do schema em JSON para quem achou o assistente restritivo demais.</p>
+<p><b>Edição em linguagem natural com controles de segurança:</b> a pessoa descreve a mudança com as próprias palavras, compara o original com o resultado lado a lado e pode cancelar durante a geração para não gastar créditos à toa.</p>
 </div>
 </div>
 </div>

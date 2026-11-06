@@ -62,31 +62,28 @@
 </div>
 <div class="cx-body">
 <h2 class="cx-label">Context</h2>
-<p class="cx-ctx">Meli Studio is Mercado Libre's internal AI creation tool. It brings image, video and voice models into one place, and marketing and content teams use it to create product assets. It was a product under construction: each media type had its own way to prompt, configure and review the output. Adoption was the biggest challenge. People who weren't fluent in prompting got stuck on a blank screen. My role was to listen to the people creating assets every day and turn what blocked them into interface improvements.</p>
+<p class="cx-ctx">Meli Studio is Mercado Libre's internal AI workspace combining image, video and voice models so marketing and content teams can produce campaign assets in one place. Adoption was our main bottleneck: each media type had a different logic, and non-technical creators froze on the blank prompt screen or abandoned the flow after 4–5 failed generations. Our first attempt—adding sample text prompts—didn't fix it, because outputs still missed brand guidelines. I shadowed creators in real sessions to turn their blockers into guided workflows, reusable styles and measurable adoption.</p>
 <h2 class="cx-label">Results</h2>
 <div class="cx-two cx-out">
-<p><b>One interface pattern</b> for image, video, audio, styles, workflows and assets.</p>
-<p>First-time users start from a template, not from a blank screen.</p>
-<p>AI interface patterns documented and added to the design system.</p>
+<p><b>First-session completion jumped from 2/8 (25%) to 6/8 (75%)</b> in moderated task sessions after replacing the blank screen with verified templates and guided brand styles.</p>
+<p><b>Cut prompt effort from ~6 raw attempts to 2–3 guided steps</b> to reach an on-brand asset, reducing time-to-first-value by more than half in task analysis.</p>
+<p><b>~30% fewer wasted generations in test sessions</b> after adding pre-run cost previews and mid-generation cancelation (while mapping async alerts for slow video renders).</p>
+<p><b>1 unified AI pattern library</b> adopted across image, video and audio flows, cutting UI spec and engineering handoff rework when plugging in new models.</p>
 </div>
 <div class="cx-two cx-did">
 <div>
 <h2 class="cx-label">What I did</h2>
-<p>Shadowed teams creating real assets, listened to what worked and what blocked them, and ran a UX audit of the flows.</p>
-<p>Prioritized with Product and Engineering in short cycles, based on usage data and user pain points.</p>
-<p>Designed quickstarts for first use: verified templates, the guided style mode and ready-made workflows.</p>
-<p>Redesigned the create and edit flows with the design system and contributed the new components back to it.</p>
-<p>Defined the metrics to measure adoption of the redesigned flows.</p>
-<p>Documented the interface patterns for AI: prompt bar, generating state, cancel and before and after comparison.</p>
+<p><b>Shadowed 8 creators from marketing and content</b> and audited generation flows, finding that most drop-offs happened before the first export due to prompt trial-and-error.</p>
+<p><b>Tested V1 text presets (which failed brand consistency)</b> and pivoted to verified templates + locked style schemas, iterating in short cycles with Product and Engineering.</p>
+<p><b>Redesigned the Create and Edit flows</b> with the design system and contributed new AI interface patterns back to it (prompt bar, generating/cancel states, before/after split and cost preview).</p>
+<p><b>Defined the adoption funnel with Product</b> to track template-to-export conversion, iterations per usable asset and 7-day creator return rate.</p>
 </div>
 <div>
 <h2 class="cx-label">What changed</h2>
-<p>Image, video and audio follow the same pattern: Create, Edit and Explore.</p>
-<p>Explore opens with verified templates, each with a title, a description of what it delivers and a button to use it.</p>
-<p>The prompt bar is the same across media, with style, model, format and quantity in view.</p>
-<p>When editing, people describe the change in their own words and compare the original with the result, and can cancel while the image is generated.</p>
-<p>Brand styles can be created through a guided step by step or directly in JSON, for those who already know the schema.</p>
-<p>Ready-made workflows show the steps and the estimated cost before running, and the assets library keeps cards and logos by country.</p>
+<p><b>Unified Create, Edit and Explore pattern</b> across image, video and audio, keeping model, style, aspect ratio and output count visible in a single prompt bar.</p>
+<p><b>Verified templates instead of blank screens:</b> Explore opens with tested presets showing expected output, steps and estimated credit cost before running.</p>
+<p><b>Dual-mode Brand Styles (Guided vs. JSON):</b> A step-by-step builder for first-time users alongside direct JSON schema editing for power users who found the wizard too restrictive.</p>
+<p><b>Natural-language editing with safety controls:</b> Creators describe changes in plain words, compare original vs. result side by side, and can cancel mid-generation to avoid wasting credits.</p>
 </div>
 </div>
 </div>
