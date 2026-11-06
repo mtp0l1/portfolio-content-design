@@ -472,7 +472,7 @@ body.cx-page { --bg: #000; --surface: #0D0D0F; --sunken: #141416; --fg: #F4F4F5;
   .sp-case .cx-hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "logo" "title" "sub" "role"; }
   .sp-case .cx-role { margin-top: 28px; align-self: start; }
   .sp-case .cx-strip.imgs.fx { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sp-case .cx-strip.imgs.fx img[src*="beneficio-desktop"], .sp-case .cx-strip.imgs.fx img[src*="pausar-config"], .sp-case .cx-strip.imgs.fx img[src*="porto-"], .sp-case .cx-strip.imgs.fx img[src*="bb-console"] { grid-column: 1 / -1; }
+  .sp-case .cx-strip.imgs.fx img[src*="beneficio-desktop"], .sp-case .cx-strip.imgs.fx img[src*="pausar-config"], .sp-case .cx-strip.imgs.fx img[src*="porto-"], .sp-case .cx-strip.imgs.fx img[src*="bb-console"], .sp-case .cx-strip.imgs.fx img[src*="studio-"] { grid-column: 1 / -1; }
   .sp-case .cx-body.fx { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
 }
 /* ===== Cases: tipografia menor, linhas preenchidas, cargo na linha do logo ===== */
@@ -668,3 +668,5 @@ body.sp { color: #000; font-family: var(--f-sp); letter-spacing: -.02em; }
 
 /* PT: texto de apoio do hero em uma linha no desktop */
 @media (min-width: 761px) { html[lang^="pt"] .sp-hero .sp-tag { white-space: nowrap; text-wrap: nowrap; } }
+
+.sp-case .cx-strip.imgs.fx + .cx-strip.imgs.fx { margin-top: 10px; }
