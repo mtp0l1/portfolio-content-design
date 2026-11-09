@@ -46,13 +46,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@600&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="cx-page sp">
+<body class="cx-page sp v2">
 <div class="sp-sky" aria-hidden="true"></div>
-<header class="sp-bar">
-<nav class="sp-langs" aria-label="Language"><span aria-current="true">EN</span>
+<header class="nv">
+<div class="nv-row">
+<nav class="sp-langs nv-langs" aria-label="Language"><span aria-current="true">EN</span>
 <a href="/es/" hreflang="es" lang="es" aria-label="Leer en español" title="Español">ES</a>
 <a href="/pt/" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português">PT</a></nav>
-<nav class="sp-actions"><a class="sp-li" href="https://wa.me/5511999562221" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.3 21.7l4.9-1.3A9.8 9.8 0 1 0 12 2.2z" stroke-width="1.5"/><path d="M12 4a8 8 0 0 0-6.9 12.1l.1.2-.9 3.2 3.3-.9.2.1A8 8 0 1 0 12 4z" stroke-width=".6"/><path d="M9.2 6.9c-.7.2-1.4 1-1.4 2.2 0 3 3.5 6.5 6.4 6.9 1.2.1 2.1-.6 2.5-1.4.1-.3 0-.6-.3-.7l-2-1c-.2-.1-.5-.1-.6.1l-.7.8c-.1.1-.3.2-.5.1-1.2-.5-2.5-1.8-3.1-3-.1-.2 0-.4.1-.6l.7-.8c.2-.2.2-.4.1-.6l-1-2c-.1-.3-.4-.4-.8-.3z" fill="currentColor" stroke="none"/></svg></a><a class="sp-li" href="https://www.linkedin.com/in/mtpoli/" rel="me noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="2.4" stroke-width="1.5"/><circle cx="7.6" cy="7.9" r="1.45" fill="currentColor" stroke="none"/><rect x="6.2" y="10.4" width="2.8" height="7" rx=".4" fill="currentColor" stroke="none"/><path d="M10.7 10.4h2.7v1c.5-.8 1.3-1.2 2.3-1.2 2 0 3.1 1.2 3.1 3.4v3.8h-2.8v-3.3c0-.9-.4-1.4-1.1-1.4-.8 0-1.4.6-1.4 1.5v3.2h-2.8z" fill="currentColor" stroke="none"/></svg></a><a class="sp-li" href="mailto:matheusloures@live.com" aria-label="Send email"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.6" y="4.6" width="18.8" height="14.8" rx="2.2" stroke-width="1.5"/><path d="M3.4 7.1 12 13.3l8.6-6.2M3.6 18.6l6.3-6M20.4 18.6l-6.3-6" stroke-width="1.3"/></svg></a></nav>
+<div class="nv-right">
+<nav class="nv-pill" aria-label="Menu"><span class="nv-ind" aria-hidden="true"></span><a href="#projetos" class="nv-a is-on" data-nv="cases">Cases</a><a href="#sobre" class="nv-a" data-nv="sobre" aria-haspopup="dialog" aria-controls="sobre">About me</a><a class="nv-cta" href="#contato">Get in touch</a></nav>
+</div>
+</div>
 </header>
 <main class="sp-curtain">
 <section class="sp-hero" id="inicio">
@@ -70,38 +74,47 @@
 </div>
 <p class="sp-loc"><span>Brazil</span><svg class="sp-globe" viewBox="0 0 30 22" width="30" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><ellipse cx="15" cy="11" rx="13.5" ry="9.5"/><path d="M1.5 11h27M3.3 6.25h23.4M3.3 15.75h23.4" stroke-width="1.4"/><g class="sp-mer" stroke-width="1.2" transform="translate(0 0)"></g></svg><span>Remote Worldwide</span></p>
 </section>
-<section class="wk-list" id="projetos" aria-labelledby="wk-t">
-<h2 class="wk-title" id="wk-t">Latest work</h2>
-<a class="wk" href="#beneficio-de-alimentacao" data-case="beneficio-de-alimentacao" aria-label="Food benefit as a payment method">
-<div class="wk-cover"><div class="wk-imgs" style="--cols:0.34fr 0.329fr 0.468fr 1.8fr"><img style="aspect-ratio:360/1060" src="/beneficio-home.png" alt="Mobile store home showing the food benefit balance next to free shipping" loading="lazy"><img style="aspect-ratio:368/1117" src="/beneficio-pagamento.png" alt="Choose how to pay screen with Food benefit among the recommended methods and a New tag" loading="lazy"><img style="aspect-ratio:364/777" src="/beneficio-compra.png" alt="Purchase detail showing the payment approved with the food benefit" loading="lazy"><img style="aspect-ratio:1440/800" src="/beneficio-desktop.png" alt="Desktop store home with the food benefit and the available balance" loading="lazy"></div></div>
-<p class="wk-meta"><b>Food benefit as a payment method</b>&nbsp; Mercado Libre</p>
-<p class="wk-sub">The balance appears on the home, at checkout and in the purchase, so people see what they have and what they used.</p>
+<section class="cs" id="projetos" aria-labelledby="cs-t">
+<div class="cs-head"><h2 class="cs-t" id="cs-t">Cases</h2>
+<div class="cs-nav"><button type="button" class="cs-btn" data-dir="-1" aria-label="Previous case"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button><span class="cs-count" aria-live="polite"><b>1</b> of 6</span><button type="button" class="cs-btn" data-dir="1" aria-label="Next case"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button></div></div>
+<div class="cs-track" tabindex="0">
+<a class="wk cs-card" href="#beneficio-de-alimentacao" data-case="beneficio-de-alimentacao" aria-label="Food benefit as a payment method">
+<div class="cs-vis"><div class="cs-inner"><div class="dv dv-phone" style="--sh:830px;--sbg:#fff"><div class="device device-iphone-14-pro device-black"><div class="device-frame"><img class="device-screen" src="/beneficio-home.png" alt="Mobile store home showing the food benefit balance next to free shipping" loading="lazy" decoding="async"></div><div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div></div></div></div>
+<div class="cs-bar" aria-hidden="true"><p class="cs-bt">Food benefit as a payment method <span>Mercado Libre</span></p><p class="cs-bd">The balance appears on the home, at checkout and in the purchase, so people see what they have and what they used.</p></div>
+<span class="cs-badge" aria-hidden="true"><svg viewBox="0 0 13 13" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l6-6M4.5 3.5h5v5"/></svg></span></div>
+<div class="cs-cap"><p class="cs-bt">Food benefit as a payment method <span>Mercado Libre</span></p><p class="cs-bd">The balance appears on the home, at checkout and in the purchase, so people see what they have and what they used.</p></div>
 </a>
-<a class="wk" href="#assistente-virtual-whatsapp" data-case="assistente-virtual-whatsapp" aria-label="Virtual assistant on WhatsApp">
-<div class="wk-cover"><div class="wk-imgs" style="--cols:0.486fr 0.486fr 0.486fr 1.267fr"><img style="aspect-ratio:360/740" src="/bb-fallback.png" alt="WhatsApp chat with the BB assistant, in Portuguese: after two messages without context, the assistant explains what it can do with an example and offers numbered options" loading="lazy"><img style="aspect-ratio:360/740" src="/bb-desambiguacao.png" alt="WhatsApp chat, in Portuguese: the customer writes “my card isn’t going through” and the assistant confirms the intent with three numbered options before asking for any data" loading="lazy"><img style="aspect-ratio:360/740" src="/bb-risco.png" alt="WhatsApp chat, in Portuguese: the customer doesn’t recognize a declined purchase on the card ending in 4821, and the assistant hands off to an agent, saying the agent gets a summary of the conversation" loading="lazy"><img style="aspect-ratio:760/600" src="/bb-console.png" alt="Agent console, in Portuguese, with the conversation from WhatsApp and the pre-service summary: detected intent, step where it stopped, data already validated and rule triggered" loading="lazy"></div></div>
-<p class="wk-meta"><b>Virtual assistant on WhatsApp</b>&nbsp; Banco do Brasil</p>
-<p class="wk-sub">Intent disambiguation, a two-step fallback and context handoff, so the conversation doesn’t get stuck.</p>
+<a class="wk cs-card" href="#assistente-virtual-whatsapp" data-case="assistente-virtual-whatsapp" aria-label="Virtual assistant on WhatsApp">
+<div class="cs-vis"><div class="cs-inner"><div class="dv dv-phone" style="--sh:802px;--sbg:#efeae2"><div class="device device-iphone-14-pro device-black"><div class="device-frame"><img class="device-screen" src="/bb-desambiguacao.png" alt="WhatsApp chat, in Portuguese: the customer writes “my card isn’t going through” and the assistant confirms the intent with three numbered options before asking for any data" loading="lazy" decoding="async"></div><div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div></div></div></div>
+<div class="cs-bar" aria-hidden="true"><p class="cs-bt">Virtual assistant on WhatsApp <span>Banco do Brasil</span></p><p class="cs-bd">Intent disambiguation, a two-step fallback and context handoff, so the conversation doesn’t get stuck.</p></div>
+<span class="cs-badge" aria-hidden="true"><svg viewBox="0 0 13 13" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l6-6M4.5 3.5h5v5"/></svg></span></div>
+<div class="cs-cap"><p class="cs-bt">Virtual assistant on WhatsApp <span>Banco do Brasil</span></p><p class="cs-bd">Intent disambiguation, a two-step fallback and context handoff, so the conversation doesn’t get stuck.</p></div>
 </a>
-<a class="wk" href="#vivo-troca-de-plano" data-case="vivo-troca-de-plano" aria-label="Mobile plan switch without leaving the app">
-<div class="wk-cover"><div class="wk-imgs" style="--cols:0.518fr 0.343fr 0.562fr 0.562fr"><img style="aspect-ratio:375/724" src="/vivo-oferta.png" alt="Plan change screen with the recommendation Get more internet for just R$ 65 more per month and the Vivo Selfie Amazon Prime 63 GB plan" loading="lazy"><img style="aspect-ratio:351/1024" src="/vivo-detalhes.png" alt="Plan details screen with the benefits in a list, the included digital services and the I want this button" loading="lazy"><img style="aspect-ratio:375/667" src="/vivo-resumo.png" alt="New plan screen with the total to pay, the previous plan&#x27;s penalties and the Don&#x27;t forget notice" loading="lazy"><img style="aspect-ratio:375/667" src="/vivo-sucesso.png" alt="Success screen: It worked! You asked to change your plan" loading="lazy"></div></div>
-<p class="wk-meta"><b>Mobile plan switch without leaving the app</b>&nbsp; Vivo</p>
-<p class="wk-sub">People switch plans in the app itself, with the offer that fits how they use it.</p>
+<a class="wk cs-card" href="#vivo-troca-de-plano" data-case="vivo-troca-de-plano" aria-label="Mobile plan switch without leaving the app">
+<div class="cs-vis"><div class="cs-inner"><div class="dv dv-phone" style="--sh:753px;--sbg:#fff"><div class="device device-iphone-14-pro device-black"><div class="device-frame"><img class="device-screen" src="/vivo-oferta.png" alt="Plan change screen with the recommendation Get more internet for just R$ 65 more per month and the Vivo Selfie Amazon Prime 63 GB plan" loading="lazy" decoding="async"></div><div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div></div></div></div>
+<div class="cs-bar" aria-hidden="true"><p class="cs-bt">Mobile plan switch without leaving the app <span>Vivo</span></p><p class="cs-bd">People switch plans in the app itself, with the offer that fits how they use it.</p></div>
+<span class="cs-badge" aria-hidden="true"><svg viewBox="0 0 13 13" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l6-6M4.5 3.5h5v5"/></svg></span></div>
+<div class="cs-cap"><p class="cs-bt">Mobile plan switch without leaving the app <span>Vivo</span></p><p class="cs-bd">People switch plans in the app itself, with the offer that fits how they use it.</p></div>
 </a>
-<a class="wk" href="#rastreio-instant-delivery" data-case="rastreio-instant-delivery" aria-label="Real-time tracking for deliveries in minutes">
-<div class="wk-cover"><div class="wk-imgs" style="--cols:0.503fr 0.503fr 0.503fr 0.503fr"><img style="aspect-ratio:362/720" src="/seg-preparando.png" alt="Tracking screen with the map and the card The store is preparing your order, with a delivery window between 1:00 and 1:15 pm" loading="lazy"><img style="aspect-ratio:362/720" src="/seg-a-caminho.png" alt="Tracking screen with the courier on the map and the card Arrives in 12 min, with the delivery code" loading="lazy"><img style="aspect-ratio:362/720" src="/seg-porta.png" alt="Tracking screen with the card Hi, I am here! when the courier is at the door" loading="lazy"><img style="aspect-ratio:362/720" src="/seg-live-activity.png" alt="Three Live Activities on the lock screen: arrives in 12 min, arrives in 4 min and at the door" loading="lazy"></div></div>
-<p class="wk-meta"><b>Real-time tracking for deliveries in minutes</b>&nbsp; Mercado Libre</p>
-<p class="wk-sub">Buyers know which step their order is at and when it arrives, in the app, in push notifications and on the lock screen.</p>
+<a class="wk cs-card" href="#rastreio-instant-delivery" data-case="rastreio-instant-delivery" aria-label="Real-time tracking for deliveries in minutes">
+<div class="cs-vis"><div class="cs-inner"><div class="dv dv-phone" style="--sh:776px;--sbg:#e0e4e7"><div class="device device-iphone-14-pro device-black"><div class="device-frame"><img class="device-screen" src="/seg-a-caminho.png" alt="Tracking screen with the courier on the map and the card Arrives in 12 min, with the delivery code" loading="lazy" decoding="async"></div><div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div></div></div></div>
+<div class="cs-bar" aria-hidden="true"><p class="cs-bt">Real-time tracking for deliveries in minutes <span>Mercado Libre</span></p><p class="cs-bd">Buyers know which step their order is at and when it arrives, in the app, in push notifications and on the lock screen.</p></div>
+<span class="cs-badge" aria-hidden="true"><svg viewBox="0 0 13 13" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l6-6M4.5 3.5h5v5"/></svg></span></div>
+<div class="cs-cap"><p class="cs-bt">Real-time tracking for deliveries in minutes <span>Mercado Libre</span></p><p class="cs-bd">Buyers know which step their order is at and when it arrives, in the app, in push notifications and on the lock screen.</p></div>
 </a>
-<a class="wk" href="#cotacao-seguro-auto" data-case="cotacao-seguro-auto" aria-label="Car insurance without needing a broker">
-<div class="wk-cover"><div class="wk-imgs" style="--cols:1.616fr 1.079fr 1.674fr"><img style="aspect-ratio:1196/740" src="/porto-home.png" alt="Auto insurance home: An insurance that is easy to understand, benefits and the three buying steps" loading="lazy"><img style="aspect-ratio:1280/1186" src="/porto-contrate.png" alt="Sections Buy online with no obstacles, with the three steps, and What does our insurance cover?, with seven coverages" loading="lazy"><img style="aspect-ratio:1540/920" src="/porto-descontos.png" alt="Section Why not more discounts?, with the perks from the Trânsito mais gentil app, Vivo and Itaú" loading="lazy"></div></div>
-<p class="wk-meta"><b>Car insurance without needing a broker</b>&nbsp; Porto</p>
-<p class="wk-sub">Clear text instead of insurance jargon, so people understand what they buy and can close on their own.</p>
+<a class="wk cs-card" href="#cotacao-seguro-auto" data-case="cotacao-seguro-auto" aria-label="Car insurance without needing a broker">
+<div class="cs-vis"><div class="cs-inner"><div class="dv dv-desk" style="--sh:375px;--sbg:#fff"><div class="device device-macbook-pro device-spacegray"><div class="device-frame"><img class="device-screen" src="/porto-home.png" alt="Auto insurance home: An insurance that is easy to understand, benefits and the three buying steps" loading="lazy" decoding="async"></div><div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div></div></div></div>
+<div class="cs-bar" aria-hidden="true"><p class="cs-bt">Car insurance without needing a broker <span>Porto</span></p><p class="cs-bd">Clear text instead of insurance jargon, so people understand what they buy and can close on their own.</p></div>
+<span class="cs-badge" aria-hidden="true"><svg viewBox="0 0 13 13" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l6-6M4.5 3.5h5v5"/></svg></span></div>
+<div class="cs-cap"><p class="cs-bt">Car insurance without needing a broker <span>Porto</span></p><p class="cs-bd">Clear text instead of insurance jargon, so people understand what they buy and can close on their own.</p></div>
 </a>
-<a class="wk" href="#meli-studio" data-case="meli-studio" aria-label="Meli Studio: AI creation for image, video and audio">
-<div class="wk-cover"><div class="wk-imgs" style="--cols:1fr 1fr 1fr 1fr"><img style="aspect-ratio:1352/711" src="/studio-imagem-explorar.jpg" alt="Image Explore tab with verified templates of product and lifestyle photos, each with a title, description and Use template button" loading="lazy"><img style="aspect-ratio:1352/706" src="/studio-estilo.jpg" alt="How do you want to create this style screen, with the recommended guided Express experience and the JSON editor for expert users" loading="lazy"><img style="aspect-ratio:1352/703" src="/studio-editar-prompt.jpg" alt="Image edit with a natural language request: turn the tomato can into a pasta package and leave the oil as it is" loading="lazy"><img style="aspect-ratio:1352/707" src="/studio-workflows.jpg" alt="Video workflow catalog, such as Before and After, UGC and Tutorial, with number of steps and estimated cost" loading="lazy"></div></div>
-<p class="wk-meta"><b>Meli Studio: AI creation for image, video and audio</b>&nbsp; Mercado Libre</p>
-<p class="wk-sub">Mercado Libre teams create product and marketing assets with AI from templates, without starting from scratch.</p>
+<a class="wk cs-card" href="#meli-studio" data-case="meli-studio" aria-label="Meli Studio: AI creation for image, video and audio">
+<div class="cs-vis"><div class="cs-inner"><div class="dv dv-desk" style="--sh:375px;--sbg:#040308"><div class="device device-macbook-pro device-spacegray"><div class="device-frame"><img class="device-screen" src="/studio-imagem-explorar.jpg" alt="Image Explore tab with verified templates of product and lifestyle photos, each with a title, description and Use template button" loading="lazy" decoding="async"></div><div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div></div></div></div>
+<div class="cs-bar" aria-hidden="true"><p class="cs-bt">Meli Studio: AI creation for image, video and audio <span>Mercado Libre</span></p><p class="cs-bd">Mercado Libre teams create product and marketing assets with AI from templates, without starting from scratch.</p></div>
+<span class="cs-badge" aria-hidden="true"><svg viewBox="0 0 13 13" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5l6-6M4.5 3.5h5v5"/></svg></span></div>
+<div class="cs-cap"><p class="cs-bt">Meli Studio: AI creation for image, video and audio <span>Mercado Libre</span></p><p class="cs-bd">Mercado Libre teams create product and marketing assets with AI from templates, without starting from scratch.</p></div>
 </a>
+</div>
 </section>
 </main>
 <template id="tpl-meli-studio"><section class="sp-case" aria-label="Meli Studio: AI creation for image, video and audio">
@@ -179,14 +192,20 @@
 <p class="cx-sub">Intent disambiguation, a two-step fallback and context handoff, so the conversation doesn’t get stuck.</p>
 <p class="cx-role"><b>Senior UX Writer</b><span>Banco do Brasil</span></p>
 </div>
-<div class="cx-bleed">
-<div class="cx-strip imgs fx" style="--n:4;--cols:0.486fr 0.486fr 0.486fr 1.267fr">
-<img style="aspect-ratio:360/740" src="/bb-fallback.png" alt="WhatsApp chat with the BB assistant, in Portuguese: after two messages without context, the assistant explains what it can do with an example and offers numbered options" loading="lazy">
-<img style="aspect-ratio:360/740" src="/bb-desambiguacao.png" alt="WhatsApp chat, in Portuguese: the customer writes “my card isn’t going through” and the assistant confirms the intent with three numbered options before asking for any data" loading="lazy">
-<img style="aspect-ratio:360/740" src="/bb-risco.png" alt="WhatsApp chat, in Portuguese: the customer doesn’t recognize a declined purchase on the card ending in 4821, and the assistant hands off to an agent, saying the agent gets a summary of the conversation" loading="lazy">
-<img style="aspect-ratio:760/600" src="/bb-console.png" alt="Agent console, in Portuguese, with the conversation from WhatsApp and the pre-service summary: detected intent, step where it stopped, data already validated and rule triggered" loading="lazy">
-</div>
-</div>
+<div class="cx-bleed"><div class="bbs" role="img" aria-label="Conversation with the assistant: disambiguation and handoff to an agent">
+<div class="bbs-phone"><div class="bbs-scr">
+<div class="bbs-top"><span class="bbs-av" aria-hidden="true"><img src="/bb-logo.svg" alt="" width="40" height="40"></span><span><b>BB Assistant</b><i>online</i></span></div>
+<div class="bbs-msgs"><p class="bbs-out">my card isn&#x27;t working</p><p class="bbs-in">Got it. Which of these is it about?</p></div>
+<div class="bbs-type">Message</div>
+</div></div>
+<div class="bbs-f bbs-greet"><span class="bbs-av" aria-hidden="true"><img src="/bb-logo.svg" alt="" width="40" height="40"></span><span class="bbs-bub">Hi! I&#x27;m the BB assistant. How can I help?</span></div>
+<div class="bbs-f bbs-chips"><span class="bbs-chip">1. Declined purchase</span><span class="bbs-chip">2. Blocked card</span><span class="bbs-chip">3. Forgot my PIN</span></div>
+<div class="bbs-f bbs-pick"><span class="bbs-blue">1. Declined purchase</span></div>
+<div class="bbs-f bbs-dots"><span class="bbs-av" aria-hidden="true"><img src="/bb-logo.svg" alt="" width="40" height="40"></span><span class="bbs-bub"><i></i><i></i><i></i></span></div>
+<div class="bbs-f bbs-sum"><p class="bbs-sum-t">Summary for the agent</p><p class="bbs-row"><span>Intent</span>Unrecognized declined purchase</p><p class="bbs-row"><span>Step</span>Card validation</p><p class="bbs-row"><span>Validated data</span>ID and card ending 4821</p><p class="bbs-note">The agent starts without asking the same questions again.</p></div>
+<div class="bbs-f bbs-need"><span class="bbs-blue">I want to talk to a person</span></div>
+<div class="bbs-f bbs-tr"><span class="bbs-av" aria-hidden="true"><img src="/bb-logo.svg" alt="" width="40" height="40"></span><span class="bbs-bub"><span class="bbs-spin" aria-hidden="true"></span>Connecting you to an agent</span></div>
+</div></div>
 <div class="cx-body fx">
 <div class="fx-blk">
 <h3 class="cx-label">Context</h3>
@@ -203,6 +222,15 @@
 <div class="fx-blk">
 <h3 class="cx-label">Results</h3>
 <ul class="fx-list"><li><b>From 3+ attempts to 1 direct choice</b> to recover from ambiguous requests, with more accurate routing in IBM Watson.</li><li><b>3 to 4 fewer repeated questions</b> at the start of human service, thanks to the context summary on the agent’s screen.</li><li><b>Faster implementation by IT</b> and consistency across flows, with the standardized message library and tone of voice guide.</li></ul>
+</div>
+</div>
+<div class="cx-bleed bp"><h3 class="cx-label bp-t">Assistant flow</h3><div class="bp-wrap"><svg class="bp-svg" viewBox="0 0 980 440" role="img" aria-label="Assistant flow: a message arrives, IBM Watson classifies the intent and the confidence sets the path. High confidence follows the flow; medium confidence confirms with short options; low confidence explains what the assistant can do with an example on the first failure and offers options or an agent on the second. If there is fraud risk, the agent receives the intent, the step and the validated data."><defs><pattern id="bp-dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d4d4d4"/></pattern><marker id="bp-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111"/></marker></defs><rect width="980" height="440" fill="url(#bp-dots)"/><path class="bp-ln" d="M66 200H98" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M250 200H296" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M320 178V80H398" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M342 200H398" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M475 170V112" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M320 222V306" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M298 330H252" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M175 300V232" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M342 330H398" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M550 80H596" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M642 80H882" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M620 102V200H688" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M860 200H912" marker-end="url(#bp-ar)"/><path class="bp-ln" d="M550 330H775V232" marker-end="url(#bp-ar)"/><circle class="bp-ev" cx="50" cy="200" r="16"/><text class="bp-sm" text-anchor="middle" dominant-baseline="middle"><tspan x="50" y="238.5">Message</tspan><tspan x="50" y="253.5">received</tspan></text><rect class="bp-task" x="100" y="170" width="150" height="60" rx="10"/><text class="bp-tx" text-anchor="middle" dominant-baseline="middle"><tspan x="175.0" y="192.5">Watson classifies</tspan><tspan x="175.0" y="207.5">the intent</tspan></text><path class="bp-gw" d="M320 178L342 200L320 222L298 200Z"/><path class="bp-x" d="M313 193l14 14M327 193l-14 14"/><text class="bp-sm" text-anchor="end" dominant-baseline="middle"><tspan x="304" y="160.0">Confidence</tspan></text><rect class="bp-task" x="400" y="50" width="150" height="60" rx="10"/><text class="bp-tx" text-anchor="middle" dominant-baseline="middle"><tspan x="475.0" y="72.5">Follows the</tspan><tspan x="475.0" y="87.5">intent flow</tspan></text><rect class="bp-task" x="400" y="170" width="150" height="60" rx="10"/><text class="bp-tx" text-anchor="middle" dominant-baseline="middle"><tspan x="475.0" y="192.5">Confirms with</tspan><tspan x="475.0" y="207.5">short options</tspan></text><path class="bp-gw" d="M320 308L342 330L320 352L298 330Z"/><path class="bp-x" d="M313 323l14 14M327 323l-14 14"/><text class="bp-sm" text-anchor="middle" dominant-baseline="middle"><tspan x="320" y="372.0">Failure</tspan></text><rect class="bp-task" x="100" y="300" width="150" height="60" rx="10"/><text class="bp-tx" text-anchor="middle" dominant-baseline="middle"><tspan x="175.0" y="322.5">Explains what it does,</tspan><tspan x="175.0" y="337.5">with an example</tspan></text><rect class="bp-task" x="400" y="300" width="150" height="60" rx="10"/><text class="bp-tx" text-anchor="middle" dominant-baseline="middle"><tspan x="475.0" y="322.5">Offers options</tspan><tspan x="475.0" y="337.5">or an agent</tspan></text><path class="bp-gw" d="M620 58L642 80L620 102L598 80Z"/><path class="bp-x" d="M613 73l14 14M627 73l-14 14"/><text class="bp-sm" text-anchor="middle" dominant-baseline="middle"><tspan x="620" y="44.0">Fraud risk?</tspan></text><circle class="bp-end" cx="900" cy="80" r="16"/><text class="bp-sm" text-anchor="middle" dominant-baseline="middle"><tspan x="900" y="116.5">Solved in</tspan><tspan x="900" y="131.5">self-service</tspan></text><rect class="bp-task" x="690" y="170" width="170" height="60" rx="10"/><g class="bp-hu" transform="translate(699 178)"><circle cx="6" cy="4" r="3.2"/><path d="M0.5 13c.6-3.4 2.8-5 5.5-5s4.9 1.6 5.5 5"/></g><text class="bp-tx" text-anchor="middle" dominant-baseline="middle"><tspan x="775.0" y="192.5">Agent receives intent,</tspan><tspan x="775.0" y="207.5">step and data</tspan></text><circle class="bp-end" cx="930" cy="200" r="16"/><text class="bp-sm" text-anchor="middle" dominant-baseline="middle"><tspan x="930" y="236.5">Human</tspan><tspan x="930" y="251.5">support</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="330" y="128.0">high</tspan></text><text class="bp-lb" text-anchor="middle" dominant-baseline="middle"><tspan x="371" y="190.0">medium</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="330" y="268.0">low</tspan></text><text class="bp-lb" text-anchor="middle" dominant-baseline="middle"><tspan x="274" y="320.0">1st</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="350" y="348.0">2nd in a row</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="183" y="266.0">new message</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="662" y="70.0">no</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="628" y="150.0">yes</tspan></text><text class="bp-lb" text-anchor="start" dominant-baseline="middle"><tspan x="566" y="320.0">asks for agent</tspan></text></svg></div></div>
+<div class="cx-bleed">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.486fr 0.486fr 0.486fr 1.267fr">
+<img style="aspect-ratio:360/740" src="/bb-fallback.png" alt="WhatsApp chat with the BB assistant, in Portuguese: after two messages without context, the assistant explains what it can do with an example and offers numbered options" loading="lazy">
+<img style="aspect-ratio:360/740" src="/bb-desambiguacao.png" alt="WhatsApp chat, in Portuguese: the customer writes “my card isn’t going through” and the assistant confirms the intent with three numbered options before asking for any data" loading="lazy">
+<img style="aspect-ratio:360/740" src="/bb-risco.png" alt="WhatsApp chat, in Portuguese: the customer doesn’t recognize a declined purchase on the card ending in 4821, and the assistant hands off to an agent, saying the agent gets a summary of the conversation" loading="lazy">
+<img style="aspect-ratio:760/600" src="/bb-console.png" alt="Agent console, in Portuguese, with the conversation from WhatsApp and the pre-service summary: detected intent, step where it stopped, data already validated and rule triggered" loading="lazy">
 </div>
 </div>
 </section></template>
@@ -314,10 +342,25 @@
 <div class="wk-scroll" tabindex="-1"><div class="wk-body"></div></div>
 </div>
 </div>
-<section class="sp-end" id="contato">
-<div class="sp-fx">
-<p class="sp-fx-big">Let's build?</p>
-<p class="sp-fx-line">You can find me on <span class="nw"><a class="sp-pill" href="https://www.linkedin.com/in/mtpoli/" rel="me noopener">LinkedIn</a>,</span> <span class="nw"><a class="sp-pill" href="https://wa.me/5511999562221" rel="noopener">WhatsApp</a>,</span> by <a class="sp-pill" href="mailto:matheusloures@live.com" rel="noopener">e-mail</a> or <a class="sp-pill" href="https://calendly.com/mtpoli/30min" rel="noopener">schedule a conversation</a></p>
+<section class="ct" id="contato" aria-labelledby="ct-h">
+<div class="ct-in">
+<p class="ct-kick">Get in touch</p>
+<h2 class="ct-h" id="ct-h">Let&#x27;s build?</h2>
+<div class="ct-call">
+<h3 class="ct-call-h">No time to write?</h3>
+<p class="ct-call-p">Tell me about the role and the team, and I&#x27;ll show you how I&#x27;ve solved similar problems.</p>
+<div class="ct-call-row"><a class="ct-book" href="https://calendly.com/mtpoli/30min" rel="noopener">Book 30 minutes<svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="8.2"/><path d="M7.5 12.5l5-5M8.5 7.5h4v4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</div>
+<form class="ct-form" data-to="matheusloures@live.com" data-subject="Contact from your portfolio" novalidate>
+<label class="ct-f"><span class="ct-l">Name</span><span class="ct-box"><input name="name" type="text" autocomplete="name" placeholder="Your name" required></span></label>
+<label class="ct-f"><span class="ct-l">Email</span><span class="ct-box"><input name="email" type="email" autocomplete="email" placeholder="you@company.com" required></span></label>
+<label class="ct-f"><span class="ct-l">Your message</span><span class="ct-tip">Tip: tell me about the role, the team and what stage the hiring process is at.</span><span class="ct-box ct-box-ta"><textarea name="message" rows="5" placeholder="Write your message" required></textarea></span></label>
+<button type="submit" class="ct-send">Send message</button>
+</form>
+<p class="ct-also">Or find me on <a href="https://www.linkedin.com/in/mtpoli/" rel="me noopener">LinkedIn</a> · <a href="https://wa.me/5511999562221" rel="noopener">WhatsApp</a> · <a href="mailto:matheusloures@live.com">Email</a></p>
+<nav aria-hidden="false" class="sp-langs ct-langs" aria-label="Language"><span aria-current="true">EN</span>
+<a href="/es/" hreflang="es" lang="es" aria-label="Leer en español" title="Español">ES</a>
+<a href="/pt/" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português" title="Português">PT</a></nav>
 </div>
 </section>
 
@@ -331,6 +374,18 @@
 <p class="sp-about">I lead projects end to end and autonomously, from PRD to handoff: discovery and research, content, flows, coded prototypes and specs for engineering.</p>
 <p class="sp-kicker">Worked with</p>
 <div class="sp-marquee"><ul class="sp-track"><li><img src="/logos/meli.svg" alt="Mercado Libre" style="height:36px" decoding="async"></li><li><img src="/logos/unilever.svg" alt="Unilever" style="height:36px" decoding="async"></li><li><img src="/logos/santander.svg" alt="Santander" style="height:30px" decoding="async"></li><li><img src="/logos/vivo.svg" alt="Vivo" style="height:26px" decoding="async"></li><li><img src="/logos/bb.svg" alt="Banco do Brasil" style="height:34px" decoding="async"></li><li><img src="/logos/pfizer.svg" alt="Pfizer" style="height:30px" decoding="async"></li><li><img src="/logos/gsk.svg" alt="GSK" style="height:22px" decoding="async"></li><li><img src="/logos/visa.svg" alt="Visa" style="height:24px" decoding="async"></li><li><img src="/logos/porto.png" alt="Porto" style="height:34px" decoding="async"></li><li><img src="/logos/loggi.svg" alt="Loggi" style="height:30px" decoding="async"></li></ul><ul class="sp-track" aria-hidden="true"><li><img src="/logos/meli.svg" alt="" style="height:36px" decoding="async"></li><li><img src="/logos/unilever.svg" alt="" style="height:36px" decoding="async"></li><li><img src="/logos/santander.svg" alt="" style="height:30px" decoding="async"></li><li><img src="/logos/vivo.svg" alt="" style="height:26px" decoding="async"></li><li><img src="/logos/bb.svg" alt="" style="height:34px" decoding="async"></li><li><img src="/logos/pfizer.svg" alt="" style="height:30px" decoding="async"></li><li><img src="/logos/gsk.svg" alt="" style="height:22px" decoding="async"></li><li><img src="/logos/visa.svg" alt="" style="height:24px" decoding="async"></li><li><img src="/logos/porto.png" alt="" style="height:34px" decoding="async"></li><li><img src="/logos/loggi.svg" alt="" style="height:30px" decoding="async"></li></ul></div>
+<p class="sp-kicker">How I work</p>
+<div class="ap-grid"><article class="ap-card"><svg class="ap-ic" viewBox="0 0 36 36" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="15" r="9"/><path d="M22 22l8 8"/></svg><h3 class="ap-t">/ Problem before pixels</h3><p class="ap-d">I start by understanding the problem and the goal, then decide what to design.</p><p class="ap-l">My approach</p><ul class="ap-list"><li>Discovery and research</li><li>Usage data and A/B tests</li><li>Clear goals in the PRD</li></ul></article><article class="ap-card"><svg class="ap-ic" viewBox="0 0 36 36" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h26v17H17l-7 6v-6H5z"/><path d="M11 13h14M11 18h9"/></svg><h3 class="ap-t">/ Content that guides</h3><p class="ap-d">I write the interface so people know what to do without having to think.</p><p class="ap-l">My approach</p><ul class="ap-list"><li>UX writing and content design</li><li>Conversational flows and AI</li><li>Documented tone of voice</li></ul></article><article class="ap-card"><svg class="ap-ic" viewBox="0 0 36 36" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 10l-7 8 7 8M24 10l7 8-7 8M20 7l-4 22"/></svg><h3 class="ap-t">/ Prototype in code</h3><p class="ap-d">I test the idea working, not just drawn, before it goes to engineering.</p><p class="ap-l">My approach</p><ul class="ap-list"><li>Figma and code prototypes</li><li>Claude Code and Codex</li><li>PRs and code review on GitHub</li></ul></article><article class="ap-card"><svg class="ap-ic" viewBox="0 0 36 36" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="11" height="11" rx="1.5"/><rect x="20" y="5" width="11" height="11" rx="1.5"/><rect x="5" y="20" width="11" height="11" rx="1.5"/><rect x="20" y="20" width="11" height="11" rx="1.5"/></svg><h3 class="ap-t">/ Clean handoff</h3><p class="ap-d">I deliver clear specs and libraries the team can reuse.</p><p class="ap-l">My approach</p><ul class="ap-list"><li>Specs and QA</li><li>Design system</li><li>Accessibility (WCAG)</li></ul></article></div>
+<p class="sp-kicker">Experience</p>
+<div class="ex"><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-0"><span class="ex-co">Mercado Libre</span><span class="ex-per">Apr 2024 – Oct 2026<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-0" role="region"><div class="ex-in"><p class="ex-role">Product Designer SSr · Design Engineer · Jan 2026 – Oct 2026</p><ul class="ex-list"><li>From brief to handoff and QA, using AI in discovery, UI, code prototypes and specs.</li><li>Vibe coding with Claude Code and Codex, with PRs and code review on GitHub.</li><li>AI images, illustrations and videos, and copy in neutral and Rioplatense Spanish.</li></ul><p class="ex-role">Content Designer SSr · Apr 2024 – Jan 2026</p><ul class="ex-list"><li>Owner of the content production process for people with no content background, from brief to publishing.</li><li>Interface copy, emails and push notifications for Supermarket, Pharmacy, Restaurants and Auto Parts.</li><li>AI skills and assistants used by several teams, content tests and A/B tests.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-1"><span class="ex-co">Weme</span><span class="ex-per">Aug 2023 – Jul 2024<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-1" role="region"><div class="ex-in"><p class="ex-role">Content Designer &amp; Mentor</p><ul class="ex-list"><li>Mentored 3 UX designers across different teams and clients.</li><li>Clients such as Pfizer, Visa, Banco do Brasil, Odontoprev and Alelo.</li><li>Content audits and tests, research workshops and OKRs.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-2"><span class="ex-co">Vivo</span><span class="ex-per">Jan 2023 – Oct 2023<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-2" role="region"><div class="ex-in"><p class="ex-role">Senior Content Designer</p><ul class="ex-list"><li>B2C journeys for Vivo Fibra in the Vivo app.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-3"><span class="ex-co">Loggi</span><span class="ex-per">May 2022 – Aug 2022<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-3" role="region"><div class="ex-in"><p class="ex-role">Senior Content Designer</p><ul class="ex-list"><li>Owner of the Loggi Envios onboarding, used by sellers to ship their products.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-4"><span class="ex-co">Trocafone</span><span class="ex-per">Sep 2021 – May 2022<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-4" role="region"><div class="ex-in"><p class="ex-role">Senior Content Designer &amp; Ops · Buenos Aires</p><ul class="ex-list"><li>Tone of voice manual, content guide and workshops with stakeholders.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-5"><span class="ex-co">Porto</span><span class="ex-per">Oct 2020 – Sep 2021<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-5" role="region"><div class="ex-in"><p class="ex-role">Senior UX Writer</p><ul class="ex-list"><li>Porto Auto 2.0, Porto Cuida, Tech Fácil, Reppara! and Bllu.</li><li>VUI design for Porto Faz on Alexa.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-6"><span class="ex-co">Banco do Brasil</span><span class="ex-per">Mar 2020 – Oct 2020<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-6" role="region"><div class="ex-in"><p class="ex-role">Senior UX Writer</p><ul class="ex-list"><li>Conversational flows and AI training on IBM Watson.</li></ul></div></div></div><div class="ex-item"><button type="button" class="ex-btn" aria-expanded="false" aria-controls="ex-7"><span class="ex-co">NTT DATA</span><span class="ex-per">Apr 2019 – Mar 2020<svg class="ex-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<div class="ex-panel" id="ex-7" role="region"><div class="ex-in"><p class="ex-role">UX Writer</p><ul class="ex-list"><li>Virtual assistants for Unilever and Santander.</li><li>VUI design for everBank on Alexa.</li></ul></div></div></div></div>
 </div>
 <button type="button" class="sp-close" aria-label="Close"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 </div>
@@ -446,6 +501,153 @@
   function req() { if (!tick) { tick = true; requestAnimationFrame(upd); } }
   addEventListener("scroll", req, { passive: true }); addEventListener("resize", req); upd();
 })();
+</script>
+<script>
+(function () {
+  /* Menu: indicador branco que desliza até o item ativo */
+  var pill = document.querySelector(".nv-pill"), ind = pill && pill.querySelector(".nv-ind");
+  var links = pill ? pill.querySelectorAll(".nv-a") : [];
+  function place(a) {
+    if (!ind || !a) return;
+    links.forEach(function (l) { l.classList.toggle("is-on", l === a); });
+    ind.style.width = a.offsetWidth + "px";
+    ind.style.transform = "translateX(" + a.offsetLeft + "px)";
+  }
+  function active() { return pill.querySelector(".nv-a.is-on") || links[0]; }
+  if (pill) {
+    place(active());
+    addEventListener("resize", function () { place(active()); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { place(active()); });
+    var cases = pill.querySelector('[data-nv="cases"]'), about = pill.querySelector('[data-nv="sobre"]');
+    about.addEventListener("click", function (e) {
+      e.preventDefault(); place(about);
+      var b = document.querySelector(".sp-about-btn"); if (b) b.click();
+    });
+    cases.addEventListener("click", function () { place(cases); });
+    var md = document.getElementById("sobre");
+    if (md && "MutationObserver" in window) {
+      new MutationObserver(function () { if (md.hidden) place(cases); else place(about); }).observe(md, { attributes: true, attributeFilter: ["hidden"] });
+    }
+  }
+
+  /* Mockups: escala o aparelho para caber no card */
+  function fitDevices() {
+    document.querySelectorAll(".cs-vis").forEach(function (v) {
+      var w = v.querySelector(".dv"), d = w && w.querySelector(".device");
+      if (!d) return;
+      var ph = w.classList.contains("dv-phone");
+      var k = Math.min(v.clientWidth * (ph ? .8 : .88) / d.offsetWidth, v.clientHeight * (ph ? .86 : .8) / d.offsetHeight);
+      w.style.setProperty("--k", k.toFixed(4));
+    });
+  }
+  fitDevices(); addEventListener("resize", fitDevices);
+
+  /* Carrossel de cases */
+  var track = document.querySelector(".cs-track");
+  if (track) {
+    var cards = track.querySelectorAll(".cs-card"), num = document.querySelector(".cs-count b");
+    var btns = document.querySelectorAll(".cs-btn");
+    function idx() { var w = cards[0].offsetWidth + parseFloat(getComputedStyle(track).columnGap || 0); return Math.round(track.scrollLeft / w); }
+    function upd() {
+      var i = idx(); if (num) num.textContent = i + 1;
+      cards.forEach(function (c, k) { c.classList.toggle("is-on", k === i); });
+      btns[0].disabled = i <= 0; btns[1].disabled = i >= cards.length - 1;
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = Math.max(0, Math.min(cards.length - 1, idx() + Number(b.dataset.dir)));
+        track.scrollTo({ left: cards[i].offsetLeft - cards[0].offsetLeft, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      });
+    });
+    track.addEventListener("scroll", function () { requestAnimationFrame(upd); }, { passive: true });
+    track.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); btns[1].click(); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); btns[0].click(); }
+    });
+    upd();
+  }
+
+  /* Experiência em acordeão: um aberto por vez */
+  var items = document.querySelectorAll(".ex-item");
+  items.forEach(function (it) {
+    var b = it.querySelector(".ex-btn");
+    b.addEventListener("click", function () {
+      var open = b.getAttribute("aria-expanded") !== "true";
+      items.forEach(function (o) { o.classList.remove("is-open"); o.querySelector(".ex-btn").setAttribute("aria-expanded", "false"); });
+      if (open) { it.classList.add("is-open"); b.setAttribute("aria-expanded", "true"); }
+    });
+  });
+
+  /* Formulário de contato: abre o e-mail já preenchido */
+  var form = document.querySelector(".ct-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var bad = null;
+      form.querySelectorAll("input, textarea").forEach(function (f) {
+        var ok = f.value.trim() !== "" && (f.type !== "email" || /.+@.+\..+/.test(f.value));
+        f.closest(".ct-box").classList.toggle("is-bad", !ok);
+        if (!ok && !bad) bad = f;
+      });
+      if (bad) { bad.focus(); return; }
+      var n = form.elements.name.value.trim(), m = form.elements.email.value.trim(), t = form.elements.message.value.trim();
+      var body = t + "\n\n" + n + "\n" + m;
+      location.href = "mailto:" + form.dataset.to + "?subject=" + encodeURIComponent(form.dataset.subject + ": " + n) + "&body=" + encodeURIComponent(body);
+    });
+  }
+})();
+
+(function () {
+  /* Coluna ajustável: arraste as alças para estreitar ou alargar; tudo escala junto */
+  var mq = matchMedia("(min-width: 900px) and (hover: hover) and (pointer: fine)");
+  var BASE = 560, KEY = "v2-col", body = document.body, col = BASE;
+  var labels = { pt: "Largura do conteúdo", en: "Content width", es: "Ancho del contenido" };
+  var lang = (document.documentElement.lang || "en").slice(0, 2);
+  try { var saved = parseFloat(localStorage.getItem(KEY)); if (saved) col = saved; } catch (e) {}
+  function max() { return Math.max(BASE, Math.min(1280, innerWidth - 120)); }
+  function min() { return 400; }
+  function apply(c, save) {
+    col = Math.round(Math.max(min(), Math.min(max(), c)));
+    body.style.setProperty("--col", col + "px");
+    body.style.setProperty("--z", (col / BASE).toFixed(4));
+    hs.forEach(function (h) { h.setAttribute("aria-valuenow", col); h.setAttribute("aria-valuemax", max()); });
+    if (save) { try { localStorage.setItem(KEY, col); } catch (e) {} }
+    dispatchEvent(new Event("v2-col"));
+  }
+  var hs = ["l", "r"].map(function (side) {
+    var h = document.createElement("div");
+    h.className = "col-h col-h--" + side;
+    h.setAttribute("role", "separator"); h.setAttribute("aria-orientation", "vertical");
+    h.setAttribute("aria-label", labels[lang] || labels.en); h.setAttribute("aria-valuemin", min());
+    h.tabIndex = 0; h.innerHTML = "<i></i>";
+    body.appendChild(h);
+    h.addEventListener("pointerdown", function (e) {
+      if (!mq.matches) return;
+      e.preventDefault(); h.setPointerCapture(e.pointerId);
+      h.classList.add("is-drag"); body.classList.add("is-resizing");
+      function move(ev) { apply(Math.abs(ev.clientX - innerWidth / 2) * 2 - 40); }
+      function up() {
+        h.classList.remove("is-drag"); body.classList.remove("is-resizing");
+        h.removeEventListener("pointermove", move); h.removeEventListener("pointerup", up); h.removeEventListener("pointercancel", up);
+        apply(col, true);
+      }
+      h.addEventListener("pointermove", move); h.addEventListener("pointerup", up); h.addEventListener("pointercancel", up);
+    });
+    h.addEventListener("dblclick", function () { apply(BASE, true); });
+    h.addEventListener("keydown", function (e) {
+      var step = e.shiftKey ? 80 : 20, d = 0;
+      if (e.key === "ArrowLeft") d = side === "l" ? step : -step;
+      if (e.key === "ArrowRight") d = side === "l" ? -step : step;
+      if (e.key === "Home") { apply(min(), true); e.preventDefault(); return; }
+      if (e.key === "End") { apply(max(), true); e.preventDefault(); return; }
+      if (d) { e.preventDefault(); apply(col + d, true); }
+    });
+    return h;
+  });
+  apply(col);
+  addEventListener("resize", function () { apply(col); });
+})();
+
 </script>
 <script src="/avatar-player.js" defer></script>
 <script src="/selection.js" defer></script>
