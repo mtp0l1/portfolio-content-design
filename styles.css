@@ -753,6 +753,147 @@ body.sp { color: #000; font-family: var(--f-sp); letter-spacing: -.02em; }
 .device-macbook-pro.device-spacegray .device-power { background: radial-gradient(circle at center, #83878a 85%, #767a7d 100%); border-color: #454749; box-shadow: inset 0 -2px 8px 0 #202121; }
 .device-macbook-pro.device-spacegray .device-power::after { background: #b7babc; box-shadow: inset 0 0 4px 2px #6a6d70; }
 
+/* Devices.css v0.2.0 (MIT): iPhone 8 */
+.device-iphone-8 {
+  height: 871px;
+  width: 419px;
+}
+
+.device-iphone-8 .device-frame {
+  background: #fff;
+  border-radius: 68px;
+  box-shadow: inset 0 0 0 2px #c8cacb, inset 0 0 0 7px #e2e3e4;
+  height: 871px;
+  padding: 102px 22px;
+  width: 419px;
+}
+
+.device-iphone-8 .device-screen {
+  border: 2px solid #222;
+  border-radius: 4px;
+  height: 667px;
+  width: 375px;
+}
+
+.device-iphone-8 .device-stripe::after,
+.device-iphone-8 .device-stripe::before {
+  border: solid rgba(51, 51, 51, .15);
+  border-width: 0 7px;
+  content: "";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
+.device-iphone-8 .device-stripe::after {
+  top: 68px;
+}
+
+.device-iphone-8 .device-stripe::before {
+  bottom: 68px;
+}
+
+.device-iphone-8 .device-home {
+  border: 2px solid #c8cacb;
+  border-radius: 50%;
+  bottom: 25px;
+  height: 58px;
+  left: 50%;
+  margin-left: -29px;
+  position: absolute;
+  width: 58px;
+}
+
+.device-iphone-8 .device-sensors {
+  background: #666;
+  border-radius: 3px;
+  height: 6px;
+  left: 50%;
+  margin-left: -38px;
+  position: absolute;
+  top: 52px;
+  width: 76px;
+}
+
+.device-iphone-8 .device-sensors::after,
+.device-iphone-8 .device-sensors::before {
+  background: #666;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+}
+
+.device-iphone-8 .device-sensors::after {
+  height: 10px;
+  left: 50%;
+  margin-left: -5px;
+  top: -25px;
+  width: 10px;
+}
+
+.device-iphone-8 .device-sensors::before {
+  height: 12px;
+  left: -42px;
+  margin-top: -6px;
+  top: 50%;
+  width: 12px;
+}
+
+.device-iphone-8 .device-btns {
+  background: #c8cacb;
+  height: 30px;
+  left: -3px;
+  position: absolute;
+  top: 102px;
+  width: 3px;
+}
+
+.device-iphone-8 .device-btns::after,
+.device-iphone-8 .device-btns::before {
+  background: #c8cacb;
+  content: "";
+  height: 56px;
+  left: 0;
+  position: absolute;
+  width: 3px;
+}
+
+.device-iphone-8 .device-btns::after {
+  top: 62px;
+}
+
+.device-iphone-8 .device-btns::before {
+  top: 132px;
+}
+
+.device-iphone-8 .device-power {
+  background: #c8cacb;
+  height: 80px;
+  position: absolute;
+  right: -2px;
+  top: 160px;
+  width: 3px;
+}
+
+.device-iphone-8.device-spacegray .device-frame {
+  background: #222;
+  box-shadow: inset 0 0 0 2px #74747a, inset 0 0 0 7px #9b9ba0;
+}
+
+.device-iphone-8.device-spacegray .device-stripe::after,
+.device-iphone-8.device-spacegray .device-stripe::before {
+  border-color: rgba(204, 204, 204, .35);
+}
+
+.device-iphone-8.device-spacegray .device-btns,
+.device-iphone-8.device-spacegray .device-btns::after,
+.device-iphone-8.device-spacegray .device-btns::before {
+  background: #74747a;
+}
+
+
 /* ===== v2 (versão de teste): coluna central, menu em pílula, carrossel de cases, contato ===== */
 body.v2 { --v2-col: 560px; --v2-ease: cubic-bezier(.22, 1, .36, 1); --v2-ink: #0d111b; --v2-grey: #8d8d8d; --v2-soft: #6b6b6b; background: #fff; }
 body.v2 .sp-sky { display: none; }
@@ -1065,3 +1206,48 @@ body.v2 .sp-hero .sp-loc { margin-top: 28px; }
   .v2 .col-h i { opacity: 0; transition: opacity .2s ease, border-color .2s ease, height .2s ease, margin .2s ease; }
   .v2 .col-h:hover i, .v2 .col-h.is-drag i, .v2 .col-h:focus-visible i { opacity: 1; }
 }
+
+/* ===== Ajustes 5 ===== */
+/* Dentro do bottomsheet do case: sem menu em pílula e sem alças de largura */
+.v2 .nv-pill { transition: opacity .25s ease, visibility .25s; }
+body:has(.wk-sheet.on) .nv-pill { opacity: 0; visibility: hidden; pointer-events: none; }
+body:has(.wk-sheet.on) .col-h { display: none !important; }
+
+/* Cor dos cards: bege da identidade (#ede8de) no lugar do cinza frio */
+.v2 .ap-card { background: #ede8de; }
+.v2 .ap-l { color: rgba(0, 0, 0, .6); }
+.v2 .ap-list li { border-top-color: rgba(0, 0, 0, .12); }
+.v2 .ct-call { background: #ede8de; }
+.v2 .ct-call-p { color: rgba(0, 0, 0, .6); }
+.v2 .cs-vis { background: #ede8de; }
+
+/* Botão de agendar: preto, como o resto do site */
+.v2 .ct-book { background: #000; box-shadow: 0 10px 24px rgba(0, 0, 0, .18); }
+.v2 .ct-book:hover { background: #1c1c1c; }
+
+/* iPhone 8 (Vivo): borda superior em vez de ilha, nada sobrepõe a tela */
+.v2 .dv-p8 .device-iphone-8, .v2 .dv-p8 .device-iphone-8 .device-frame { height: calc(var(--sh) + 204px); }
+.v2 .dv-p8 .device-iphone-8 .device-screen { border: 0; border-radius: 2px; width: 375px; height: var(--sh); object-fit: fill; background: var(--sbg); }
+
+/* Espaço entre o carrossel e o contato: ritmo mais curto e harmônico */
+body.v2 .cs { padding-bottom: 40px; }
+body.v2 .ct { padding-top: 40px; }
+
+/* Tags dentro do conteúdo que sobe no hover (nunca sobre o mockup) */
+.v2 .cs-tags { display: none; }
+@media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+  .v2 .cs-bar { background: rgba(237, 232, 222, .86); }
+  .v2 .cs-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; }
+  .v2 .cs-tags span { padding: 4px 10px; border-radius: 100px; background: rgba(255, 255, 255, .7); border: 1px solid rgba(0, 0, 0, .08); font-size: 12px; font-weight: 600; line-height: 1.2; color: #111; }
+}
+
+/* MacBook Pro 14": tampa preta fina, notch, base de alumínio com a reentrância do dedo */
+.v2 .mbp { position: relative; width: 880px; }
+.v2 .mbp-lid { position: relative; padding: 11px 11px 15px; border-radius: 18px 18px 4px 4px; background: #0b0b0c; box-shadow: inset 0 0 0 1px #3a3a3d, inset 0 0 0 2px #121213; }
+.v2 .mbp-scr { position: relative; overflow: hidden; width: 858px; height: 556px; box-sizing: border-box; padding-top: 24px; border-radius: 7px 7px 3px 3px; background: #000; }
+.v2 .mbp-scr img { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--sbg); }
+.v2 .mbp-scr::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, rgba(255, 255, 255, .07) 0%, rgba(255, 255, 255, 0) 38%); }
+.v2 .mbp-notch { position: absolute; z-index: 2; top: 11px; left: 50%; width: 96px; height: 18px; margin-left: -48px; border-radius: 0 0 11px 11px; background: #000; }
+.v2 .mbp-notch::after { content: ""; position: absolute; left: 50%; top: 5px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2c3552, #07080d 70%); }
+.v2 .mbp-base { position: relative; width: 100%; height: 17px; margin-top: -1px; border-radius: 0 0 22px 22px / 0 0 14px 14px; background: linear-gradient(180deg, #8c8f95 0, #d7d9dd 14%, #c3c6cb 55%, #9ea1a7 100%); box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset, 0 18px 26px -10px rgba(0, 0, 0, .35); }
+.v2 .mbp-base::before { content: ""; position: absolute; top: 0; left: 50%; width: 150px; height: 6px; margin-left: -75px; border-radius: 0 0 9px 9px; background: linear-gradient(180deg, #7e8187, #b4b7bc); }
