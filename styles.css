@@ -901,7 +901,7 @@ body.v2 .sp-sky { display: none; }
 body.v2 .sp-curtain { margin: 0; border-radius: 0; box-shadow: none; background: #fff; transform: none !important; clip-path: none !important; overflow: visible; }
 
 /* Menu */
-.v2 .nv { position: fixed; inset: 0 0 auto 0; z-index: 60; padding-top: 21px; pointer-events: none; }
+.v2 .nv { position: absolute; inset: 0 0 auto 0; z-index: 60; padding-top: 21px; pointer-events: none; }
 .v2 .nv-row { width: min(var(--v2-col), calc(100% - 48px)); margin: 0 auto; height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .v2 .nv-row > * { pointer-events: auto; }
 .v2 .nv-langs { font-size: 13px; gap: 12px; padding: 6px 10px; margin-left: -10px; border-radius: 100px; background: rgba(255, 255, 255, .72); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
@@ -1251,3 +1251,46 @@ body.v2 .ct { padding-top: 40px; }
 .v2 .mbp-notch::after { content: ""; position: absolute; left: 50%; top: 5px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2c3552, #07080d 70%); }
 .v2 .mbp-base { position: relative; width: 100%; height: 17px; margin-top: -1px; border-radius: 0 0 22px 22px / 0 0 14px 14px; background: linear-gradient(180deg, #8c8f95 0, #d7d9dd 14%, #c3c6cb 55%, #9ea1a7 100%); box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset, 0 18px 26px -10px rgba(0, 0, 0, .35); }
 .v2 .mbp-base::before { content: ""; position: absolute; top: 0; left: 50%; width: 150px; height: 6px; margin-left: -75px; border-radius: 0 0 9px 9px; background: linear-gradient(180deg, #7e8187, #b4b7bc); }
+
+/* ===== Mockups no estilo muhid.de: aparelho grande, alinhado ao topo do card ===== */
+.v2 .cs-inner .dv { position: absolute; left: 50%; top: 44px; transform: translateX(-50%) scale(var(--k, .6)); transform-origin: 50% 0; filter: drop-shadow(0 22px 36px rgba(0, 0, 0, .2)); }
+.v2 .dv-desk { top: 56px; }
+
+/* Celular: moldura fina com testa (sem ilha nem entalhe, nada cobre a interface) */
+.v2 .ph { position: relative; width: 399px; }
+.v2 .ph-body { position: relative; box-sizing: border-box; width: 399px; padding: 40px 12px 24px; border-radius: 54px; background: #0d0d0f; box-shadow: inset 0 0 0 2px #4a4a50, inset 0 0 0 4px #09090a, 0 0 0 1px #26262a; }
+.v2 .ph-scr { position: relative; overflow: hidden; width: 375px; height: var(--sh); border-radius: 4px 4px 34px 34px; background: var(--sbg); }
+.v2 .ph-scr img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.v2 .ph-scr::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(120deg, rgba(255, 255, 255, .06) 0%, rgba(255, 255, 255, 0) 35%); }
+.v2 .ph-spk { position: absolute; z-index: 2; top: 17px; left: 50%; width: 64px; height: 6px; margin-left: -32px; border-radius: 3px; background: #1d1d21; box-shadow: inset 0 1px 1px rgba(0, 0, 0, .6); }
+.v2 .ph-cam { position: absolute; z-index: 2; top: 14px; left: 50%; width: 12px; height: 12px; margin-left: 52px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #35405f, #07080d 65%); box-shadow: 0 0 0 2px #151518; }
+.v2 .ph-b { position: absolute; width: 4px; border-radius: 2px; background: #3b3b40; }
+.v2 .ph-b1 { left: -3px; top: 120px; height: 34px; }
+.v2 .ph-b2 { left: -3px; top: 186px; height: 62px; }
+.v2 .ph-b3 { left: -3px; top: 262px; height: 62px; }
+.v2 .ph-pw { right: -3px; top: 210px; height: 90px; }
+
+/* ===== Ajustes 7: moldura fina, sem folgas, MacBook refeito ===== */
+.v2 .ph { width: 389px; }
+.v2 .ph-body { width: 389px; padding: 7px; border-radius: 40px; background: #050506; box-shadow: inset 0 0 0 1.5px #62646a, inset 0 0 0 3px #17171a, 0 0 0 1px #2c2d31; }
+.v2 .ph-scr { border-radius: 32px; }
+.v2 .ph-b { background: #4a4c52; }
+.v2 .ph-b1 { top: 110px; } .v2 .ph-b2 { top: 176px; } .v2 .ph-b3 { top: 252px; } .v2 .ph-pw { top: 200px; }
+
+.v2 .dv-desk { top: 44px; }
+.v2 .mbp { width: 880px; }
+.v2 .mbp-lid { padding: 11px 11px 14px; border-radius: 20px 20px 3px 3px; background: #060607; box-shadow: inset 0 0 0 1.5px #5a5c62, inset 0 0 0 3px #131315, 0 0 0 1px #2b2c30; }
+.v2 .mbp-scr { width: 858px; height: var(--msh); padding-top: 24px; border-radius: 6px 6px 2px 2px; }
+.v2 .mbp-scr img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: top center; }
+.v2 .mbp-notch { top: 11px; width: 104px; height: 24px; margin-left: -52px; border-radius: 0 0 12px 12px; }
+.v2 .mbp-notch::after { top: 8px; }
+.v2 .mbp-base { display: block; width: 100%; height: 16px; margin: -1px 0 0; border-radius: 0; background: none; box-shadow: none; }
+.v2 .mbp-base::before { display: none; }
+
+/* Cantos pequenos: a barra de status dos desenhos (sinal e bateria rentes à borda) não é cortada */
+.v2 .ph-body { border-radius: 19px; }
+.v2 .ph-scr { border-radius: 12px; }
+
+/* Vivo: respiro lateral na tela; a faixa roxa continua nas laterais do cabeçalho */
+.v2 .dv-ins .ph-scr { background: linear-gradient(#660099, #660099) top / 100% calc(64px * (375 - 2 * 9) / 375) no-repeat, #fff; }
+.v2 .dv-ins .ph-scr img { width: calc(100% - 2 * var(--ins)); margin: 0 auto; object-fit: contain; object-position: top center; }
