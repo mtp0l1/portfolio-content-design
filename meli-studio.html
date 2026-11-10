@@ -62,28 +62,28 @@
 </div>
 <div class="cx-body">
 <h2 class="cx-label">Context</h2>
-<p class="cx-ctx">Meli Studio is Mercado Libre's internal AI workspace for image, video and voice, where marketing and content teams produce campaign assets. Adoption was the bottleneck: each media type worked differently, and non-technical creators froze on the blank prompt or quit after 4–5 failed generations. Sample text prompts didn't fix it, because outputs still missed brand guidelines. I shadowed creators in real sessions to turn their blockers into guided workflows, reusable styles and measurable adoption.</p>
+<p class="cx-ctx">Meli Studio is Mercado Libre's internal AI workspace for image, video and audio. The main target audience was the marketing team, who needed to produce assets quickly to save on external audiovisual costs. However, the cost of AI generation was becoming a problem. Non-technical creators struggled with prompting, leading to a high rate of wasted API credits through trial and error. My role was to reduce this learning curve and turn unpredictable AI outputs into consistent, brand-safe assets.</p>
 <h2 class="cx-label">Results</h2>
 <div class="cx-two cx-out">
-<p><b>First-session completion went from 2/8 (25%) to 6/8 (75%)</b> in moderated task sessions.</p>
-<p><b>Prompt effort fell from ~6 raw attempts to 2–3 guided steps</b> to reach an on-brand asset, cutting time-to-first-value by more than half in task analysis.</p>
-<p><b>~30% fewer wasted generations in test sessions</b> with cost preview and mid-generation cancel. Async alerts for slow video renders are the next step.</p>
-<p><b>1 unified AI pattern library</b> across image, video and audio, reducing spec and handoff rework when plugging in new models.</p>
+<p><b>First-session success jumped from 2/8 (25%) to 6/8 (75%)</b> in moderated task sessions, after introducing the AI Skills and verified templates.</p>
+<p><b>Reduced AI cost waste:</b> I lowered the learning curve and cut down on prompt trial and error, directly reducing wasted generations and saving API credits.</p>
+<p><b>Higher output quality:</b> the marketing team was able to independently generate consistent, on-brand assets without advanced prompt engineering knowledge.</p>
+<p><b>1 unified AI pattern library</b> adopted across the tool, accelerating engineering handoff when plugging in new models.</p>
 </div>
 <div class="cx-two cx-did">
 <div>
 <h2 class="cx-label">What I did</h2>
-<p><b>Shadowed 8 marketing and content creators</b> and audited the flows: most drop-offs happened before the first export, from prompt trial and error.</p>
-<p><b>Tested V1 text presets, which failed brand consistency,</b> and moved to verified templates and locked style schemas, in short cycles with Product and Engineering.</p>
-<p><b>Redesigned Create and Edit</b> with the design system, prototyping in code with v0 and Cursor, and contributed AI patterns back to it: prompt bar, generating and cancel states, before/after split and cost preview.</p>
-<p><b>Defined the adoption funnel with Product:</b> template-to-export conversion, iterations per usable asset and 7-day return rate.</p>
+<p><b>Shadowed and tested:</b> I started by researching 8 marketing creators and found that only 2 out of 8 could generate a usable asset without heavy friction.</p>
+<p><b>Built a "Master Prompt" assistant:</b> I used Gemini Deep Research to gather credible prompt engineering practices and built an internal assistant to help categorize and structure the initial Prompt Library.</p>
+<p><b>Prototyped and validated:</b> I created prototypes and ran task validations with the marketing and ads teams, using real campaign briefings, to make sure the AI Skills delivered consistent results.</p>
+<p><b>Tracked adoption and quality:</b> I shifted the focus from counting generations to tracking adoption (active users) and output quality (assets that matched expectations without endless rework).</p>
 </div>
 <div>
 <h2 class="cx-label">What changed</h2>
-<p><b>One Create, Edit and Explore pattern</b> across image, video and audio, with model, style, aspect ratio and output count in a single prompt bar.</p>
-<p><b>Verified templates instead of blank screens:</b> Explore opens with tested presets showing expected output, steps and estimated credit cost.</p>
-<p><b>Brand Styles in two modes:</b> a guided builder for newcomers and direct JSON editing for power users who found the wizard too restrictive.</p>
-<p><b>Natural-language editing:</b> describe a change, compare original and result side by side, and cancel mid-generation to save credits.</p>
+<p><b>From blank screens to AI Skills:</b> we evolved the workflow in stages. We started with a structured Prompt Library, moved to AI Assistants with brand knowledge bases, and finally implemented automated AI Skills.</p>
+<p><b>Unified Create and Edit pattern:</b> model, style, aspect ratio and output count are visible in a single prompt bar across all media types.</p>
+<p><b>Verified templates:</b> creators start with pre-tested formats (for example, "15-second Reels") that automatically lock in the correct parameters.</p>
+<p><b>Cost preview and cancellation:</b> creators see the estimated cost before generating and can cancel mid-generation, to avoid wasting company resources on wrong inputs.</p>
 </div>
 </div>
 </div>
