@@ -1299,3 +1299,7 @@ body.v2 .ct { padding-top: 40px; }
 .v2 .dv3 { position: absolute; inset: 8% 8%; display: flex; align-items: center; justify-content: center; }
 .v2 .dv3-desk { inset: 7% 9%; }
 .v2 .dv3 img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* Tags na legenda do card (mobile e touch, sem hover) */
+.v2 .cs-cap .cs-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+.v2 .cs-cap .cs-tags span { padding: 4px 10px; border-radius: 100px; background: rgba(0, 0, 0, .05); border: 1px solid rgba(0, 0, 0, .08); font-size: 12px; font-weight: 600; line-height: 1.2; color: #111; }
