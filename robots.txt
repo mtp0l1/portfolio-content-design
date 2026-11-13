@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mtpoli-portfolio.vercel.app/sitemap.xml
+Sitemap: https://mtportfolio.vercel.app/sitemap.xml
