@@ -48,10 +48,10 @@
   });
 
   /* ---------- Campana: mesma tela, três marcas ---------- */
-  var T = [{ id: "a", hex: "#F2A545" }, { id: "b", hex: "#45C1A5" }, { id: "c", hex: "#7DA3F5" }];
+  var T = [{ id: "a", hex: "#F2A545", name: "orange" }, { id: "b", hex: "#45C1A5", name: "teal" }, { id: "c", hex: "#7DA3F5", name: "blue" }];
   document.querySelectorAll(".cdemo").forEach(function (el) {
     var i = 0, timer = null, stopped = false,
-        hexes = el.querySelectorAll("[data-hex]"),
+        hexes = el.querySelectorAll("[data-hex]"), tnames = el.querySelectorAll("[data-tn]"),
         dots = el.querySelectorAll(".cd-dots span"),
         btns = (el.closest(".cp-fig") || el.parentNode).querySelectorAll("[data-theme]");
     function fit() { el.style.setProperty("--k", el.clientWidth / 560); }
@@ -61,6 +61,7 @@
     function set(n, anim) {
       i = n; el.setAttribute("data-t", T[n].id);
       hexes.forEach(function (h) { h.textContent = T[n].hex; });
+      tnames.forEach(function (h) { h.textContent = T[n].name; });
       dots.forEach(function (d, k) { d.classList.toggle("on", k === n); });
       btns.forEach(function (b, k) { b.setAttribute("aria-pressed", k === n ? "true" : "false"); });
       el.classList.remove("swap"); void el.offsetWidth; if (anim) el.classList.add("swap");

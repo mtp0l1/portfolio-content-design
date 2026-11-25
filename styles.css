@@ -1695,3 +1695,28 @@ body.v2 .ct { padding-top: 40px; }
 @media (max-width: 680px) { .pc-g { grid-template-columns: minmax(0, 300px); } }
 
 .pc-t { min-height: 2.7em; }
+
+/* Campana: artefatos reais */
+.cp-art-g { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.cp-term { border: 1px solid #26262b; border-radius: 18px; background: #0b0b0e; padding: 16px 18px; }
+.cp-term-t { margin: 0 0 10px; font: 500 12px/1.3 "IBM Plex Mono", monospace; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.cp-term p { font-size: 14.5px; line-height: 1.55; color: #cfcfd4; }
+.cp-term > p:not(.cp-term-t):not(.cp-term-n) { margin: 0 0 10px; }
+.cp-id { font: 600 12px/1 "IBM Plex Mono", monospace; color: #1E2A3B; background: var(--o); padding: 3px 6px; border-radius: 6px; margin-right: 4px; }
+.cp-rpt { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font: 400 12.5px/1.5 "IBM Plex Mono", monospace; }
+.cp-rpt li { display: grid; grid-template-columns: 16px 58px minmax(0, 1fr); gap: 6px; padding: 2px 6px; border-radius: 6px; color: #b4b4ba; }
+.cp-rpt b { color: #7be0a1; font-weight: 600; } .cp-rpt code { color: #fff; font: inherit; }
+.cp-rpt li.is-hl { background: rgba(242, 165, 69, .16); color: #fff; box-shadow: inset 2px 0 0 var(--o); }
+.cp-term-n { margin: 10px 0 0; font-size: 13px !important; color: var(--muted) !important; }
+.cp-docs { margin-top: 22px; }
+.cp-docs-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cp-docs-g figure { margin: 0; display: grid; gap: 8px; }
+.cp-docs-g img { width: 100%; height: auto; border-radius: 12px; border: 1px solid #26262b; display: block; }
+.cp-docs-g figcaption { font-size: 13px; line-height: 1.4; color: var(--muted); }
+@media (max-width: 900px) { .cp-art-g, .cp-docs-g { grid-template-columns: minmax(0, 1fr); } }
+
+/* Home: Sobre mim resumido */
+.v2 .ab { width: min(var(--v2-col), calc(100% - 48px)); margin: 0 auto; padding: 8px 0 56px; }
+.v2 .ab-h { margin: 8px 0 10px; font-size: clamp(24px, 3.2vw, 32px); line-height: 1.15; font-weight: 600; letter-spacing: -.01em; }
+.v2 .ab-p { margin: 0 0 18px; max-width: 62ch; font-size: 17px; line-height: 1.55; color: var(--v2-soft); }
+.cx-fric { margin-top: 10px; }
