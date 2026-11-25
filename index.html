@@ -43,7 +43,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@600&family=Lexend:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="cx-page sp v2">
@@ -80,8 +80,27 @@
 <div class="ft-vis" role="img" aria-label="Four final screens of the picker app: volume alert, stock tag, bag count and customs screen"><img src="/pronto-vol-depois.png" width="360" height="640" alt="" loading="lazy" decoding="async"><img src="/pronto-stock-depois.png" width="360" height="1192" alt="" loading="lazy" decoding="async"><img src="/pronto-finalizar-depois.png" width="358" height="638" alt="" loading="lazy" decoding="async"><img src="/pronto-aduana.png" width="360" height="730" alt="" loading="lazy" decoding="async"></div>
 <div class="ft-txt"><p class="ft-co">Mercado Libre · Product Design</p><h3 class="ft-h">Pronto App: the picker app for deliveries in minutes</h3><p class="ft-d">Volume, stock, bags and proof of what was collected: four flow failures, four workstreams.</p><ul class="ft-li"><li>On-site discovery with pickers and store leaders</li><li>Inline cues instead of blocking modals</li><li>Quick-scan and one-handed first-tap tests</li></ul><span class="ft-cta">See the full case<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
 </a>
-<a class="wk ft-card" href="#design-system-soma" data-case="design-system-soma" aria-label="Campana Design System, white-label and scalable">
-<div class="ft-vis ft-vis--one"><img src="/mockups/design-system-soma.webp?v=2" width="1479" height="1427" alt="Campana Design System documentation site with the headline Let’s build with consistency" loading="lazy" decoding="async"></div>
+<a class="ft-card" href="/campana-design-system.html" aria-label="Campana Design System, white-label and scalable">
+<div class="ft-vis ft-vis--demo"><div class="cdemo" role="img" aria-label="Phone with the So+ma home screen, three token layers and Campana buttons; the screen cycles through three brands"><div class="cdemo-in">
+<div class="cd-card cd-tk"><h4>Tokens · 3 layers</h4>
+<div class="cd-row" style="--i:0"><s></s><span><em>core</em><strong>orange <b data-hex>#F2A545</b></strong></span></div>
+<div class="cd-row" style="--i:1"><s></s><span><em>semantic</em><strong>interactive-fill-loud</strong></span></div>
+<div class="cd-row" style="--i:2"><s></s><span><em>shadcn alias</em><strong>primary</strong></span></div></div>
+<div class="cd-ph"><div class="cd-sc">
+<p class="cd-hi">Olá Mônica</p>
+<div class="cd-bal"><small>Saldo atual</small><b>10<i>pontos</i></b></div>
+<p class="cd-lb">Reciclar e ganhar pontos</p>
+<div class="cd-tiles"><div class="cd-tile"><u></u>Buscar material</div><div class="cd-tile"><u></u>Convidar amigos</div></div>
+<div class="cd-q">Isopor é reciclável?<span>Responda para somar pontos</span></div>
+<div class="cd-btn">Mostrar meu QR</div>
+<p class="cd-lb">Usar pontos</p>
+<div class="cd-tiles"><div class="cd-tile"><u></u>Recompensas</div><div class="cd-tile"><u></u>Doar pontos</div></div>
+</div></div>
+<div class="cd-card cd-cm"><h4>Button · 5 emphases</h4>
+<span class="cd-b cd-b--loud">loud</span><span class="cd-b cd-b--q">quiet</span><span class="cd-b cd-b--o">outline</span>
+<span class="cd-chip cd-chip--a">navy on orange <i>7.07:1 ✓</i></span><span class="cd-chip cd-chip--o">same component, different value</span></div>
+<div class="cd-dots" aria-hidden="true"><span>Brand A</span><span>Brand B</span><span>Brand C</span></div>
+</div></div></div>
 <div class="ft-txt"><p class="ft-co">So+ma · Product Design · Design System</p><h3 class="ft-h">Campana Design System, white-label and scalable</h3><p class="ft-d">A white-label core with tokens, components and optional modules, so any So+ma product starts out consistent and accessible.</p><ul class="ft-li"><li>Three token layers: core, semantic and shadcn/ui aliases</li><li>Components only consume tokens, so a new product gets its own theme</li><li>Composition rules for AI tools and a contract on every component</li></ul><span class="ft-cta">See the full case<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
 </a>
 </section>
@@ -146,40 +165,6 @@
 </div>
 </section>
 </main>
-<template id="tpl-design-system-soma"><section class="sp-case" aria-label="Campana Design System, white-label and scalable">
-<div class="cx-hero">
-<img class="cx-logo-img" src="/soma-logo.png" alt="So+ma" width="228" height="228">
-<h2 class="cx-title">Campana Design System, white-label and scalable</h2>
-<p class="cx-sub">Tokens, 123 components and rules the system checks on its own, to build screens that match Figma.</p>
-<p class="cx-role"><b>Design Engineer</b><span>So+ma</span></p>
-</div>
-<div class="cx-bleed">
-<div class="cx-strip imgs fx" style="--n:4;--cols:0.462fr 0.462fr 0.462fr 0.462fr">
-<img style="aspect-ratio:750/1624" src="/soma-inicio.jpg" alt="App home screen with the points balance, recycling actions and the question of the day" loading="lazy">
-<img style="aspect-ratio:750/1624" src="/soma-reciclar.jpg" alt="Recycle screen with the next delivery, material search and drop-off spots" loading="lazy">
-<img style="aspect-ratio:750/1624" src="/soma-meta.jpg" alt="Goal screen with the chosen reward and the progress in points" loading="lazy">
-<img style="aspect-ratio:750/1624" src="/soma-doar.jpg" alt="Donation done screen with an illustration of two people celebrating" loading="lazy">
-</div>
-</div>
-<div class="cx-body fx">
-<div class="fx-blk">
-<h3 class="cx-label">Context</h3>
-<p class="fx-ctx">So+ma is an app where people recycle, earn points and trade them for rewards or donate to institutions.</p><p class="fx-ctx">The Figma redesign brought new screens and left old components behind.</p><p class="fx-ctx">The goal was a single source of values and components, so designers, engineers and AI build screens the same way.</p>
-</div>
-<div class="fx-blk">
-<h3 class="cx-label">What changed</h3>
-<ul class="fx-list"><li>Every visual decision became a token, in three layers. Components only consume tokens, so the whole system changes when the brand does.</li><li>The 123 components follow shadcn/ui (Radix, CVA and Tailwind), and each has a working example, accessibility notes and a “Use for / Never / Verified by” contract.</li><li>Example screens at the app width, built only from system pieces.</li><li>Rules have IDs and the system checks them on its own, with a report.</li></ul>
-</div>
-<div class="fx-blk">
-<h3 class="cx-label">What I did</h3>
-<ul class="fx-list"><li>Mapped the new Figma screens to components and tokens, and removed what the redesign replaced.</li><li>Wrote AGENTS.md, the decision map and the composition rules, so any AI (Claude, Claude Design, Figma AI) can use the system without inventing variants.</li><li>Defined the content rules: Brazilian Portuguese, addressing the person as “você”, “tap” instead of “click” and “participant” instead of “user”.</li><li>Compared the system against the 59 shadcn/ui components: 20 were added, 18 fixed and 10 left out with a reason.</li></ul>
-</div>
-<div class="fx-blk">
-<h3 class="cx-label">Results</h3>
-<ul class="fx-list"><li><b>123 components</b> with a contract and <b>13 automated checks</b> with a report.</li><li><b>104 color tokens</b> and 86 Lucide icons, with Lexend typography in four weights.</li><li>Documentation site at version 14, with ⌘K search, light and dark themes and a package for engineering.</li></ul>
-</div>
-</div>
-</section></template>
 <template id="tpl-meli-studio"><section class="sp-case" aria-label="Meli Studio: AI creation for image, video and audio">
 <div class="cx-hero">
 <img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="256" height="196">
@@ -819,6 +804,7 @@
 })();
 
 </script>
+<script src="/craft.js" defer></script>
 <script src="/avatar-player.js" defer></script>
 <script src="/selection.js" defer></script>
 <script src="/globe.js" defer></script>
@@ -827,6 +813,7 @@
   var b = document.querySelector("[data-open-about]"), a = document.querySelector(".sp-about-btn");
   if (b && a) b.addEventListener("click", function () { a.click(); });
   if (location.hash === "#pronto-app-instant-delivery") location.replace("/pronto-app-instant-delivery.html");
+  if (location.hash === "#design-system-soma") location.replace("/campana-design-system.html");
 })();
 </script>
 </body>
