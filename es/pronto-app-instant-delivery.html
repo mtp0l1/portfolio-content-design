@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pronto App: la app del picker para entregas en minutos · Matheus Policarpo</title>
+<title>Pronto App: preparación de pedidos para entregas en minutos · Matheus Policarpo</title>
 <meta name="description" content="Volumen, stock, bolsas y comprobación de lo recolectado: cuatro fallas del flujo, cuatro frentes.">
 <meta name="author" content="Matheus Policarpo">
-<meta property="og:title" content="Pronto App: la app del picker para entregas en minutos · Matheus Policarpo">
+<meta property="og:title" content="Pronto App: preparación de pedidos para entregas en minutos · Matheus Policarpo">
 <meta property="og:description" content="Volumen, stock, bolsas y comprobación de lo recolectado: cuatro fallas del flujo, cuatro frentes.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://mtpoli-portfolio.vercel.app/es/pronto-app-instant-delivery.html">
@@ -30,7 +30,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Pronto App: la app del picker para entregas en minutos",
+  "name": "Pronto App: preparación de pedidos para entregas en minutos",
   "about": "Diseño de producto",
   "inLanguage": "es",
   "author": {
@@ -61,7 +61,7 @@
 <main>
 <div class="cx-hero">
 <img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="256" height="196">
-<h1 class="cx-title">Pronto App: la app del picker para entregas en minutos</h1>
+<h1 class="cx-title">Pronto App: preparación de pedidos para entregas en minutos</h1>
 <p class="cx-sub">Volumen, stock, bolsas y comprobación de lo recolectado: cuatro fallas del flujo, cuatro frentes.</p>
 <p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
 </div>
@@ -74,20 +74,23 @@
 <p class="cx-p">Conduje un <b>discovery presencial con operaciones</b> usando <b>Shadowing</b> (observación en campo sin interferir) y <b>entrevistas de interceptación</b> con pickers y líderes de tienda, cruzado con <b>análisis cuantitativo</b> de telemetría y errores de entrega para aislar las cuatro fallas críticas del flujo.</p>
 <h2 class="cx-label">Decisión</h2>
 <p class="cx-p"><b>Señales en la propia pantalla en lugar de modales bloqueantes.</b> La alerta de volumen (15+ unidades) y la etiqueta “Stock” quedan en la pantalla, sin pasos extra. Las pruebas mostraron que los modales bloqueantes retrasaban el picking.</p>
-<!-- TODO (Matheus): V1 con modal bloqueante vs señal elegida ; por qué 15 unidades como disparador; por qué avisar antes de la recolección en vez de dividir o bloquear; qué se descartó. -->
+<h2 class="cx-label">Por qué decidí así</h2>
+<ul class="cx-to"><li><b>Volumen (15+ unidades)</b><span>Dividir el pedido automáticamente generaría el costo de un segundo repartidor en vano en artículos livianos. Avisar antes de la recolección y dejar que el picker decida protege el SLA sin disparar el costo logístico.</span></li><li><b>Stock</b><span>Buscar un artículo agotado revienta el SLA, y sustituir sin aviso rompe la confianza de quien compró. La etiqueta evita la búsqueda en vano, y la sustitución solo sigue con una confirmación clara antes.</span></li><li><b>Aduana sin conexión</b><span>El comprobante queda guardado en la propia app. Así, la salida de la tienda no depende de la inestabilidad del sistema del supermercado.</span></li></ul>
 </div>
 <div class="cx-bleed">
 <h2 class="cx-label cx-center">Pantallas finales</h2>
 <div class="pd"><div class="pd-stage"><div class="ph ph-s24"><i class="ph-btn ph-btn--v"></i><i class="ph-btn ph-btn--p"></i><div class="ph-screen"><div class="pd-slide on" data-dur="6200" data-nav="#fff"><div class="pd-body"><div class="pd-in"><img src="/pronto-s24-volume.webp" alt="Pantalla de confirmación del pedido con una alerta naranja que pregunta si un solo repartidor puede llevar todo" width="720" height="1512" loading="eager"><i class="pd-ring" style="left:5.5%;top:37.25%;width:89%;height:9.31%;--d:1.3s"></i><i class="pd-tap" style="left:50%;top:94.67%;--d:3.6s"></i></div></div></div><div class="pd-slide" data-dur="8200" data-nav="#fff" data-scroll><div class="pd-body"><div class="pd-hd"><img src="/pronto-s24-stock-topo.webp" alt="" width="720" height="320" loading="lazy"></div><div class="pd-vp"><div class="pd-in"><img src="/pronto-s24-stock-lista.webp" alt="Lista de productos del pedido con la etiqueta Stock en los ítems con poco stock" width="720" height="2064" loading="lazy"><i class="pd-ring" style="left:64.3%;top:19.26%;width:23%;height:3.93%;--d:1.6s"></i></div></div></div></div><div class="pd-slide" data-dur="6200" data-nav="#fff"><div class="pd-body"><div class="pd-in"><img src="/pronto-s24-sacolas.webp" alt="Pantalla verde de pedido terminado con el código de envío y el total de bolsas para anotar" width="720" height="1512" loading="lazy"><i class="pd-ring" style="left:20%;top:42.6%;width:60%;height:2.89%;--d:1.2s"></i><i class="pd-tap" style="left:50%;top:87.2%;--d:3.6s"></i></div></div></div><div class="pd-slide" data-dur="6200" data-nav="#EDEDED"><div class="pd-body"><div class="pd-in"><img src="/pronto-s24-aduana.webp" alt="Pantalla de detalle del pedido con los productos recolectados para mostrar en la salida de la tienda" width="720" height="1512" loading="lazy"><i class="pd-ring" style="left:3.5%;top:35.15%;width:93%;height:58.42%;--d:1.3s"></i></div></div></div><i class="ph-cam"></i><div class="ph-nav" style="background:#fff"></div></div></div></div><ol class="pd-steps"><li><button class="pd-step on" type="button" aria-current="true"><span class="pd-n">01</span><b>Volumen</b><span class="pd-t">Un pedido grande avisa antes de la recolección y el picker decide si llama a un segundo repartidor.</span><i class="pd-bar"></i></button></li><li><button class="pd-step" type="button" aria-current="false"><span class="pd-n">02</span><b>Stock</b><span class="pd-t">Los ítems con poco stock reciben una etiqueta “Stock”. El picker ofrece un reemplazo en vez de seguir buscando.</span><i class="pd-bar"></i></button></li><li><button class="pd-step" type="button" aria-current="false"><span class="pd-n">03</span><b>Bolsas</b><span class="pd-t">El picker confirma la cantidad de bolsas y entrega el pedido al repartidor al final del armado.</span><i class="pd-bar"></i></button></li><li><button class="pd-step" type="button" aria-current="false"><span class="pd-n">04</span><b>Aduana</b><span class="pd-t">En la salida de la tienda, la pantalla Aduana muestra lo que se recolectó, aunque el sistema del supermercado esté caído.</span><i class="pd-bar"></i></button></li></ol></div>
 <p class="pd-hint">Toca un frente para ver la pantalla y qué cambió.</p>
-<!-- TODO (Matheus): pantallas “antes” de cada frente; anotaciones (tamaño del área táctil, contraste, jerarquía); riesgo de la sustitución de Stock; comportamiento offline de Aduana. -->
+<div class="pc"><h2 class="cx-label cx-center">Descartado y elegido</h2><div class="pc-g"><figure class="pc-f"><figcaption class="pc-t pc-t--x">Descartado: modal bloqueante</figcaption><div class="pc-s"><img src="/pronto-s24-volume.webp" alt="Recreación de la pantalla de confirmación con un modal bloqueante sobre el aviso de volumen" width="720" height="1512" loading="lazy"><div class="pc-dim"></div><div class="pc-modal"><p>¿Un solo repartidor puede llevar todo?</p><span>Sí, puedo</span><span>No, avisar al líder</span></div></div></figure><figure class="pc-f"><figcaption class="pc-t pc-t--ok">Elegido: aviso naranja en la propia pantalla</figcaption><div class="pc-s"><img src="/pronto-s24-volume.webp" alt="" width="720" height="1512" loading="lazy"><span class="pc-pin" style="left:93%;top:42%">1</span><span class="pc-pin" style="left:55%;top:34%">2</span><span class="pc-pin" style="left:93%;top:93.4%">3</span></div><ol class="pc-leg"><li>Contraste del aviso: lectura en 5 segundos</li><li>Horario de despacho destacado</li><li>Botón ancho, área de toque para una mano</li></ol></figure></div><p class="pd-hint">El modal es una recreación ilustrativa de la primera idea. Frenaba al picker antes de cada pedido grande.</p></div>
 </div>
 <div class="cx-body cx-bottom">
 <h2 class="cx-label">Cómo lo probé</h2>
 <p class="cx-p">Validé la interfaz con <b>pruebas de usabilidad</b>, combinando <b>5-Second Test</b> (lectura rápida de alertas), <b>First-Click Testing</b> (precisión del primer toque) y pruebas móviles con una mano en movimiento. Diseñé y escribí una pantalla o un aviso para cada punto, con handoff propio y sin sumar pasos nuevos.</p>
-<!-- TODO (Matheus): tamaño de la muestra y quién probó (¿pickers reales?); qué cambió después de las pruebas; datos del lanzamiento, si hay; qué fue decisión mía vs PM vs ingeniería. -->
+<h2 class="cx-label">Mi rol</h2>
+<p class="cx-p">Hice el discovery en campo, diseñé la arquitectura de decisión y escribí la UI y el copy de los cuatro frentes, además de conducir las pruebas.</p>
+<p class="cx-p">Trabajé en conjunto con el PM y la ingeniería, que definieron la regla de corte de volumen y la persistencia local de la Aduana.</p>
 <h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out"><p><b>4 frentes</b> priorizadas a partir de las fallas reales de la operación y documentadas para ingeniería</p><p><b>Alerta de volumen (15+ unidades) y etiqueta “Stock” sin pasos extra:</b> las pruebas mostraron que los modales bloqueantes retrasaban el picking, guiando la decisión por señales directas en la pantalla</p><p><b>Lectura y toque validados en movimiento:</b> ajustes de contraste, jerarquía y área táctil tras las pruebas aseguraron identificación rápida de avisos y primer toque certero con una mano</p></div>
+<div class="cx-two cx-out"><p><b>4 frentes</b> priorizados a partir de las fallas reales de la operación, cada uno con su propio handoff para ingeniería</p><p><b>SLA de la entrega en minutos protegido:</b> el aviso de volumen y la etiqueta “Stock” aparecen antes de la recolección y sin paso extra, evitando la demora que los modales bloqueantes causaban en el picking</p><p><b>Menos demora en la puerta de la tienda y menos costo logístico innecesario:</b> la Aduana funciona sin conexión, y el picker solo llama a un segundo repartidor cuando el pedido de verdad lo pide</p><p><b>Lectura y toque validados en movimiento:</b> los ajustes de contraste, jerarquía y área de toque hechos tras las pruebas garantizaron una identificación rápida de los avisos y un primer toque certero con una mano</p></div>
 </div>
 </main>
 <script src="/craft.js" defer></script>
