@@ -1632,15 +1632,5 @@ body.v2 .ct { padding-top: 40px; }
 .cp-tag { display: inline-block; margin-bottom: 10px; padding: 3px 9px; border-radius: 999px; background: #FDE8E8; color: #8A1F1F; font: 500 11px/1.4 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .06em; }
 @media (max-width: 560px) { .cp-ag { grid-template-columns: minmax(0, 1fr); } }
 
-/* Pronto: antes e depois */
-.pd-ba { padding-top: clamp(40px, 6vw, 72px); padding-bottom: clamp(24px, 4vw, 48px); }
-.pd-pair { max-width: 760px; margin: 0 auto clamp(44px, 7vw, 72px); }
-.pd-ph { font-size: 17px; font-weight: 600; color: #fff; margin: 0 0 14px; }
-.pd-pg { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 2.4vw, 24px); }
-.pd-bf { margin: 0; }
-.pd-bf img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); background: #fff; }
-.pd-tag { margin-bottom: 8px; }
-.pd-pc { font-size: 15px; line-height: 1.5; color: #C9C9CF; margin: 14px 0 0; max-width: 60ch; }
-.pd-tag--ok { background: #E3F3D9; color: #2A6A1B; }
 .cp-tag--ok { background: #E3F3D9; color: #2A6A1B; }
 .cp-ag + .cp-ag { margin-top: 36px; }
