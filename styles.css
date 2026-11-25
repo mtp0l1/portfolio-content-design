@@ -1621,3 +1621,13 @@ body.v2 .ct { padding-top: 40px; }
 .pd-hd img { width: 100%; height: 100%; }
 .pd-vp { position: absolute; left: 0; right: 0; bottom: 0; top: 21.164%; overflow: hidden; }
 .pd-vp .pd-in { position: relative; width: 100%; }
+
+/* telas "antes" do redesign (seção 01) */
+.cp-antes { margin: 8px 0 32px; }
+.cp-antes h3 { margin: 0 0 16px; font: 500 12px/1.4 "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.cp-ag { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.cp-ag figure { position: relative; margin: 0; }
+.cp-ag img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
+.cp-ag figcaption { max-width: none; margin-top: 12px; font-size: 14.5px; line-height: 1.5; color: #b4b4ba; }
+.cp-tag { display: inline-block; margin-bottom: 10px; padding: 3px 9px; border-radius: 999px; background: #FDE8E8; color: #8A1F1F; font: 500 11px/1.4 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .06em; }
+@media (max-width: 560px) { .cp-ag { grid-template-columns: minmax(0, 1fr); } }
