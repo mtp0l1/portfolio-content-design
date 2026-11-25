@@ -93,10 +93,14 @@
 <p class="sp-loc"><span>Brasil</span><svg class="sp-globe" viewBox="0 0 30 22" width="30" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><ellipse cx="15" cy="11" rx="13.5" ry="9.5"/><path d="M1.5 11h27M3.3 6.25h23.4M3.3 15.75h23.4" stroke-width="1.4"/><g class="sp-mer" stroke-width="1.2" transform="translate(0 0)"></g></svg><span>Remoto no mundo todo</span></p>
 </section>
 <section class="ft" id="destaque" aria-labelledby="ft-t">
-<div class="ft-head"><h2 class="ft-k" id="ft-t">Case em destaque</h2></div>
+<div class="ft-head"><h2 class="ft-k" id="ft-t">Cases em destaque</h2></div>
 <a class="ft-card" href="/pt/pronto-app-instant-delivery.html" aria-label="Pronto App: o app do picker para entrega em minutos">
 <div class="ft-vis" role="img" aria-label="Quatro telas finais do app do picker: alerta de volume, etiqueta Stock, conferência de sacolas e tela de Aduana"><img src="/pronto-vol-depois.png" width="360" height="640" alt="" loading="lazy" decoding="async"><img src="/pronto-stock-depois.png" width="360" height="1192" alt="" loading="lazy" decoding="async"><img src="/pronto-finalizar-depois.png" width="358" height="638" alt="" loading="lazy" decoding="async"><img src="/pronto-aduana.png" width="360" height="730" alt="" loading="lazy" decoding="async"></div>
 <div class="ft-txt"><p class="ft-co">Mercado Livre · Product Design</p><h3 class="ft-h">Pronto App: o app do picker para entrega em minutos</h3><p class="ft-d">Volume, estoque, sacolas e comprovação do que foi coletado: quatro falhas, quatro frentes.</p><ul class="ft-li"><li>Discovery presencial com pickers e líderes de loja</li><li>Sinais na própria tela no lugar de modais bloqueantes</li><li>Testes de leitura rápida e de primeiro toque com uma mão</li></ul><span class="ft-cta">Ver o case completo<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
+</a>
+<a class="wk ft-card" href="#design-system-soma" data-case="design-system-soma" aria-label="Campana Design System, white-label e escalável">
+<div class="ft-vis ft-vis--one"><img src="/mockups/design-system-soma.webp?v=2" width="1479" height="1427" alt="Site de documentação do Campana Design System com o título Vamos construir com consistência" loading="lazy" decoding="async"></div>
+<div class="ft-txt"><p class="ft-co">So+ma · Product Design · Design System</p><h3 class="ft-h">Campana Design System, white-label e escalável</h3><p class="ft-d">Núcleo white label com tokens, componentes e módulos opcionais, para qualquer produto da So+ma nascer consistente e acessível.</p><ul class="ft-li"><li>Três camadas de tokens: núcleo, semântico e aliases do shadcn/ui</li><li>Componentes só consomem tokens: um produto novo ganha o próprio tema</li><li>Regras de composição para IAs e contrato em cada componente</li></ul><span class="ft-cta">Ver o case completo<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div>
 </a>
 </section>
 <section class="cs" id="projetos" aria-labelledby="cs-t">
@@ -160,6 +164,40 @@
 </div>
 </section>
 </main>
+<template id="tpl-design-system-soma"><section class="sp-case" aria-label="Campana Design System, white-label e escalável">
+<div class="cx-hero">
+<img class="cx-logo-img" src="/soma-logo.png" alt="So+ma" width="228" height="228">
+<h2 class="cx-title">Campana Design System, white-label e escalável</h2>
+<p class="cx-sub">Tokens, 123 componentes e regras que o próprio sistema confere, para montar telas fiéis ao Figma.</p>
+<p class="cx-role"><b>Design Engineer</b><span>So+ma</span></p>
+</div>
+<div class="cx-bleed">
+<div class="cx-strip imgs fx" style="--n:4;--cols:0.462fr 0.462fr 0.462fr 0.462fr">
+<img style="aspect-ratio:750/1624" src="/soma-inicio.jpg" alt="Tela Início do app com o saldo de pontos, ações de reciclagem e a pergunta do dia" loading="lazy">
+<img style="aspect-ratio:750/1624" src="/soma-reciclar.jpg" alt="Tela Reciclar com a próxima entrega, busca de materiais e espaços de recebimento" loading="lazy">
+<img style="aspect-ratio:750/1624" src="/soma-meta.jpg" alt="Tela Meta com a recompensa escolhida e o progresso em pontos" loading="lazy">
+<img style="aspect-ratio:750/1624" src="/soma-doar.jpg" alt="Tela Doação realizada com a ilustração de duas pessoas comemorando" loading="lazy">
+</div>
+</div>
+<div class="cx-body fx">
+<div class="fx-blk">
+<h3 class="cx-label">Contexto</h3>
+<p class="fx-ctx">O So+ma é um app em que a pessoa recicla, junta pontos e troca por recompensas ou doa para instituições.</p><p class="fx-ctx">O redesign no Figma trouxe telas novas e deixou componentes antigos para trás.</p><p class="fx-ctx">O objetivo foi ter uma fonte única de valores e componentes, para designers, engenharia e IA montarem as telas do mesmo jeito.</p>
+</div>
+<div class="fx-blk">
+<h3 class="cx-label">O que mudou</h3>
+<ul class="fx-list"><li>Cada decisão visual virou um token, em três camadas. Os componentes só consomem tokens, então o sistema muda inteiro quando a marca muda.</li><li>Os 123 componentes seguem o shadcn/ui (Radix, CVA e Tailwind), e cada um tem exemplo funcionando, acessibilidade e contrato “Usar para / Nunca / Verificado por”.</li><li>Telas de exemplo na largura do app, montadas só com peças do sistema.</li><li>As regras têm ID e o sistema confere sozinho, com relatório.</li></ul>
+</div>
+<div class="fx-blk">
+<h3 class="cx-label">O que eu fiz</h3>
+<ul class="fx-list"><li>Levei as telas novas do Figma para componentes e tokens, e removi o que o redesign substituiu.</li><li>Escrevi o AGENTS.md, o mapa de decisão e as regras de composição, para qualquer IA (Claude, Claude Design, IA do Figma) usar o sistema sem inventar variante.</li><li>Defini as regras de conteúdo: português do Brasil, tratamento por “você”, “tocar” em vez de “clicar” e “participante” em vez de “usuário”.</li><li>Comparei o sistema com os 59 componentes do shadcn/ui: 20 foram adicionados, 18 corrigidos e 10 ficaram de fora com motivo.</li></ul>
+</div>
+<div class="fx-blk">
+<h3 class="cx-label">Resultados</h3>
+<ul class="fx-list"><li><b>123 componentes</b> com contrato e <b>13 checagens</b> automáticas com relatório.</li><li><b>104 tokens de cor</b> e 86 ícones Lucide, com tipografia Lexend em quatro pesos.</li><li>Site de documentação na versão 14, com busca ⌘K, tema claro e escuro e pacote para engenharia.</li></ul>
+</div>
+</div>
+</section></template>
 <template id="tpl-meli-studio"><section class="sp-case" aria-label="Meli Studio: criação com IA para imagem, vídeo e áudio">
 <div class="cx-hero">
 <img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Livre" width="256" height="196">
