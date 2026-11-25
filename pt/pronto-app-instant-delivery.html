@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>App do picker para entrega em minutos · Matheus Policarpo</title>
+<title>Pronto App: o app do picker para entrega em minutos · Matheus Policarpo</title>
 <meta name="description" content="Volume, estoque, sacolas e comprovação do que foi coletado: quatro falhas, quatro frentes.">
 <meta name="author" content="Matheus Policarpo">
-<meta property="og:title" content="App do picker para entrega em minutos · Matheus Policarpo">
+<meta property="og:title" content="Pronto App: o app do picker para entrega em minutos · Matheus Policarpo">
 <meta property="og:description" content="Volume, estoque, sacolas e comprovação do que foi coletado: quatro falhas, quatro frentes.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://mtpoli-portfolio.vercel.app/pt/pronto-app-instant-delivery.html">
@@ -30,7 +30,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "App do picker para entrega em minutos",
+  "name": "Pronto App: o app do picker para entrega em minutos",
   "about": "Product design",
   "inLanguage": "pt-BR",
   "author": {
@@ -61,42 +61,32 @@
 <main>
 <div class="cx-hero">
 <img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Livre" width="256" height="196">
-<h1 class="cx-title">App do picker para entrega em minutos</h1>
+<h1 class="cx-title">Pronto App: o app do picker para entrega em minutos</h1>
 <p class="cx-sub">Volume, estoque, sacolas e comprovação do que foi coletado: quatro falhas, quatro frentes.</p>
 <p class="cx-role"><b>Product Designer</b><span>Mercado Livre</span></p>
 </div>
+<div class="cx-body cx-top">
+<h2 class="cx-label">Problema</h2>
+<p class="cx-ctx">O Pronto App é o app de quem separa pedidos de supermercado. Com o instant delivery, o fluxo mostrou quatro falhas.</p>
+<ol class="cx-fails"><li><b>Volume</b><span>pedido que não cabe num entregador</span></li><li><b>Estoque</b><span>pouco estoque que gera substituição à toa</span></li><li><b>Sacolas</b><span>sacola sem número</span></li><li><b>Comprovação</b><span>nenhuma prova do que foi coletado</span></li></ol>
+<p class="cx-note">Cada uma virou um projeto de handoff.</p>
+<h2 class="cx-label">Como cheguei a elas</h2>
+<p class="cx-p">Conduzi <b>discovery presencial com a operação</b> usando <b>Shadowing</b> (observação em campo sem interferir) e <b>entrevistas de interceptação</b> com pickers e líderes de loja, cruzando com <b>análise quantitativa</b> de telemetria e erros de entrega para isolar as quatro falhas críticas do fluxo.</p>
+<h2 class="cx-label">Decisão</h2>
+<p class="cx-p"><b>Sinais na própria tela no lugar de modais bloqueantes.</b> O alerta de volume (15+ unidades) e a tag “Stock” ficam na tela, sem etapa extra. Os testes mostraram que modais bloqueantes atrasavam o picking.</p>
+<!-- TODO (Matheus): V1 com modal bloqueante x sinal escolhido (imagem antes/depois); por que 15 unidades como gatilho; por que avisar antes da coleta em vez de dividir ou bloquear; o que foi descartado. -->
+</div>
 <div class="cx-bleed">
-<div class="cx-strip imgs eqh" style="--n:4;--cols:0.562fr 0.302fr 0.561fr 0.493fr">
-<img style="aspect-ratio:360/640" src="/pronto-vol-depois.png" alt="Tela de confirmação do pedido com um alerta laranja perguntando se um só entregador consegue levar tudo" loading="lazy">
-<img style="aspect-ratio:360/1192" src="/pronto-stock-depois.png" alt="Lista de produtos do pedido com a etiqueta Stock nos itens com pouco estoque" loading="lazy">
-<img style="aspect-ratio:358/638" src="/pronto-finalizar-depois.png" alt="Tela verde de pedido finalizado com o código de envio e o total de sacolas para anotar" loading="lazy">
-<img style="aspect-ratio:360/730" src="/pronto-aduana.png" alt="Tela de detalhe do pedido com os produtos coletados para mostrar na saída da loja" loading="lazy">
+<h2 class="cx-label cx-center">Telas finais</h2>
+<div class="cx-figs" style="--cols:0.562fr 0.302fr 0.561fr 0.493fr"><figure><img style="aspect-ratio:360/640" src="/pronto-vol-depois.png" alt="Tela de confirmação do pedido com um alerta laranja perguntando se um só entregador consegue levar tudo" loading="lazy"><figcaption><b>Volume</b>Pedido grande avisa antes da coleta, e o picker decide se chama um segundo entregador.</figcaption></figure><figure><img style="aspect-ratio:360/1192" src="/pronto-stock-depois.png" alt="Lista de produtos do pedido com a etiqueta Stock nos itens com pouco estoque" loading="lazy"><figcaption><b>Stock</b>Item com pouco estoque ganha uma etiqueta “Stock”. O picker oferece substituição em vez de procurar mais.</figcaption></figure><figure><img style="aspect-ratio:358/638" src="/pronto-finalizar-depois.png" alt="Tela verde de pedido finalizado com o código de envio e o total de sacolas para anotar" loading="lazy"><figcaption><b>Sacolas</b>O picker confirma a numeração das sacolas e entrega ao motorista no fim da separação.</figcaption></figure><figure><img style="aspect-ratio:360/730" src="/pronto-aduana.png" alt="Tela de detalhe do pedido com os produtos coletados para mostrar na saída da loja" loading="lazy"><figcaption><b>Aduana</b>Na saída da loja, a tela de Aduana mostra o que foi coletado, mesmo com o sistema do supermercado fora do ar.</figcaption></figure></div>
+<!-- TODO (Matheus): telas “antes” de cada frente; anotações (tamanho da área de toque, contraste, hierarquia); risco da substituição de Stock; comportamento offline da Aduana. -->
 </div>
-</div>
-<div class="cx-body">
-<h2 class="cx-label">Contexto</h2>
-<p class="cx-ctx">O Pronto App é o app de quem separa pedidos de supermercado. Com o instant delivery, o fluxo do picker mostrou quatro falhas: volume que não cabe num entregador, estoque que gera substituição à toa, sacola sem número e nenhuma prova do que foi coletado. Cada uma virou um projeto de handoff.</p>
+<div class="cx-body cx-bottom">
+<h2 class="cx-label">Como testei</h2>
+<p class="cx-p">Validei a interface em <b>testes de usabilidade</b> combinando <b>5-Second Test</b> (leitura rápida dos alertas), <b>First-Click Testing</b> (precisão do primeiro toque) e testes móveis com uma mão em movimento. Desenhei e escrevi uma tela ou um aviso para cada ponto, com handoff próprio e sem criar etapa nova.</p>
+<!-- TODO (Matheus): tamanho da amostra e quem testou (pickers reais?); o que mudou depois dos testes; dados do lançamento, se houver; o que foi decisão minha x PM x engenharia. -->
 <h2 class="cx-label">Resultados</h2>
-<div class="cx-two cx-out">
-<p><b>4 frentes</b> priorizadas a partir das falhas reais da operação e documentadas para a engenharia</p>
-<p><b>Alerta de volume (15+ unidades) e tag “Stock” sem etapa extra:</b> os testes mostraram que modais bloqueantes atrasavam o picking, guiando a escolha por sinais diretos na própria tela</p>
-<p><b>Leitura e toque validados em movimento:</b> ajustes de contraste, hierarquia e área de toque feitos após os testes garantiram identificação rápida dos avisos e primeiro toque certeiro com uma mão</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">O que eu fiz</h2>
-<p>Conduzi <b>discovery presencial com a operação</b> usando <b>Shadowing</b> (observação em campo sem interferir) e <b>entrevistas de interceptação</b> com pickers e líderes de loja, cruzando com <b>análise quantitativa</b> de telemetria e erros de entrega para isolar as quatro falhas críticas do fluxo.</p>
-<p>Desenhei e escrevi uma tela ou um aviso para cada ponto, com handoff próprio e sem criar etapa nova.</p>
-<p>Validei a interface em <b>testes de usabilidade</b> combinando <b>5-Second Test</b> (leitura rápida dos alertas), <b>First-Click Testing</b> (precisão do primeiro toque) e testes móveis com uma mão em movimento.</p>
-</div>
-<div>
-<h2 class="cx-label">O que mudou</h2>
-<p>Pedido grande avisa antes da coleta, e o picker decide se chama um segundo entregador.</p>
-<p>Item com pouco estoque ganha uma etiqueta “Stock”. O picker oferece substituição em vez de procurar mais.</p>
-<p>O picker confirma a numeração das sacolas e entrega ao motorista no fim da separação.</p>
-<p>Na saída da loja, a tela de Aduana mostra o que foi coletado, mesmo com o sistema do supermercado fora do ar.</p>
-</div>
-</div>
+<div class="cx-two cx-out"><p><b>4 frentes</b> priorizadas a partir das falhas reais da operação e documentadas para a engenharia</p><p><b>Alerta de volume (15+ unidades) e tag “Stock” sem etapa extra:</b> os testes mostraram que modais bloqueantes atrasavam o picking, guiando a escolha por sinais diretos na própria tela</p><p><b>Leitura e toque validados em movimento:</b> ajustes de contraste, hierarquia e área de toque feitos após os testes garantiram identificação rápida dos avisos e primeiro toque certeiro com uma mão</p></div>
 </div>
 </main>
 <script src="/selection.js" defer></script>

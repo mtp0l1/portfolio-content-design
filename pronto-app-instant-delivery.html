@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Picker app for deliveries in minutes · Matheus Policarpo</title>
+<title>Pronto App: the picker app for deliveries in minutes · Matheus Policarpo</title>
 <meta name="description" content="Volume, stock, bags and proof of what was collected: four flow failures, four workstreams.">
 <meta name="author" content="Matheus Policarpo">
-<meta property="og:title" content="Picker app for deliveries in minutes · Matheus Policarpo">
+<meta property="og:title" content="Pronto App: the picker app for deliveries in minutes · Matheus Policarpo">
 <meta property="og:description" content="Volume, stock, bags and proof of what was collected: four flow failures, four workstreams.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://mtpoli-portfolio.vercel.app/pronto-app-instant-delivery.html">
@@ -30,7 +30,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Picker app for deliveries in minutes",
+  "name": "Pronto App: the picker app for deliveries in minutes",
   "about": "Product design",
   "inLanguage": "en",
   "author": {
@@ -61,42 +61,32 @@
 <main>
 <div class="cx-hero">
 <img class="cx-logo-img" src="/meli-logo.png" alt="Mercado Libre" width="256" height="196">
-<h1 class="cx-title">Picker app for deliveries in minutes</h1>
+<h1 class="cx-title">Pronto App: the picker app for deliveries in minutes</h1>
 <p class="cx-sub">Volume, stock, bags and proof of what was collected: four flow failures, four workstreams.</p>
 <p class="cx-role"><b>Product Designer</b><span>Mercado Libre</span></p>
 </div>
+<div class="cx-body cx-top">
+<h2 class="cx-label">Problem</h2>
+<p class="cx-ctx">Pronto App is the app used by the people who pick supermarket orders. With instant delivery, its flow showed four failures.</p>
+<ol class="cx-fails"><li><b>Volume</b><span>an order that doesn’t fit one courier</span></li><li><b>Stock</b><span>low stock that triggers needless substitutions</span></li><li><b>Bags</b><span>bags with no count</span></li><li><b>Proof</b><span>no proof of what was collected</span></li></ol>
+<p class="cx-note">Each one became its own handoff project.</p>
+<h2 class="cx-label">How I found them</h2>
+<p class="cx-p">Led <b>on-site discovery with operations</b> using <b>Shadowing</b> (unobtrusive field observation) and <b>intercept interviews</b> with pickers and store leaders, combined with <b>quantitative telemetry analysis</b> of delivery errors to isolate the four critical flow failures.</p>
+<h2 class="cx-label">Decision</h2>
+<p class="cx-p"><b>Inline cues instead of blocking modals.</b> The volume alert (15+ items) and the “Stock” tag live on the screen itself, with no extra step. Testing showed blocking modals slowed picking down.</p>
+<!-- TODO (Matheus): V1 with blocking modal vs chosen cue (before/after image); why 15 items as the trigger; why warn before collection instead of splitting or blocking; what was discarded. -->
+</div>
 <div class="cx-bleed">
-<div class="cx-strip imgs eqh" style="--n:4;--cols:0.562fr 0.302fr 0.561fr 0.493fr">
-<img style="aspect-ratio:360/640" src="/pronto-vol-depois.png" alt="Order confirmation screen with an orange alert asking whether a single courier can carry everything" loading="lazy">
-<img style="aspect-ratio:360/1192" src="/pronto-stock-depois.png" alt="Order product list with a Stock tag on low-stock items" loading="lazy">
-<img style="aspect-ratio:358/638" src="/pronto-finalizar-depois.png" alt="Green order-finished screen with the shipping code and the total number of bags to note down" loading="lazy">
-<img style="aspect-ratio:360/730" src="/pronto-aduana.png" alt="Order detail screen with the collected products to show at the store exit" loading="lazy">
+<h2 class="cx-label cx-center">Final screens</h2>
+<div class="cx-figs" style="--cols:0.562fr 0.302fr 0.561fr 0.493fr"><figure><img style="aspect-ratio:360/640" src="/pronto-vol-depois.png" alt="Order confirmation screen with an orange alert asking whether a single courier can carry everything" loading="lazy"><figcaption><b>Volume</b>A large order warns before collection, and the picker decides whether to call a second courier.</figcaption></figure><figure><img style="aspect-ratio:360/1192" src="/pronto-stock-depois.png" alt="Order product list with a Stock tag on low-stock items" loading="lazy"><figcaption><b>Stock</b>Low-stock items get a “Stock” tag. The picker offers a substitute instead of searching for more.</figcaption></figure><figure><img style="aspect-ratio:358/638" src="/pronto-finalizar-depois.png" alt="Green order-finished screen with the shipping code and the total number of bags to note down" loading="lazy"><figcaption><b>Bags</b>The picker confirms the bag count and hands the order to the driver at the end of picking.</figcaption></figure><figure><img style="aspect-ratio:360/730" src="/pronto-aduana.png" alt="Order detail screen with the collected products to show at the store exit" loading="lazy"><figcaption><b>Customs</b>At the store exit, the Customs screen shows what was collected, even if the supermarket’s system is down.</figcaption></figure></div>
+<!-- TODO (Matheus): before screens for each front; annotations (touch target size, contrast, hierarchy); Stock substitution risk; Customs offline behavior. -->
 </div>
-</div>
-<div class="cx-body">
-<h2 class="cx-label">Context</h2>
-<p class="cx-ctx">Pronto App is the app used by the people who pick supermarket orders. With instant delivery, the picker flow showed four gaps: volume that doesn’t fit one courier, stock that triggers needless substitutions, bags with no count, and no proof of what was collected. Each one became its own handoff project.</p>
+<div class="cx-body cx-bottom">
+<h2 class="cx-label">How I tested it</h2>
+<p class="cx-p">Validated the interface through <b>usability testing</b>, combining <b>5-Second Tests</b> (quick alert scanning), <b>First-Click Testing</b> (first-tap accuracy), and one-handed mobile tests on the move. Designed and wrote a dedicated screen or alert for each failure point, with its own handoff and no extra steps.</p>
+<!-- TODO (Matheus): sample size and who tested (real pickers?); what changed after the tests; launch data if available; what was my call vs PM vs engineering. -->
 <h2 class="cx-label">Results</h2>
-<div class="cx-two cx-out">
-<p><b>4 workstreams</b> prioritized from real operational failures and documented for engineering</p>
-<p><b>Volume alert (15+ items) and “Stock” tag with no extra steps:</b> testing showed blocking modals slowed picking down, leading to inline visual cues instead</p>
-<p><b>Scanning and tapping validated on the move:</b> contrast, hierarchy, and touch-target adjustments after testing ensured fast alert recognition and accurate one-handed first taps</p>
-</div>
-<div class="cx-two cx-did">
-<div>
-<h2 class="cx-label">What I did</h2>
-<p>Led <b>on-site discovery with operations</b> using <b>Shadowing</b> (unobtrusive field observation) and <b>intercept interviews</b> with pickers and store leaders, combined with <b>quantitative telemetry analysis</b> of delivery errors to isolate the four critical flow failures.</p>
-<p>Designed and wrote a dedicated screen or alert for each failure point, with its own handoff and no extra steps.</p>
-<p>Validated the interface through <b>usability testing</b>, combining <b>5-Second Tests</b> (quick alert scanning), <b>First-Click Testing</b> (first-tap accuracy), and one-handed mobile tests on the move.</p>
-</div>
-<div>
-<h2 class="cx-label">What changed</h2>
-<p>A large order warns before collection, and the picker decides whether to call a second courier.</p>
-<p>Low-stock items get a “Stock” tag. The picker offers a substitute instead of searching for more.</p>
-<p>The picker confirms the bag count and hands the order to the driver at the end of picking.</p>
-<p>At the store exit, the Customs screen shows what was collected, even if the supermarket’s system is down.</p>
-</div>
-</div>
+<div class="cx-two cx-out"><p><b>4 workstreams</b> prioritized from real operational failures and documented for engineering</p><p><b>Volume alert (15+ items) and “Stock” tag with no extra steps:</b> testing showed blocking modals slowed picking down, leading to inline visual cues instead</p><p><b>Scanning and tapping validated on the move:</b> contrast, hierarchy, and touch-target adjustments after testing ensured fast alert recognition and accurate one-handed first taps</p></div>
 </div>
 </main>
 <script src="/selection.js" defer></script>
