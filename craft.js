@@ -53,7 +53,7 @@
     var i = 0, timer = null, stopped = false,
         hexes = el.querySelectorAll("[data-hex]"),
         dots = el.querySelectorAll(".cd-dots span"),
-        btns = el.parentNode.querySelectorAll("[data-theme]");
+        btns = (el.closest(".cp-fig") || el.parentNode).querySelectorAll("[data-theme]");
     function fit() { el.style.setProperty("--k", el.clientWidth / 560); }
     fit();
     if (window.ResizeObserver) new ResizeObserver(fit).observe(el); else window.addEventListener("resize", fit);
@@ -75,6 +75,27 @@
         if (!stopped) timer = setInterval(function () { set((i + 1) % T.length, true); }, 3600);
       }
     }, 0.25);
+  });
+
+  /* ---------- Campana: demo automática do fluxo ---------- */
+  document.querySelectorAll("[data-auto]").forEach(function (box) {
+    var imgs = box.querySelectorAll("img"), host = box.parentNode,
+        cap = host.querySelector("[data-step]"), dots = host.querySelectorAll(".cp-autodots button"),
+        names = [], i = 0, timer = null, stopped = false;
+    try { names = JSON.parse(box.getAttribute("data-steps") || "[]"); } catch (e) {}
+    function show(n) {
+      i = n;
+      imgs.forEach(function (im, k) { im.classList.toggle("on", k === n); });
+      dots.forEach(function (d, k) { d.classList.toggle("on", k === n); });
+      if (cap && names[n]) cap.textContent = (n + 1) + " · " + names[n];
+    }
+    show(0);
+    dots.forEach(function (d, k) { d.addEventListener("click", function () { stopped = true; clearInterval(timer); show(k); }); });
+    if (reduce) return;
+    whenVisible(box, function (vis) {
+      clearInterval(timer);
+      if (vis && !stopped) timer = setInterval(function () { show((i + 1) % imgs.length); }, 2600);
+    }, 0.3);
   });
 
   /* ---------- Revelar ao rolar (páginas de case) ---------- */
