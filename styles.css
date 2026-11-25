@@ -1604,11 +1604,20 @@ body.v2 .ct { padding-top: 40px; }
 .cp-sec--wall .cp-cta { margin-top: 28px; }
 .cp-sec--wall + .cp-wall { border-top: 0; }
 
-/* Pronto: o celular assume a proporção exata de cada tela, sem corte nem sobra */
-.pd { --ph-w: 296px; }
-.pd-stage { min-height: calc(var(--ph-w) * 1.971 + clamp(48px, 8vw, 88px)); }
-.pd .ph { aspect-ratio: auto; padding: 8px; height: calc((var(--ph-w) - 16px) * var(--r, 2.0278) + 16px); transition: height .6s cubic-bezier(.22, 1, .36, 1); }
-/* cantos de cima menores: a barra de status (hora e ícones) não pode ser cortada */
-.pd .ph { border-radius: 28px 28px 44px 44px; }
-.pd .ph-screen { border-radius: 20px 20px 36px 36px; }
-@media (prefers-reduced-motion: reduce) { .pd .ph { transition: none; } }
+/* Pronto: celular Samsung Galaxy S24 (tela 360 x 780). Todas as telas têm o mesmo tamanho. */
+.pd-stage { min-height: calc(664px + clamp(48px, 8vw, 88px)); }
+.pd .ph.ph-s24 { --ph-w: 312px; width: 312px; height: auto; aspect-ratio: auto; padding: 6px; border-radius: 34px; background: #050506; box-shadow: 0 0 0 2.5px #5d5f65, 0 0 0 3.5px #1b1c1f, inset 0 0 0 1px #17181a, 0 34px 60px -26px rgba(0, 0, 0, .7); }
+.pd .ph-s24 .ph-screen { width: 100%; height: auto; aspect-ratio: 360 / 780; border-radius: 26px; background: #fff; }
+.ph-btn { position: absolute; right: -6.5px; width: 3px; border-radius: 0 2px 2px 0; background: linear-gradient(90deg, #4b4d53, #6a6c72); }
+.ph-btn--v { top: 128px; height: 58px; }
+.ph-btn--p { top: 206px; height: 36px; }
+.ph-cam { position: absolute; z-index: 6; top: 6px; left: 50%; width: 9px; height: 9px; margin-left: -4.5px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #26304a 0, #05060a 60%); box-shadow: 0 0 0 1.5px #000; }
+.ph-nav { position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; height: 3.0769%; transition: background .4s; }
+.ph-nav::after { content: ""; position: absolute; left: 50%; bottom: 5px; width: 31%; height: 3.5px; margin-left: -15.5%; border-radius: 2px; background: rgba(0, 0, 0, .62); }
+.pd-body { position: absolute; left: 0; top: 0; width: 100%; height: 96.9231%; overflow: hidden; }
+.pd-body > .pd-in { position: absolute; inset: 0; width: 100%; }
+.pd-body > .pd-in img { width: 100%; height: 100%; }
+.pd-hd { position: absolute; left: 0; top: 0; width: 100%; height: 21.164%; z-index: 2; }
+.pd-hd img { width: 100%; height: 100%; }
+.pd-vp { position: absolute; left: 0; right: 0; bottom: 0; top: 21.164%; overflow: hidden; }
+.pd-vp .pd-in { position: relative; width: 100%; }
