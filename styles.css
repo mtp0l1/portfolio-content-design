@@ -1304,3 +1304,9 @@ body.v2 .ct { padding-top: 40px; }
 /* Tags na legenda do card (mobile e touch, sem hover) */
 .v2 .cs-cap .cs-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
 .v2 .cs-cap .cs-tags span { padding: 4px 10px; border-radius: 100px; background: rgba(0, 0, 0, .05); border: 1px solid rgba(0, 0, 0, .08); font-size: 12px; font-weight: 600; line-height: 1.2; color: #111; }
+
+/* BB: rótulos acima dos 3 mockups de WhatsApp */
+.bb-fig { margin: 0; min-width: 0; display: block; }
+.bb-cap { max-width: none; margin: 0 0 8px; font-size: .78rem; line-height: 1.3; font-weight: 600; letter-spacing: .01em; color: #666; }
+.cx-strip.fx .bb-fig { display: flex; flex-direction: column; justify-content: flex-end; }
+.cx-strip.fx .bb-cap { display: flex; align-items: flex-end; min-height: 2.6em; }
