@@ -1433,7 +1433,7 @@ body.v2 .ct { padding-top: 40px; }
 }
 
 /* demo do Campana (desenhada em 560x330 e escalada) */
-.cdemo { --k: 1; --loud: #F2A545; --deep: #B35400; --warm: #FDF5EA; --navy: #1E2A3B; --tile: #F1F5F8; --ink: #21344E; --mute: #5C7089; --line: #DDE4EE; position: relative; width: 100%; aspect-ratio: 560 / 330; overflow: hidden; background: radial-gradient(90% 120% at 50% 0%, #2b3a52 0%, #172131 72%); }
+.cdemo { --k: 1; --loud: #F2A545; --deep: #1E2A3B; --warm: #FDF5EA; --navy: #1E2A3B; --tile: #F1F5F8; --ink: #21344E; --mute: #5C7089; --line: #DDE4EE; position: relative; width: 100%; aspect-ratio: 560 / 330; overflow: hidden; background: radial-gradient(90% 120% at 50% 0%, #2b3a52 0%, #172131 72%); }
 .cdemo[data-t="b"] { --loud: #45C1A5; --deep: #0A6B57; --warm: #E8F7F2; --navy: #11332D; --tile: #EFF6F4; --ink: #17302B; --mute: #567069; --line: #D5E6E1; }
 .cdemo[data-t="c"] { --loud: #7DA3F5; --deep: #2447A8; --warm: #EDF2FF; --navy: #17224F; --tile: #EFF2FA; --ink: #1B2850; --mute: #56627F; --line: #D8DFF0; }
 .cdemo-in { position: absolute; left: 0; top: 0; width: 560px; height: 330px; transform-origin: 0 0; transform: scale(var(--k)); font-family: "Lexend", "Inter", system-ui, sans-serif; }
@@ -1485,7 +1485,7 @@ body.v2 .ct { padding-top: 40px; }
 .cdemo[data-t="a"] .cd-chip--o, .cdemo:not([data-t="a"]) .cd-chip--a { display: none; }
 
 /* ===== Página do Campana ===== */
-.cp { overflow-x: clip; --o: #F2A545; --od: #B35400; --nv: #1E2A3B; --cw: min(1080px, calc(100% - 48px)); font-family: "Inter", system-ui, sans-serif; color: var(--fg); }
+.cp { overflow-x: clip; --o: #F2A545; --od: #1E2A3B; --nv: #1E2A3B; --cw: min(1080px, calc(100% - 48px)); font-family: "Inter", system-ui, sans-serif; color: var(--fg); }
 .cp-js .cp-rv { opacity: 0; transform: translateY(22px); transition: opacity .8s cubic-bezier(.22, 1, .36, 1), transform .8s cubic-bezier(.22, 1, .36, 1); transition-delay: var(--rd, 0s); }
 .cp-js .cp-rv.in { opacity: 1; transform: none; }
 .cp-hero { width: var(--cw); margin: 0 auto; padding: clamp(56px, 9vw, 112px) 0 clamp(40px, 6vw, 72px); }
@@ -1625,7 +1625,7 @@ body.v2 .ct { padding-top: 40px; }
 /* telas "antes" do redesign (seção 01) */
 .cp-antes { margin: 8px 0 32px; }
 .cp-antes h3 { margin: 0 0 16px; font: 500 12px/1.4 "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.cp-ag { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.cp-ag { display: grid; grid-template-columns: minmax(0, var(--c1, 1fr)) minmax(0, var(--c2, 1fr)); gap: 16px; align-items: start; }
 .cp-ag figure { position: relative; margin: 0; }
 .cp-ag img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
 .cp-ag figcaption { max-width: none; margin-top: 12px; font-size: 14.5px; line-height: 1.5; color: #b4b4ba; }
@@ -1642,3 +1642,5 @@ body.v2 .ct { padding-top: 40px; }
 .pd-tag { margin-bottom: 8px; }
 .pd-pc { font-size: 15px; line-height: 1.5; color: #C9C9CF; margin: 14px 0 0; max-width: 60ch; }
 .pd-tag--ok { background: #E3F3D9; color: #2A6A1B; }
+.cp-tag--ok { background: #E3F3D9; color: #2A6A1B; }
+.cp-ag + .cp-ag { margin-top: 36px; }
