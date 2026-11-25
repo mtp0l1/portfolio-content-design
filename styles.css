@@ -1313,3 +1313,7 @@ body.v2 .ct { padding-top: 40px; }
 .bb-fig-wide .bb-cap { min-height: 0; }
 .cx-strip.fx .bb-fig-wide .bb-cap { min-height: 2.6em; }
 @media (max-width: 760px) { .sp-case .cx-strip.imgs.fx .bb-fig-wide { grid-column: 1 / -1; } }
+
+/* Pronto App: 4 telas de alturas diferentes alinhadas pelas colunas (--cols) */
+.cx-strip.imgs.eqh { grid-template-columns: var(--cols); align-items: start; }
+@media (max-width: 720px) { .cx-strip.imgs.eqh { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
