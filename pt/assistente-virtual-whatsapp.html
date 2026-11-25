@@ -77,15 +77,15 @@
 <p class="cx-ctx">Planejei os fluxos e o conteúdo da assistente do Banco do Brasil no WhatsApp Business API, junto de Produto, Negócios e TI, para demandas urgentes como saldo, transferências, boletos, limites e bloqueio de cartão. Quando a pessoa escrevia fora do roteiro ou mandava frases curtas como “meu cartão não passa”, o fluxo antigo caía em erro repetido ou adivinhava a intenção errada no IBM Watson. O desafio era destravar a conversa no autoatendimento e passar para um atendente, com contexto, nos casos de dúvida ou risco.</p>
 <h2 class="cx-label">Resultados</h2>
 <div class="cx-two cx-out">
-<p><b>De 3+ tentativas para 1 escolha direta</b> na recuperação de solicitações ambíguas, aumentando a contenção no autoatendimento com roteamento mais preciso no IBM Watson</p>
-<p><b>3 a 4 perguntas repetidas a menos</b> e menor tempo de resposta no início do atendimento humano, graças ao resumo de contexto entregue na tela do atendente</p>
-<p><b>Implementação mais rápida pela TI</b> e consistência entre fluxos com a biblioteca padronizada de mensagens e o guia de tom de voz</p>
+<p>De <b>3+ tentativas para 1 escolha direta</b> em pedidos ambíguos, aumentando a contenção no WhatsApp e reduzindo transferências caras para o call center</p>
+<p><b>3 a 4 perguntas repetidas a menos</b> na abertura do atendimento humano, reduzindo o tempo médio de atendimento (TMA) e liberando a equipe para casos críticos de fraude</p>
+<p><b>Implementação mais rápida pela TI e escala consistente</b> entre novos fluxos com a biblioteca padronizada de mensagens e o guia de tom de voz</p>
 </div>
 <div class="cx-two cx-did">
 <div>
 <h2 class="cx-label">O que eu fiz</h2>
 <p>Planejei os fluxos de diálogo, as regras de erro, ambiguidade e falta de contexto e o encaminhamento humano com Produto, Negócios e TI.</p>
-<p>Auditei logs reais no IBM Watson, ouvi atendentes da fila de cartões e rodei testes rápidos de diálogo (Mágico de Oz). A pesquisa mostrou que o abandono vinha de chutes errados na zona cinzenta e da repetição de dados no transbordo, o que guiou o desenho da desambiguação, do fallback em 2 etapas e do resumo na tela do atendente.</p>
+<p>Auditei conversas reais nos logs do IBM Watson, ouvi atendentes da fila de cartões e rodei <b>testes de conversa simulada no WhatsApp</b>. A pesquisa mostrou que o abandono acontecia quando a IA chutava a resposta sem ter certeza da intenção e quando o cliente precisava repetir tudo para o atendente, o que guiou o novo fluxo de confirmação, o fallback em 2 etapas e o resumo de pré-atendimento.</p>
 <p>Escrevi e documentei o microcopy e as bibliotecas de mensagens do Sistema de Design Conversacional no Miro e no Figma para manter o tom de voz e acelerar a entrega da TI.</p>
 </div>
 <div>
