@@ -78,15 +78,16 @@
 <p class="cx-ctx">O Pronto App é o app de quem separa pedidos de supermercado. Com o instant delivery, o fluxo do picker mostrou quatro falhas: volume que não cabe num entregador, estoque que gera substituição à toa, sacola sem número e nenhuma prova do que foi coletado. Cada uma virou um projeto de handoff.</p>
 <h2 class="cx-label">Resultados</h2>
 <div class="cx-two cx-out">
-<p><b>4 frentes</b> desenhadas e documentadas para a engenharia, cada uma sobre uma falha do fluxo</p>
-<p>Alerta de volume a partir de <b>15 unidades</b>, sem acrescentar tempo ao picking</p>
+<p><b>4 frentes</b> priorizadas a partir das falhas reais da operação e documentadas para a engenharia</p>
+<p><b>Alerta de volume (15+ unidades) e tag “Stock” sem etapa extra:</b> os testes mostraram que modais bloqueantes atrasavam o picking, guiando a escolha por sinais diretos na própria tela</p>
+<p><b>Leitura e toque validados em movimento:</b> ajustes de contraste, hierarquia e área de toque feitos após os testes garantiram identificação rápida dos avisos e primeiro toque certeiro com uma mão</p>
 </div>
 <div class="cx-two cx-did">
 <div>
 <h2 class="cx-label">O que eu fiz</h2>
 <p>Conduzi <b>pesquisa qualitativa</b> (observação em contexto com a operação) e <b>análise quantitativa</b> de telemetria e erros de entrega para isolar as quatro falhas críticas do fluxo.</p>
 <p>Desenhei e escrevi uma tela ou um aviso para cada ponto, com handoff próprio e sem criar etapa nova.</p>
-<p>Validei a interface em <b>testes de usabilidade</b> combinando <b>5-Second Test</b> (hierarquia visual dos alertas), <b>First-Click Testing</b> e testes móveis simulando uso com uma mão em movimento.</p>
+<p>Validei a interface em <b>testes de usabilidade</b> combinando <b>5-Second Test</b> (leitura rápida dos alertas), <b>First-Click Testing</b> (precisão do primeiro toque) e testes móveis com uma mão em movimento.</p>
 </div>
 <div>
 <h2 class="cx-label">O que mudou</h2>
