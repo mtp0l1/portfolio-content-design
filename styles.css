@@ -1603,3 +1603,12 @@ body.v2 .ct { padding-top: 40px; }
 .cp-sec--wall .cp-side { position: static; max-width: 640px; }
 .cp-sec--wall .cp-cta { margin-top: 28px; }
 .cp-sec--wall + .cp-wall { border-top: 0; }
+
+/* Pronto: o celular assume a proporção exata de cada tela, sem corte nem sobra */
+.pd { --ph-w: 296px; }
+.pd-stage { min-height: calc(var(--ph-w) * 1.971 + clamp(48px, 8vw, 88px)); }
+.pd .ph { aspect-ratio: auto; padding: 8px; height: calc((var(--ph-w) - 16px) * var(--r, 2.0278) + 16px); transition: height .6s cubic-bezier(.22, 1, .36, 1); }
+/* cantos de cima menores: a barra de status (hora e ícones) não pode ser cortada */
+.pd .ph { border-radius: 28px 28px 44px 44px; }
+.pd .ph-screen { border-radius: 20px 20px 36px 36px; }
+@media (prefers-reduced-motion: reduce) { .pd .ph { transition: none; } }

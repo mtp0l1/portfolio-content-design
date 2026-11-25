@@ -14,6 +14,8 @@
     function dur(n) { return parseInt(slides[n].getAttribute("data-dur") || "6000", 10); }
     function go(n) {
       cur = n;
+      var ph = pd.querySelector(".ph"), rr = slides[n].getAttribute("data-r");
+      if (ph && rr) ph.style.setProperty("--r", rr);
       slides.forEach(function (s, k) {
         var inn = s.querySelector(".pd-in");
         s.classList.toggle("on", k === n);
@@ -25,7 +27,7 @@
       if (playing) pd.classList.add("is-playing");
       var s = slides[n], inn = s.querySelector(".pd-in");
       if (inn && s.hasAttribute("data-scroll") && !reduce) {
-        var max = inn.offsetHeight - s.parentNode.clientHeight;
+        var max = inn.offsetHeight - inn.offsetWidth * parseFloat(s.getAttribute("data-r") || "2.0278");
         if (max > 0) setTimeout(function () {
           if (cur !== n) return;
           inn.style.transition = "transform " + Math.max(2.5, dur(n) / 1000 - 2.2) + "s cubic-bezier(.45,0,.2,1)";
